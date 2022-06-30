@@ -1,25 +1,10 @@
-import type { NextPage  } from 'next'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-
-    <br/>
-    <br/>
-    <br/>
-    <Link href="/react-components">
-      <a>React components</a>
-    </Link>
-
-    <br/>
-    <br/>
-    <br/>
-
-    <Link href="/web-components">
-        <a>Web components</a>
-      </Link>
+    <div style={{width: '100%', height: '95vh', display: 'flex', justifyContent: 'center'}}>
+      <Image src="/geovistory-logo.svg" width={300} height={100}></Image>
     </div>
   )
 }
