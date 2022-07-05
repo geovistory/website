@@ -59,8 +59,8 @@ jobs:
       - name: Echo tag created by npm
         run: echo your tag is '${{steps.npm_version.outputs.tag}}'
      
-      - name: Update Lock files
-        run: 'npm run update:lock'
+      - name: Update Lock file
+        run: 'npm i --package-lock-only'
 
       - uses: EndBug/add-and-commit@v5
         with:
