@@ -1,14 +1,15 @@
+import { Html, Head, Main, NextScript } from 'next/document';
 
-import { Html, Head, Main, NextScript } from 'next/document'
+const CustomHtml = (props:any) => Html(props);
 
 export default function Document() {
   return (
-    <Html className="ios" mode="ios">
+    <CustomHtml className="ios" mode="ios">
       <Head />
       <body>
         <Main />
         <NextScript />
       </body>
-    </Html>
-  )
+    </CustomHtml>
+  );
 }
