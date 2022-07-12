@@ -1,0 +1,38 @@
+.logo {
+    max-width: 100px;
+    max-height: 30px;
+}
+
+.divider  {
+    height: 2rem;
+    width: 1px;
+    margin: 0 10px 0 16px;
+    background: var(--ion-color-step-250);
+    display: inline-block;
+    vertical-align: bottom;
+}
+.toolbar {
+    --padding-top: 3px;
+    --padding-bottom: 3px;
+    --padding-start: var(--ion-padding, 16px);
+    --padding-end: var(--ion-padding, 16px);
+}
+
+
+.toolbar ion-button~ion-button {
+    margin-left: 8px;
+}
+
+@media screen and (min-width: 576px) {
+    .logo {
+        max-width: 140px;
+        max-height: 40px;
+    }
+
+    .toolbar {
+        --padding-top: 20px;
+        --padding-bottom: 20px;
+        --padding-start: var(--ion-padding, 16px);
+        --padding-end: var(--ion-padding, 16px);
+    }
+}
