@@ -17,6 +17,7 @@ import {
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import styles from './DefaultPage.module.css';
+import {version} from '../../package.json'
 
 interface DefaultPageProps {
   children: ReactNode;
@@ -90,7 +91,7 @@ export const DefaultPage = (props: DefaultPageProps) => {
           <IonGrid fixed class="ion-padding">
             {props.children}
           </IonGrid>
-          <IonToolbar>Footer</IonToolbar>
+          <IonToolbar>Footer v{version}</IonToolbar>
         </IonContent>
       </IonApp>
     </>
