@@ -114,6 +114,10 @@
 	--ion-color-step-900: #323232;
 	--ion-color-step-950: #272727;
 
+
+  /** Swiper colors */
+  --swiper-theme-color: var(--ion-color-primary);
+
   /***************************/
   /** Application variables **/
   /***************************/
@@ -124,42 +128,4 @@
     */
   --ion-font-family: 'Roboto', sans-serif;
 
-  /**
-    * @tokens Spacing
-    * @presenter Spacing
-    */
-  /* --ion-safe-area-top: 0px;
-  --ion-safe-area-top: 0px;
-  --ion-safe-area-right: 0px;
-  --ion-safe-area-left: 0px;
-  --ion-statusbar-padding: ;  
-  --ion-margin: ; 
-  --ion-padding: 7px; */
-
-
-  /***************************/
-  /***** Grid variables ******/
-  /***************************/
-
-  /**
-    * @tokens Grid Variables
-    * @presenter Spacing
-    */
-  /*--ion-grid-width:;*/
-  /*--ion-grid-columns: ;*/
-  /* --ion-grid-width-xs: 100%;
-  --ion-grid-width-sm: 540px;
-  --ion-grid-width-md: 720px;
-  --ion-grid-width-lg: 960px;
-  --ion-grid-width-xl: 1140px;
-  --ion-grid-padding-xs: ;
-  --ion-grid-padding-sm: ;
-  --ion-grid-padding-md: ;
-  --ion-grid-padding-lg: ;
-  --ion-grid-padding-xl: ;
-  --ion-grid-column-padding-xs: ;
-  --ion-grid-column-padding-sm: ;
-  --ion-grid-column-padding-md: ;
-  --ion-grid-column-padding-lg: ;
-  --ion-grid-column-padding-xl: ; */
 }
