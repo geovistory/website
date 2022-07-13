@@ -1,0 +1,13 @@
+.buttonContainer {
+  margin-top: 1rem;
+}
+
+.title {
+  max-height: calc(2*1.2em);
+  overflow: hidden;
+}
+
+.description {
+  max-height: calc(4*1.4em);
+  overflow: hidden;
+}

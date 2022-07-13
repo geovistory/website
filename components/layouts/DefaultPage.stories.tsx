@@ -1,6 +1,6 @@
 import { DefaultPage as DefaultPageComponent } from './DefaultPage.component';
 export default {
-  title: 'Components/Layout',
+  title: 'Components/Layout/DefaultPage',
   component: DefaultPageComponent,
   decorators: [(Story: any) => <Story />],
 };
