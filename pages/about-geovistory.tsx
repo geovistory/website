@@ -1,6 +1,6 @@
 import { IonButton } from '@geovistory/design-system-react';
 import type { NextPage } from 'next';
-import { DefaultPage } from '../components/page-layouts/DefaultPage.component';
+import { DefaultPage } from '../components/layouts/DefaultPage.component';
 import { YoutubeEmbed } from '../components/elements/YoutubeEmbed.component';
 
 const AboutGeovistory: NextPage = () => {

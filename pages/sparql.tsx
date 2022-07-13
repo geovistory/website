@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { DefaultPage } from '../components/page-layouts/DefaultPage.component';
+import { DefaultPage } from '../components/layouts/DefaultPage.component';
 
 const AboutUs: NextPage = () => {
   return (
