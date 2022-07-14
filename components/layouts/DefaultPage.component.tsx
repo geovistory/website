@@ -1,97 +1,73 @@
 import {
-  IonHeader,
-  IonToolbar,
-  IonMenu,
-  IonList,
-  IonTitle,
-  IonContent,
-  IonItem,
-  IonMenuButton,
-  IonButton,
-  IonButtons,
-  IonImg,
   IonApp,
-  IonIcon,
+  IonContent,
   IonGrid,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonItemDivider,
+  IonLabel,
+  IonList,
+  IonMenu,
+  IonTitle,
+  IonToolbar,
 } from '@geovistory/design-system-react';
-import Link from 'next/link';
 import { ReactNode } from 'react';
-import styles from './DefaultPage.module.css';
-import {version} from '../../package.json'
+import { Footer, FooterProps } from './Footer.component';
+import { Navbar } from './Navbar.component';
+import styles from './DefaultPage.module.css'
 
-interface DefaultPageProps {
-  children: ReactNode;
+export interface DefaultPageProps {
+  children?: ReactNode;
+  footer: FooterProps;
 }
 
 export const DefaultPage = (props: DefaultPageProps) => {
   return (
     <>
-      <IonMenu side="start" menuId="first" contentId="main-menu">
-        <IonHeader>
-          <IonToolbar color="primary">
-            <IonTitle>Geovistory</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent>
-          <IonList>
-            <IonItem href="/sparql" lines="full">
-              Data Access
-            </IonItem>
-            <IonItem href="/about-geovistory" lines="full">
-              About Geovistory
-            </IonItem>
-            <IonItem href="/about-us" lines="full">
-              About Us
-            </IonItem>
-            <IonItem
-              href="https://toolbox.geovistory.org/login"
-              target="_blank"
-              color="primary"
-              lines="full"
-            >
-              Login
-              <IonIcon name="open-outline" slot="end"></IonIcon>
-            </IonItem>
-          </IonList>
-        </IonContent>
-      </IonMenu>
       <IonApp>
+        <IonMenu side="start" menuId="main" contentId="main">
+          <IonHeader>
+            <IonToolbar className={styles.menuTitle}>
+              <IonTitle></IonTitle>
+            </IonToolbar>
+          </IonHeader>
+          <IonContent>
+            <IonList>
+              <IonItemDivider>
+                <IonLabel>Geovistory</IonLabel>
+              </IonItemDivider>
+              <IonItem href="/sparql" lines="full">
+                Data Access
+              </IonItem>
+              <IonItem href="/about-geovistory" lines="full">
+                About Geovistory
+              </IonItem>
+              <IonItem href="/about-us" lines="full">
+                About Us
+              </IonItem>
+              <IonItemDivider>
+                <IonLabel>Toolbox</IonLabel>
+              </IonItemDivider>
+              <IonItem
+                href="https://toolbox.geovistory.org/login"
+                target="_blank"
+                lines="full"
+              >
+                Login
+                <IonIcon name="open-outline" slot="end"></IonIcon>
+              </IonItem>
+            </IonList>
+          </IonContent>
+        </IonMenu>
         <IonHeader>
-          <IonToolbar className={styles.toolbar} color="light">
-            <Link href="/" passHref={true}>
-              <a>
-                <IonImg className={styles.logo} src={'/geovistory-logo.svg'} />
-              </a>
-            </Link>
-            <IonButtons slot="end">
-              <IonMenuButton
-                class="ion-hide-sm-up"
-                id="main-menu"
-              ></IonMenuButton>
-              <span className="ion-hide-sm-down">
-                <IonButton href="/sparql" strong={true}>
-                  Data Access
-                </IonButton>
-                <IonButton href="/about-geovistory">About Geovistory</IonButton>
-                <IonButton href="/about-us">About Us</IonButton>
-                <span className={styles.divider}></span>
-                <IonButton
-                  href="https://toolbox.geovistory.org/login"
-                  target="_blank"
-                  color="primary"
-                  fill="clear"
-                >
-                  Log in
-                </IonButton>
-              </span>
-            </IonButtons>
-          </IonToolbar>
+          <Navbar />
         </IonHeader>
         <IonContent>
           <IonGrid fixed class="ion-padding">
             {props.children}
           </IonGrid>
-          <IonToolbar>Footer v{version}</IonToolbar>
+          <Footer featuredProjects={props.footer.featuredProjects}></Footer>
         </IonContent>
       </IonApp>
     </>

@@ -1,0 +1,12 @@
+/* 
+ * This file introduces new CSS custom variables
+ * that are not given by Ionic / Geovistory Design System.
+ */
+
+
+:root {
+
+  /* Padding used on header, footer and content on big screens */
+  --gv-padding-big: 32px;
+
+}

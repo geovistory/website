@@ -14,6 +14,9 @@
 @import '~@ionic/core/css/text-transformation.css';
 @import '~@ionic/core/css/flex-utils.css';
 
+/* Custom variables */
+@import './custom.css';
+
 :root {
   /***************************/
   /***** Color variables *****/
@@ -117,6 +120,13 @@
 
   /** Swiper colors */
   --swiper-theme-color: var(--ion-color-primary);
+
+  /***************************/
+  /** Spacings              **/
+  /***************************/
+  
+  --ion-grid-padding: 0;
+  --ion-grid-column-padding: 0;
 
   /***************************/
   /** Application variables **/
