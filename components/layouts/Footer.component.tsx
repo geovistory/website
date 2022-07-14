@@ -60,7 +60,7 @@ export const Footer = (props: FooterProps) => {
               sizeSm="5"
               className={styles.featuredProjectsContainer}
             >
-              <IonList lines="full">
+              <IonList lines="full" className={styles.featuredProjectsList}>
                 <IonListHeader className={styles.featuredProjectsHeader}>
                   <h5 style={{ width: '100%' }}>
                     <IonText>Featured Projects</IonText>

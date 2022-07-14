@@ -1,11 +1,19 @@
-import type { NextPage } from 'next';
-import { DefaultPage } from '../components/layouts/DefaultPage.component';
+import type { GetStaticProps, NextPage } from 'next';
+import {
+  DefaultPage,
+  DefaultPageProps,
+} from '../components/layouts/DefaultPage.component';
 import { GeovCarousel } from '@geovistory/design-system-react';
-const Home: NextPage = () => {
+import { projectsParams } from '../projects/config';
+export interface HomeProps {
+  defaultPage: DefaultPageProps;
+}
+const Home: NextPage<HomeProps> = (props) => {
   return (
-    <DefaultPage>
+    <DefaultPage {...props.defaultPage}>
       <h1>Geovistory</h1>
-      <GeovCarousel style={{height:400, maxWidth:600}}
+      <GeovCarousel
+        style={{ height: 400, maxWidth: 600 }}
         images={[
           '/carousel-1_maquette-lugdunum.jpg',
           '/carousel-2_tapisserie-bayeux.jpg',
@@ -81,3 +89,15 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  return {
+    props: {
+      defaultPage:{
+        footer: {
+          featuredProjects: projectsParams.filter((pp) => pp.featured)
+        }
+      }
+    },
+    revalidate: 86400,
+  };
+};
