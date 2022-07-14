@@ -19,6 +19,7 @@ import styles from './DefaultPage.module.css';
 
 export interface DefaultPageProps {
   children?: ReactNode;
+  noPaddingSlot?: ReactNode;
   footer: FooterProps;
 
   /**
@@ -74,10 +75,14 @@ export const DefaultPage = (props: DefaultPageProps) => {
           <Navbar />
         </IonHeader>
         <IonContent>
-          <IonGrid fixed={!props.expand} className={styles.mainGrid}>
-            {props.expand}
-            {props.children}
-          </IonGrid>
+          {props.noPaddingSlot && (
+            <IonGrid fixed={false}>{props.noPaddingSlot}</IonGrid>
+          )}
+          {props.children && (
+            <IonGrid fixed={!props.expand} className={styles.mainGrid}>
+              {props.children}
+            </IonGrid>
+          )}
           <Footer featuredProjects={props.footer.featuredProjects}></Footer>
         </IonContent>
       </IonApp>

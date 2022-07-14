@@ -1,5 +1,5 @@
-.buttonContainer {
-  margin-top: 1rem;
+.container {
+  background-color: #fff;
 }
 
 .title {
@@ -10,4 +10,10 @@
 .description {
   max-height: calc(4*1.4em);
   overflow: hidden;
+}
+
+.imageContainer {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
 }

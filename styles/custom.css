@@ -9,4 +9,16 @@
   /* Padding used on header, footer and content on big screens */
   --gv-padding-big: 32px;
 
+  /* Primary color grades */
+  --gv-color-primary-50: #FAF5FF;
+  --gv-color-primary-100: #E9D8FD;
+  --gv-color-primary-200: #D6BCFA;
+  --gv-color-primary-300: #B794F4;
+  --gv-color-primary-400: #9F7AEA;
+  --gv-color-primary-500: #805AD5;
+  --gv-color-primary-600: #6B46C1;
+  --gv-color-primary-700: #553C9A;
+  --gv-color-primary-800: #44337A;
+  --gv-color-primary-900: #322659;
+
 }
