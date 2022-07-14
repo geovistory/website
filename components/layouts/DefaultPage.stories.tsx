@@ -19,6 +19,9 @@ const Template: ComponentStory<typeof DefaultPageComponent> = (args) => {
         explicabo eligendi veniam rerum nemo inventore distinctio repellat
         exercitationem, omnis optio illum cum.
       </p>
+      <div style={{ background: 'lightblue', height: 100, paddingTop:20 }}>
+        <p>Box expanding to grid</p>
+      </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo
         voluptates nihil beatae eligendi obcaecati quaerat dolores quo ab labore
@@ -29,7 +32,7 @@ const Template: ComponentStory<typeof DefaultPageComponent> = (args) => {
   );
 };
 
-export const DefaultPage = Template.bind({});
+export const DefaultPageFixedGrid = Template.bind({});
 const args: DefaultPageProps = {
   footer: {
     featuredProjects: [
@@ -44,4 +47,11 @@ const args: DefaultPageProps = {
     ],
   },
 };
-DefaultPage.args = args;
+DefaultPageFixedGrid.args = args;
+
+export const DefaultPageExpandingGrid = Template.bind({});
+const argsExpand: DefaultPageProps = {
+  ...args,
+  expand: true,
+};
+DefaultPageExpandingGrid.args = argsExpand;

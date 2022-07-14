@@ -15,11 +15,21 @@ import {
 import { ReactNode } from 'react';
 import { Footer, FooterProps } from './Footer.component';
 import { Navbar } from './Navbar.component';
-import styles from './DefaultPage.module.css'
+import styles from './DefaultPage.module.css';
 
 export interface DefaultPageProps {
   children?: ReactNode;
   footer: FooterProps;
+
+  /**
+   * if true: main container for its children takes up the
+   *          entire width of the screen
+   *    else: main container has max width based on the current
+   *          screen size.
+   *
+   * see: https://ionicframework.com/docs/layout/grid#grid-attributes
+   */
+  expand?: boolean;
 }
 
 export const DefaultPage = (props: DefaultPageProps) => {
@@ -64,7 +74,8 @@ export const DefaultPage = (props: DefaultPageProps) => {
           <Navbar />
         </IonHeader>
         <IonContent>
-          <IonGrid fixed className={styles.mainGrid}>
+          <IonGrid fixed={!props.expand} className={styles.mainGrid}>
+            {props.expand}
             {props.children}
           </IonGrid>
           <Footer featuredProjects={props.footer.featuredProjects}></Footer>
