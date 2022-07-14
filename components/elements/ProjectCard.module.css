@@ -1,13 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+}
 .buttonContainer {
   margin-top: 1rem;
 }
 
 .title {
   max-height: calc(2*1.2em);
+  font-size: 1.5rem;
   overflow: hidden;
 }
 
 .description {
   max-height: calc(4*1.4em);
   overflow: hidden;
+  flex: 1 1 0%;
 }

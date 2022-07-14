@@ -17,13 +17,13 @@ export interface ProjectCardProps {
 export const ProjectCard = ({
   project,
 }: ProjectCardProps) => (
-  <IonCard>
+  <IonCard className={styles.container}>
     <IonCardHeader>
       {/* <IonCardSubtitle>Featured Project</IonCardSubtitle> */}
       <IonCardTitle className={styles.title}>{project.shortName}</IonCardTitle>
     </IonCardHeader>
 
-    <IonCardContent>
+    <IonCardContent className={styles.content}>
       <div className={styles.description}>{project.description}</div>
       {project.hasPage && (
         <div className={styles.buttonContainer}>

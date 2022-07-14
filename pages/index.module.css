@@ -1,0 +1,98 @@
+.title {
+  max-width: unset;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.slogan {
+  max-width: unset;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--ion-color-step-500);
+}
+
+
+
+.featuredProjectsGrid {}
+
+.projectCardContainer {
+  display: flex;
+}
+.carousel {
+  height: 350px;
+}
+
+/* sm and up */
+@media screen and (min-width: 576px) {
+
+  .carousel {
+    display: block;
+    margin-top: 50px;
+    height: 400px;
+    max-width: 508px;
+  }
+}
+
+/* md and up */
+@media screen and (min-width: 768px) {
+  .container {
+    position: relative;
+    height: 800px;
+    min-height: 100vh;
+  }
+  .bannerContainer {
+    position: absolute;
+    z-index: 0;
+  }
+  
+  .featuredProjectsContainer {
+    position: absolute;
+    top: 170px;
+    z-index: 1;
+  }
+  .subheading {
+    margin-top: 10rem;
+    max-width: unset;
+  }
+  
+  .carousel {
+    display: block;
+    margin-top: 50px;
+    height: 400px;
+    max-width: 344px;
+  }
+}
+
+/* lg and up */
+@media screen and (min-width: 992px) {
+
+  .featuredProjectsContainer {
+    top: 240px;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .slogan {
+    font-size: 2rem
+  }
+
+
+  .carousel {
+    display: block;
+    margin-top: 50px;
+    height: 500px;
+    max-width: 550px;
+  }
+}
+
+/* xl and up */
+@media screen and (min-width: 1200px) {
+  .carousel {
+    display: block;
+    margin-top: 50px;
+    height: 500px;
+    max-width: 600px;
+  }
+}
