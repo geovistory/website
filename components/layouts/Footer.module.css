@@ -67,12 +67,12 @@
     }
 
     .featuredProjectsHeader {
-        padding-inline-start: var(--ion-padding);
+        padding-inline-start: 0;
     }
 
     .featuredProject {
-        --padding-start: var(--ion-padding);
-        --padding-end: var(--ion-padding);
+        --padding-start: 0;
+        --padding-end: 0;
     }
 
     .getStartedCard {

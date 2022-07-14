@@ -64,7 +64,7 @@ export const DefaultPage = (props: DefaultPageProps) => {
           <Navbar />
         </IonHeader>
         <IonContent>
-          <IonGrid fixed class="ion-padding">
+          <IonGrid fixed className={styles.mainGrid}>
             {props.children}
           </IonGrid>
           <Footer featuredProjects={props.footer.featuredProjects}></Footer>
