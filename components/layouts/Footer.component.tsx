@@ -15,7 +15,6 @@ import {
   IonText,
 } from '@geovistory/design-system-react';
 import { arrowForwardOutline } from 'ionicons/icons';
-import Link from 'next/link';
 import { version } from '../../package.json';
 import styles from './Footer.module.css';
 
@@ -36,11 +35,11 @@ export const Footer = (props: FooterProps) => {
         <IonCol sizeXs="12" sizeMd="4" className={styles.leftCol}>
           {/* <img src="/geovistory-logo-white.svg"></img> */}
           <h5 className={styles.whoWeAre}>Who we are:</h5>
-          <IonButton shape="round">
+          <IonButton href="/about-geovistory" shape="round">
             About Geovistory
             <IonIcon slot="end" icon={arrowForwardOutline}></IonIcon>
           </IonButton>
-          <IonButton shape="round">
+          <IonButton href="/about-us" shape="round">
             About Us
             <IonIcon slot="end" icon={arrowForwardOutline}></IonIcon>
           </IonButton>
@@ -92,12 +91,23 @@ export const Footer = (props: FooterProps) => {
                 <IonCardContent>
                   <IonRow>
                     <IonCol>
-                      <IonButton shape="round" expand="block">
+                      <IonButton
+                        href="https://toolbox.geovistory.org/login"
+                        target="_blank"
+                        shape="round"
+                        expand="block"
+                      >
                         Register
                       </IonButton>
                     </IonCol>
                     <IonCol>
-                      <IonButton shape="round" fill="outline" expand="block">
+                      <IonButton
+                        href="https://toolbox.geovistory.org/login"
+                        target="_blank"
+                        shape="round"
+                        fill="outline"
+                        expand="block"
+                      >
                         Login
                       </IonButton>
                     </IonCol>

@@ -1,4 +1,4 @@
- .logo {
+.logo {
     max-width: 30px;
     max-height: 30px;
 }
@@ -17,7 +17,7 @@
     --padding-bottom: 10px;
     --padding-start: var(--ion-padding, 16px);
     --padding-end: var(--ion-padding, 16px);
-    --ion-color-base:  var(--gv-bg-project-toolbar, none) !important;
+    --ion-color-base: var(--gv-bg-project-toolbar, none) !important;
 }
 
 
@@ -37,4 +37,8 @@
         --padding-start: var(--gv-padding-big);
         --padding-end: var(--gv-padding-big);
     }
-} 
+}
+
+.buttonsLeft {
+    overflow: hidden;
+}

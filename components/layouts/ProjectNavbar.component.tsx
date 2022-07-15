@@ -15,7 +15,7 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
   return (
     <>
       <IonToolbar className={styles.toolbar} color="light">
-        <IonButtons>
+        <IonButtons className={styles.buttonsLeft}>
           <IonButton href={`/project/${props.projectId}`}>
             {props.title}
           </IonButton>
