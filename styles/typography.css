@@ -37,6 +37,10 @@ p {
   max-width: 38rem;
   margin: auto;
 }
+.unrestricted-width {
+  max-width: unset;
+  margin: unset;
+}
 
 /* @media screen and (min-width: 576px) {
   p {

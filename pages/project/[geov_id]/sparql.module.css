@@ -1,4 +1,4 @@
 .container{
-  padding: var(--ion-padding);
+  padding: var(--gv-padding-big);
   min-height: 100vh;
 }

@@ -72,8 +72,8 @@ const AboutUs: NextPage<AboutUsProps> = (props) => {
                     className={styles.carousel}
                     images={[
                       '/team.jpg',
-                      // '/about-us_carousel-1.jpg',
-                      // '/about-us_carousel-2.png',
+                      '/about-us_carousel-1.jpg',
+                      '/about-us_carousel-2.png',
                     ]}
                   ></GeovCarousel>
                 </IonCol>
