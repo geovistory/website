@@ -1,0 +1,4 @@
+.container{
+  padding: var(--ion-padding);
+  min-height: 100vh;
+}
