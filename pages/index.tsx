@@ -9,7 +9,7 @@ import {
   IonGrid,
   IonRow,
 } from '@geovistory/design-system-react';
-import { projectsParams } from '../projects/config';
+import { projectsParams } from '../projects/projectParams';
 import { ProjectParams } from '../model/project-param';
 import { ProjectCard } from '../components/elements/ProjectCard.component';
 import styles from './index.module.css';

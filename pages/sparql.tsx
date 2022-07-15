@@ -5,7 +5,7 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
-import { projectsParams } from '../projects/config';
+import { projectsParams } from '../projects/projectParams';
 
 export interface SparqlProps {
   defaultPage: DefaultPageProps;

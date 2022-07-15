@@ -21,7 +21,7 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
-import { projectsParams } from '../projects/config';
+import { projectsParams } from '../projects/projectParams';
 import styles from './about-us.module.css';
 import { mailOutline } from 'ionicons/icons';
 

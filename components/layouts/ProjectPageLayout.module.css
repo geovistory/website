@@ -1,0 +1,9 @@
+.menuTitle {
+    height: 58px;
+}
+
+.mainGrid {
+    padding: var(--ion-padding);
+    min-height: 100vh;
+    margin-bottom: 8rem;
+}

@@ -7,7 +7,7 @@ h4,
 h5,
 h6 {
   max-width: 38rem;
-  margin:auto;
+  margin: auto;
   margin-top: 24px;
   margin-bottom: 10px;
   font-weight: 500;
@@ -27,10 +27,15 @@ h2 {
 p {
   font-size: 1rem;
   max-width: 38rem;
-  margin:auto;
+  margin: auto;
   margin-block-start: 1em;
   margin-block-end: 1em;
   line-height: 1.8;
+}
+
+.restricted-width {
+  max-width: 38rem;
+  margin: auto;
 }
 
 /* @media screen and (min-width: 576px) {
