@@ -37,6 +37,8 @@ const args: ProjectPageLayoutProps = {
   navbar: {
     projectId: 123,
     title: 'Title of my project',
+    sparqlLinkEnabled: true,
+    teiLinkEnabled: true,
   },
 };
 ProjectPageLayoutFixedGrid.args = args;
