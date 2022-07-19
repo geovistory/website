@@ -52,7 +52,7 @@ jobs:
           token: ${{ secrets.GEOVBOT_PAT_REPO }}
           inputs: |
             {
-              "service": "website-new",
+              "service": "website",
               "tag": "${{steps.get_version.outputs.tag}}",
               "environment": "${{github.event.inputs.env}}"
             }
