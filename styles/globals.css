@@ -1,0 +1,141 @@
+/* Core CSS required for Ionic components to work properly */
+@import '~@ionic/core/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '~@ionic/core/css/normalize.css';
+@import '~@ionic/core/css/structure.css';
+@import '~@ionic/core/css/display.css';
+@import './typography.css';
+
+/* Optional CSS utils that can be commented out */
+@import '~@ionic/core/css/padding.css';
+@import '~@ionic/core/css/float-elements.css';
+@import '~@ionic/core/css/text-alignment.css';
+@import '~@ionic/core/css/text-transformation.css';
+@import '~@ionic/core/css/flex-utils.css';
+
+/* Custom variables */
+@import './custom.css';
+
+:root {
+  /***************************/
+  /***** Color variables *****/
+  /***************************/
+
+  /**
+    * @tokens Colors
+    * @presenter Color
+    */
+
+  --ion-color-primary: #6b46c1;
+  --ion-color-primary-rgb: 107, 70, 193;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #5e3eaa;
+  --ion-color-primary-tint: #7a59c7;
+
+  --ion-color-secondary: #00f0b8;
+  --ion-color-secondary-rgb: 0, 240, 184;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #00d3a2;
+  --ion-color-secondary-tint: #1af2bf;
+
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #fff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+
+  --ion-background-color: #fafafa;
+  --ion-background-color-rgb: 250, 250, 250;
+
+  --ion-text-color: #1c1c1c;
+  --ion-text-color-rgb: 28, 28, 28;
+
+  --ion-color-step-50: #efefef;
+  --ion-color-step-100: #e4e4e4;
+  --ion-color-step-150: #d9d9d9;
+  --ion-color-step-200: #cecece;
+  --ion-color-step-250: #c3c3c3;
+  --ion-color-step-300: #b7b7b7;
+  --ion-color-step-350: #acacac;
+  --ion-color-step-400: #a1a1a1;
+  --ion-color-step-450: #969696;
+  --ion-color-step-500: #8b8b8b;
+  --ion-color-step-550: #808080;
+  --ion-color-step-600: #757575;
+  --ion-color-step-650: #6a6a6a;
+  --ion-color-step-700: #5f5f5f;
+  --ion-color-step-750: #545454;
+  --ion-color-step-800: #484848;
+  --ion-color-step-850: #3d3d3d;
+  --ion-color-step-900: #323232;
+  --ion-color-step-950: #272727;
+
+
+  /** Swiper colors */
+  --swiper-theme-color: var(--ion-color-primary);
+
+  /***************************/
+  /** Spacings              **/
+  /***************************/
+  --ion-padding: 16px;
+  --ion-grid-padding: 0;
+  --ion-grid-column-padding: 0;
+
+  /***************************/
+  /** Application variables **/
+  /***************************/
+
+  /**
+    * @tokens Font
+    * @presenter FontFamily
+    */
+  --ion-font-family: 'Roboto', sans-serif;
+
+}

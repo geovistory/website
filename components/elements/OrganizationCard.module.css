@@ -1,0 +1,19 @@
+.container {
+  background-color: #fff;
+}
+
+.title {
+  max-height: calc(2*1.2em);
+  overflow: hidden;
+}
+
+.description {
+  max-height: calc(4*1.4em);
+  overflow: hidden;
+}
+
+.imageContainer {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+}

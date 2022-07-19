@@ -1,0 +1,15 @@
+.theme {
+    --ion-background-color: #fff;
+    --gv-bg-project-toolbar: #EBF8FF;   
+}
+
+.logosTitle {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.logosContainer {
+    margin-top: 4rem;
+    background-color: white;
+    --ion-grid-column-padding: var(--ion-padding);
+}

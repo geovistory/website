@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Next.js: debug server-side",
+        "type": "node-terminal",
+        "nodeVersionHint": 16,
+        "request": "launch",
+        "command": "nvm use 16 && npm run dev"
+      },
+      {
+        "name": "Next.js: debug client-side",
+        "type": "pwa-chrome",
+        "request": "launch",
+        "url": "http://localhost:3000"
+      },
+    ]
+  }

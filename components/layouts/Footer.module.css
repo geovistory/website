@@ -1,0 +1,100 @@
+.container {}
+
+.leftCol {
+    background-color: var(--ion-color-primary-tint);
+    color: var(--ion-color-primary-contrast);
+    padding-top: var(--ion-padding, 16px);
+    padding-left: var(--gv-padding-big);
+    padding-bottom: var(--gv-padding-big);
+    padding-right: var(--gv-padding-big);
+}
+
+.rightCol {
+    background-color: #FAF5FF;
+    overflow: hidden;
+    min-height: 150px;
+    padding-bottom: 2rem;
+}
+
+.featuredProjectsList,
+.featuredProjectsContainer {
+    --ion-item-background: none
+}
+
+.featuredProjectsContainer {
+    margin: 0;
+}
+
+.featuredProjectsHeader {
+    padding-inline-start: var(--gv-padding-big);
+}
+
+.featuredProject {
+    --padding-start: var(--gv-padding-big);
+    --padding-end: var(--gv-padding-big);
+}
+
+.getStartedCard {
+    position: relative;
+    right: unset;
+    left: unset;
+    height: unset;
+    margin-top: var(--gv-padding-big);
+    ;
+    margin-left: var(--gv-padding-big);
+    margin-right: var(--gv-padding-big);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
+    border-radius: 1rem;
+}
+
+.getStartedCardHeader {
+    margin-top: 0;
+}
+
+.bigText {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+
+    .leftCol,
+    .rightCol {
+        padding-bottom: 1rem;
+    }
+
+    .featuredProjectsContainer {
+        padding: 16px 32px;
+    }
+
+    .featuredProjectsHeader {
+        padding-inline-start: 0;
+    }
+
+    .featuredProject {
+        --padding-start: 0;
+        --padding-end: 0;
+    }
+
+    .getStartedCard {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin-top: 20px;
+        height: 800px;
+        margin-left: 1rem;
+        margin-right: 2.5rem;
+    }
+
+    .bigText {
+        font-size: 2.5rem;
+    }
+}
+
+.legalNotice {
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.36)
+}
+
+.whoWeAre {
+    font-weight: 600;
+}

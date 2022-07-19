@@ -1,0 +1,15 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  background-color: var(--ion-color-step-200);
+}
+
+.icon {
+  margin-top: 5px;
+  font-size: 23px;
+  color: var(--ion-color-light)
+}
+
+.item::part(native){
+  padding-inline-start: 0;
+}
