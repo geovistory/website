@@ -20,7 +20,6 @@ cd website
 npm install
 ```
 
-
 Run the development server:
 
 ```bash
