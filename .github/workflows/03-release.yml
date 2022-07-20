@@ -89,11 +89,6 @@ jobs:
           push: true
           tags: ghcr.io/geovistory/website:${{steps.npm_version.outputs.tag}}
       
-      - name: prevent to release before ready for production
-        run: |
-          echo stopping! remove this step to release to staging, when website is ready.
-          exit 1
-      
       - name: Invoke workflow in public-chart to make a staging release
         uses: benc-uk/workflow-dispatch@v1
         with:
