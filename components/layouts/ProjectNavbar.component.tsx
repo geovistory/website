@@ -34,7 +34,7 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
             )}
             {props.sparqlLinkEnabled && (
               <IonButton href={`/project/${props.projectId}/sparql`}>
-                SPARQL
+                Data Access
               </IonButton>
             )}
           </span>
