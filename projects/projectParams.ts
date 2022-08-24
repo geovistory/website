@@ -70,7 +70,7 @@ export const projectsParams: Array<ProjectParams> = [
 
         fullName: 'Maritime History',
         shortName: 'Maritime History',
-        description: 'Historical information of about the Dutch East India Company, ready to explore and re-use at your hand. A pilot project.',
+        description: 'Historical information about the Dutch East India Company, ready to explore and re-use at your hand.',
 
         hasPage: true,
         hasSPARQL: true,
