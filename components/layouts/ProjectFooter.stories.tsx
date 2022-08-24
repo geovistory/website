@@ -1,5 +1,8 @@
 import { ComponentStory } from '@storybook/react';
-import { ProjectFooter as ProjectFooterComponent, ProjectFooterProps } from './ProjectFooter.component';
+import {
+  ProjectFooter as ProjectFooterComponent,
+  ProjectFooterProps,
+} from './ProjectFooter.component';
 
 export default {
   title: 'Components/Layout/ProjectFooter',
@@ -14,6 +17,7 @@ const Template: ComponentStory<typeof ProjectFooterComponent> = (args) => {
 export const ProjectFooter = Template.bind({});
 
 const footerProps: ProjectFooterProps = {
+  showEeditiones: true,
 };
 
 ProjectFooter.args = footerProps;
