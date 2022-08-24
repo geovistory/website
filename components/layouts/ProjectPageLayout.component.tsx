@@ -65,7 +65,7 @@ export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
         </IonHeader>
         <IonContent>
           {props.children}
-          <ProjectFooter></ProjectFooter>
+          <ProjectFooter showEeditiones={props.navbar.teiLinkEnabled}></ProjectFooter>
         </IonContent>
       </IonApp>
     </>

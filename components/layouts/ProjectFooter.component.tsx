@@ -6,7 +6,9 @@ import {
   IonRow,
 } from '@geovistory/design-system-react';
 import styles from './ProjectFooter.module.css';
-export interface ProjectFooterProps {}
+export interface ProjectFooterProps {
+  showEeditiones: boolean;
+}
 
 export const ProjectFooter = (props: ProjectFooterProps) => {
   return (
@@ -27,20 +29,22 @@ export const ProjectFooter = (props: ProjectFooterProps) => {
               />
             </div>
           </IonCard>
-          <IonCard
-            button={true}
-            href="https://e-editiones.org/"
-            target="_blank"
-            className={styles.card}
-          >
-            <div className={styles.cardContent}>
-              <div>Powered by</div>
-              <IonImg
-                className={styles.logoEeditiones}
-                src={'/e-editiones-logo-bw.svg'}
-              />
-            </div>
-          </IonCard>
+          {props.showEeditiones && (
+            <IonCard
+              button={true}
+              href="https://e-editiones.org/"
+              target="_blank"
+              className={styles.card}
+            >
+              <div className={styles.cardContent}>
+                <div>Powered by</div>
+                <IonImg
+                  className={styles.logoEeditiones}
+                  src={'/e-editiones-logo-bw.svg'}
+                />
+              </div>
+            </IonCard>
+          )}
         </IonCol>
       </IonRow>
     </IonGrid>

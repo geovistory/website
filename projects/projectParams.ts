@@ -58,6 +58,24 @@ export const projectsParams: Array<ProjectParams> = [
         hasSPARQL: false,
         hasTEI: false
     },
+    // Maritime History
+    {
+        geovID: 84760,
+        geovName: 'Maritime History',
+
+        featured: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Maritime History',
+        shortName: 'Maritime History',
+        description: 'Historical information about the Dutch East India Company, ready to explore and re-use at your hand.',
+
+        hasPage: true,
+        hasSPARQL: true,
+        hasTEI: false
+    },
 
 
     // ANR Globalvat
@@ -73,7 +91,7 @@ export const projectsParams: Array<ProjectParams> = [
         fullName: 'ANR Globalvat',
         shortName: 'ANR Globalvat',
         description: 'Reconstruire les sociétés et la personne humaine (1939-58) : L’apport des archives vaticanes.',
-        
+
         hasPage: false,
         hasSPARQL: false,
         hasTEI: false
