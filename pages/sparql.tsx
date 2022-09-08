@@ -1,9 +1,9 @@
-import type { GetStaticProps, GetStaticPropsResult, NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import { CCLicense } from '../components/elements/CCLicense.component';
 import { Yasgui } from '../components/elements/Yasgui.component';
 import {
   DefaultPage,
-  DefaultPageProps,
+  DefaultPageProps
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../projects/projectParams';
 

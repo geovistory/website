@@ -1,10 +1,3 @@
-import {
-  IonCard,
-  IonCol,
-  IonGrid,
-  IonImg,
-  IonRow,
-} from '@geovistory/design-system-react';
 import styles from './ProjectFooter.module.css';
 export interface ProjectFooterProps {
   showEeditiones: boolean;
@@ -12,41 +5,41 @@ export interface ProjectFooterProps {
 
 export const ProjectFooter = (props: ProjectFooterProps) => {
   return (
-    <IonGrid>
-      <IonRow>
-        <IonCol className={styles.container}>
-          <IonCard
+    <ion-grid>
+      <ion-row>
+        <ion-col class={styles.container}>
+          <ion-card
             button={true}
             href="/"
             target="_blank"
-            className={styles.card}
+            class={styles.card}
           >
             <div className={styles.cardContent}>
               <div>Powered by</div>
-              <IonImg
-                className={styles.logoGeovistory}
+              <ion-img
+                class={styles.logoGeovistory}
                 src={'/geovistory-logo.svg'}
               />
             </div>
-          </IonCard>
+          </ion-card>
           {props.showEeditiones && (
-            <IonCard
+            <ion-card
               button={true}
               href="https://e-editiones.org/"
               target="_blank"
-              className={styles.card}
+              class={styles.card}
             >
               <div className={styles.cardContent}>
                 <div>Powered by</div>
-                <IonImg
-                  className={styles.logoEeditiones}
+                <ion-img
+                  class={styles.logoEeditiones}
                   src={'/e-editiones-logo-bw.svg'}
                 />
               </div>
-            </IonCard>
+            </ion-card>
           )}
-        </IonCol>
-      </IonRow>
-    </IonGrid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   );
 };

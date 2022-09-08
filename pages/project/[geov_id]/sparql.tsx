@@ -8,7 +8,6 @@ import {
 import { ProjectParams } from '../../../model/project-param';
 import { projectsParams } from '../../../projects/projectParams';
 import styles from './sparql.module.css';
-import { IonText } from '@geovistory/design-system-react';
 
 export interface ProjectSparqlProps {
   params: ProjectParams;
@@ -20,9 +19,9 @@ const ProjectSparqlPage: NextPage<ProjectSparqlProps> = (props) => {
       <div className={styles.container}>
         <h1 className="unrestricted-width">
           Open Project Data{' '}
-          <IonText color={'medium'}>
+          <ion-text color={'medium'}>
             <small>SPARQL access</small>
-          </IonText>
+          </ion-text>
         </h1>
         <div className="ion-margin-top">
           <Yasgui

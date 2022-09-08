@@ -1,11 +1,3 @@
-import {
-  IonCard,
-  IonCol,
-  IonGrid,
-  IonImg,
-  IonLabel,
-  IonRow,
-} from '@geovistory/design-system-react';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { Person } from '../../components/elements/Person.component';
@@ -18,24 +10,24 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
   return (
     <div className={styles.theme}>
       <ProjectPageLayout {...props.projectPageLayout}>
-        <IonGrid fixed class="ion-padding">
+        <ion-grid fixed class="ion-padding">
           <h1>{params.fullName}</h1>
           <p className="lead">
             Migration et mariage à Venise au 16ème/17ème siècle.
           </p>{' '}
           <div className="restricted-width">
-            <IonImg
+            <ion-img
               src="/Processetti_Immagine-Teresa-Bernardi.jpeg"
               alt="B.Licinio, Familienbild - B.Licinio / Family Portr./ Paint./ 	C16 - B. Licinio / Portrait de famille"
             />
           </div>
           <div className="restricted-width">
-            <IonLabel>
+            <ion-label>
               <small>
                 B.Licinio, Familienbild - B.Licinio / Family Portr./ Paint./ C16
                 - B. Licinio / Portrait de famille
               </small>
-            </IonLabel>
+            </ion-label>
           </div>
           {/* <h2>Description</h2> */}
           <p>
@@ -80,34 +72,34 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
             Transcription, annotation sémantique, saisie et analyse des données
           </h4>
           <p>
-            <IonRow>
-              <IonCol size="6">
+            <ion-row>
+              <ion-col size="6">
                 <Person
                   name="Francesca Zungo"
                   description="Collaboratrice du projet"
                 />
-              </IonCol>
-              <IonCol size="6">
+              </ion-col>
+              <ion-col size="6">
                 <Person
                   name="Davide Drago"
                   description="Collaborateur du projet"
                 />
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol size="6">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
                 <Person
                   name="Jacopo Cossu"
                   description="Collaborateur du projet"
                 />
-              </IonCol>
-              <IonCol size="6">
+              </ion-col>
+              <ion-col size="6">
                 <Person
                   name="Teresa Bernardi"
                   description="Post-doctorat Université de Padoue"
                 />
-              </IonCol>
-            </IonRow>
+              </ion-col>
+            </ion-row>
           </p>
           <h4>Modélisation sémantique et analyse des données</h4>
           <p>
@@ -117,14 +109,14 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
             />
           </p>
           <h4>Institutions partenaires</h4>
-          {/* <IonCardHeader>
-              <IonCardTitle>
+          {/* <ion-card-header>
+              <ion-card-title>
                 <h2 className={styles.logosTitle}>Institutions partenaires</h2>
-              </IonCardTitle>
-            </IonCardHeader> */}
+              </ion-card-title>
+            </ion-card-header> */}
           <p>
-            <IonRow>
-              <IonCol size="4">
+            <ion-row>
+              <ion-col size="4">
                 <Image
                   src="/logo_ANR.gif"
                   width={150}
@@ -132,8 +124,8 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo Agence Nationale de la Recherche"
                 />
-              </IonCol>
-              <IonCol size="4">
+              </ion-col>
+              <ion-col size="4">
                 <Image
                   src="/Logo_efr.png"
                   width={150}
@@ -141,9 +133,9 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo Ecole Française de Rome"
                 />
-              </IonCol>
+              </ion-col>
 
-              <IonCol size="4">
+              <ion-col size="4">
                 <Image
                   src="/logo_ekpa.png"
                   width={150}
@@ -151,10 +143,10 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo University of Athens"
                 />
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol size="4">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="4">
                 <Image
                   src="/Logo_padova.png"
                   width={150}
@@ -162,9 +154,9 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo Università Delgli Studi Di Padova"
                 />
-              </IonCol>
+              </ion-col>
 
-              <IonCol size="4">
+              <ion-col size="4">
                 <Image
                   src="/Logo_sga.png"
                   width={150}
@@ -172,8 +164,8 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo DiSSGeA"
                 />
-              </IonCol>
-              <IonCol size="4">
+              </ion-col>
+              <ion-col size="4">
                 <Image
                   src="/LOGO-EFA-CT-72.jpg"
                   width={150}
@@ -181,10 +173,10 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo Ecole Française d'Athènes"
                 />
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol size="4">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="4">
                 <Image
                   src="/larhra-bleu-blanc-full.jpg"
                   width={150}
@@ -192,8 +184,8 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo LARHRA"
                 />
-              </IonCol>
-              <IonCol size="4">
+              </ion-col>
+              <ion-col size="4">
                 <Image
                   src="/kleiolab-logo.png"
                   width={150}
@@ -201,10 +193,10 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="KleioLab logo"
                 />
-              </IonCol>
-            </IonRow>
+              </ion-col>
+            </ion-row>
           </p>
-        </IonGrid>
+        </ion-grid>
       </ProjectPageLayout>
     </div>
   );

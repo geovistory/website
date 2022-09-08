@@ -1,12 +1,3 @@
-import {
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
-  IonIcon,
-  IonItem,
-} from '@geovistory/design-system-react';
 import { openOutline } from 'ionicons/icons';
 import Image from 'next/image';
 import React from 'react';
@@ -30,16 +21,21 @@ export const OrganizationCard = ({
   organizationDescription,
   organizationURL,
 }: OrganizationCardProps) => (
-  <IonCard  className={styles.container}>
-    <IonItem lines="full">
-      {/* <IonIcon icon={pin} slot="start" /> */}
-      {/* <IonLabel>ion-item in a card, icon left, button right</IonLabel> */}
-      <IonButton fill="clear" slot="end" href={organizationURL} target="_blank">
+  <ion-card class={styles.container}>
+    <ion-item lines="full">
+      {/* <ion-icon icon={pin} slot="start" /> */}
+      {/* <ion-label>ion-item in a card, icon left, button right</ion-label> */}
+      <ion-button
+        fill="clear"
+        slot="end"
+        href={organizationURL}
+        target="_blank"
+      >
         Visit website
-        <IonIcon icon={openOutline} slot="end" />
-      </IonButton>
-    </IonItem>
-    <div  className={styles.imageContainer}>
+        <ion-icon icon={openOutline} slot="end" />
+      </ion-button>
+    </ion-item>
+    <div className={styles.imageContainer}>
       <Image
         src={imageURL}
         alt={organizationName + ' image'}
@@ -48,13 +44,13 @@ export const OrganizationCard = ({
         height={imageHeight}
       />
     </div>
-    <IonCardHeader>
-      {/* <IonCardSubtitle>Featured Project</IonCardSubtitle> */}
-      <IonCardTitle className={styles.title}>{organizationName}</IonCardTitle>
-    </IonCardHeader>
+    <ion-card-header>
+      {/* <ion-card-subtitle>Featured Project</ion-card-subtitle> */}
+      <ion-card-title class={styles.title}>{organizationName}</ion-card-title>
+    </ion-card-header>
 
-    <IonCardContent>
+    <ion-card-content>
       <div className={styles.description}>{organizationDescription}</div>
-    </IonCardContent>
-  </IonCard>
+    </ion-card-content>
+  </ion-card>
 );

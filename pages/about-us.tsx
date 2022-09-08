@@ -1,29 +1,16 @@
-import {
-  GeovCarousel,
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardSubtitle,
-  IonCardTitle,
-  IonCol,
-  IonGrid,
-  IonIcon,
-  IonRow,
-  IonText,
-} from '@geovistory/design-system-react';
+import { Components } from '@geovistory/design-system-web/loader';
+import { mailOutline } from 'ionicons/icons';
 import type { GetStaticProps, NextPage } from 'next';
 import {
   OrganizationCard,
-  OrganizationCardProps,
+  OrganizationCardProps
 } from '../components/elements/OrganizationCard.component';
 import {
   DefaultPage,
-  DefaultPageProps,
+  DefaultPageProps
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../projects/projectParams';
 import styles from './about-us.module.css';
-import { mailOutline } from 'ionicons/icons';
 
 const larhra: OrganizationCardProps = {
   imageURL: '/larhra-logo.jpg',
@@ -54,75 +41,78 @@ const AboutUs: NextPage<AboutUsProps> = (props) => {
       noPaddingSlot={
         <>
           <div className={styles.bannerContainer}>
-            <IonGrid fixed>
-              <IonRow>
-                <IonCol sizeXs='12' sizeSm='6' className={styles.bannerLeftCol}>
-                  <IonText color="primary" className={styles.bannerTitle}>
+            <ion-grid fixed>
+              <ion-row>
+                <ion-col size-xs="12" size-sm="6" class={styles.bannerLeftCol}>
+                  <ion-text color="primary" class={styles.bannerTitle}>
                     We are historians, developers and digital humanists.
-                  </IonText>
+                  </ion-text>
                   <div className={styles.bannerText}>
                     The humanities and social sciences play a central role in
                     society. We see enormous potential for these sciences in
                     digital methods and tools. Geovistory was realized to
                     unleash this potential.
                   </div>
-                </IonCol>
-                <IonCol sizeXs='12' sizeSm='6' className={styles.bannerRightCol}>
-                  <GeovCarousel
-                    className={styles.carousel}
-                    images={[
-                      '/team.jpg',
-                      '/about-us_carousel-1.jpg',
-                      '/about-us_carousel-2.png',
-                    ]}
-                  ></GeovCarousel>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
+                </ion-col>
+                <ion-col size-xs="12" size-sm="6" class={styles.bannerRightCol}>
+                  <geov-carousel
+                    class={styles.carousel}
+                    ref={(carousel?: Components.GeovCarousel) => {
+                      if (carousel)
+                        carousel.images = [
+                          '/team.jpg',
+                          '/about-us_carousel-1.jpg',
+                          '/about-us_carousel-2.png',
+                        ];
+                    }}
+                  ></geov-carousel>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
           </div>
-          <IonGrid fixed className={styles.restContainer}>
-            <IonRow class="ion-text-center">
-              <IonCol className={styles.innitiatorsCol}>
+          <ion-grid fixed class={styles.restContainer}>
+            <ion-row class="ion-text-center">
+              <ion-col class={styles.innitiatorsCol}>
                 <h1 className={styles.innitiatorsTitle}>Initiators</h1>
                 <p className={styles.innitiatorsDescription}>
                   Geovistory is a common initiative of LARHRA and KleioLab.
                 </p>
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
                 <OrganizationCard {...larhra}></OrganizationCard>
-              </IonCol>
-              <IonCol>
+              </ion-col>
+              <ion-col>
                 <OrganizationCard {...kleiolab}></OrganizationCard>
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol>
-                <IonCard color="primary">
-                  <IonCardHeader>
-                    <IonCardTitle class="ion-text-center">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-card color="primary">
+                  <ion-card-header>
+                    <ion-card-title class="ion-text-center">
                       Want to join the initiative?
-                    </IonCardTitle>
-                    <IonCardSubtitle></IonCardSubtitle>
-                  </IonCardHeader>
-                  <IonCardContent className="ion-text-center">
+                    </ion-card-title>
+                    <ion-card-subtitle></ion-card-subtitle>
+                  </ion-card-header>
+                  <ion-card-content class="ion-text-center">
                     <div>We are happy to hear from you.</div>
-                    <IonButton
+                    <ion-button
                       class="ion-margin-top"
                       shape="round"
                       fill="outline"
                       color="light"
                       href="javascript:location='mailto:\u0069\u006e\u0066\u006f\u0040\u006b\u006c\u0065\u0069\u006f\u006c\u0061\u0062\u002e\u0063\u0068';void 0"
                     >
-                      <IonIcon slot="end" icon={mailOutline}></IonIcon>
+                      <ion-icon slot="end" icon={mailOutline}></ion-icon>
                       Write us an Email
-                    </IonButton>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
+                    </ion-button>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
         </>
       }
     />

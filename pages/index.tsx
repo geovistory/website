@@ -3,16 +3,12 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
-import {
-  GeovCarousel,
-  IonCol,
-  IonGrid,
-  IonRow,
-} from '@geovistory/design-system-react';
+
 import { projectsParams } from '../projects/projectParams';
 import { ProjectParams } from '../model/project-param';
 import { ProjectCard } from '../components/elements/ProjectCard.component';
 import styles from './index.module.css';
+import { Components } from '@geovistory/design-system-web/loader';
 export interface HomeProps {
   defaultPage: DefaultPageProps;
   featuredProjects: ProjectParams[];
@@ -21,50 +17,53 @@ const Home: NextPage<HomeProps> = (props) => {
   return (
     <DefaultPage {...props.defaultPage}>
       <div className={styles.container}>
-        <IonGrid className={styles.bannerContainer}>
-          <IonRow>
-            <IonCol>
+        <ion-grid class={styles.bannerContainer}>
+          <ion-row>
+            <ion-col>
               <h1 className={styles.title}>Geovistory</h1>
               <p className={styles.slogan}>
                 Virtual Research Environment for Humanities and Social Sciences
               </p>
-            </IonCol>
-            <IonCol>
-              <GeovCarousel
-                className={styles.carousel}
-                images={[
-                  '/carousel-1_maquette-lugdunum.jpg',
-                  '/carousel-2_tapisserie-bayeux.jpg',
-                  '/carousel-3_vitrail.jpg',
-                  '/carousel-4_astrolabe-arabe.jpg',
-                  '/carousel-5_quetzalcoatl.jpg',
-                  '/carousel-6_bronzes-benin.jpg',
-                  '/carousel-7_carte-amerique.jpg',
-                  '/carousel-8_assemble-vizille.jpg',
-                  '/carousel-9_acte-deces.jpg',
-                  '/carousel-10_guerre-russo-japonaise.jpg',
-                  '/carousel-11_congret-musique.jpg',
-                  '/carousel-12_toronto.jpg',
-                ]}
-              ></GeovCarousel>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
+            </ion-col>
+            <ion-col>
+              <geov-carousel
+                class={styles.carousel}
+                ref={(carousel?: Components.GeovCarousel) => {
+                  if (carousel)
+                    carousel.images = [
+                      '/carousel-1_maquette-lugdunum.jpg',
+                      '/carousel-2_tapisserie-bayeux.jpg',
+                      '/carousel-3_vitrail.jpg',
+                      '/carousel-4_astrolabe-arabe.jpg',
+                      '/carousel-5_quetzalcoatl.jpg',
+                      '/carousel-6_bronzes-benin.jpg',
+                      '/carousel-7_carte-amerique.jpg',
+                      '/carousel-8_assemble-vizille.jpg',
+                      '/carousel-9_acte-deces.jpg',
+                      '/carousel-10_guerre-russo-japonaise.jpg',
+                      '/carousel-11_congret-musique.jpg',
+                      '/carousel-12_toronto.jpg',
+                    ];
+                }}
+              ></geov-carousel>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
         <div className={styles.featuredProjectsContainer}>
           <h2 className={styles.subheading}>Featured Projects</h2>
 
-          <IonGrid className={styles.featuredProjectsGrid}>
-            <IonRow>
+          <ion-grid class={styles.featuredProjectsGrid}>
+            <ion-row>
               {props.featuredProjects.map((proj: ProjectParams, i: number) => (
-                <IonCol
+                <ion-col
                   key={'project-card-' + i}
-                  className={styles.projectCardContainer}
+                  class={styles.projectCardContainer}
                 >
                   <ProjectCard project={proj} />
-                </IonCol>
+                </ion-col>
               ))}
-            </IonRow>
-          </IonGrid>
+            </ion-row>
+          </ion-grid>
         </div>
       </div>
     </DefaultPage>

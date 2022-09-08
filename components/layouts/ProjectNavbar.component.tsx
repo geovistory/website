@@ -1,9 +1,4 @@
-import {
-  IonButton,
-  IonButtons,
-  IonMenuButton,
-  IonToolbar,
-} from '@geovistory/design-system-react';
+
 import styles from './ProjectNavbar.module.css';
 export interface ProjectNavbarProps {
   title: string;
@@ -14,32 +9,32 @@ export interface ProjectNavbarProps {
 export const ProjectNavbar = (props: ProjectNavbarProps) => {
   return (
     <>
-      <IonToolbar className={styles.toolbar} color="light">
-        <IonButtons className={styles.buttonsLeft}>
-          <IonButton href={`/project/${props.projectId}`}>
+      <ion-toolbar class={styles.toolbar} color="light">
+        <ion-buttons class={styles.buttonsLeft}>
+          <ion-button href={`/project/${props.projectId}`}>
             {props.title}
-          </IonButton>
-        </IonButtons>
-        <IonButtons slot="end">
-          <IonMenuButton
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-menu-button
             class="ion-hide-sm-up"
             id="main"
             menu="main"
-          ></IonMenuButton>
+          ></ion-menu-button>
           <span className="ion-hide-sm-down">
             {props.teiLinkEnabled && (
-              <IonButton href={`/project/${props.projectId}/publication`}>
+              <ion-button href={`/project/${props.projectId}/publication`}>
                 Inhalt
-              </IonButton>
+              </ion-button>
             )}
             {props.sparqlLinkEnabled && (
-              <IonButton href={`/project/${props.projectId}/sparql`}>
+              <ion-button href={`/project/${props.projectId}/sparql`}>
                 Data Access
-              </IonButton>
+              </ion-button>
             )}
           </span>
-        </IonButtons>
-      </IonToolbar>
+        </ion-buttons>
+      </ion-toolbar>
     </>
   );
 };

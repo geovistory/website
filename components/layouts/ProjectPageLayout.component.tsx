@@ -1,16 +1,3 @@
-import {
-  IonApp,
-  IonContent,
-  IonHeader,
-  IonIcon,
-  IonItem,
-  IonItemDivider,
-  IonLabel,
-  IonList,
-  IonMenu,
-  IonTitle,
-  IonToolbar,
-} from '@geovistory/design-system-react';
 import { ReactNode } from 'react';
 import { ProjectFooter } from './ProjectFooter.component';
 import { ProjectNavbar, ProjectNavbarProps } from './ProjectNavbar.component';
@@ -24,50 +11,50 @@ export interface ProjectPageLayoutProps {
 export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
   return (
     <>
-      <IonApp>
-        <IonMenu side="start" menuId="main" contentId="main">
-          <IonHeader>
-            <IonToolbar className={styles.menuTitle}>
-              <IonTitle></IonTitle>
-            </IonToolbar>
-          </IonHeader>
-          <IonContent>
-            <IonList>
-              <IonItemDivider>
-                <IonLabel>{props.navbar.title}</IonLabel>
-              </IonItemDivider>
-              <IonItem href={`/project/${props.navbar.projectId}`}>
+      <ion-app>
+        <ion-menu side="start" menu-id="main" content-id="main">
+          <ion-header>
+            <ion-toolbar className={styles.menuTitle}>
+              <ion-title></ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-list>
+              <ion-item-divider>
+                <ion-label>{props.navbar.title}</ion-label>
+              </ion-item-divider>
+              <ion-item href={`/project/${props.navbar.projectId}`}>
                 Project home
-              </IonItem>
+              </ion-item>
               {props.navbar.teiLinkEnabled && (
-                <IonItem
+                <ion-item
                   href={`/project/${props.navbar.projectId}/publication`}
                 >
                   Inhalt
-                </IonItem>
+                </ion-item>
               )}
               {props.navbar.sparqlLinkEnabled && (
-                <IonItem href={`/project/${props.navbar.projectId}/sparql`}>
-                  SPARQL
-                </IonItem>
+                <ion-item href={`/project/${props.navbar.projectId}/sparql`}>
+                  Data Access
+                </ion-item>
               )}
-              <IonItemDivider>
-                <IonLabel>Geovistory</IonLabel>
-              </IonItemDivider>
-              <IonItem href="/" lines="full">
+              <ion-item-divider>
+                <ion-label>Geovistory</ion-label>
+              </ion-item-divider>
+              <ion-item href="/" lines="full">
                 Geovistory home
-              </IonItem>
-            </IonList>
-          </IonContent>
-        </IonMenu>
-        <IonHeader>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ion-menu>
+        <ion-header>
           <ProjectNavbar {...props.navbar} />
-        </IonHeader>
-        <IonContent>
+        </ion-header>
+        <ion-content>
           {props.children}
           <ProjectFooter showEeditiones={props.navbar.teiLinkEnabled}></ProjectFooter>
-        </IonContent>
-      </IonApp>
+        </ion-content>
+      </ion-app>
     </>
   );
 };

@@ -1,19 +1,17 @@
-import { IonApp, IonContent } from '@geovistory/design-system-react';
 import Link from 'next/link';
-
 export default function FourOhFour() {
   return (
     <>
-      <IonApp>
-        <IonContent>
+      <ion-app>
+        <ion-content>
           <h1>404 - Page Not Found</h1>
           <p>
-              <Link href="/">
-                <a>Go back home</a>
-              </Link>
+            <Link href="/">
+              <a>Go back home</a>
+            </Link>
           </p>
-        </IonContent>
-      </IonApp>
+        </ion-content>
+      </ion-app>
     </>
   );
 }
