@@ -1,13 +1,14 @@
+import toReact from 'html-react-parser';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import { ErrorBoundary } from '../../components/elements/ErrorBoundary.component';
 import {
   DefaultPage,
-  DefaultPageProps,
+  DefaultPageProps
 } from '../../components/layouts/DefaultPage.component';
 import { serverRender } from '../../lib/serverRender';
 import { ProjectParams } from '../../model/project-param';
 import { projectsParams } from '../../projects/projectParams';
-
 interface SSRProps {
   entityId: string;
 }
@@ -19,20 +20,23 @@ interface ResourceProps extends SSRProps {
   _ssrHtmlHead: string;
   _ssrData: { [key: string]: any };
 }
+
 export default function Resource(props: ResourceProps) {
   return (
-    <DefaultPage {...props.defaultPage}>
-      <Head>
-        <title>{props._ssrData?.entityLabel?.label}</title>
-        <meta
-          name="description"
-          content={`Page about ${props._ssrData?.entityLabel?.label} on Geovistory`}
-        />
-        <link rel="icon" href="/favicon.ico" />
-        <span dangerouslySetInnerHTML={{ __html: props._ssrHtmlHead }}></span>
-      </Head>
-      <main dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></main>
-    </DefaultPage>
+    <ErrorBoundary>
+      <DefaultPage {...props.defaultPage}>
+        <Head>
+          {toReact(props._ssrHtmlHead)}
+          <title>{props._ssrData?.entityLabel?.label}</title>
+          <meta
+            name="description"
+            content={`Page about ${props._ssrData?.entityLabel?.label} on Geovistory`}
+          />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></main>
+      </DefaultPage>
+    </ErrorBoundary>
   );
 }
 
@@ -80,7 +84,7 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
 
 export async function getStaticPaths() {
   return {
-    paths: [],
+    paths: ['/resource/i92342'],
     fallback: 'blocking', // can also be false or 'blocking'
   };
 }
