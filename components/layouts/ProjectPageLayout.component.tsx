@@ -14,7 +14,7 @@ export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
       <ion-app>
         <ion-menu side="start" menu-id="main" content-id="main">
           <ion-header>
-            <ion-toolbar className={styles.menuTitle}>
+            <ion-toolbar class={styles.menuTitle}>
               <ion-title></ion-title>
             </ion-toolbar>
           </ion-header>

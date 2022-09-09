@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { ErrorBoundary } from '../../components/elements/ErrorBoundary.component';
 import {
   DefaultPage,
-  DefaultPageProps
+  DefaultPageProps,
 } from '../../components/layouts/DefaultPage.component';
 import { serverRender } from '../../lib/serverRender';
 import { ProjectParams } from '../../model/project-param';
@@ -34,7 +34,15 @@ export default function Resource(props: ResourceProps) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></main>
+        <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
+        <p>
+          <small>
+            URI:{' '}
+            <a href={`https://www.geovistory.org/resource/${props.entityId}`}>
+              https://www.geovistory.org/resource/{props.entityId}
+            </a>
+          </small>
+        </p>
       </DefaultPage>
     </ErrorBoundary>
   );
@@ -50,6 +58,20 @@ function ssr(props: SSRProps) {
           _ssr-id="entityLabel"
         ></geov-entity-label>
       </h1>
+      <p>
+        <geov-entity-class-label
+          class="restricted-width"
+          sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+          entity-id={props.entityId}
+          _ssr-id="classLabel"
+        ></geov-entity-class-label>
+      </p>
+      <geov-entity-definition
+        class="restricted-width"
+        sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+        entity-id={props.entityId}
+        _ssr-id="def"
+      ></geov-entity-definition>
     </ion-grid>
   );
 }
@@ -84,7 +106,7 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
 
 export async function getStaticPaths() {
   return {
-    paths: ['/resource/i92342'],
+    paths: ['/resource/i92342', '/resource/i3158616'],
     fallback: 'blocking', // can also be false or 'blocking'
   };
 }

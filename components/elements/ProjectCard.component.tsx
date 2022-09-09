@@ -10,13 +10,13 @@ export interface ProjectCardProps {
 export const ProjectCard = ({
   project,
 }: ProjectCardProps) => (
-  <ion-card className={styles.container}>
+  <ion-card class={styles.container}>
     <ion-card-header>
       {/* <ion-card-subtitle>Featured Project</ion-card-subtitle> */}
-      <ion-card-title className={styles.title}>{project.shortName}</ion-card-title>
+      <ion-card-title class={styles.title}>{project.shortName}</ion-card-title>
     </ion-card-header>
 
-    <ion-card-content className={styles.content}>
+    <ion-card-content class={styles.content}>
       <div className={styles.description}>{project.description}</div>
       {project.hasPage && (
         <div className={styles.buttonContainer}>
