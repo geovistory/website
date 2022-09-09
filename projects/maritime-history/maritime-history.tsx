@@ -1,11 +1,3 @@
-import {
-  IonCard,
-  IonCol,
-  IonGrid,
-  IonImg,
-  IonLabel,
-  IonRow,
-} from '@geovistory/design-system-react';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { Person } from '../../components/elements/Person.component';
@@ -18,25 +10,25 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
   return (
     <div className={styles.theme}>
       <ProjectPageLayout {...props.projectPageLayout}>
-        <IonGrid fixed class="ion-padding">
+        <ion-grid fixed class="ion-padding">
           <h1>{params.fullName}</h1>
           <p className="lead">
             Historical information about the Dutch East India Company, ready to
             explore and re-use. A pilot project.
           </p>{' '}
           <div className="restricted-width">
-            <IonImg
+            <ion-img
               src="/maritime-history.jpg"
               alt="The Noord-Nieuwland in Table Bay, 1762."
             />
           </div>
           <div className="restricted-width">
-            <IonLabel>
+            <ion-label>
               <small>
                 The Noord-Nieuwland in Table Bay, 1762. Licensing: Public
                 Domain.
               </small>
-            </IonLabel>
+            </ion-label>
           </div>
           <p>
             Consisting of approximately twenty-five million pages, the UNESCO
@@ -53,39 +45,39 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
           </p>
           <h4>Involved People</h4>
           <p>
-            <IonRow>
-              <IonCol size="6">
+            <ion-row>
+              <ion-col size="6">
                 <Person
                   name="Dr. Lodewijk Petram"
                   description="Project Leader Globalise"
                 />
-              </IonCol>
-              <IonCol size="6">
+              </ion-col>
+              <ion-col size="6">
                 <Person
                   name="Sebastiaan Derks M.A."
                   description="Head of Digital Data Management"
                 />
-              </IonCol>
-            </IonRow>
-            <IonRow>
-              <IonCol size="6">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
                 <Person
                   name="Habil. Dr. Francesco Beretta"
                   description="Founder Digital History Team LARHRA"
                 />
-              </IonCol>
-              <IonCol size="6">
+              </ion-col>
+              <ion-col size="6">
                 <Person
                   name="Jonas Schneider M.A."
                   description="Co-director & CTO KleioLab"
                 />
-              </IonCol>
-            </IonRow>
+              </ion-col>
+            </ion-row>
           </p>
           <h4>Institutional Partners</h4>
           <p>
-            <IonRow>
-              <IonCol size="4">
+            <ion-row>
+              <ion-col size="4">
                 <Image
                   src="/kleiolab-logo.png"
                   width={150}
@@ -93,8 +85,8 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="KleioLab logo"
                 />
-              </IonCol>
-              <IonCol size="4">
+              </ion-col>
+              <ion-col size="4">
                 <Image
                   src="/huygens-institute.png"
                   width={150}
@@ -102,8 +94,8 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo Huygens Institute"
                 />
-              </IonCol>
-              <IonCol size="4">
+              </ion-col>
+              <ion-col size="4">
                 <Image
                   src="/larhra-logo.jpg"
                   width={150}
@@ -111,10 +103,10 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
                   objectFit={'scale-down'}
                   alt="Logo LARHRA"
                 />
-              </IonCol>
-            </IonRow>
+              </ion-col>
+            </ion-row>
           </p>
-        </IonGrid>
+        </ion-grid>
       </ProjectPageLayout>
     </div>
   );

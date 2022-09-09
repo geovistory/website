@@ -1,22 +1,8 @@
-import {
-  IonApp,
-  IonContent,
-  IonGrid,
-  IonHeader,
-  IonIcon,
-  IonItem,
-  IonItemDivider,
-  IonLabel,
-  IonList,
-  IonMenu,
-  IonTitle,
-  IonToolbar,
-} from '@geovistory/design-system-react';
 import { ReactNode } from 'react';
 import { Footer, FooterProps } from './Footer.component';
 import { Navbar } from './Navbar.component';
 import styles from './DefaultPage.module.css';
-
+import { openOutline } from 'ionicons/icons';
 export interface DefaultPageProps {
   children?: ReactNode;
   noPaddingSlot?: ReactNode;
@@ -36,56 +22,56 @@ export interface DefaultPageProps {
 export const DefaultPage = (props: DefaultPageProps) => {
   return (
     <>
-      <IonApp>
-        <IonMenu side="start" menuId="main" contentId="main">
-          <IonHeader>
-            <IonToolbar className={styles.menuTitle}>
-              <IonTitle></IonTitle>
-            </IonToolbar>
-          </IonHeader>
-          <IonContent>
-            <IonList>
-              <IonItemDivider>
-                <IonLabel>Geovistory</IonLabel>
-              </IonItemDivider>
-              <IonItem href="/sparql" lines="full">
+      <ion-app>
+        <ion-menu side="start" menu-id="main" content-id="main">
+          <ion-header>
+            <ion-toolbar class={styles.menuTitle}>
+              <ion-title></ion-title>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content>
+            <ion-list>
+              <ion-item-divider>
+                <ion-label>Geovistory</ion-label>
+              </ion-item-divider>
+              <ion-item href="/sparql" lines="full">
                 Data Access
-              </IonItem>
-              <IonItem href="/about-geovistory" lines="full">
+              </ion-item>
+              <ion-item href="/about-geovistory" lines="full">
                 About Geovistory
-              </IonItem>
-              <IonItem href="/about-us" lines="full">
+              </ion-item>
+              <ion-item href="/about-us" lines="full">
                 About Us
-              </IonItem>
-              <IonItemDivider>
-                <IonLabel>Toolbox</IonLabel>
-              </IonItemDivider>
-              <IonItem
+              </ion-item>
+              <ion-item-divider>
+                <ion-label>Toolbox</ion-label>
+              </ion-item-divider>
+              <ion-item
                 href="https://toolbox.geovistory.org/login"
                 target="_blank"
                 lines="full"
               >
                 Login
-                <IonIcon name="open-outline" slot="end"></IonIcon>
-              </IonItem>
-            </IonList>
-          </IonContent>
-        </IonMenu>
-        <IonHeader>
+                <ion-icon icon={openOutline} slot="end"></ion-icon>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ion-menu>
+        <ion-header>
           <Navbar />
-        </IonHeader>
-        <IonContent>
+        </ion-header>
+        <ion-content>
           {props.noPaddingSlot && (
-            <IonGrid fixed={false}>{props.noPaddingSlot}</IonGrid>
+            <ion-grid fixed={false}>{props.noPaddingSlot}</ion-grid>
           )}
           {props.children && (
-            <IonGrid fixed={!props.expand} className={styles.mainGrid}>
+            <ion-grid fixed={!props.expand} class={styles.mainGrid}>
               {props.children}
-            </IonGrid>
+            </ion-grid>
           )}
           <Footer featuredProjects={props.footer.featuredProjects}></Footer>
-        </IonContent>
-      </IonApp>
+        </ion-content>
+      </ion-app>
     </>
   );
 };

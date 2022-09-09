@@ -1,5 +1,5 @@
 # Geovistory.org
-This repostitory contains the code behind the website geovistory.org.
+This repostitory contains the source code of the website geovistory.org.
 
 ## Technology
 

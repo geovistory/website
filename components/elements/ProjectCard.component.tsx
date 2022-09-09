@@ -1,11 +1,4 @@
-import {
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
-  IonIcon
-} from '@geovistory/design-system-react';
+
 import { arrowForwardOutline } from 'ionicons/icons';
 import React from 'react';
 import { ProjectParams } from '../../model/project-param';
@@ -17,22 +10,22 @@ export interface ProjectCardProps {
 export const ProjectCard = ({
   project,
 }: ProjectCardProps) => (
-  <IonCard className={styles.container}>
-    <IonCardHeader>
-      {/* <IonCardSubtitle>Featured Project</IonCardSubtitle> */}
-      <IonCardTitle className={styles.title}>{project.shortName}</IonCardTitle>
-    </IonCardHeader>
+  <ion-card class={styles.container}>
+    <ion-card-header>
+      {/* <ion-card-subtitle>Featured Project</ion-card-subtitle> */}
+      <ion-card-title class={styles.title}>{project.shortName}</ion-card-title>
+    </ion-card-header>
 
-    <IonCardContent className={styles.content}>
+    <ion-card-content class={styles.content}>
       <div className={styles.description}>{project.description}</div>
       {project.hasPage && (
         <div className={styles.buttonContainer}>
-          <IonButton shape="round" href={'/project/' + project.geovID}>
+          <ion-button shape="round" href={'/project/' + project.geovID}>
             Open
-            <IonIcon slot="end" icon={arrowForwardOutline}></IonIcon>
-          </IonButton>
+            <ion-icon slot="end" icon={arrowForwardOutline}></ion-icon>
+          </ion-button>
         </div>
       )}
-    </IonCardContent>
-  </IonCard>
+    </ion-card-content>
+  </ion-card>
 );

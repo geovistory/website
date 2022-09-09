@@ -1,16 +1,8 @@
-import {
-  IonApp,
-  IonContent,
-  IonGrid,
-  IonItem,
-  IonList,
-  IonText,
-  IonCol,
-  IonRow,
-  IonButton,
-  IonIcon,
-} from '@geovistory/design-system-react';
+/// <reference path="../node_modules/@geovistory/design-system-web/dist/types/react.d.ts" />
+import { defineCustomElements } from '@geovistory/design-system-web/loader';
 import { version } from '../package.json';
+defineCustomElements()
+
 export default {
   title: 'Welcome',
   parameters: {
@@ -20,20 +12,20 @@ export default {
 };
 
 export const Welcome = () => (
-  <IonApp>
-    <IonContent class="ion-padding">
-      <IonGrid fixed>
+  <ion-app>
+    <ion-content class="ion-padding">
+      <ion-grid fixed>
         <h1>
           Geovistory Website – Developer Documentation{' '}
-          <IonText color="medium" style={{ fontSize: '1rem' }}>
+          <ion-text color="medium" style={{ fontSize: '1rem' }}>
             v{version}
-          </IonText>
+          </ion-text>
         </h1>
         <p className="lead">
           This is a developer documentation for contributers of the geovistory
           website.
         </p>
-      </IonGrid>
-    </IonContent>
-  </IonApp>
+      </ion-grid>
+    </ion-content>
+  </ion-app>
 );

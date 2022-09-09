@@ -1,9 +1,4 @@
-import {
-  IonAvatar,
-  IonIcon,
-  IonItem,
-  IonLabel,
-} from '@geovistory/design-system-react';
+
 import React from 'react';
 import { person } from 'ionicons/icons';
 import styles from './Person.module.css'
@@ -14,17 +9,17 @@ export interface PersonProps {
 }
 
 export const Person = (props: PersonProps) => (
-  <IonItem lines='none' className={styles.item}>
-    <IonAvatar slot="start" className={styles.avatar}>
-      <IonIcon
-        className={styles.icon}
+  <ion-item lines='none' class={styles.item}>
+    <ion-avatar slot="start" class={styles.avatar}>
+      <ion-icon
+        class={styles.icon}
         icon={person}
-      ></IonIcon>
+      ></ion-icon>
       {/* <img src="/avatar.svg" /> */}
-    </IonAvatar>
-    <IonLabel>
+    </ion-avatar>
+    <ion-label>
       <h2>{props.name}</h2>
       <p>{props.description}</p>
-    </IonLabel>
-  </IonItem>
+    </ion-label>
+  </ion-item>
 );

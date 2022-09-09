@@ -1,19 +1,3 @@
-import {
-  IonButton,
-  IonButtons,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
-  IonCol,
-  IonGrid,
-  IonIcon,
-  IonItem,
-  IonList,
-  IonListHeader,
-  IonRow,
-  IonText,
-} from '@geovistory/design-system-react';
 import { arrowForwardOutline } from 'ionicons/icons';
 import { version } from '../../package.json';
 import styles from './Footer.module.css';
@@ -28,80 +12,80 @@ export interface FooterProps {
 
 export const Footer = (props: FooterProps) => {
   return (
-    <IonGrid className={styles.container}>
-      <IonRow class="ion-align-items-stretch">
+    <ion-grid class={styles.container}>
+      <ion-row class="ion-align-items-stretch">
         {/* Left Column (purple) */}
 
-        <IonCol sizeXs="12" sizeMd="4" className={styles.leftCol}>
+        <ion-col size-xs="12" size-md="4" class={styles.leftCol}>
           {/* <img src="/geovistory-logo-white.svg"></img> */}
           <h5 className={styles.whoWeAre}>Who we are:</h5>
-          <IonButton href="/about-geovistory" shape="round">
+          <ion-button href="/about-geovistory" shape="round">
             About Geovistory
-            <IonIcon slot="end" icon={arrowForwardOutline}></IonIcon>
-          </IonButton>
-          <IonButton href="/about-us" shape="round">
+            <ion-icon slot="end" icon={arrowForwardOutline}></ion-icon>
+          </ion-button>
+          <ion-button href="/about-us" shape="round">
             About Us
-            <IonIcon slot="end" icon={arrowForwardOutline}></IonIcon>
-          </IonButton>
+            <ion-icon slot="end" icon={arrowForwardOutline}></ion-icon>
+          </ion-button>
           <div className={styles.legalNotice}>
             <div>Geovistory 2022 Imprint</div>
             <div>v{version}</div>
           </div>
-        </IonCol>
+        </ion-col>
 
         {/* Right Column (light) */}
 
-        <IonCol sizeXs="12" sizeMd="8" className={styles.rightCol}>
-          <IonRow>
+        <ion-col size-xs="12" size-md="8" class={styles.rightCol}>
+          <ion-row>
             {/* Right > Featured Projects */}
-            <IonCol
-              sizeXs="12"
-              sizeSm="5"
-              className={styles.featuredProjectsContainer}
+            <ion-col
+              size-xs="12"
+              size-sm="5"
+              class={styles.featuredProjectsContainer}
             >
-              <IonList lines="full" className={styles.featuredProjectsList}>
-                <IonListHeader className={styles.featuredProjectsHeader}>
+              <ion-list lines="full" class={styles.featuredProjectsList}>
+                <ion-list-header class={styles.featuredProjectsHeader}>
                   <h5 style={{ width: '100%' }}>
-                    <IonText>Featured Projects</IonText>
+                    <ion-text>Featured Projects</ion-text>
                   </h5>
-                </IonListHeader>
+                </ion-list-header>
                 {props.featuredProjects.map((proj) => (
-                  <IonItem
-                    className={styles.featuredProject}
+                  <ion-item
+                    class={styles.featuredProject}
                     key={'footer-' + proj.geovID}
                     href={proj.hasPage ? `/project/${proj.geovID}` : undefined}
                   >
                     {proj.shortName}
-                  </IonItem>
+                  </ion-item>
                 ))}
-              </IonList>
-            </IonCol>
+              </ion-list>
+            </ion-col>
 
             {/* Right > Get Started */}
 
-            <IonCol sizeXs="12" sizeSm="5" pullSm="1" pushSm="1">
-              <IonCard className={styles.getStartedCard}>
-                <IonCardHeader>
-                  <IonCardTitle>
+            <ion-col size-xs="12" size-sm="5" pull-sm="1" push-sm="1">
+              <ion-card class={styles.getStartedCard}>
+                <ion-card-header>
+                  <ion-card-title>
                     <h5 className={styles.getStartedCardHeader}>
-                      <IonText>Get started</IonText>
+                      <ion-text>Get started</ion-text>
                     </h5>
-                  </IonCardTitle>
-                </IonCardHeader>
-                <IonCardContent>
-                  <IonRow>
-                    <IonCol>
-                      <IonButton
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <ion-row>
+                    <ion-col>
+                      <ion-button
                         href="https://toolbox.geovistory.org/login"
                         target="_blank"
                         shape="round"
                         expand="block"
                       >
                         Register
-                      </IonButton>
-                    </IonCol>
-                    <IonCol>
-                      <IonButton
+                      </ion-button>
+                    </ion-col>
+                    <ion-col>
+                      <ion-button
                         href="https://toolbox.geovistory.org/login"
                         target="_blank"
                         shape="round"
@@ -109,15 +93,15 @@ export const Footer = (props: FooterProps) => {
                         expand="block"
                       >
                         Login
-                      </IonButton>
-                    </IonCol>
-                  </IonRow>
-                </IonCardContent>
-              </IonCard>
-            </IonCol>
-          </IonRow>
-        </IonCol>
-      </IonRow>
-    </IonGrid>
+                      </ion-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   );
 };
