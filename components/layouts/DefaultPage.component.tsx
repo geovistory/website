@@ -37,6 +37,9 @@ export const DefaultPage = (props: DefaultPageProps) => {
               <ion-item href="/sparql" lines="full">
                 Data Access
               </ion-item>
+              <ion-item href="/resources" lines="full">
+                Resources
+              </ion-item>
               <ion-item href="/about-geovistory" lines="full">
                 About Geovistory
               </ion-item>

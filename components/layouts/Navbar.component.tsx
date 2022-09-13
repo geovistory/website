@@ -8,24 +8,27 @@ export const Navbar = (props: NavbarProps) => {
         <Link href="/" passHref={true}>
           <a>
             <ion-img
-              class={'ion-hide-sm-up ' + styles.logo}
+              class={'ion-hide-md-up ' + styles.logo}
               src={'/Geovistory-Logo-No-Text-White.svg'}
             />
             <ion-img
-              class={'ion-hide-sm-down ' + styles.logo}
+              class={'ion-hide-md-down ' + styles.logo}
               src={'/geovistory-logo.svg'}
             />
           </a>
         </Link>
         <ion-buttons slot="end">
           <ion-menu-button
-            class="ion-hide-sm-up"
+            class="ion-hide-md-up"
             id="main"
             menu="main"
           ></ion-menu-button>
-          <span className="ion-hide-sm-down" style={{display:'flex'}}>
+          <span className="ion-hide-md-down" style={{display:'flex'}}>
             <ion-button href="/sparql" strong={true}>
               Data Access
+            </ion-button>
+            <ion-button href="/resources" strong={true}>
+              Resources
             </ion-button>
             <ion-button href="/about-geovistory">About Geovistory</ion-button>
             <ion-button href="/about-us">About Us</ion-button>

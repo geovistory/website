@@ -30,6 +30,8 @@ export const Footer = (props: FooterProps) => {
           <div className={styles.legalNotice}>
             <div>Geovistory 2022 Imprint</div>
             <div>v{version}</div>
+            <div><a href="/legal">legal notice</a></div>
+
           </div>
         </ion-col>
 
