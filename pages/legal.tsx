@@ -81,7 +81,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               href="https://www.flickr.com/photos/88907899@N06/8107916332"
             >
               La projection sur la maquette de Lugdunum est parfaitement
-              calibrée par l'équipe Makus (jour 2)
+              calibrée par l&apos;équipe Makus (jour 2)
             </a>{' '}
           </li>
 
@@ -220,14 +220,14 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               rel="noreferrer"
               href="https://commons.wikimedia.org/w/index.php?curid=37856359"
             >
-              File:Catastrophe d'Aniche 24 février 1827 - état civil - acte de
+              File:Catastrophe d&apos;Aniche 24 février 1827 - état civil - acte de
               décès 32 Constant Héroguez.jpg - Wikimedia Commons{' '}
             </a>{' '}
           </li>
 
           <li>
             {' '}
-            A Righteous War to Chastise the Russians: The Destroyer Force's
+            A Righteous War to Chastise the Russians: The Destroyer Force&apos;s
             Night Attack by Shinohara Kiyooki, 1904 (Museum of Fine Arts -
             Boston): Public domain{' '}
             <a
@@ -256,7 +256,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               rel="noreferrer"
               href="https://www.flickr.com/photos/72746018@N00/50166914111"
             >
-              Le premier congrès international de la musique (musée de l'Opéra
+              Le premier congrès international de la musique (musée de l&apos;Opéra
               de Vichy)
             </a>{' '}
           </li>
