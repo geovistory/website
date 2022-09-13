@@ -1,4 +1,5 @@
 import { arrowForwardOutline } from 'ionicons/icons';
+import Link from 'next/link';
 import { version } from '../../package.json';
 import styles from './Footer.module.css';
 
@@ -30,6 +31,8 @@ export const Footer = (props: FooterProps) => {
           <div className={styles.legalNotice}>
             <div>Geovistory 2022 Imprint</div>
             <div>v{version}</div>
+            <div><Link href="/legal">legal notice</Link></div>
+
           </div>
         </ion-col>
 

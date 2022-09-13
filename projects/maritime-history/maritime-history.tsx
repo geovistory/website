@@ -10,26 +10,23 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
   return (
     <div className={styles.theme}>
       <ProjectPageLayout {...props.projectPageLayout}>
+        <div className={styles.bannerContainer}>
+          <Image
+            className={styles.bannerImage}
+            src="/maritime-history.jpg"
+            alt="Maritime history"
+            layout="fill"
+            objectFit={'cover'}
+          />
+          <h1 className={styles.title}>
+            <div className={styles.titleLine1}>Maritime History</div>
+          </h1>
+        </div>
         <ion-grid fixed class="ion-padding">
-          <h1>{params.fullName}</h1>
           <p className="lead">
             Historical information about the Dutch East India Company, ready to
             explore and re-use. A pilot project.
           </p>{' '}
-          <div className="restricted-width">
-            <ion-img
-              src="/maritime-history.jpg"
-              alt="The Noord-Nieuwland in Table Bay, 1762."
-            />
-          </div>
-          <div className="restricted-width">
-            <ion-label>
-              <small>
-                The Noord-Nieuwland in Table Bay, 1762. Licensing: Public
-                Domain.
-              </small>
-            </ion-label>
-          </div>
           <p>
             Consisting of approximately twenty-five million pages, the UNESCO
             Memory of the World-listed archives of the Dutch East India Company
@@ -62,8 +59,8 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
             <ion-row>
               <ion-col size="6">
                 <Person
-                  name="Habil. Dr. Francesco Beretta"
-                  description="Founder Digital History Team LARHRA"
+                  name="Dr. Habil. Francesco Beretta"
+                  description="Chargé de recherche, CNRS, LARHRA"
                 />
               </ion-col>
               <ion-col size="6">
