@@ -23,7 +23,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           >
             www.geovistory.org
           </a>
-          ) is published by:
+          ) is published by the Geovistory Team under the responsability of:
           <br />
           <a href="https://www.kleiolab.ch" target="_blank" rel="noreferrer">
             KleioLab GmbH
@@ -37,9 +37,9 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       <p>
         <address>
           Responsible editor: <br />
-          Online Team KleioLab <br />
-          <a target="_blank" rel="noreferrer" href="mailto:info@kleiolab.ch">
-            info@kleiolab.ch
+          Online Team Geovistory <br />
+          <a target="_blank" rel="noreferrer" href="mailto:info@geovistory.org">
+            info@geovistory.org
           </a>
         </address>
       </p>

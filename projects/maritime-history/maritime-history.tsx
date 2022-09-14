@@ -103,6 +103,21 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
               </ion-col>
             </ion-row>
           </p>
+          <div className="restricted-width">
+            <ion-label>
+              <small>
+                Image: Hendrick Jacobsz. Dubbels, View of Batavia, 1640-1674,
+                Public Domain,{' '}
+                <a
+                  href="https://www.rijksmuseum.nl/en/collection/SK-A-2513"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  https://www.rijksmuseum.nl/en/collection/SK-A-2513
+                </a>
+              </small>
+            </ion-label>
+          </div>
         </ion-grid>
       </ProjectPageLayout>
     </div>
