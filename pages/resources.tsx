@@ -20,8 +20,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         target="_blank"
       >
         <ion-card-header>
-          <ion-card-subtitle>User Documentation</ion-card-subtitle>
-          <ion-card-title>Geovistory Toolbox Docs</ion-card-title>
+          <ion-card-subtitle>User Manual</ion-card-subtitle>
+          <ion-card-title>Geovistory Toolbox Documentation</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>

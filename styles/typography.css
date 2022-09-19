@@ -57,3 +57,10 @@ address {
   font-style: normal;
   line-height: 1.2rem;
 }
+
+code {
+  background-color: var(--gv-color-background-code);
+  border-left: 4px solid var(--gv-color-background-code);
+  border-right: 4px solid var(--gv-color-background-code);
+  border-radius: 3px;
+}
