@@ -1,7 +1,7 @@
 .title {
   max-width: unset;
   font-size: 3rem;
-  margin-block-start: .5em;
+  margin-block-start: .6em;
   font-weight: 500;
 }
 
@@ -32,6 +32,9 @@
     height: 400px;
     max-width: 508px;
   }
+}
+.subheading {
+ font-weight: 400;
 }
 
 /* md and up */
