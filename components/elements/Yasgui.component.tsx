@@ -13,8 +13,7 @@ PREFIX xml: <http://www.w3.org/XML/1998/namespace>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX onto-c: <https://ontome.net/class/>
-PREFIX onto-p: <https://ontome.net/property/>
+PREFIX ontome: <https://ontome.net/ontology/>
 PREFIX geov: <http://geovistory.org/resource/>
 
 SELECT ?subject ?predicate ?object
