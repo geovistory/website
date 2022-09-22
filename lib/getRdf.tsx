@@ -4,7 +4,8 @@ export async function getRdf(
   entityId: string,
   accept: string
 ) {
-  const query = `CONSTRUCT {
+  const query = `PREFIX ontome: <https://ontome.net/ontology/>
+CONSTRUCT {
   <http://geovistory.org/resource/${entityId}> ?p ?o .
 } WHERE { 
   <http://geovistory.org/resource/${entityId}> ?p ?o .
