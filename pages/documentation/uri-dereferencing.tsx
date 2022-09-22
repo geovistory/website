@@ -35,9 +35,9 @@ const Resources: NextPage<ResourcesProps> = (props) => {
     <DefaultPage {...props.defaultPage}>
       <h1>URI Dereferencing</h1>
       <p className="lead">
-        You can ask for different representations of the same entity identified
-        by a Geovistory URI. The representation may be in HTML or different RDF
-        syntaxes.
+        You can ask for different representations of properties of an entity
+        identified by a Geovistory URI. The representation may be in HTML or
+        different RDF syntaxes.
       </p>
       <p>
         The Geovistory URI pattern is{' '}
