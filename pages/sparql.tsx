@@ -6,14 +6,14 @@ import {
   DefaultPageProps
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../projects/projectParams';
-
+import styles from './sparql.module.css';
 export interface SparqlProps {
   defaultPage: DefaultPageProps;
 }
 const Sparql: NextPage<SparqlProps> = (props) => {
   return (
     <DefaultPage {...props.defaultPage}>
-      <h1>Access Geovistory Community Data via SPARQL</h1>
+      <h1 className={styles.title}>Access Geovistory Community Data via SPARQL</h1>
       <Yasgui endpoint="https://sparql.geovistory.org/api_v1_community_data" />
       <CCLicense />
     </DefaultPage>

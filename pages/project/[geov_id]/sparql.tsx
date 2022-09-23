@@ -17,8 +17,8 @@ const ProjectSparqlPage: NextPage<ProjectSparqlProps> = (props) => {
   return (
     <ProjectPageLayout {...props.projectPageLayout}>
       <div className={styles.container}>
-        <h1 className="unrestricted-width">
-          Open Project Data{' '}
+        <h1 className={styles.title}>
+          Project&apos;s Open Data{' '}
           <ion-text color={'medium'}>
             <small>SPARQL access</small>
           </ion-text>

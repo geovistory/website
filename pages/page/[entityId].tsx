@@ -38,8 +38,8 @@ export default function Resource(props: ResourceProps) {
         <p>
           <small>
             URI:{' '}
-            <a href={`https://www.geovistory.org/resource/${props.entityId}`}>
-              https://www.geovistory.org/resource/{props.entityId}
+            <a href={`http://geovistory.org/resource/${props.entityId}`}>
+              http://geovistory.org/resource/{props.entityId}
             </a>
           </small>
         </p>
@@ -106,7 +106,7 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
 
 export async function getStaticPaths() {
   return {
-    paths: ['/resource/i92342', '/resource/i3158616'],
+    paths: ['/page/i92342', '/page/i3158616'],
     fallback: 'blocking', // can also be false or 'blocking'
   };
 }

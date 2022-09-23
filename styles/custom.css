@@ -21,4 +21,9 @@
   --gv-color-primary-800: #44337A;
   --gv-color-primary-900: #322659;
 
+  --gv-color-background-code: #f5f2f0
+}
+
+geov-code {
+  --background-color: var(--gv-color-background-code)
 }

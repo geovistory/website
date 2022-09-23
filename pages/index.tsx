@@ -50,7 +50,7 @@ const Home: NextPage<HomeProps> = (props) => {
           </ion-row>
         </ion-grid>
         <div className={styles.featuredProjectsContainer}>
-          <h2 className={styles.subheading}>Featured Projects</h2>
+          <h3 className={styles.subheading}>Featured Projects</h3>
 
           <ion-grid class={styles.featuredProjectsGrid}>
             <ion-row>
