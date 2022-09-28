@@ -34,9 +34,14 @@ export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
                 </ion-item>
               )}
               {props.navbar.sparqlLinkEnabled && (
-                <ion-item href={`/project/${props.navbar.projectId}/sparql`}>
-                  Data Access
-                </ion-item>
+                <>
+                  <ion-item href={`/project/${props.navbar.projectId}/sparql`}>
+                    SPARQL
+                  </ion-item>
+                  <ion-item href={`/project/${props.navbar.projectId}/explore`}>
+                    Explore Data
+                  </ion-item>
+                </>
               )}
               <ion-item-divider>
                 <ion-label>Geovistory</ion-label>
@@ -52,7 +57,9 @@ export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
         </ion-header>
         <ion-content>
           {props.children}
-          <ProjectFooter showEeditiones={props.navbar.teiLinkEnabled}></ProjectFooter>
+          <ProjectFooter
+            showEeditiones={props.navbar.teiLinkEnabled}
+          ></ProjectFooter>
         </ion-content>
       </ion-app>
     </>
