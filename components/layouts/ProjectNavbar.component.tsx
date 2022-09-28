@@ -1,4 +1,3 @@
-
 import styles from './ProjectNavbar.module.css';
 export interface ProjectNavbarProps {
   title: string;
@@ -28,9 +27,14 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
               </ion-button>
             )}
             {props.sparqlLinkEnabled && (
-              <ion-button href={`/project/${props.projectId}/sparql`}>
-                Data Access
-              </ion-button>
+              <>
+                <ion-button href={`/project/${props.projectId}/sparql`}>
+                  SPARQL
+                </ion-button>
+                <ion-button href={`/project/${props.projectId}/explore`}>
+                  Explore Data
+                </ion-button>
+              </>
             )}
           </span>
         </ion-buttons>
