@@ -1,0 +1,5 @@
+.container {
+    padding: var(--gv-padding-big);
+    min-height: 100vh;
+    padding-bottom: 8rem;
+}

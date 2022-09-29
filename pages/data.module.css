@@ -1,0 +1,34 @@
+.container {
+    background-color: var(--ion-background-color);
+    min-height: 100vh;
+    padding-bottom: 8rem;
+}
+
+.banner {
+    padding: 5px 5px 3rem 5px;
+}
+
+.banner2 {
+    background-color: var(--ion-color-light-shade);
+    color: var(--ion-color-tertiary-contrast);
+    padding: 3rem 5px;
+}
+
+.title1 {
+    margin-bottom: 1rem;
+}
+
+.title2 {
+    margin-top: 1rem;
+}
+
+/* .searchbar {
+    margin-top: 3rem;
+} */
+.imgContainer {
+    position: relative;
+    height: 100px;
+}
+.img {
+    object-position: 40% 70%;
+}

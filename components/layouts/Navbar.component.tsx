@@ -24,8 +24,8 @@ export const Navbar = (props: NavbarProps) => {
             menu="main"
           ></ion-menu-button>
           <span className="ion-hide-md-down" style={{display:'flex'}}>
-            <ion-button href="/sparql" strong={true}>
-              Data Access
+            <ion-button href="/data" strong={true}>
+              Data
             </ion-button>
             <ion-button href="/resources" strong={true}>
               Resources

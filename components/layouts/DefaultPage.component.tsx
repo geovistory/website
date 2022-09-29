@@ -65,7 +65,7 @@ export const DefaultPage = (props: DefaultPageProps) => {
         </ion-header>
         <ion-content>
           {props.noPaddingSlot && (
-            <ion-grid fixed={false}>{props.noPaddingSlot}</ion-grid>
+            <ion-grid fixed={false} >{props.noPaddingSlot}</ion-grid>
           )}
           {props.children && (
             <ion-grid fixed={!props.expand} class={styles.mainGrid}>

@@ -1,11 +1,12 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { Person } from '../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../pages/project/[geov_id]';
 import styles from './maritime-history.module.css';
 const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
-  const params = props.params;
+  const router = useRouter();
 
   return (
     <div className={styles.theme}>
@@ -18,6 +19,31 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
             layout="fill"
             objectFit={'cover'}
           />
+          <ion-searchbar
+            class="restricted-width"
+            color="light"
+            enterkeyhint="enter"
+            placeholder="Search and hit Enter…"
+            ref={(el: any) => {
+              el?.getInputElement().then(() => {
+                setTimeout(() => {
+                  console.log('focus on ', el);
+                  el?.setFocus();
+                }, 300);
+              });
+              el?.addEventListener('keypress', (event: KeyboardEvent) => {
+                if (event.key === 'Enter') {
+                  el?.getInputElement().then((inputEl: HTMLInputElement) => {
+                    console.log(inputEl?.value);
+                    router.push({
+                      pathname: `${props.params.geovID}/search`,
+                      query: { term: inputEl?.value },
+                    });
+                  });
+                }
+              });
+            }}
+          ></ion-searchbar>
           <h1 className={styles.title}>
             <div className={styles.titleLine1}>Maritime History</div>
           </h1>

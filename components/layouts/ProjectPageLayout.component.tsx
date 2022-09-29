@@ -38,8 +38,8 @@ export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
                   <ion-item href={`/project/${props.navbar.projectId}/sparql`}>
                     SPARQL
                   </ion-item>
-                  <ion-item href={`/project/${props.navbar.projectId}/explore`}>
-                    Explore Data
+                  <ion-item href={`/project/${props.navbar.projectId}/search`}>
+                    Search
                   </ion-item>
                 </>
               )}
