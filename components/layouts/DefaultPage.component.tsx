@@ -34,8 +34,8 @@ export const DefaultPage = (props: DefaultPageProps) => {
               <ion-item-divider>
                 <ion-label>Geovistory</ion-label>
               </ion-item-divider>
-              <ion-item href="/sparql" lines="full">
-                Data Access
+              <ion-item href="/data" lines="full">
+                Data
               </ion-item>
               <ion-item href="/resources" lines="full">
                 Resources
@@ -65,7 +65,7 @@ export const DefaultPage = (props: DefaultPageProps) => {
         </ion-header>
         <ion-content>
           {props.noPaddingSlot && (
-            <ion-grid fixed={false}>{props.noPaddingSlot}</ion-grid>
+            <ion-grid fixed={false} >{props.noPaddingSlot}</ion-grid>
           )}
           {props.children && (
             <ion-grid fixed={!props.expand} class={styles.mainGrid}>

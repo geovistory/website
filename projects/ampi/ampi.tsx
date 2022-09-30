@@ -1,12 +1,13 @@
-
 import { NextPage } from 'next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { Person } from '../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../pages/project/[geov_id]';
 import styles from './ampi.module.css';
 const AMPI_component: NextPage<ProjectPageProps> = (props) => {
   // const params = projectsParams.find(pp => pp.geovName == 'AMPI')
+  const router = useRouter();
 
   return (
     <div className={styles.theme}>
@@ -18,6 +19,31 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             layout="fill"
             objectFit={'cover'}
           />
+          <ion-searchbar
+            class={`restricted-width ${styles.searchbar}`}
+            color="light"
+            enterkeyhint="enter"
+            placeholder="Search and hit enter…"
+            ref={(el: any) => {
+              el?.getInputElement().then(() => {
+                setTimeout(() => {
+                  console.log('focus on ', el);
+                  el?.setFocus();
+                }, 300);
+              });
+              el?.addEventListener('keypress', (event: KeyboardEvent) => {
+                if (event.key === 'Enter') {
+                  el?.getInputElement().then((inputEl: HTMLInputElement) => {
+                    console.log(inputEl?.value);
+                    router.push({
+                      pathname: `${props.params.geovID}/search`,
+                      query: { term: inputEl?.value },
+                    });
+                  });
+                }
+              });
+            }}
+          ></ion-searchbar>
           <h1 className={styles.title}>
             <div className={styles.titleLine1}>Tagebücher</div>
             <div className={styles.titleLine2}>Anna Maria</div>
@@ -31,7 +57,10 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
           </p>
 
           <p>
-            <ion-button expand='block' href={props.params.geovID + '/publication'}>
+            <ion-button
+              expand="block"
+              href={props.params.geovID + '/publication'}
+            >
               Hier geht&apos;s zur Edition
             </ion-button>
           </p>

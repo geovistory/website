@@ -9,11 +9,14 @@ import { ProjectParams } from '../model/project-param';
 import { ProjectCard } from '../components/elements/ProjectCard.component';
 import styles from './index.module.css';
 import { Components } from '@geovistory/design-system-web/loader';
+import { useRouter } from 'next/router';
 export interface HomeProps {
   defaultPage: DefaultPageProps;
   featuredProjects: ProjectParams[];
 }
 const Home: NextPage<HomeProps> = (props) => {
+  const router = useRouter();
+
   return (
     <DefaultPage {...props.defaultPage}>
       <div className={styles.container}>
@@ -24,6 +27,33 @@ const Home: NextPage<HomeProps> = (props) => {
               <p className={styles.slogan}>
                 Virtual Research Environment for Humanities and Social Sciences
               </p>
+              <ion-searchbar
+                class={styles.searchbar}
+                // color="secondary"
+                enterkeyhint="enter"
+                placeholder="Search and hit enter…"
+                ref={(el: any) => {
+                  el?.getInputElement().then(() => {
+                    setTimeout(() => {
+                      console.log('focus on ', el);
+                      el?.setFocus();
+                    }, 300);
+                  });
+                  el?.addEventListener('keypress', (event: KeyboardEvent) => {
+                    if (event.key === 'Enter') {
+                      el?.getInputElement().then(
+                        (inputEl: HTMLInputElement) => {
+                          console.log(inputEl?.value);
+                          router.push({
+                            pathname: '/search',
+                            query: { term: inputEl?.value },
+                          });
+                        }
+                      );
+                    }
+                  });
+                }}
+              ></ion-searchbar>
             </ion-col>
             <ion-col>
               <geov-carousel

@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 import styles from './ProjectNavbar.module.css';
 export interface ProjectNavbarProps {
   title: string;
@@ -11,6 +11,14 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
     <>
       <ion-toolbar class={styles.toolbar} color="light">
         <ion-buttons class={styles.buttonsLeft}>
+          <Link href="/" passHref={true}>
+            <a>
+              <ion-img
+                class={styles.logo}
+                src={'/Geovistory-Logo-No-Text-Gray.svg'}
+              />
+            </a>
+          </Link>
           <ion-button href={`/project/${props.projectId}`}>
             {props.title}
           </ion-button>
@@ -28,9 +36,14 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
               </ion-button>
             )}
             {props.sparqlLinkEnabled && (
-              <ion-button href={`/project/${props.projectId}/sparql`}>
-                Data Access
-              </ion-button>
+              <>
+                <ion-button href={`/project/${props.projectId}/sparql`}>
+                  SPARQL
+                </ion-button>
+                <ion-button href={`/project/${props.projectId}/search`}>
+                  Search
+                </ion-button>
+              </>
             )}
           </span>
         </ion-buttons>
