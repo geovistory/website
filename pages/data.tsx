@@ -18,24 +18,26 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       {...props.defaultPage}
       noPaddingSlot={
         <div className={styles.container}>
-          <div className={styles.banner}>
+          <ion-grid class={`ion-padding ${styles.banner}`}>
             <h1 className={styles.title1}>Data</h1>
-            <h2 className={styles.title2}>Open and FAIR</h2>
-            <h3>Created by the Geovistory community. </h3>
-          </div>
-          <div className={styles.banner2}>
+            <p className={styles.title2 + ' lead'}>
+              Open and FAIR <br />
+              Created by the Geovistory Community{' '}
+            </p>
+          </ion-grid>
+          <ion-grid class={`ion-padding ${styles.banner2}`}>
             <ion-buttons class={`restricted-width ${styles.searchbar}`}>
               <ion-searchbar
                 color="light"
                 enterkeyhint="enter"
                 placeholder="Search and hit Enter…"
                 ref={(el: any) => {
-                    el?.getInputElement().then(()=>{
-                        setTimeout(() => {
-                          console.log('focus on ',el)
-                          el?.setFocus();
-                        },300);
-                    })
+                  el?.getInputElement().then(() => {
+                    setTimeout(() => {
+                      console.log('focus on ', el);
+                      el?.setFocus();
+                    }, 300);
+                  });
                   el?.addEventListener('keypress', (event: KeyboardEvent) => {
                     if (event.key === 'Enter') {
                       el?.getInputElement().then(
@@ -52,54 +54,52 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                 }}
               ></ion-searchbar>
             </ion-buttons>
-          </div>
-          <div className={styles.banner}>
-            <h2>Tools</h2>
-            <ion-grid>
-              <ion-row class="restricted-width">
-                <ion-col size="12" size-md="6">
-                  <ion-card href="/sparql">
-                    <ion-card-header>
-                      <ion-card-title>SPARQL client</ion-card-title>
-                    </ion-card-header>
-                    <div className={styles.imgContainer}>
-                      <Image
-                        className={styles.img}
-                        src="/sparql-code.jpg"
-                        alt="Sparl code image"
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </div>
-                    <ion-card-content>
-                      <div slot="start"></div>
-                      Query and analyze the data with SPARQL, the RDF query
-                      language.
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-                <ion-col size="12" size-md="6">
-                  <ion-card disabled>
-                    <ion-card-header>
-                      <ion-card-title>More tools</ion-card-title>
-                    </ion-card-header>
-                    <div className={styles.imgContainer}>
-                      <Image
-                        className={styles.img}
-                        src="/sparql-code.jpg"
-                        alt="Sparl code image"
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </div>
-                    <ion-card-content>
-                      We work on the integration of more tools...
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </div>
+          </ion-grid>
+          <ion-grid class={`ion-padding ${styles.banner}`}>
+            <h3>Tools</h3>
+            <ion-row class="restricted-width">
+              <ion-col size="12" size-md="6">
+                <ion-card href="/sparql">
+                  <ion-card-header>
+                    <ion-card-title>SPARQL client</ion-card-title>
+                  </ion-card-header>
+                  <div className={styles.imgContainer}>
+                    <Image
+                      className={styles.img}
+                      src="/sparql-code.jpg"
+                      alt="Sparl code image"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <ion-card-content>
+                    <div slot="start"></div>
+                    Query and analyze the data with SPARQL, the RDF query
+                    language.
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col size="12" size-md="6">
+                <ion-card disabled>
+                  <ion-card-header>
+                    <ion-card-title>More tools</ion-card-title>
+                  </ion-card-header>
+                  <div className={styles.imgContainer}>
+                    <Image
+                      className={styles.img}
+                      src="/sparql-code.jpg"
+                      alt="Sparl code image"
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <ion-card-content>
+                    We work on the integration of more tools...
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
         </div>
       }
     ></DefaultPage>
