@@ -22,13 +22,16 @@
 .carousel {
   height: 350px;
 }
+.searchbar{
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
 
 /* sm and up */
 @media screen and (min-width: 576px) {
 
   .carousel {
     display: block;
-    margin-top: 50px;
     height: 400px;
     max-width: 508px;
   }
@@ -51,11 +54,15 @@
   
   .featuredProjectsContainer {
     position: absolute;
-    top: 170px;
+    top: 330px;
     z-index: 1;
   }
+  .searchbar{
+    padding-right: 2rem;
+  }
+  
   .subheading {
-    margin-top: 10rem;
+    margin-top: 0;
     max-width: unset;
   }
   
@@ -71,7 +78,7 @@
 @media screen and (min-width: 992px) {
 
   .featuredProjectsContainer {
-    top: 240px;
+    top: 400px;
   }
 
   .title {
@@ -87,7 +94,7 @@
     display: block;
     margin-top: 50px;
     height: 500px;
-    max-width: 550px;
+    max-width: 450px;
   }
 }
 

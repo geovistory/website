@@ -11,7 +11,7 @@ export interface ResourcesProps {
 const Resources: NextPage<ResourcesProps> = (props) => {
   return (
     <DefaultPage {...props.defaultPage}>
-      <h1>Exlpore Geovistory Resources</h1>
+      <h1>Explore Geovistory Resources</h1>
       <br />
 
       <ion-card

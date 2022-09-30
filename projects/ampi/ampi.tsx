@@ -23,7 +23,7 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             class={`restricted-width ${styles.searchbar}`}
             color="light"
             enterkeyhint="enter"
-            placeholder="Search and hit Enter…"
+            placeholder="Search and hit enter…"
             ref={(el: any) => {
               el?.getInputElement().then(() => {
                 setTimeout(() => {

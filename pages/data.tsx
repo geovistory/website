@@ -1,3 +1,4 @@
+import { rocketOutline } from 'ionicons/icons';
 import type { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -19,9 +20,13 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       noPaddingSlot={
         <div className={styles.container}>
           <ion-grid class={`ion-padding ${styles.banner}`}>
-            <h1 className={styles.title1}>Data</h1>
+            <h1 className={styles.title1}>
+              Data. Open and FAIR
+              {/* <ion-button href="" fill="none">
+                <ion-icon icon={rocketOutline}></ion-icon>
+              </ion-button> */}
+            </h1>
             <p className={styles.title2 + ' lead'}>
-              Open and FAIR <br />
               Created by the Geovistory Community{' '}
             </p>
           </ion-grid>
@@ -30,7 +35,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               <ion-searchbar
                 color="light"
                 enterkeyhint="enter"
-                placeholder="Search and hit Enter…"
+                placeholder="Search and hit enter…"
                 ref={(el: any) => {
                   el?.getInputElement().then(() => {
                     setTimeout(() => {

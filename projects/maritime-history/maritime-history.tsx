@@ -23,7 +23,7 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
             class="restricted-width"
             color="light"
             enterkeyhint="enter"
-            placeholder="Search and hit Enter…"
+            placeholder="Search and hit enter…"
             ref={(el: any) => {
               el?.getInputElement().then(() => {
                 setTimeout(() => {
