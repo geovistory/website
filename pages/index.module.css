@@ -54,7 +54,7 @@
   
   .featuredProjectsContainer {
     position: absolute;
-    top: 330px;
+    margin-top: 330px;
     z-index: 1;
   }
   .searchbar{
@@ -78,7 +78,7 @@
 @media screen and (min-width: 992px) {
 
   .featuredProjectsContainer {
-    top: 400px;
+    margin-top: 400px;
   }
 
   .title {
