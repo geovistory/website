@@ -4,8 +4,7 @@ import {
   DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
 
-import { projectsParams } from '../projects/projectParams';
-import { ProjectParams } from '../model/project-param';
+import { ProjectParams, projectsParams } from '../lib/projectParams';
 import { ProjectCard } from '../components/elements/ProjectCard.component';
 import styles from './index.module.css';
 import { Components } from '@geovistory/design-system-web/loader';

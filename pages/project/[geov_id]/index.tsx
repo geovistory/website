@@ -1,11 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
-import {
-  ProjectPageLayout,
-  ProjectPageLayoutProps,
-} from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams } from '../../../model/project-param';
-import { projectsParams } from '../../../projects/projectParams';
-import { projectsConfig } from '../../../projects/projectsConfig';
+import { ProjectPageLayoutProps } from '../../../components/layouts/ProjectPageLayout.component';
+import { ProjectParams, projectsParams } from '../../../lib/projectParams';
+import { projectHomePageMap } from '../../../lib/projectHomePages/projectHomePageMap';
 
 export interface ProjectPageProps {
   params: ProjectParams;
@@ -31,7 +27,7 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (
         projectId,
         title: params.shortName,
         teiLinkEnabled: params.hasTEI,
-        sparqlLinkEnabled: params.hasSPARQL
+        sparqlLinkEnabled: params.hasSPARQL,
       },
     },
     params,
@@ -42,8 +38,8 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (
   };
 };
 
-function getProjectComponent(projectId:number) {
-  return projectsConfig[projectId]?.component ?? (() => <></>);
+function getProjectComponent(projectId: number) {
+  return projectHomePageMap[projectId] ?? (() => <>Project not found</>);
 }
 
 export async function getStaticPaths() {

@@ -4,8 +4,8 @@ import { requestedRDFSyntax } from '../../../lib/requestedRDFSyntax';
 import { getRdf } from '../../../lib/getRdf';
 
 const resource = async (req: NextApiRequest, res: NextApiResponse) => {
-  // extract entityId
-  const { entityId } = req.query;
+  // extract entityId and projectId
+  const { entityId, p } = req.query;
 
   // validate entityId
   if (!entityId || typeof entityId !== 'string') return res.status(400);
@@ -13,11 +13,12 @@ const resource = async (req: NextApiRequest, res: NextApiResponse) => {
   // get rdf syntax, defaults to rdf+xml
   const rdfSyntax = requestedRDFSyntax(req.headers.accept) ?? rdfSyntaxes[0];
 
-  const rdf = await getRdf(
-    'https://sparql.geovistory.org/api_v1_community_data',
-    entityId,
-    rdfSyntax.httpContentType
-  );
+  // set sparql endpoint url
+  const sparqlEndpoint = p
+    ? `https://sparql.geovistory.org/api_v1_project_${p}`
+    : 'https://sparql.geovistory.org/api_v1_community_data';
+
+  const rdf = await getRdf(sparqlEndpoint, entityId, rdfSyntax.httpContentType);
 
   res
     .status(200)

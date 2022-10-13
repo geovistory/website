@@ -7,8 +7,7 @@ import {
   DefaultPageProps,
 } from '../../components/layouts/DefaultPage.component';
 import { serverRender } from '../../lib/serverRender';
-import { ProjectParams } from '../../model/project-param';
-import { projectsParams } from '../../projects/projectParams';
+import { ProjectParams, projectsParams } from '../../lib/projectParams';
 interface SSRProps {
   entityId: string;
 }

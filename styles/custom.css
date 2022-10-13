@@ -27,3 +27,9 @@
 geov-code {
   --background-color: var(--gv-color-background-code)
 }
+
+.mainGrid {
+  padding: var(--ion-padding);
+  min-height: 100vh;
+  margin-bottom: 8rem;
+}

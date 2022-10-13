@@ -9,7 +9,7 @@ import {
   DefaultPage,
   DefaultPageProps
 } from '../components/layouts/DefaultPage.component';
-import { projectsParams } from '../projects/projectParams';
+import { projectsParams } from '../lib/projectParams';
 import styles from './about-us.module.css';
 
 const larhra: OrganizationCardProps = {

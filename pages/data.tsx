@@ -6,7 +6,7 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
-import { projectsParams } from '../projects/projectParams';
+import { projectsParams } from '../lib/projectParams';
 import styles from './data.module.css';
 export interface ResourcesProps {
   defaultPage: DefaultPageProps;

@@ -3,8 +3,7 @@ import {
   ProjectPageLayout,
   ProjectPageLayoutProps,
 } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams } from '../../../model/project-param';
-import { projectsParams } from '../../../projects/projectParams';
+import { ProjectParams, projectsParams } from '../../../lib/projectParams';
 import styles from './sparql.module.css';
 
 export interface ProjectSearchProps {
@@ -20,6 +19,7 @@ const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
           <geov-explorer
             init-search-string={props.explorerTerm ?? undefined}
             sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.params.geovID}`}
+            url-append={`?p=${props.params.geovID}`}
           ></geov-explorer>
         </div>
       </div>

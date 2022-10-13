@@ -3,7 +3,7 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
-import { projectsParams } from '../projects/projectParams';
+import { projectsParams } from '../lib/projectParams';
 
 export interface ResourcesProps {
   defaultPage: DefaultPageProps;

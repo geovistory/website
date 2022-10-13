@@ -1,9 +1,9 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Person } from '../../components/elements/Person.component';
-import { ProjectPageLayout } from '../../components/layouts/ProjectPageLayout.component';
-import { ProjectPageProps } from '../../pages/project/[geov_id]';
+import { Person } from '../../../components/elements/Person.component';
+import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
+import { ProjectPageProps } from '../../../pages/project/[geov_id]';
 import styles from './ampi.module.css';
 const AMPI_component: NextPage<ProjectPageProps> = (props) => {
   // const params = projectsParams.find(pp => pp.geovName == 'AMPI')
