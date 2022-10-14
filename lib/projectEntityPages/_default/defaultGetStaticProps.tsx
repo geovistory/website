@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
-import { serverRender } from '../../serverRender';
 import { projectsParams } from '../../projectParams';
-import { DefaultEntityProps, SSRProps, ssr } from './DefaultEntityPage';
+import { serverRender } from '../../serverRender';
+import { DefaultEntityProps, ssr, SSRProps } from './DefaultEntityPage';
 
 
 export const defaultGetStaticProps: GetStaticProps<DefaultEntityProps> = async (

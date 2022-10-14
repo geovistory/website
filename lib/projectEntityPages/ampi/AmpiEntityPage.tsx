@@ -1,5 +1,4 @@
 import toReact from 'html-react-parser';
-import { openOutline } from 'ionicons/icons';
 import Head from 'next/head';
 import React from 'react';
 import { ErrorBoundary } from '../../../components/elements/ErrorBoundary.component';
@@ -29,17 +28,6 @@ export function AmpiEntityPage(props: AmpiEntityProps) {
         </Head>
         <main className="mainGrid">
           <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
-          <br />
-          <p>
-            <ion-button
-              fill="outline"
-              target={'_blank'}
-              href={`http://geovistory.org/project/${props.projectId}/publication/entity-page.html?id=${props.entityId}`}
-            >
-              In der TEI Publikation öffnen
-              <ion-icon slot="end" icon={openOutline}></ion-icon>
-            </ion-button>
-          </p>
           <br />
           <p>
             <small>

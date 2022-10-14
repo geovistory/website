@@ -32,7 +32,7 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
           <span className="ion-hide-sm-down">
             {props.teiLinkEnabled && (
               <ion-button href={`/project/${props.projectId}/publication`}>
-                Inhalt
+                Edition
               </ion-button>
             )}
             {props.sparqlLinkEnabled && (
