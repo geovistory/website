@@ -3,6 +3,7 @@ const copyfiles = require('copyfiles');
 const paths = [
   './node_modules/@ionic/core/dist/ionic/svg/ellipsis-vertical.svg',
   './node_modules/@ionic/core/dist/ionic/svg/open-outline.svg',
+  './node_modules/@ionic/core/dist/ionic/svg/open.svg',
   
   // ^ add path to needed ionic icon above this line ^ 
 

@@ -3,7 +3,7 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
-import { projectsParams } from '../projects/projectParams';
+import { projectsParams } from '../lib/projectParams';
 import styles from './search.module.css';
 export interface SearchProps {
   explorerTerm: string | null;

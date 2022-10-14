@@ -7,8 +7,7 @@ import {
   DefaultPageProps,
 } from '../../components/layouts/DefaultPage.component';
 import { serverRender } from '../../lib/serverRender';
-import { ProjectParams } from '../../model/project-param';
-import { projectsParams } from '../../projects/projectParams';
+import { ProjectParams, projectsParams } from '../../lib/projectParams';
 interface SSRProps {
   entityId: string;
 }
@@ -51,13 +50,13 @@ export default function Resource(props: ResourceProps) {
 function ssr(props: SSRProps) {
   return (
     <ion-grid fixed={false}>
-      <h1>
+      <h2>
         <geov-entity-label
           sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
           entity-id={props.entityId}
           _ssr-id="entityLabel"
         ></geov-entity-label>
-      </h1>
+      </h2>
       <p>
         <geov-entity-class-label
           class="restricted-width"

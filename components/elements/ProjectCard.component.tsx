@@ -1,7 +1,7 @@
 
 import { arrowForwardOutline } from 'ionicons/icons';
 import React from 'react';
-import { ProjectParams } from '../../model/project-param';
+import { ProjectParams } from '../../lib/projectParams';
 import styles from './ProjectCard.module.css';
 export interface ProjectCardProps {
   project: ProjectParams;

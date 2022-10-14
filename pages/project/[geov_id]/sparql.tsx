@@ -1,12 +1,11 @@
 import type { GetStaticProps, NextPage } from 'next';
-import { Yasgui } from '../../../components/elements/Yasgui.component';
 import { CCLicense } from '../../../components/elements/CCLicense.component';
+import { Yasgui } from '../../../components/elements/Yasgui.component';
 import {
   ProjectPageLayout,
-  ProjectPageLayoutProps,
+  ProjectPageLayoutProps
 } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams } from '../../../model/project-param';
-import { projectsParams } from '../../../projects/projectParams';
+import { ProjectParams, projectsParams } from '../../../lib/projectParams';
 import styles from './sparql.module.css';
 
 export interface ProjectSparqlProps {

@@ -1,9 +1,9 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Person } from '../../components/elements/Person.component';
-import { ProjectPageLayout } from '../../components/layouts/ProjectPageLayout.component';
-import { ProjectPageProps } from '../../pages/project/[geov_id]';
+import { Person } from '../../../components/elements/Person.component';
+import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
+import { ProjectPageProps } from '../../../pages/project/[geov_id]';
 import styles from './ampi.module.css';
 const AMPI_component: NextPage<ProjectPageProps> = (props) => {
   // const params = projectsParams.find(pp => pp.geovName == 'AMPI')
@@ -23,7 +23,7 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             class={`restricted-width ${styles.searchbar}`}
             color="light"
             enterkeyhint="enter"
-            placeholder="Search and hit enter…"
+            placeholder="Suchen und enter drücken…"
             ref={(el: any) => {
               el?.getInputElement().then(() => {
                 setTimeout(() => {
@@ -55,15 +55,31 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             Digitale Edition der Tagebücher der Anna Maria Preiswerk-Iselin,
             verfasst zwischen 1795 und 1839 (etwa 1200 Seiten).
           </p>
-
+          <p>
+            Die Edition umfasst Texte sowie
+            strukturierte Daten zu Personen, Orten, bibliographischen Angaben
+            und Schlagworten, die in den Texten annotiert sind.
+          </p>
           <p>
             <ion-button
-              expand="block"
               href={props.params.geovID + '/publication'}
             >
               Hier geht&apos;s zur Edition
             </ion-button>
+            <ion-button href={props.params.geovID + '/search'}>
+              Hier geht&apos;s zur Suche in den Daten
+            </ion-button>
           </p>
+          <p>
+            Tipp: Die Suchresultate lassen sich nach Klasse filtern, wie zum Beispiel:
+            <ul>
+              <li><code>Person</code> für Personen</li>
+              <li><code>Geographical Place</code> für Orte</li>
+              <li><code>Manifestation Product Type</code> für bibliographische Angaben</li>
+              <li><code>Tag</code> für Schlagworte</li>
+            </ul>
+          </p>
+
           <h2>Manuskript</h2>
           <p>
             Anna Maria Preiswerk-Iselin ( * 1758 Basel, ✝ 1840 Basel) war die
@@ -72,7 +88,6 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             Das insgesamt etwa 1200 Seiten umfassende Manuskript befindet sich
             heute im Staatsarchiv Basel-Stadt.
           </p>
-
           <h2>Transkription</h2>
           <p>
             <ion-row>

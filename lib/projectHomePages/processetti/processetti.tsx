@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import { Person } from '../../components/elements/Person.component';
-import { ProjectPageLayout } from '../../components/layouts/ProjectPageLayout.component';
-import { ProjectPageProps } from '../../pages/project/[geov_id]';
+import { Person } from '../../../components/elements/Person.component';
+import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
+import { ProjectPageProps } from '../../../pages/project/[geov_id]';
 import styles from './processetti.module.css';
 const Processetti_component: NextPage<ProjectPageProps> = (props) => {
   const params = props.params;

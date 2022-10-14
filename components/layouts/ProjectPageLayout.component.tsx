@@ -30,7 +30,7 @@ export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
                 <ion-item
                   href={`/project/${props.navbar.projectId}/publication`}
                 >
-                  Inhalt
+                  Edition
                 </ion-item>
               )}
               {props.navbar.sparqlLinkEnabled && (

@@ -1,6 +1,7 @@
 import type { Components } from '@geovistory/design-system-web';
 import {
   IonicSafeString,
+  IonInputCustomEvent,
   IonSegmentCustomEvent,
   SegmentChangeEventDetail,
 } from '@ionic/core';
@@ -10,12 +11,18 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../../components/layouts/DefaultPage.component';
-import { projectsParams } from '../../projects/projectParams';
+import { projectsParams } from '../../lib/projectParams';
 
 export interface ResourcesProps {
   defaultPage: DefaultPageProps;
 }
-const RDFSyntayDoc = (props: { title: string; acceptType: string }) => {
+
+const RDFSyntayDoc = (props: {
+  title: string;
+  acceptType: string;
+  entityId: string;
+  queryParam: string;
+}) => {
   return (
     <>
       <p>{props.title}</p>
@@ -23,7 +30,7 @@ const RDFSyntayDoc = (props: { title: string; acceptType: string }) => {
         <geov-code
           language="bash"
           code={`curl -L -H "Accept: ${props.acceptType}" \\
-            http://geovistory.org/resource/i785518`}
+            http://geovistory.org/resource/${props.entityId}${props.queryParam}`}
         ></geov-code>
       </p>
     </>
@@ -31,6 +38,15 @@ const RDFSyntayDoc = (props: { title: string; acceptType: string }) => {
 };
 const Resources: NextPage<ResourcesProps> = (props) => {
   let [redirects, setRedirects] = useState('html');
+  let [entityId, setEntityId] = useState('i785518');
+  let [queryParam, setQueryParam] = useState('');
+  let [pId, setPId] = useState<number | undefined>();
+
+  const setProjectId = (projectId?: number) => {
+    setPId(projectId);
+    projectId ? setQueryParam(`?p=${projectId}`) : setQueryParam('');
+  };
+
   return (
     <DefaultPage {...props.defaultPage}>
       <h1>URI Dereferencing</h1>
@@ -39,13 +55,22 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         identified by a Geovistory URI. The representation may be in HTML or
         different RDF syntaxes.
       </p>
+      <p>The Geovistory URI pattern is </p>
       <p>
-        The Geovistory URI pattern is{' '}
-        <code>http://geovistory.org/resource/:id</code>, where <code>:id</code>{' '}
-        is the identifier of the Geovistory entity. When you http-request a
-        Geovistory URI, the accept header of your http request determines
-        whether you get back HTML or RDF. (This mechanism is called Content
-        negotiation, see section 12 of the{' '}
+        <geov-code
+          language="bash"
+          code="http://geovistory.org/resource/:entityId?p=:projectId"
+        ></geov-code>
+      </p>
+      <p>
+        <code>:entityId</code> is the identifier of the entity.
+        <br />
+        <code>?p=:projectId</code> is optional and allows to specify a project.
+      </p>
+      <p>
+        The accept header of your http request determines whether you get back
+        HTML or RDF (see below; See content negotiation in section
+        12 in the {' '}
         <a
           href="https://www.w3.org/Protocols/rfc2616/rfc2616.txt"
           target="_blank"
@@ -55,17 +80,55 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         </a>
         ) .
       </p>
+
+      <p>Change these parameters to adjust the commands below:</p>
+      <p>
+        <ion-list>
+          <ion-item lines="full">
+            <ion-label position="fixed">entityId</ion-label>
+            <ion-input
+              value="i785518"
+              ref={(el: any) => {
+                el?.addEventListener(
+                  'ionChange',
+                  (event: IonInputCustomEvent<{ value: string }>) => {
+                    setEntityId(event.detail.value);
+                  }
+                );
+              }}
+            ></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-label position="fixed">projectId</ion-label>
+            <ion-input
+              clear-input="true"
+              type="number"
+              placeholder="Enter project id (optional)"
+              ref={(el: any) => {
+                el?.addEventListener(
+                  'ionChange',
+                  (event: IonInputCustomEvent<{ value: number }>) => {
+                    setProjectId(event.detail.value);
+                  }
+                );
+              }}
+            ></ion-input>
+          </ion-item>
+        </ion-list>
+      </p>
+
       <h2>Get HTML</h2>
       <p>
         To get the resource&apos;s HTML page you can http-request the URI.
         <br />
         With the browser:{' '}
         <a
-          href="http://geovistory.org/resource/i785518"
+          href={`http://geovistory.org/resource/${entityId}${queryParam}`}
           target="_blank"
           rel="noreferrer"
         >
-          http://geovistory.org/resource/i785518
+          http://geovistory.org/resource/{entityId}
+          {queryParam}
         </a>
         <br />
         With curl (<code>-L</code> = follows redirects):
@@ -73,7 +136,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       <p>
         <geov-code
           language="bash"
-          code="curl -L http://geovistory.org/resource/i785518"
+          code={`curl -L http://geovistory.org/resource/${entityId}${queryParam}`}
         ></geov-code>
       </p>
 
@@ -85,28 +148,45 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       <RDFSyntayDoc
         title="RDF XML"
         acceptType="application/rdf+xml"
+        entityId={entityId}
+        queryParam={queryParam}
       ></RDFSyntayDoc>
       <RDFSyntayDoc
         title="JSON-LD"
         acceptType="application/ld+json"
+        entityId={entityId}
+        queryParam={queryParam}
       ></RDFSyntayDoc>
       <RDFSyntayDoc
         title="N-Triples"
         acceptType="application/n-triples"
+        entityId={entityId}
+        queryParam={queryParam}
       ></RDFSyntayDoc>
       <RDFSyntayDoc
         title="N-Quads"
         acceptType="application/n-quads"
+        entityId={entityId}
+        queryParam={queryParam}
       ></RDFSyntayDoc>
       <RDFSyntayDoc
         title="TRIX"
         acceptType="application/trix+xml"
+        entityId={entityId}
+        queryParam={queryParam}
       ></RDFSyntayDoc>
       <RDFSyntayDoc
         title="Thrift"
         acceptType="application/rdf+thrift"
+        entityId={entityId}
+        queryParam={queryParam}
       ></RDFSyntayDoc>
-      <RDFSyntayDoc title="Turtle" acceptType="text/turtle"></RDFSyntayDoc>
+      <RDFSyntayDoc
+        title="Turtle"
+        acceptType="text/turtle"
+        entityId={entityId}
+        queryParam={queryParam}
+      ></RDFSyntayDoc>
       <h2>Redirects in detail</h2>
 
       <p>When you request the URI, it will be redirected as follows:</p>
@@ -140,7 +220,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             Browser/curl request:{' '}
             <code>
               <strong>http://</strong>geovistory.org/<strong>resource</strong>
-              /:id
+              /{entityId}{queryParam}
             </code>
           </li>
           <li>
@@ -150,7 +230,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             Browser/curl requests:
             <code>
               <strong>https://www</strong>.geovistory.org/
-              <strong>resource</strong>/:id
+              <strong>resource</strong>/{entityId}{queryParam}
             </code>
           </li>
           <li>
@@ -158,10 +238,19 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           </li>
           <li>
             Browser/curl requests:
-            <code>
-              <strong>https://www</strong>.geovistory.org/<strong>page</strong>
-              /:id
-            </code>
+            {pId ? (
+              <code>
+                <strong>https://www</strong>.geovistory.org/
+                <strong>project/{pId}/page</strong>
+                /{entityId}{queryParam}
+              </code>
+            ) : (
+              <code>
+                <strong>https://www</strong>.geovistory.org/
+                <strong>page</strong>
+                /{entityId}
+              </code>
+            )}{' '}
           </li>
           <li>Browser/curl receives: HTML</li>{' '}
         </ol>
@@ -172,7 +261,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             Browser/curl request:{' '}
             <code>
               <strong>http://</strong>geovistory.org/<strong>resource</strong>
-              /:id
+              /{entityId}{queryParam}
             </code>
           </li>
           <li>
@@ -181,8 +270,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <li>
             Browser/curl requests:
             <code>
-              <strong>https://www</strong>.geovistory.org/
-              <strong>resource</strong>/:id
+              <strong>https://www</strong>.geovistory.org/resource/{entityId}{queryParam}
             </code>
           </li>
           <li>Browser/curl receives: RDF</li>{' '}
