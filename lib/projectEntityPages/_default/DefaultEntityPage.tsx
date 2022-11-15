@@ -32,6 +32,16 @@ export function DefaultEntityPage(props: DefaultEntityProps) {
         </Head>
         <main className="mainGrid">
           <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
+          <geov-entity-properties
+            class="restricted-width"
+            language="en"
+            sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+            entity-id={props.entityId}
+            uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+            uri-replace={
+              process.env.NEXT_PUBLIC_GEOV_URI_REPLACE + '?p=' + props.projectId
+            }
+          ></geov-entity-properties>
           <p>
             <small>
               URI:{' '}
