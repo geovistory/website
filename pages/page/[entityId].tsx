@@ -42,6 +42,14 @@ export default function Resource(props: ResourceProps) {
             </a>
           </small>
         </p>
+        <geov-entity-properties
+          class="restricted-width"
+          language="en"
+          sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+          entity-id={props.entityId}
+          uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+          uri-replace={process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}
+        ></geov-entity-properties>
       </DefaultPage>
     </ErrorBoundary>
   );
