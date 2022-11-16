@@ -2,9 +2,11 @@ import toReact from 'html-react-parser';
 import Head from 'next/head';
 import React from 'react';
 import { ErrorBoundary } from '../../../components/elements/ErrorBoundary.component';
-import { ProjectPageLayout, ProjectPageLayoutProps } from '../../../components/layouts/ProjectPageLayout.component';
+import {
+  ProjectPageLayout,
+  ProjectPageLayoutProps,
+} from '../../../components/layouts/ProjectPageLayout.component';
 import { SSRProps } from '../_default/DefaultEntityPage';
-
 
 export interface AmpiEntityProps extends SSRProps {
   projectPageLayout: ProjectPageLayoutProps;
@@ -47,6 +49,16 @@ export function AmpiEntityPage(props: AmpiEntityProps) {
               </a>
             </small>
           </p>
+          <geov-entity-properties
+            class="restricted-width"
+            language="en"
+            sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+            entity-id={props.entityId}
+            uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+            uri-replace={
+              process.env.NEXT_PUBLIC_GEOV_URI_REPLACE + '?p=' + props.projectId
+            }
+          ></geov-entity-properties>
         </main>
       </ProjectPageLayout>
     </ErrorBoundary>
