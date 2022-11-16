@@ -23,34 +23,39 @@ interface ResourceProps extends SSRProps {
 export default function Resource(props: ResourceProps) {
   return (
     <ErrorBoundary>
-      <DefaultPage {...props.defaultPage}>
-        <Head>
-          {toReact(props._ssrHtmlHead)}
-          <title>{props._ssrData?.entityLabel?.label}</title>
-          <meta
-            name="description"
-            content={`Page about ${props._ssrData?.entityLabel?.label} on Geovistory`}
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
-        <p>
-          <small>
-            URI:{' '}
-            <a href={`http://geovistory.org/resource/${props.entityId}`}>
-              http://geovistory.org/resource/{props.entityId}
-            </a>
-          </small>
-        </p>
-        <geov-entity-properties
-          class="restricted-width"
-          language="en"
-          sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
-          entity-id={props.entityId}
-          uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
-          uri-replace={process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}
-        ></geov-entity-properties>
-      </DefaultPage>
+      <DefaultPage
+        {...props.defaultPage}
+        noPaddingSlot={
+          <div className="mainGrid">
+            <Head>
+              {toReact(props._ssrHtmlHead)}
+              <title>{props._ssrData?.entityLabel?.label}</title>
+              <meta
+                name="description"
+                content={`Page about ${props._ssrData?.entityLabel?.label} on Geovistory`}
+              />
+              <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
+            <p>
+              <small>
+                URI:{' '}
+                <a href={`http://geovistory.org/resource/${props.entityId}`}>
+                  http://geovistory.org/resource/{props.entityId}
+                </a>
+              </small>
+            </p>
+            <geov-entity-properties
+              class="restricted-width"
+              language="en"
+              sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+              entity-id={props.entityId}
+              uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+              uri-replace={process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}
+            ></geov-entity-properties>
+          </div>
+        }
+      ></DefaultPage>
     </ErrorBoundary>
   );
 }
