@@ -30,37 +30,10 @@ export function DefaultEntityPage(props: DefaultEntityProps) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className="mainGrid">
-          <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
-          <p>
-            <small>
-              URI:{' '}
-              <a href={`http://geovistory.org/resource/${props.entityId}`}>
-                http://geovistory.org/resource/{props.entityId}
-              </a>
-            </small>
-            <br />
-            <small>
-              Project URL:{' '}
-              <a
-                href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-              >
-                http://geovistory.org/resource/
-                {props.entityId}?p={props.projectId}
-              </a>
-            </small>
-          </p>
-          <geov-entity-properties
-            class="restricted-width"
-            language="en"
-            sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
-            entity-id={props.entityId}
-            uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
-            uri-replace={
-              process.env.NEXT_PUBLIC_GEOV_URI_REPLACE + '?p=' + props.projectId
-            }
-          ></geov-entity-properties>
-        </main>
+        <main
+          className="mainGridNoPadding ion-color-tertiary-bg"
+          dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}
+        ></main>
       </ProjectPageLayout>
     </ErrorBoundary>
   );
@@ -68,28 +41,45 @@ export function DefaultEntityPage(props: DefaultEntityProps) {
 
 export function ssr(props: SSRProps) {
   return (
-    <ion-grid fixed={false}>
-      <h2>
-        <geov-entity-label
-          sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
-          entity-id={props.entityId}
-          _ssr-id="entityLabel"
-        ></geov-entity-label>
-      </h2>
-      <p>
-        <geov-entity-class-label
-          class="restricted-width"
-          sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
-          entity-id={props.entityId}
-          _ssr-id="classLabel"
-        ></geov-entity-class-label>
-      </p>
-      <geov-entity-definition
-        class="restricted-width"
-        sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
-        entity-id={props.entityId}
-        _ssr-id="def"
-      ></geov-entity-definition>
-    </ion-grid>
+    <geov-entity
+      sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
+      entity-id={props.entityId}
+      uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+      uri-replace={
+        process.env.NEXT_PUBLIC_GEOV_URI_REPLACE + '?p=' + props.projectId
+      }
+    >
+      <div slot="body-end" className="section">
+        <ion-grid fixed={true}>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Metadata</ion-card-subtitle>
+            </ion-card-header>
+            <ion-list lines="none">
+              <ion-item>
+                <ion-note>
+                  Project URL:{' '}
+                  <a
+                    href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
+                  >
+                    {`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
+                  </a>
+                </ion-note>
+              </ion-item>
+            </ion-list>
+            <ion-list lines="none">
+              <ion-item>
+                <ion-note>
+                  URI:{' '}
+                  <a
+                    href={`http://geovistory.org/resource/${props.entityId}`}
+                  >{`http://geovistory.org/resource/${props.entityId}`}</a>
+                </ion-note>
+              </ion-item>
+            </ion-list>
+          </ion-card>
+        </ion-grid>
+      </div>
+    </geov-entity>
   );
 }
