@@ -44,3 +44,7 @@ geov-code {
 .ion-color-tertiary-bg {
   background: var(--ion-color-tertiary)
 }
+
+[c-id]:not(.hydrated) {
+  display: none;
+}

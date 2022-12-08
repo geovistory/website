@@ -8,6 +8,7 @@ import {
 } from '../../components/layouts/DefaultPage.component';
 import { serverRender } from '../../lib/serverRender';
 import { ProjectParams, projectsParams } from '../../lib/projectParams';
+import { openOutline } from 'ionicons/icons';
 interface SSRProps {
   entityId: string;
 }
@@ -57,18 +58,15 @@ function ssr(props: SSRProps) {
               <ion-card-subtitle>Metadata</ion-card-subtitle>
             </ion-card-header>
 
-            <ion-card-content>
-              <ion-list lines="none">
-                <ion-item>
-                  <ion-note>
-                    URI:{' '}
-                    <a
-                      href={`http://geovistory.org/resource/${props.entityId}`}
-                    >{`http://geovistory.org/resource/${props.entityId}`}</a>
-                  </ion-note>
-                </ion-item>
-              </ion-list>
-            </ion-card-content>
+            <ion-list lines="none">
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}`}
+              >
+                <ion-label>
+                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
           </ion-card>
         </ion-grid>
       </div>

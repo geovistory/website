@@ -1,4 +1,3 @@
-import { openOutline } from 'ionicons/icons';
 import { GetStaticProps } from 'next';
 import { projectsParams } from '../../projectParams';
 import { serverRender } from '../../serverRender';
@@ -72,25 +71,22 @@ export function ampiSsr(props: SSRProps) {
               <ion-card-subtitle>Metadata</ion-card-subtitle>
             </ion-card-header>
             <ion-list lines="none">
-              <ion-item>
-                <ion-note>
-                  Project URL:{' '}
-                  <a
-                    href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-                  >
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
+              >
+                <ion-label>
+                  <p>
+                    Project URL:{' '}
                     {`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-                  </a>
-                </ion-note>
+                  </p>
+                </ion-label>
               </ion-item>
-            </ion-list>
-            <ion-list lines="none">
-              <ion-item>
-                <ion-note>
-                  URI:{' '}
-                  <a
-                    href={`http://geovistory.org/resource/${props.entityId}`}
-                  >{`http://geovistory.org/resource/${props.entityId}`}</a>
-                </ion-note>
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}`}
+              >
+                <ion-label>
+                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                </ion-label>
               </ion-item>
             </ion-list>
           </ion-card>

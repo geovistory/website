@@ -16,7 +16,7 @@ export async function serverRender(
       serverFetchedData = doc.__STENCIL_DATA__;
     },
   });
-
+  removeUndefined(serverFetchedData);
   const happyDomWindow = new Window();
   const happyDomDoc = happyDomWindow.document;
   happyDomDoc.write(stencilHydrateOutput.html);
@@ -24,3 +24,13 @@ export async function serverRender(
   const headInnerHtml = happyDomDoc.querySelector('head').getInnerHTML();
   return { bodyInnerHtml: bodyInnerHtml, headInnerHtml, serverFetchedData };
 }
+
+const removeUndefined = (obj: any) => {
+  for (const key in obj) {
+    if (typeof obj[key] === 'undefined') {
+      delete obj[key];
+    } else if (typeof obj[key] === 'object') {
+      removeUndefined(obj[key]);
+    }
+  }
+};

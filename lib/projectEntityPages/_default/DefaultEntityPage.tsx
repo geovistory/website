@@ -23,10 +23,10 @@ export function DefaultEntityPage(props: DefaultEntityProps) {
       <ProjectPageLayout {...props.projectPageLayout}>
         <Head>
           {toReact(props._ssrHtmlHead)}
-          <title>{props._ssrData?.entityLabel?.label}</title>
+          <title>{props._ssrData?.['entity-label']?.label}</title>
           <meta
             name="description"
-            content={`Page about ${props._ssrData?.entityLabel?.label} on Geovistory`}
+            content={`Page about ${props._ssrData?.['entity-label']?.label} on Geovistory`}
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -56,25 +56,22 @@ export function ssr(props: SSRProps) {
               <ion-card-subtitle>Metadata</ion-card-subtitle>
             </ion-card-header>
             <ion-list lines="none">
-              <ion-item>
-                <ion-note>
-                  Project URL:{' '}
-                  <a
-                    href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-                  >
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
+              >
+                <ion-label>
+                  <p>
+                    Project URL:{' '}
                     {`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-                  </a>
-                </ion-note>
+                  </p>
+                </ion-label>
               </ion-item>
-            </ion-list>
-            <ion-list lines="none">
-              <ion-item>
-                <ion-note>
-                  URI:{' '}
-                  <a
-                    href={`http://geovistory.org/resource/${props.entityId}`}
-                  >{`http://geovistory.org/resource/${props.entityId}`}</a>
-                </ion-note>
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}`}
+              >
+                <ion-label>
+                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                </ion-label>
               </ion-item>
             </ion-list>
           </ion-card>

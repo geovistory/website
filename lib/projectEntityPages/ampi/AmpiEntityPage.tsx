@@ -21,10 +21,10 @@ export function AmpiEntityPage(props: AmpiEntityProps) {
       <ProjectPageLayout {...props.projectPageLayout}>
       <Head>
           {toReact(props._ssrHtmlHead)}
-          <title>{props._ssrData?.entityLabel?.label}</title>
+          <title>{props._ssrData?.['entity-label']?.label}</title>
           <meta
             name="description"
-            content={`Page about ${props._ssrData?.entityLabel?.label} on Geovistory`}
+            content={`Page about ${props._ssrData?.['entity-label']?.label} on Geovistory`}
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
