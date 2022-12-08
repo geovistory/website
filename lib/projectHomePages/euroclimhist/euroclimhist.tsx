@@ -21,6 +21,31 @@ const EuroClimHist_component: NextPage<ProjectPageProps> = (props) => {
             layout="fill"
             objectFit={'cover'}
           />
+          <ion-searchbar
+            class="restricted-width"
+            color="light"
+            enterkeyhint="enter"
+            placeholder="Search and hit enter…"
+            ref={(el: any) => {
+              el?.getInputElement().then(() => {
+                setTimeout(() => {
+                  console.log('focus on ', el);
+                  el?.setFocus();
+                }, 300);
+              });
+              el?.addEventListener('keypress', (event: KeyboardEvent) => {
+                if (event.key === 'Enter') {
+                  el?.getInputElement().then((inputEl: HTMLInputElement) => {
+                    console.log(inputEl?.value);
+                    router.push({
+                      pathname: `${props.params.geovID}/search`,
+                      query: { term: inputEl?.value },
+                    });
+                  });
+                }
+              });
+            }}
+          ></ion-searchbar>
           <h1 className={styles.title}>
             <div className={styles.titleLine1}>Euro-Climhist Database</div>
           </h1>
@@ -60,7 +85,7 @@ const EuroClimHist_component: NextPage<ProjectPageProps> = (props) => {
               <ion-col size="6">
                 <Person
                   name="Lukas Würsch"
-                  description="Research Associate & Technical Support"
+                  description="Research Associate/ IT"
                 />
               </ion-col>
             </ion-row>
@@ -68,7 +93,7 @@ const EuroClimHist_component: NextPage<ProjectPageProps> = (props) => {
               <ion-col size="6">
                 <Person
                   name="Matthias Fries, MSc"
-                  description="Senior Research Scientist/ OT"
+                  description="Senior Research Scientist/ IT"
                 />
               </ion-col>
             </ion-row>
