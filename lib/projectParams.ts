@@ -73,6 +73,7 @@ export const projectsParams: Array<ProjectParams> = [
         hasSPARQL: false,
         hasTEI: false
     },
+    
     // Maritime History
     {
         geovID: 84760,
@@ -110,7 +111,27 @@ export const projectsParams: Array<ProjectParams> = [
         hasPage: false,
         hasSPARQL: false,
         hasTEI: false
+    },
+
+    // EuroClimHist
+    {
+        geovID: 6529336,
+        geovName: 'EuroClimHist',
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Euro-Climhist Database',
+        shortName: 'Euro-Climhist Database',
+        description: 'The historical climate database Euro-Climhist contains a unique set of data on observations and measurement series of weather phenomena.',
+
+        hasPage: true,
+        hasSPARQL: true,
+        hasTEI: false
     }
+
 ]
 
 
