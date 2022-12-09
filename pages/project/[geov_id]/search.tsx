@@ -20,6 +20,8 @@ const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
             init-search-string={props.explorerTerm ?? undefined}
             sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.params.geovID}`}
             url-append={`?p=${props.params.geovID}`}
+            uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+            uri-replace={`${process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}?p=${props.params.geovID}`}
           ></geov-explorer>
         </div>
       </div>

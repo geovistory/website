@@ -1,4 +1,3 @@
-import { openOutline } from 'ionicons/icons';
 import { GetStaticProps } from 'next';
 import { projectsParams } from '../../projectParams';
 import { serverRender } from '../../serverRender';
@@ -57,44 +56,59 @@ export function ampiSsr(props: SSRProps) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
   return (
-    <ion-grid fixed={false}>
-      <h2>
-        <geov-entity-label
+    <geov-entity
+      sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
+      entity-id={props.entityId}
+      uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+      uri-replace={
+        process.env.NEXT_PUBLIC_GEOV_URI_REPLACE + '?p=' + props.projectId
+      }
+    >
+      <div slot="body-end" className="section">
+        <ion-grid fixed={true}>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Metadata</ion-card-subtitle>
+            </ion-card-header>
+            <ion-list lines="none">
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
+              >
+                <ion-label>
+                  <p>
+                    Project URL:{' '}
+                    {`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
+                  </p>
+                </ion-label>
+              </ion-item>
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}`}
+              >
+                <ion-label>
+                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card>
+        </ion-grid>
+        <geov-if
           sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
-          entity-id={props.entityId}
-          _ssr-id="entityLabel"
-        ></geov-entity-label>
-      </h2>
-      <geov-entity-class-label
-        class="restricted-width"
-        sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
-        entity-id={props.entityId}
-        _ssr-id="classLabel"
-      ></geov-entity-class-label>
-      <geov-entity-definition
-        class="restricted-width"
-        sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
-        entity-id={props.entityId}
-        _ssr-id="def"
-      ></geov-entity-definition>
-      <br />
-      <geov-if
-        sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
-        sparql-query={isAnnotated}
-      >
-        <p>
-          <br />
-          <ion-button
-            fill="outline"
-            mode="ios"
-            target={'_blank'}
-            href={`http://geovistory.org/project/${props.projectId}/publication/entity-page.html?id=${props.entityId}`}
-          >
-            In der TEI Publikation öffnen
-            <ion-icon slot="end" src="/svg/open.svg"></ion-icon>
-          </ion-button>
-        </p>
-      </geov-if>
-    </ion-grid>
+          sparql-query={isAnnotated}
+        >
+          <p>
+            <br />
+            <ion-button
+              fill="outline"
+              mode="ios"
+              target={'_blank'}
+              href={`http://geovistory.org/project/${props.projectId}/publication/entity-page.html?id=${props.entityId}`}
+            >
+              In der TEI Publikation öffnen
+              <ion-icon slot="end" src="/svg/open.svg"></ion-icon>
+            </ion-button>
+          </p>
+        </geov-if>
+      </div>
+    </geov-entity>
   );
 }
