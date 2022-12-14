@@ -23,6 +23,7 @@ const resource = async (req: NextApiRequest, res: NextApiResponse) => {
   res
     .status(200)
     .setHeader('Content-Type', rdfSyntax.httpContentType)
+    .setHeader('Access-Control-Allow-Origin', req.headers.origin ?? '*')
     .send(rdf);
 };
 
