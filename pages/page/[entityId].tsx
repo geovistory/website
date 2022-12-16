@@ -8,6 +8,7 @@ import {
 } from '../../components/layouts/DefaultPage.component';
 import { serverRender } from '../../lib/serverRender';
 import { ProjectParams, projectsParams } from '../../lib/projectParams';
+import { openOutline } from 'ionicons/icons';
 interface SSRProps {
   entityId: string;
 }
@@ -23,55 +24,53 @@ interface ResourceProps extends SSRProps {
 export default function Resource(props: ResourceProps) {
   return (
     <ErrorBoundary>
-      <DefaultPage {...props.defaultPage}>
-        <Head>
-          {toReact(props._ssrHtmlHead)}
-          <title>{props._ssrData?.entityLabel?.label}</title>
-          <meta
-            name="description"
-            content={`Page about ${props._ssrData?.entityLabel?.label} on Geovistory`}
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
-        <p>
-          <small>
-            URI:{' '}
-            <a href={`http://geovistory.org/resource/${props.entityId}`}>
-              http://geovistory.org/resource/{props.entityId}
-            </a>
-          </small>
-        </p>
-      </DefaultPage>
+      <DefaultPage
+        {...props.defaultPage}
+        noPaddingSlot={
+          <div className="mainGridNoPadding ion-color-tertiary-bg">
+            <Head>
+              {toReact(props._ssrHtmlHead)}
+              <title>{props._ssrData?.['entity-label']?.label}</title>
+              <meta
+                name="description"
+                content={`Page about ${props._ssrData?.['entity-label']?.label} on Geovistory`}
+              />
+              <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
+          </div>
+        }
+      ></DefaultPage>
     </ErrorBoundary>
   );
 }
 
 function ssr(props: SSRProps) {
   return (
-    <ion-grid fixed={false}>
-      <h2>
-        <geov-entity-label
-          sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
-          entity-id={props.entityId}
-          _ssr-id="entityLabel"
-        ></geov-entity-label>
-      </h2>
-      <p>
-        <geov-entity-class-label
-          class="restricted-width"
-          sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
-          entity-id={props.entityId}
-          _ssr-id="classLabel"
-        ></geov-entity-class-label>
-      </p>
-      <geov-entity-definition
-        class="restricted-width"
-        sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
-        entity-id={props.entityId}
-        _ssr-id="def"
-      ></geov-entity-definition>
-    </ion-grid>
+    <geov-entity
+      sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+      entity-id={props.entityId}
+    >
+      <div slot="body-end" className="section">
+        <ion-grid fixed={true}>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Metadata</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-list lines="none">
+              <ion-item
+                href={`http://geovistory.org/resource/${props.entityId}`}
+              >
+                <ion-label>
+                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card>
+        </ion-grid>
+      </div>
+    </geov-entity>
   );
 }
 
