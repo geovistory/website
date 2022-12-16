@@ -55,11 +55,11 @@ const RomasDeportation_component: NextPage<ProjectPageProps> = (props) => {
             Individual trajectories, and collective fates.
           </p>{' '}
           <p>
-            In order to capture the dislocated world of Romanian Roma during the Second World War, We are reconstructing the spatial and social trajectories of the 25,500 Romanian Roma deported by the Romanian government to the governorate of Transnistria between 1942 and 1944.
+            In order to capture the dislocated world of Romanian Roma during the Second World War, we are reconstructing the spatial and social trajectories of the 25,500 Romanian Roma deported by the Romanian government to the governorate of Transnistria between 1942 and 1944.
             <br />
-            The project is funded by the Fondation pour la mémoire de la Shoah.
+            The project is funded by the <i>Fondation pour la mémoire de la Shoah.</i>
           </p>
-          <h4>Mention RGPDP</h4>
+          <h4>Mention RGPD</h4>
           <p>
             The exercise of the rights of access and rectification of personal data contained in the database can be done by simple request by email to Grégoire Cousin: gregoire.cousin[at]ehess.fr
           </p>
