@@ -87,7 +87,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               <ion-col size="12" size-md="6">
                 <ion-card
                   target="_blank"
-                  href="https://sparklis-dev.geovistory.org/?title=Geovistory%20Communtiy%20Data&endpoint=https%3A//sparql.geovistory.org/api_v1_community_data&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label"
+                  href="https://sparklis.geovistory.org/?title=Geovistory%20Communtiy%20Data&endpoint=https%3A//sparql.geovistory.org/api_v1_community_data&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label"
                 >
                   <ion-card-header>
                     <ion-card-title>
