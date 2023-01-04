@@ -40,6 +40,13 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
                 <ion-button href={`/project/${props.projectId}/sparql`}>
                   SPARQL
                 </ion-button>
+
+                <ion-button
+                  href={`https://sparklis.geovistory.org/?title=Geovistory%20Project%20${props.title}&endpoint=https%3A//sparql.geovistory.org/api_v1_project_${props.projectId}&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label`}
+                  target="blank"
+                >
+                  Sparklis
+                </ion-button>
                 <ion-button href={`/project/${props.projectId}/search`}>
                   Search
                 </ion-button>
