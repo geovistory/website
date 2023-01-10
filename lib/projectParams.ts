@@ -99,7 +99,7 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: -1,
         geovName: 'GLOBALVAT',
 
-        featured: true,
+        featured: false,
 
         teiURL: '',
         sparqlURL: '',
@@ -126,6 +126,25 @@ export const projectsParams: Array<ProjectParams> = [
         fullName: 'Euro-Climhist Database',
         shortName: 'Euro-Climhist Database',
         description: 'The historical climate database Euro-Climhist contains a unique set of data on observations and measurement series of weather phenomena.',
+
+        hasPage: true,
+        hasSPARQL: true,
+        hasTEI: false
+    },
+
+    // EHESS
+    {
+        geovID: 3354801,
+        geovName: 'Roma\'s deportation to Transnistria, 1942-1944',
+
+        featured: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Roma\'s deportation to Transnistria, 1942-1944',
+        shortName: 'Roma\'s deportation',
+        description: 'Individual trajectories, and collective fates. ',
 
         hasPage: true,
         hasSPARQL: true,
