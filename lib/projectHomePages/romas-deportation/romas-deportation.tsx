@@ -47,7 +47,7 @@ const RomasDeportation_component: NextPage<ProjectPageProps> = (props) => {
             }}
           ></ion-searchbar>
           <h1 className={styles.title}>
-            <div className={styles.titleLine1}>Roma&quot;s deportation to Transnistria, 1942-1944</div>
+            <div className={styles.titleLine1}>Roma&lsquo;s deportation to Transnistria, 1942-1944</div>
           </h1>
         </div>
         <ion-grid fixed class="ion-padding">
