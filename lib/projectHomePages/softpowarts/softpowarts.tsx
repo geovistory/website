@@ -64,6 +64,11 @@ const Softpowarts_component: NextPage<ProjectPageProps> = (props) => {
             interaméricaines au XXe siècle.
           </p>
           <p>
+            <ion-button href={props.params.geovID + '/search'}>
+              Accès aux données
+            </ion-button>
+          </p>
+          <p>
             Les résultats de la recherche peuvent être filtrés par classe, comme
             par exemple :
             <ul>
