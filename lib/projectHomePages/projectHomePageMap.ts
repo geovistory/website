@@ -6,24 +6,28 @@ import MaritimeHistory_component from './maritime-history/maritime-history';
 import Processetti_component from "./processetti/processetti";
 import EuroClimHist_component from "./euroclimhist/euroclimhist";
 import RomasDeportation_component from "./romas-deportation/romas-deportation";
+import Softpowarts_component from './softpowarts/softpowarts';
 
 
- interface Map {
-    [key: number]:  NextPage<ProjectPageProps>
+interface Map {
+    [key: number]: NextPage<ProjectPageProps>
 }
 export const projectHomePageMap: Map = {
     // AMPI
-    924033:  AMPI_component,
+    924033: AMPI_component,
 
     // Maritime History
-    84760:  MaritimeHistory_component,
+    84760: MaritimeHistory_component,
 
     // Processetti
-    591:  Processetti_component,
+    591: Processetti_component,
 
     // EuroClimHist
     6529336: EuroClimHist_component,
 
     // Roma's deportation
-    3354801: RomasDeportation_component
+    3354801: RomasDeportation_component,
+
+    // Softpowarts
+    3350169: Softpowarts_component
 };

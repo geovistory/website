@@ -11,9 +11,9 @@ export interface ProjectParams {
     shortName: string,
     description: string,
 
-    hasPage:boolean
-    hasSPARQL:boolean
-    hasTEI:boolean
+    hasPage: boolean
+    hasSPARQL: boolean
+    hasTEI: boolean
 }
 
 export const projectsParams: Array<ProjectParams> = [
@@ -73,7 +73,7 @@ export const projectsParams: Array<ProjectParams> = [
         hasSPARQL: false,
         hasTEI: false
     },
-    
+
     // Maritime History
     {
         geovID: 84760,
@@ -145,6 +145,24 @@ export const projectsParams: Array<ProjectParams> = [
         fullName: 'Roma\'s deportation to Transnistria, 1942-1944',
         shortName: 'Roma\'s deportation',
         description: 'Individual trajectories, and collective fates. ',
+
+        hasPage: true,
+        hasSPARQL: true,
+        hasTEI: false
+    },
+    // Softpowarts
+    {
+        geovID: 3350169,
+        geovName: 'Softpowarts',
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Softpowarts',
+        shortName: 'Softpowarts',
+        description: "Le soft power sud-américain : l'usage politique de la circulation des arts de la scène au XXe siècle",
 
         hasPage: true,
         hasSPARQL: true,
