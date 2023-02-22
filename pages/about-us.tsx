@@ -3,11 +3,11 @@ import { mailOutline } from 'ionicons/icons';
 import type { GetStaticProps, NextPage } from 'next';
 import {
   OrganizationCard,
-  OrganizationCardProps
+  OrganizationCardProps,
 } from '../components/elements/OrganizationCard.component';
 import {
   DefaultPage,
-  DefaultPageProps
+  DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../lib/projectParams';
 import styles from './about-us.module.css';
@@ -30,6 +30,15 @@ const kleiolab: OrganizationCardProps = {
   organizationDescription:
     'A Swiss company specializing in information systems in the digital humanities.',
   organizationURL: 'https://kleiolab.ch',
+};
+const unibe: OrganizationCardProps = {
+  imageURL: '/logo-unibe.png',
+  imageHeight: 972,
+  imageWidth: 1174,
+  organizationName: 'Universität Bern',
+  organizationDescription:
+    'The Digital Humanities are part of the Walter Benjamin Kolleg at the University of Bern researching and critiquing digital applications in the Humanities.',
+  organizationURL: 'https://www.dh.unibe.ch/',
 };
 export interface AboutUsProps {
   defaultPage: DefaultPageProps;
@@ -85,6 +94,9 @@ const AboutUs: NextPage<AboutUsProps> = (props) => {
               </ion-col>
               <ion-col>
                 <OrganizationCard {...kleiolab}></OrganizationCard>
+              </ion-col>
+              <ion-col>
+                <OrganizationCard {...unibe}></OrganizationCard>
               </ion-col>
             </ion-row>
             <ion-row>

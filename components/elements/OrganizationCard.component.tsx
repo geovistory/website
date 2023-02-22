@@ -21,20 +21,11 @@ export const OrganizationCard = ({
   organizationDescription,
   organizationURL,
 }: OrganizationCardProps) => (
-  <ion-card class={styles.container}>
-    <ion-item lines="full">
-      {/* <ion-icon icon={pin} slot="start" /> */}
-      {/* <ion-label>ion-item in a card, icon left, button right</ion-label> */}
-      <ion-button
-        fill="clear"
-        slot="end"
-        href={organizationURL}
-        target="_blank"
-      >
-        Visit website
-        <ion-icon icon={openOutline} slot="end" />
-      </ion-button>
-    </ion-item>
+  <ion-card class={styles.container} href={organizationURL} target="_blank">
+    {/* <ion-card-header>
+      <ion-card-title class={styles.title}>{organizationName}</ion-card-title>
+    </ion-card-header> */}
+
     <div className={styles.imageContainer}>
       <Image
         src={imageURL}
@@ -44,13 +35,21 @@ export const OrganizationCard = ({
         height={imageHeight}
       />
     </div>
-    <ion-card-header>
-      {/* <ion-card-subtitle>Featured Project</ion-card-subtitle> */}
-      <ion-card-title class={styles.title}>{organizationName}</ion-card-title>
-    </ion-card-header>
-
     <ion-card-content>
-      <div className={styles.description}>{organizationDescription}</div>
+      <div className={styles.description}>
+        <strong>{organizationName}</strong> – {organizationDescription}
+      </div>
     </ion-card-content>
+    {/* <ion-item lines="full">
+      <ion-button
+        fill="clear"
+        slot="end"
+        href={organizationURL}
+        target="_blank"
+      >
+        Visit website
+        <ion-icon icon={openOutline} slot="end" />
+      </ion-button>
+    </ion-item> */}
   </ion-card>
 );
