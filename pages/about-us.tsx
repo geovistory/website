@@ -35,7 +35,7 @@ const unibe: OrganizationCardProps = {
   imageURL: '/logo-unibe.png',
   imageHeight: 972,
   imageWidth: 1174,
-  organizationName: 'Universität Bern',
+  organizationName: 'University of Bern',
   organizationDescription:
     'The Digital Humanities are part of the Walter Benjamin Kolleg at the University of Bern researching and critiquing digital applications in the Humanities.',
   organizationURL: 'https://www.dh.unibe.ch/',
