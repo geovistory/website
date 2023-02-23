@@ -18,7 +18,7 @@ const larhra: OrganizationCardProps = {
   imageWidth: 500,
   organizationName: 'LARHRA',
   organizationDescription:
-    'A French research lab focusing on digital history methods and techniques.',
+    'A joint French research unit in History of the CNRS and the universities of Lyon and Grenoble. A research group of LARHRA, the Digital history research team focuses on digital humanities methods and techniques.',
   organizationURL:
     'http://larhra.ish-lyon.cnrs.fr/axe-de-recherche-en-histoire-numerique',
 };

@@ -8,7 +8,7 @@
 }
 
 .description {
-  max-height: calc(5*1.4em);
+  /* height: calc(6*1.4em); */
   overflow: hidden;
 }
 
