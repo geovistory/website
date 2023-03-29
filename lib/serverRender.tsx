@@ -17,6 +17,9 @@ export async function serverRender(
     },
   });
   removeUndefined(serverFetchedData);
+  if (typeof serverFetchedData === 'undefined') {
+    serverFetchedData = null;
+  }
   const happyDomWindow = new Window();
   const happyDomDoc = happyDomWindow.document;
   happyDomDoc.write(stencilHydrateOutput.html);
