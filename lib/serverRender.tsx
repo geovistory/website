@@ -18,7 +18,7 @@ export async function serverRender(
   });
   removeUndefined(serverFetchedData);
   if (typeof serverFetchedData === 'undefined') {
-    serverFetchedData = null;
+    throw new Error('SSR data is undefined');
   }
   const happyDomWindow = new Window();
   const happyDomDoc = happyDomWindow.document;
