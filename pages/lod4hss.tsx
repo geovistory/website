@@ -16,7 +16,7 @@ const Lod4Hss: NextPage<Lod4HssProps> = (props) => {
     <DefaultPage {...props.defaultPage}>
       <div className={styles.mainLogo}>
         <Image
-          width={400}
+          width={340}
           height={100}
           objectFit="scale-down"
           alt="Linked open research data"
@@ -107,180 +107,184 @@ const Lod4Hss: NextPage<Lod4HssProps> = (props) => {
         or drop us a message: info[at]geovistory.org.
       </p>
       <h2>Partners</h2>
-      {/* ROW 1 */}
-      <p className={styles.col}>
-        <ion-row>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/larhra.jpg"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="LARHRA"
-            />
-          </ion-col>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/kleiolab.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="KleioLab"
-            />
-          </ion-col>
+      <p className={styles.partners}>
+        <ion-card class={styles.partnersCard}>
+          <ion-card-content>
+            {/* ROW 1 */}
+            <ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/larhra.jpg"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="LARHRA"
+                />
+              </ion-col>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/kleiolab.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="KleioLab"
+                />
+              </ion-col>
 
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/unibe.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="University of Bern"
-            />
-          </ion-col>
-        </ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/unibe.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="University of Bern"
+                />
+              </ion-col>
+            </ion-row>
 
-        {/* ROW 2 */}
-        <ion-row>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/unine.png"
-              objectFit={'scale-down'}
-              width={150}
-              height={100}
-              alt="University of Neuchâtel"
-            />
-          </ion-col>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/uzh.png"
-              objectFit={'scale-down'}
-              width={150}
-              height={100}
-              alt="University of Zürich"
-            />
-          </ion-col>
+            {/* ROW 2 */}
+            <ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/unine.png"
+                  objectFit={'scale-down'}
+                  width={150}
+                  height={100}
+                  alt="University of Neuchâtel"
+                />
+              </ion-col>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/uzh.svg"
+                  objectFit={'scale-down'}
+                  width={150}
+                  height={100}
+                  alt="University of Zürich"
+                />
+              </ion-col>
 
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/dasch.png"
-              objectFit={'scale-down'}
-              width={150}
-              height={100}
-              alt="DaSCH"
-            />
-          </ion-col>
-        </ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/dasch.png"
+                  objectFit={'scale-down'}
+                  width={150}
+                  height={100}
+                  alt="DaSCH"
+                />
+              </ion-col>
+            </ion-row>
 
-        {/* ROW 3 */}
-        <ion-row>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/hep.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Haute école pédagogique vaud"
-            />
-          </ion-col>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/unibas.svg"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="University of Basel"
-            />
-          </ion-col>
+            {/* ROW 3 */}
+            <ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/hep.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Haute école pédagogique vaud"
+                />
+              </ion-col>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/unibas.svg"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="University of Basel"
+                />
+              </ion-col>
 
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/unifr.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="University of Freiburg"
-            />
-          </ion-col>
-        </ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/unifr.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="University of Freiburg"
+                />
+              </ion-col>
+            </ion-row>
 
-        {/* ROW 4 */}
-        <ion-row>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/uniberlin.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Freie Universität Berlin"
-            />
-          </ion-col>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/usi.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Università della Svizzera italiana"
-            />
-          </ion-col>
+            {/* ROW 4 */}
+            <ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/uniberlin.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Freie Universität Berlin"
+                />
+              </ion-col>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/usi.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Università della Svizzera italiana"
+                />
+              </ion-col>
 
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/unigreifswald.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Universität Greifswald"
-            />
-          </ion-col>
-        </ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/unigreifswald.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Universität Greifswald"
+                />
+              </ion-col>
+            </ion-row>
 
-        {/* ROW 4 */}
-        <ion-row>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/unitrier.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Universität Trier"
-            />
-          </ion-col>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/abes.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Agence bibliographique de l'enseignement supérieur"
-            />
-          </ion-col>
+            {/* ROW 4 */}
+            <ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/unitrier.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Universität Trier"
+                />
+              </ion-col>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/abes.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Agence bibliographique de l'enseignement supérieur"
+                />
+              </ion-col>
 
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/huygens.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Huygens Institurte"
-            />
-          </ion-col>
-          <ion-col size="4">
-            <Image
-              src="/lod4hss/logos/sari.png"
-              width={150}
-              height={100}
-              objectFit={'scale-down'}
-              alt="Swiss Art Research Infrastructure (SARI)"
-            />
-          </ion-col>
-        </ion-row>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/huygens.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Huygens Institurte"
+                />
+              </ion-col>
+              <ion-col size="4">
+                <Image
+                  src="/lod4hss/logos/sari.png"
+                  width={150}
+                  height={100}
+                  objectFit={'scale-down'}
+                  alt="Swiss Art Research Infrastructure (SARI)"
+                />
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
       </p>
       <h2>With the financial support of</h2>
-      <p>
+      <p className={styles.partners}>
         <Image
-          src="/lod4hss/logos/swissuniversities.png"
+          src="/lod4hss/logos/swissuniversities.svg"
           width={300}
           height={100}
           objectFit={'scale-down'}
