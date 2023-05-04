@@ -46,6 +46,23 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           Geovistory.org.
         </ion-card-content>
       </ion-card>
+      <br />
+      <ion-card
+        class="restricted-width"
+        href="https://discord.gg/DBJGZTJf"
+        target="_blank"
+      >
+        <ion-card-header>
+          <ion-card-subtitle>Communication Channel</ion-card-subtitle>
+          <ion-card-title>Geovistory Community Discord Server</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          A space for the Geovistory Community to collaborate, get the latest
+          news on events and developments, as well as answers to all sorts of
+          questions.
+        </ion-card-content>
+      </ion-card>
     </DefaultPage>
   );
 };

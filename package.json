@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "1.12.3",
+  "version": "1.12.4-pr-38.2",
   "private": true,
   "engines": {
     "npm": ">=7.0.0",
@@ -16,7 +16,7 @@
     "copy:icons": "node .build/copy-icons.js"
   },
   "dependencies": {
-    "@geovistory/design-system-web": "1.10.0",
+    "@geovistory/design-system-web": "1.10.1",
     "@ionic/core": "^6.1.13",
     "@triply/yasgui": "^4.2.26",
     "dlv": "^1.1.3",
