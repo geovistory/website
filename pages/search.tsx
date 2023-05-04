@@ -18,6 +18,9 @@ const Search: NextPage<SearchProps> = (props) => {
         <div className={styles.container}>
           <geov-explorer
             init-search-string={props.explorerTerm ?? undefined}
+            ref={(e: HTMLGeovExplorerElement) => {
+              if (e) e.preferredItems = ['c21', 'c363', 'c523', 'c68'];
+            }}
             sparql-endpoint={`https://sparql.geovistory.org/api_v1_community_data`}
             uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
             uri-replace={process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}
