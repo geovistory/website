@@ -23,15 +23,24 @@ export const Navbar = (props: NavbarProps) => {
             id="main"
             menu="main"
           ></ion-menu-button>
-          <span className="ion-hide-md-down" style={{display:'flex'}}>
+          <span className="ion-hide-md-down" style={{ display: 'flex' }}>
             <ion-button href="/data" strong={true}>
               Data
             </ion-button>
             <ion-button href="/resources" strong={true}>
               Resources
             </ion-button>
-            <ion-button href="/about-geovistory">About Geovistory</ion-button>
-            <ion-button href="/about-us">About Us</ion-button>
+
+            <ion-button id="about-trigger">About</ion-button>
+            <ion-popover trigger="about-trigger" trigger-action="click">
+              <ion-content>
+                <ion-list lines={'none'}>
+                  <ion-item href="/about-geovistory">Geovistory</ion-item>
+                  <ion-item href="/about-us">Team</ion-item>
+                  <ion-item href="/lod4hss">LOD4HSS</ion-item>
+                </ion-list>
+              </ion-content>
+            </ion-popover>
             <span className={styles.divider}></span>
             <ion-button
               href="https://toolbox.geovistory.org/login"

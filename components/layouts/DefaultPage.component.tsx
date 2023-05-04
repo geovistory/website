@@ -40,11 +40,17 @@ export const DefaultPage = (props: DefaultPageProps) => {
               <ion-item href="/resources" lines="full">
                 Resources
               </ion-item>
+              <ion-item-divider>
+                <ion-label>About</ion-label>
+              </ion-item-divider>
               <ion-item href="/about-geovistory" lines="full">
-                About Geovistory
+                Geovistory
               </ion-item>
               <ion-item href="/about-us" lines="full">
-                About Us
+                Team
+              </ion-item>
+              <ion-item href="/lod4hss" lines="full">
+                LOD4HSS
               </ion-item>
               <ion-item-divider>
                 <ion-label>Toolbox</ion-label>

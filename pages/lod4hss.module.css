@@ -1,0 +1,9 @@
+.mainLogo {
+  margin: 40px 0 0 89px;
+}
+
+.col {
+
+  --ion-grid-column-padding-xl: 0px;
+  --ion-grid-column-padding: 0px;
+}
