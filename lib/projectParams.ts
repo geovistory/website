@@ -172,7 +172,7 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: 3350169,
         geovName: 'Softpowarts',
 
-        preferredClasses: ['c363', 'c21', 'c870', 'c247', 'c698', 'c441'],
+        preferredClasses: ['c363', 'c21', 'c870', 'c247', 'c698', 'c68'],
 
         featured: false,
 
