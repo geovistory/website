@@ -86,15 +86,18 @@ const AboutGeovistory: NextPage<AboutGeovistoryProps> = (props) => {
       <h2>To whom Geovistory belongs</h2>
 
       <p>
-        The publication platform Geovistory.org is jointly developed by KleioLab
-        ARHN, University of Bern and other actors joining the Geovistory vision.
-        The <Link href="/lod4hss" target="_blank">LOD4HSS-project</Link>, co-funded by
-        swissuniversities, structures these efforts. The data publication
-        platform <Link href="/">Geovistory.org</Link> is developed open source
-        and available to the community via GitHub. The appropriate open-source
-        licensing yet needs to be decided. The publication platform is designed
-        in such a way that external software engineers can develop and integrate
-        their own components (
+        The publication platform Geovistory.org is jointly developed by
+        KleioLab, LARHRA, the University of Bern and other actors joining the
+        Geovistory vision. The{' '}
+        <Link href="/lod4hss" target="_blank">
+          LOD4HSS-project
+        </Link>
+        , co-funded by swissuniversities, structures these efforts. The data
+        publication platform <Link href="/">Geovistory.org</Link> is developed
+        open source and available to the community via GitHub. The appropriate
+        open-source licensing yet needs to be decided. The publication platform
+        is designed in such a way that external software engineers can develop
+        and integrate their own components (
         <a
           href="https://design.geovistory.org/?path=/story/welcome--welcome"
           target="_blank"
