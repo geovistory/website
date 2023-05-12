@@ -101,7 +101,7 @@ const Lod4Hss: NextPage<Lod4HssProps> = (props) => {
       <h2>Get in touch</h2>
       <p>
         Please join us on{' '}
-        <a href="https://discord.gg/DBJGZTJf" target="_blank" rel="noreferrer">
+        <a href="https://discord.gg/wVfM5BMZsf" target="_blank" rel="noreferrer">
           Discord
         </a>{' '}
         or drop us a message: info[at]geovistory.org.

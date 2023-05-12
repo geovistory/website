@@ -49,7 +49,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       <br />
       <ion-card
         class="restricted-width"
-        href="https://discord.gg/DBJGZTJf"
+        href="https://discord.gg/wVfM5BMZsf"
         target="_blank"
       >
         <ion-card-header>
