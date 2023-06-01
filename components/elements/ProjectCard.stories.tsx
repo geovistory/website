@@ -20,6 +20,8 @@ const args: ProjectCardProps = {
     geovID: 591,
     geovName: 'Processetti',
 
+    preferredClasses:[],
+
     featured: true,
 
     teiURL: '',
@@ -43,6 +45,8 @@ const args2: ProjectCardProps = {
     geovID: 591,
     geovName: 'Processetti',
 
+    preferredClasses: [],
+    
     featured: true,
 
     teiURL: '',

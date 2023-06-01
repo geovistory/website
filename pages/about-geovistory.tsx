@@ -1,8 +1,9 @@
 import type { GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
 import { YoutubeEmbed } from '../components/elements/YoutubeEmbed.component';
 import {
   DefaultPage,
-  DefaultPageProps
+  DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../lib/projectParams';
 
@@ -83,23 +84,34 @@ const AboutGeovistory: NextPage<AboutGeovistoryProps> = (props) => {
       </p>
 
       <h2>To whom Geovistory belongs</h2>
+
       <p>
-        The publication platform Geovistory.org is jointly developed by KleioLab
-        and ARHN and other actors joining the Geovistory vision. The data
-        publication platform{' '}
-        <a href="https://www.geovistory.org/">Geovistory.org</a> is developed
+        The publication platform Geovistory.org is jointly developed by
+        KleioLab, LARHRA, the University of Bern and other actors joining the
+        Geovistory vision. The{' '}
+        <Link href="/lod4hss" target="_blank">
+          LOD4HSS-project
+        </Link>
+        , co-funded by swissuniversities, structures these efforts. The data
+        publication platform <Link href="/">Geovistory.org</Link> is developed
         open source and available to the community via GitHub. The appropriate
-        open source licensing yet needs to be decided. The publication platform
+        open-source licensing yet needs to be decided. The publication platform
         is designed in such a way that external software engineers can develop
-        and integrate their own components (web components). We invite all
-        contributors to develop these components also open source and will do so
-        ourselves.
+        and integrate their own components (
+        <a
+          href="https://design.geovistory.org/?path=/story/welcome--welcome"
+          target="_blank"
+          rel="noreferrer"
+        >
+          web components
+        </a>
+        ). We invite all contributors to develop these components also open
+        source and will do so ourselves.
       </p>
       <p>
         The Toolbox is owned, developed and maintained by KleioLab. It is not
-        open source. However, this might change depending on the development of
-        Geovistory. The Toolbox is freely accessible for all individual
-        projects.
+        open source. However, this is about to change. The Toolbox is freely
+        accessible for all individual projects.
       </p>
 
       <h2>The data and their accessibility</h2>

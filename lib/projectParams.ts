@@ -1,6 +1,9 @@
 export interface ProjectParams {
     featured: boolean,
 
+    // preferred classe in entity explorer
+    preferredClasses: string[]
+
     geovID: number,
     geovName: string,
 
@@ -22,6 +25,8 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: 0,
         geovName: 'Community',
 
+        preferredClasses: [],
+
         featured: false,
 
         teiURL: '',
@@ -40,6 +45,8 @@ export const projectsParams: Array<ProjectParams> = [
     {
         geovID: 924033,
         geovName: 'AMPI',
+
+        preferredClasses: ['c21', 'c219', 'c635', 'c785', 'c633'],
 
         featured: true,
 
@@ -60,6 +67,8 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: 591,
         geovName: 'Processetti',
 
+        preferredClasses: [],
+
         featured: true,
 
         teiURL: '',
@@ -78,6 +87,8 @@ export const projectsParams: Array<ProjectParams> = [
     {
         geovID: 84760,
         geovName: 'Maritime History',
+
+        preferredClasses: ['c523', 'c21', 'c363', 'c522', 'c529'],
 
         featured: true,
 
@@ -99,6 +110,8 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: -1,
         geovName: 'GLOBALVAT',
 
+        preferredClasses: [],
+
         featured: false,
 
         teiURL: '',
@@ -117,6 +130,8 @@ export const projectsParams: Array<ProjectParams> = [
     {
         geovID: 6529336,
         geovName: 'EuroClimHist',
+
+        preferredClasses: [],
 
         featured: false,
 
@@ -137,6 +152,8 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: 3354801,
         geovName: 'Roma\'s deportation to Transnistria, 1942-1944',
 
+        preferredClasses: ['c363', 'c21', 'c68', 'c636',],
+
         featured: true,
 
         teiURL: '',
@@ -154,6 +171,8 @@ export const projectsParams: Array<ProjectParams> = [
     {
         geovID: 3350169,
         geovName: 'Softpowarts',
+
+        preferredClasses: ['c363', 'c21', 'c870', 'c247', 'c698', 'c68'],
 
         featured: false,
 
