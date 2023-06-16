@@ -1,0 +1,131 @@
+.theme {
+    --ion-background-color: #fff;
+    --gv-bg-project-toolbar: #EBF8FF;
+}
+
+.logosTitle {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.logosContainer {
+    margin-top: 4rem;
+    background-color: white;
+    --ion-grid-column-padding: var(--ion-padding);
+}
+
+.bannerContainer {
+    position: relative;
+    height: 250px;
+    display: flex;
+}
+
+.searchbar {
+    margin: auto;
+    margin-top: 0;
+}
+
+.bannerImage {
+    object-position: 40% 60%;
+}
+
+.title {
+    color: #fff;
+    font-size: 1.4rem;
+    text-shadow: rgb(70, 76, 38) 1px 0 10px;
+    position: absolute;
+    left: 1rem;
+    bottom: 0.3rem;
+}
+
+/* sm and up */
+@media screen and (min-width: 576px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .bannerContainer {
+        height: 350px;
+    }
+
+    .bannerImage {
+        object-position: 100% 60%;
+    }
+    .searchbar {
+        max-width: 508px;
+    }
+}
+
+/* md and up */
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 2.1rem;
+    }
+
+    .bannerContainer {
+        height: 425px;
+    }
+
+    .bannerImage {
+        object-position: 100% 100%;
+    }
+
+    .searchbar {
+        max-width: 38rem;
+        margin-top: 240px;
+        padding: 0;
+    }
+}
+
+/* lg and up */
+@media screen and (min-width: 992px) {
+    .title {
+        font-size: 2.6rem;
+    }
+
+    .bannerContainer {
+        height: 500px;
+    }
+
+    .bannerImage {
+        object-position: 100% 90%;
+    }
+
+    .searchbar {
+        margin-top: 280px;
+    }
+}
+
+/* xl and up */
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 3.1rem;
+    }
+
+    .bannerContainer {
+        height: 650px;
+    }
+
+    .bannerImage {
+        object-position: 100% 100%;
+    }
+
+    .searchbar {
+        margin-top: 430px;
+    }
+}
+
+
+/* xl and up */
+@media screen and (min-width: 1560px) {
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+
+    .searchbar {
+        margin-top: auto;
+        margin-bottom: 2rem;
+    }
+
+}

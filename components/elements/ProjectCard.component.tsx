@@ -1,16 +1,18 @@
-
 import { arrowForwardOutline } from 'ionicons/icons';
+import { NextComponentType } from 'next';
 import React from 'react';
 import { ProjectParams } from '../../lib/projectParams';
 import styles from './ProjectCard.module.css';
 export interface ProjectCardProps {
   project: ProjectParams;
+  height?: number;
 }
 
-export const ProjectCard = ({
-  project,
-}: ProjectCardProps) => (
-  <ion-card class={styles.container}>
+export const ProjectCard = ({ project, height }: ProjectCardProps) => (
+  <ion-card
+    class={styles.container}
+    style={{ height: height ? height + 'px' : 'unset' }}
+  >
     <ion-card-header>
       {/* <ion-card-subtitle>Featured Project</ion-card-subtitle> */}
       <ion-card-title class={styles.title}>{project.shortName}</ion-card-title>
