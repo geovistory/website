@@ -13,6 +13,12 @@
 }
 
 
+.mainGrid {
+  padding: var(--ion-padding);
+  min-height: 100vh;
+  margin-bottom: 8rem;
+}
+
 
 .featuredProjectsGrid {
   display: flex;
@@ -24,6 +30,9 @@
 
 .projectCardContainer {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
 }
 
 .carousel {
@@ -34,6 +43,7 @@
   margin-bottom: 1.5rem;
   padding: 0;
 }
+
 
 /* sm and up */
 @media screen and (min-width: 576px) {
@@ -52,6 +62,7 @@
 /* md and up */
 @media screen and (min-width: 768px) {
   .container {
+    width: 100%;
     position: relative;
     height: 680px;
     min-height: 100vh;
@@ -64,12 +75,15 @@
 
   .featuredProjectsContainer {
     position: absolute;
-    margin-top: 330px;
+    right: 0;
+    left: 0;
+    top: 400px;
     z-index: 1;
+    display: flex;
   }
-  
+
   .projectCardContainer {
-    max-width: 228px;
+    max-width: 295px;
     display: flex;
   }
 
@@ -78,8 +92,8 @@
   }
 
   .subheading {
-    margin-top: 0;
-    max-width: unset;
+    position: absolute;
+    bottom: 56px;
   }
 
   .carousel {
@@ -94,7 +108,7 @@
 @media screen and (min-width: 992px) {
 
   .featuredProjectsContainer {
-    margin-top: 400px;
+    top: 480px;
   }
 
   .title {
@@ -112,6 +126,10 @@
     height: 500px;
     max-width: 450px;
   }
+  .subheading {
+    position: absolute;
+    bottom: 70px;
+  }
 }
 
 /* xl and up */
@@ -122,4 +140,8 @@
     height: 500px;
     max-width: 600px;
   }
+}
+
+
+@media screen and (min-width: 1460px) {
 }

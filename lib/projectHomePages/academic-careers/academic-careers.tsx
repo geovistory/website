@@ -52,13 +52,13 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
         </div>
         <ion-grid fixed class="ion-padding">
           <p className="lead">
-            An open collaborative project of the Geovistory community dedicated
-            to the history of science and universities.
+            An open collaborative project of the Geovistory community on the
+            history of science and universities.
           </p>
           <p>
-            «Academic Education & Careers» is an open and collaborative project
-            of the Geovistory community. Everyone is invited to join and
-            contribute with their own data.
+            <strong>
+              Everyone is invited to join and contribute with their own data.
+            </strong>
           </p>
           <p>
             The project is dedicated to the history of science and universities.
@@ -67,19 +67,31 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
             professorship.
           </p>
           <p>
-            Background: This project was initiated as part of the virtual DHd
-            (German Digital Humanities Conference) in 2021, as part of a
-            collaborative experiment. The original description of the experiment
-            can be found here. In this experiment, a first dataset, the
-            directory of scholars at the University of Kiel in Germany, has been
-            added. It was further enriched with data from various projects, such
-            as the siprojuris project on French law professors.
+            Background: This project was initiated at the virtual DHd (German
+            Digital Humanities Conference) in 2021, as part of a collaborative
+            experiment. The original description of the experiment can be found{' '}
+            <a
+              href="https://vdhd2021.hypotheses.org/264"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+            . In this experiment, a first dataset, the directory of scholars at
+            the University of Kiel in Germany, has been added. It was further
+            enriched with data from various projects, such as the siprojuris
+            project on French law professors.
           </p>
           <h4>What can you do?</h4>
           <p>
             Explore the available information using the graphical data explorer
             or the sparql endpoint. For example, you might want to explore the
             existing scholars per domain.
+          </p>
+          <p>
+            <ion-button href={props.params.geovID + '/search'}>
+              Search data
+            </ion-button>
           </p>
           {/* <p>
              [Collaborate and contribute to the project by creating an account
@@ -109,44 +121,72 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
           </p>
           <h4>Institutional Partners</h4>
           <p>
-            <ion-row>
-              <ion-col size="3">
-                <Image
-                  src="/larhra-logo.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo LARHRA"
-                />
-              </ion-col>
-              <ion-col size="3">
-                <Image
-                  src="/kleiolab-logo.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="KleioLab logo"
-                />
-              </ion-col>
-              <ion-col size="3">
-                <Image
-                  src="/university-bern-logo.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo University of Bern"
-                />
-              </ion-col>
-              <ion-col size="3">
-                <Image
-                  src="/logo_abes.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Abes"
-                />
-              </ion-col>
-            </ion-row>
+            <ion-card
+              style={{
+                marginLeft: '0',
+                marginRight: '0',
+                paddingBottom: '1.5rem',
+              }}
+            >
+              <ion-card-content>
+                <ion-row>
+                  <ion-col
+                    size="6"
+                    style={{ display: 'flex' }}
+                    class="ion-justify-content-center"
+                  >
+                    <Image
+                      src="/larhra-logo.jpg"
+                      width={150}
+                      height={150}
+                      objectFit={'scale-down'}
+                      alt="Logo LARHRA"
+                    />
+                  </ion-col>
+                  <ion-col
+                    size="6"
+                    style={{ display: 'flex' }}
+                    class="ion-justify-content-center"
+                  >
+                    <Image
+                      src="/kleiolab-logo.png"
+                      width={150}
+                      height={150}
+                      objectFit={'scale-down'}
+                      alt="KleioLab logo"
+                    />
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col
+                    size="6"
+                    style={{ display: 'flex' }}
+                    class="ion-justify-content-center"
+                  >
+                    <Image
+                      src="/logo-unibe.png"
+                      width={150}
+                      height={150}
+                      objectFit={'scale-down'}
+                      alt="Logo University of Bern"
+                    />
+                  </ion-col>
+                  <ion-col
+                    size="6"
+                    style={{ display: 'flex' }}
+                    class="ion-justify-content-center"
+                  >
+                    <Image
+                      src="/logo_abes.png"
+                      width={150}
+                      height={150}
+                      objectFit={'scale-down'}
+                      alt="Logo Abes"
+                    />
+                  </ion-col>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
           </p>
           <div className="restricted-width" style={{ marginTop: '5rem' }}>
             <ion-label>
