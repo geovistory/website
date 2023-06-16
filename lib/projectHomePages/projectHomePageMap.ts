@@ -7,6 +7,7 @@ import Processetti_component from "./processetti/processetti";
 import EuroClimHist_component from "./euroclimhist/euroclimhist";
 import RomasDeportation_component from "./romas-deportation/romas-deportation";
 import Softpowarts_component from './softpowarts/softpowarts';
+import AcademicCareers_component from './academic-careers/academic-careers';
 
 
 interface Map {
@@ -29,5 +30,9 @@ export const projectHomePageMap: Map = {
     3354801: RomasDeportation_component,
 
     // Softpowarts
-    3350169: Softpowarts_component
+    3350169: Softpowarts_component,
+
+    // Academic Careers
+    1483135: AcademicCareers_component
+
 };

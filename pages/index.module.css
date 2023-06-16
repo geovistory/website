@@ -14,15 +14,23 @@
 
 
 
-.featuredProjectsGrid {}
+.featuredProjectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
 
 .projectCardContainer {
   display: flex;
 }
+
 .carousel {
   height: 350px;
 }
-.searchbar{
+
+.searchbar {
   margin-bottom: 1.5rem;
   padding: 0;
 }
@@ -36,8 +44,9 @@
     max-width: 508px;
   }
 }
+
 .subheading {
- font-weight: 400;
+  font-weight: 400;
 }
 
 /* md and up */
@@ -47,25 +56,32 @@
     height: 680px;
     min-height: 100vh;
   }
+
   .bannerContainer {
     position: absolute;
     z-index: 0;
   }
-  
+
   .featuredProjectsContainer {
     position: absolute;
     margin-top: 330px;
     z-index: 1;
   }
-  .searchbar{
+  
+  .projectCardContainer {
+    max-width: 228px;
+    display: flex;
+  }
+
+  .searchbar {
     padding-right: 2rem;
   }
-  
+
   .subheading {
     margin-top: 0;
     max-width: unset;
   }
-  
+
   .carousel {
     display: block;
     margin-top: 50px;

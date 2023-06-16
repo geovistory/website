@@ -82,16 +82,14 @@ const Home: NextPage<HomeProps> = (props) => {
           <h3 className={styles.subheading}>Featured Projects</h3>
 
           <ion-grid class={styles.featuredProjectsGrid}>
-            <ion-row>
-              {props.featuredProjects.map((proj: ProjectParams, i: number) => (
-                <ion-col
-                  key={'project-card-' + i}
-                  class={styles.projectCardContainer}
-                >
-                  <ProjectCard project={proj} />
-                </ion-col>
-              ))}
-            </ion-row>
+            {props.featuredProjects.map((proj: ProjectParams, i: number) => (
+              <div
+                key={'project-card-' + i}
+                className={styles.projectCardContainer}
+              >
+                <ProjectCard project={proj} />
+              </div>
+            ))}
           </ion-grid>
         </div>
       </div>

@@ -186,7 +186,28 @@ export const projectsParams: Array<ProjectParams> = [
         hasPage: true,
         hasSPARQL: true,
         hasTEI: false
+    },
+    // Academic Careers
+    {
+        geovID: 1483135,
+        geovName: 'Academic Education & Careers',
+
+        preferredClasses: ['c363', 'c21', 'c870', 'c247', 'c698', 'c68'],
+
+        featured: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Academic Education & Careers',
+        shortName: 'Academic Education & Careers',
+        description: "An open collaborative project of the Geovistory community dedicated to the history of science and universities.",
+
+        hasPage: true,
+        hasSPARQL: true,
+        hasTEI: false
     }
+
 
 ]
 
