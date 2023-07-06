@@ -23,6 +23,7 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (
   if (!params) return { notFound: true };
   const props: ProjectPageProps = {
     projectPageLayout: {
+      headTitle: params.shortName,
       navbar: {
         projectId,
         title: params.shortName,

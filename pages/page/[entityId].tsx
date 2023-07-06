@@ -90,6 +90,7 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
       ...props,
       featuredProjects,
       defaultPage: {
+        headTitle: null, // head title is set within Resource
         footer: {
           featuredProjects,
         },

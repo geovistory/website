@@ -3,7 +3,7 @@ import { CCLicense } from '../../../components/elements/CCLicense.component';
 import { Yasgui } from '../../../components/elements/Yasgui.component';
 import {
   ProjectPageLayout,
-  ProjectPageLayoutProps
+  ProjectPageLayoutProps,
 } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectParams, projectsParams } from '../../../lib/projectParams';
 import styles from './sparql.module.css';
@@ -44,6 +44,7 @@ export const getServerSideProps: GetStaticProps<ProjectSparqlProps> = async (
   if (!params) return { notFound: true };
   const props: ProjectSparqlProps = {
     projectPageLayout: {
+      headTitle: 'SPARQL ' + params.shortName,
       navbar: {
         projectId,
         title: params.shortName,

@@ -63,7 +63,9 @@ const Home: NextPage<HomeProps> = (props) => {
                         );
                       }}
                     ></ion-searchbar>
-                    <h3 className={styles.subheading +  ' ion-hide-md-down'}>Featured Projects</h3>
+                    <h3 className={styles.subheading + ' ion-hide-md-down'}>
+                      Featured Projects
+                    </h3>
                   </ion-col>
                   <ion-col>
                     <geov-carousel
@@ -143,6 +145,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     props: {
       featuredProjects,
       defaultPage: {
+        headTitle: 'Geovistory',
         footer: {
           featuredProjects,
         },

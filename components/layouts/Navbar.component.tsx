@@ -27,8 +27,11 @@ export const Navbar = (props: NavbarProps) => {
             <ion-button href="/data" strong={true}>
               Data
             </ion-button>
-            <ion-button href="/resources" strong={true}>
-              Resources
+            <ion-button href="/community" strong={true}>
+              Community
+            </ion-button>
+            <ion-button href="/documentation" strong={true}>
+              Docs
             </ion-button>
 
             <ion-button id="about-trigger">About</ion-button>

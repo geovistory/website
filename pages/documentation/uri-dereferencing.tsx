@@ -69,8 +69,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       </p>
       <p>
         The accept header of your http request determines whether you get back
-        HTML or RDF (see below; See content negotiation in section
-        12 in the {' '}
+        HTML or RDF (see below; See content negotiation in section 12 in the{' '}
         <a
           href="https://www.w3.org/Protocols/rfc2616/rfc2616.txt"
           target="_blank"
@@ -219,8 +218,9 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <li>
             Browser/curl request:{' '}
             <code>
-              <strong>http://</strong>geovistory.org/<strong>resource</strong>
-              /{entityId}{queryParam}
+              <strong>http://</strong>geovistory.org/<strong>resource</strong>/
+              {entityId}
+              {queryParam}
             </code>
           </li>
           <li>
@@ -230,7 +230,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             Browser/curl requests:
             <code>
               <strong>https://www</strong>.geovistory.org/
-              <strong>resource</strong>/{entityId}{queryParam}
+              <strong>resource</strong>/{entityId}
+              {queryParam}
             </code>
           </li>
           <li>
@@ -241,14 +242,13 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             {pId ? (
               <code>
                 <strong>https://www</strong>.geovistory.org/
-                <strong>project/{pId}/page</strong>
-                /{entityId}{queryParam}
+                <strong>project/{pId}/page</strong>/{entityId}
+                {queryParam}
               </code>
             ) : (
               <code>
                 <strong>https://www</strong>.geovistory.org/
-                <strong>page</strong>
-                /{entityId}
+                <strong>page</strong>/{entityId}
               </code>
             )}{' '}
           </li>
@@ -260,8 +260,9 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <li>
             Browser/curl request:{' '}
             <code>
-              <strong>http://</strong>geovistory.org/<strong>resource</strong>
-              /{entityId}{queryParam}
+              <strong>http://</strong>geovistory.org/<strong>resource</strong>/
+              {entityId}
+              {queryParam}
             </code>
           </li>
           <li>
@@ -270,7 +271,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <li>
             Browser/curl requests:
             <code>
-              <strong>https://www</strong>.geovistory.org/resource/{entityId}{queryParam}
+              <strong>https://www</strong>.geovistory.org/resource/{entityId}
+              {queryParam}
             </code>
           </li>
           <li>Browser/curl receives: RDF</li>{' '}
@@ -285,6 +287,7 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
+        headTitle: 'URI Derefernecing',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

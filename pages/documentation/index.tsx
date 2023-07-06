@@ -2,8 +2,8 @@ import type { GetStaticProps, NextPage } from 'next';
 import {
   DefaultPage,
   DefaultPageProps,
-} from '../components/layouts/DefaultPage.component';
-import { projectsParams } from '../lib/projectParams';
+} from '../../components/layouts/DefaultPage.component';
+import { projectsParams } from '../../lib/projectParams';
 
 export interface ResourcesProps {
   defaultPage: DefaultPageProps;
@@ -11,7 +11,7 @@ export interface ResourcesProps {
 const Resources: NextPage<ResourcesProps> = (props) => {
   return (
     <DefaultPage {...props.defaultPage}>
-      <h1>Explore Geovistory Resources</h1>
+      <h1>Documentation</h1>
       <br />
 
       <ion-card
@@ -21,7 +21,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       >
         <ion-card-header>
           <ion-card-subtitle>User Manual</ion-card-subtitle>
-          <ion-card-title>Geovistory Toolbox Documentation</ion-card-title>
+          <ion-card-title>Toolbox Documentation</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
@@ -37,7 +37,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       >
         <ion-card-header>
           <ion-card-subtitle>Developer Documentation</ion-card-subtitle>
-          <ion-card-title>Geovistory Webcomponents</ion-card-title>
+          <ion-card-title>Webcomponents</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
@@ -49,12 +49,12 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       <br />
       <ion-card
         class="restricted-width"
-        href="https://discord.gg/wVfM5BMZsf"
+        href="/documentation/uri-dereferencing"
         target="_blank"
       >
         <ion-card-header>
-          <ion-card-subtitle>Communication Channel</ion-card-subtitle>
-          <ion-card-title>Geovistory Community Discord Server</ion-card-title>
+          <ion-card-subtitle>Data API</ion-card-subtitle>
+          <ion-card-title>URI Dereferencing</ion-card-title>
         </ion-card-header>
 
         <ion-card-content>
@@ -72,6 +72,7 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
+        headTitle: 'Documentation',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

@@ -139,6 +139,7 @@ export const getStaticProps: GetStaticProps<AboutGeovistoryProps> =
     return {
       props: {
         defaultPage: {
+          headTitle: 'About Geovistory',
           footer: {
             featuredProjects: projectsParams.filter((pp) => pp.featured),
           },

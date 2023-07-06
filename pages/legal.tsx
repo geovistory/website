@@ -94,7 +94,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               href="https://creativecommons.org/licenses/by-nc-nd/2.0/"
             >
               CC BY-NC-ND 2.0
-            </a>{' '} 
+            </a>{' '}
             <a
               target="_blank"
               rel="noreferrer"
@@ -220,8 +220,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               rel="noreferrer"
               href="https://commons.wikimedia.org/w/index.php?curid=37856359"
             >
-              File:Catastrophe d&apos;Aniche 24 février 1827 - état civil - acte de
-              décès 32 Constant Héroguez.jpg - Wikimedia Commons{' '}
+              File:Catastrophe d&apos;Aniche 24 février 1827 - état civil - acte
+              de décès 32 Constant Héroguez.jpg - Wikimedia Commons{' '}
             </a>{' '}
           </li>
 
@@ -256,8 +256,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               rel="noreferrer"
               href="https://www.flickr.com/photos/72746018@N00/50166914111"
             >
-              Le premier congrès international de la musique (musée de l&apos;Opéra
-              de Vichy)
+              Le premier congrès international de la musique (musée de
+              l&apos;Opéra de Vichy)
             </a>{' '}
           </li>
 
@@ -359,13 +359,14 @@ const Resources: NextPage<ResourcesProps> = (props) => {
       </p>
       <h2>Terms of Service Geovistory Toolbox</h2>
       <p>
-        The usage of the Geovistory Toolbox is subject to the {' '}
+        The usage of the Geovistory Toolbox is subject to the{' '}
         <a
           target="_blank"
           rel="noreferrer"
           href="https://docs.geovistory.com/pricing-and-administration/terms-of-service-and-data-privacy"
-        >Terms of Service
-        of the Geovistory Toolbox and the Data Privacy Policy</a>
+        >
+          Terms of Service of the Geovistory Toolbox and the Data Privacy Policy
+        </a>
       </p>{' '}
     </DefaultPage>
   );
@@ -376,6 +377,7 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
+        headTitle: 'Legal Notice',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },
