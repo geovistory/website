@@ -58,7 +58,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         </ion-card-header>
 
         <ion-card-content>
-          Geovistory Entities have URIs. Learn here how to obtain different
+          Geovistory entities have URIs. Learn here how to obtain different
           representations of the entities in HTML and RDF.
         </ion-card-content>
       </ion-card>
