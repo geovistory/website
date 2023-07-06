@@ -68,7 +68,7 @@ const Community: NextPage<CommunityProps> = (props) => {
         Fill in this form and receive the Geovistory newsletter so that you
         don&apos;t miss our latest developments.
       </p>
-      <h2>Github</h2>
+      <h2>GitHub</h2>
       <p>
         The platform GitHub is used by our DevOps team to develop and maintain
         the Geovistory infrastructure. It allows the publication of the source
@@ -76,8 +76,16 @@ const Community: NextPage<CommunityProps> = (props) => {
         milestones, and recording issues that need to be solved.
       </p>
       <p>
-        If coding interests you, check out our various repositories used for the
-        Geovistory environment. Of particular interest to you might be our{' '}
+        If coding interests you, check out our{' '}
+        <a
+          href="https://github.com/geovistory"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub repositories
+        </a>{' '}
+        used for the Geovistory environment. Of particular interest to you might
+        be our{' '}
         <a
           href="https://design.geovistory.org"
           target="_blank"
@@ -85,8 +93,8 @@ const Community: NextPage<CommunityProps> = (props) => {
         >
           Geovistory Design System
         </a>
-        , built from open-source webcomponents. You can use it to build your own
-        webpage featuring Geovistory data!
+        , which consists of open-source web components. You can embed them in
+        your own webpage to present Geovistory data!
       </p>
       <h2>Email and Twitter</h2>
       <p>
@@ -100,7 +108,7 @@ const Community: NextPage<CommunityProps> = (props) => {
           rel="noreferrer"
           href="https://twitter.com/Geovistory?s=20"
         >
-          info@twitter.org
+          twitter
         </a>
         . Or visit us in our offices in Bern, Lyon and Basel. You are always
         welcome for a coffee!

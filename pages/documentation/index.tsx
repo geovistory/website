@@ -58,9 +58,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         </ion-card-header>
 
         <ion-card-content>
-          A space for the Geovistory Community to collaborate, get the latest
-          news on events and developments, as well as answers to all sorts of
-          questions.
+          Geovistory Entities have URIs. Learn here how to obtain different
+          representations of the entities in HTML and RDF.
         </ion-card-content>
       </ion-card>
     </DefaultPage>
