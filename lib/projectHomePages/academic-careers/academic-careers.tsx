@@ -103,7 +103,7 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             Contact us in case of questions! Either on{' '}
             <a
-              href="https://discord.gg/wVfM5BMZsf"
+              href="https://discord.gg/pjcwjnruVb"
               target="_blank"
               rel="noreferrer"
             >

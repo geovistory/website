@@ -69,7 +69,7 @@ const AboutUs: NextPage<AboutUsProps> = (props) => {
                     ref={(carousel?: Components.GeovCarousel) => {
                       if (carousel)
                         carousel.images = [
-                          '/team.jpg',
+                          '/geovistory-team.jpg',
                           '/about-us_carousel-1.jpg',
                           '/about-us_carousel-2.png',
                         ];
@@ -136,6 +136,7 @@ export const getStaticProps: GetStaticProps<AboutUsProps> = async () => {
   return {
     props: {
       defaultPage: {
+        headTitle: 'About Us',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

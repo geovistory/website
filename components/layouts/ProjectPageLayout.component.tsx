@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { ReactNode } from 'react';
 import { getOntoExlorerUrl } from '../../lib/getOntoExploerUrl';
 import { ProjectFooter } from './ProjectFooter.component';
@@ -6,12 +7,22 @@ import styles from './ProjectPageLayout.module.css';
 
 export interface ProjectPageLayoutProps {
   navbar: ProjectNavbarProps;
+  // the title to be put in <head><title></title></head>
+  headTitle: string | null;
   children?: ReactNode;
 }
 
 export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
   return (
     <>
+      <Head>
+        {props.headTitle && (
+          <title>
+            {props.headTitle}
+            {props.headTitle?.includes('Geovistory') ? '' : ' – Geovistory'}
+          </title>
+        )}
+      </Head>
       <ion-app>
         <ion-menu side="start" menu-id="main" content-id="main">
           <ion-header>

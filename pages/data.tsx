@@ -146,6 +146,7 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
+        headTitle:"Community Data",
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

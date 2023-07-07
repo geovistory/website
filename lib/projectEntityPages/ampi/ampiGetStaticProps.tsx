@@ -21,6 +21,7 @@ export const ampiGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
     props: {
       ...ssrProps,
       projectPageLayout: {
+        headTitle: params.shortName,
         navbar: {
           projectId,
           title: params.shortName,

@@ -40,6 +40,7 @@ export const getServerSideProps: GetServerSideProps<SearchProps> = async ({
     props: {
       explorerTerm,
       defaultPage: {
+        headTitle: 'Search',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

@@ -34,6 +34,7 @@ const Template: ComponentStory<typeof DefaultPageComponent> = (args) => {
 
 export const DefaultPageFixedGrid = Template.bind({});
 const args: DefaultPageProps = {
+  headTitle: 'Tagebücher Anne Maria Preiswerk Iselin',
   footer: {
     featuredProjects: [
       {

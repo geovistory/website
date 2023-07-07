@@ -25,6 +25,7 @@ export const getStaticProps: GetStaticProps<SparqlProps> = async ()=> {
   return {
     props: {
       defaultPage: {
+        headTitle:"SPARQL",
         expand: true,
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),

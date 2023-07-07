@@ -1,13 +1,17 @@
-import { ReactNode } from 'react';
+import { openOutline } from 'ionicons/icons';
+import Head from 'next/head';
+
+import React, { ReactNode } from 'react';
+import styles from './DefaultPage.module.css';
 import { Footer, FooterProps } from './Footer.component';
 import { Navbar } from './Navbar.component';
-import styles from './DefaultPage.module.css';
-import { openOutline } from 'ionicons/icons';
 export interface DefaultPageProps {
   children?: ReactNode;
   noPaddingSlot?: ReactNode;
   footer: FooterProps;
 
+  // the title to be put in <head><title></title></head>
+  headTitle: string | null;
   /**
    * if true: main container for its children takes up the
    *          entire width of the screen
@@ -22,6 +26,14 @@ export interface DefaultPageProps {
 export const DefaultPage = (props: DefaultPageProps) => {
   return (
     <>
+      <Head>
+        {props.headTitle && (
+          <title>
+            {props.headTitle}
+            {props.headTitle?.includes('Geovistory') ? '' : ' – Geovistory'}
+          </title>
+        )}
+      </Head>
       <ion-app>
         <ion-menu side="start" menu-id="main" content-id="main">
           <ion-header>
@@ -37,8 +49,11 @@ export const DefaultPage = (props: DefaultPageProps) => {
               <ion-item href="/data" lines="full">
                 Data
               </ion-item>
-              <ion-item href="/resources" lines="full">
-                Resources
+              <ion-item href="/community" lines="full">
+                Community
+              </ion-item>
+              <ion-item href="/documentation" lines="full">
+                Documentation
               </ion-item>
               <ion-item-divider>
                 <ion-label>About</ion-label>
@@ -71,7 +86,7 @@ export const DefaultPage = (props: DefaultPageProps) => {
         </ion-header>
         <ion-content>
           {props.noPaddingSlot && (
-            <ion-grid fixed={false} >{props.noPaddingSlot}</ion-grid>
+            <ion-grid fixed={false}>{props.noPaddingSlot}</ion-grid>
           )}
           {props.children && (
             <ion-grid fixed={!props.expand} class={styles.mainGrid}>
