@@ -29,7 +29,13 @@ const Community: NextPage<CommunityProps> = (props) => {
       </p>
       <h2>Discord</h2>
       <p>
-        <Link href="#"> Join us on Discord and stay tuned!</Link>
+        <Link
+          href="https://discord.gg/pjcwjnruVb"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Join us on Discord and stay tuned!
+        </Link>
       </p>
       <p>
         Discord is a discussion platform that allows you to join our groups and
@@ -65,8 +71,12 @@ const Community: NextPage<CommunityProps> = (props) => {
       </p>
       <h2>Newsletter</h2>
       <p>
-        Fill in this form and receive the Geovistory newsletter so that you
-        don&apos;t miss our latest developments.
+        Fill in{' '}
+        <a href="http://eepurl.com/iu7oqQ" target="_blank" rel="noreferrer">
+          this form
+        </a>{' '}
+        and receive the Geovistory newsletter so that you don&apos;t miss our
+        latest developments.
       </p>
       <h2>GitHub</h2>
       <p>

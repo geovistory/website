@@ -102,7 +102,7 @@ const Lod4Hss: NextPage<Lod4HssProps> = (props) => {
       <p>
         Please join us on{' '}
         <a
-          href="https://discord.gg/wVfM5BMZsf"
+          href="https://discord.gg/pjcwjnruVb"
           target="_blank"
           rel="noreferrer"
         >
