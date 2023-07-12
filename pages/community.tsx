@@ -72,7 +72,7 @@ const Community: NextPage<CommunityProps> = (props) => {
       <h2>Newsletter</h2>
       <p>
         Fill in{' '}
-        <a href="http://eepurl.com/iu7oqQ" target="_blank" rel="noreferrer">
+        <a href="https://stats.sender.net/forms/aKNpMe/view" target="_blank" rel="noreferrer">
           this form
         </a>{' '}
         and receive the Geovistory newsletter so that you don&apos;t miss our
