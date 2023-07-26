@@ -62,7 +62,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             <h3>Presentazione breve del progetto</h3>
 
             <p>
-              Il progetto di ricerca "Processetti". Matrimonio e mobilità a
+              Il progetto di ricerca &quot;Processetti&quot;. Matrimonio e mobilità a
               Venezia, XVI-XVIII secolo ha un duplice obiettivo: da un lato, le
               strutture e i percorsi migratori verso Venezia attraverso lo
               sfruttamento delle informazioni contenute nelle inchieste
