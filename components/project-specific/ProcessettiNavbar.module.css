@@ -1,0 +1,45 @@
+
+
+.logo {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 1rem;
+}
+
+
+.divider {
+    height: 2rem;
+    width: 1px;
+    margin: 0 10px 0 16px;
+    background: var(--ion-color-step-250);
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.toolbar {
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --padding-start: var(--ion-padding, 16px);
+    --padding-end: var(--ion-padding, 16px);
+    /* --ion-color-base: var(--gv-bg-project-toolbar, none) !important; */
+}
+
+
+.toolbar ion-button~ion-button {
+    margin-left: 8px;
+}
+
+@media screen and (min-width: 576px) {
+
+
+    .toolbar {
+        --padding-top: 20px;
+        --padding-bottom: 20px;
+        --padding-start: var(--gv-padding-big);
+        --padding-end: var(--gv-padding-big);
+    }
+}
+
+.buttonsLeft {
+    overflow: hidden;
+}
