@@ -2,6 +2,8 @@ import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Person } from '../../components/elements/Person.component';
+import { ProjectFooter } from '../../components/layouts/ProjectFooter.component';
+import { ProcessettiBanner } from '../../components/project-specific/ProcessettiBanner.component';
 import { ProcessettiNavbar } from '../../components/project-specific/ProcessettiNavbar.component';
 import styles from './index.module.css';
 
@@ -18,41 +20,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             title="Progetto ANR Processetti"
             projectId={591}
           ></ProcessettiNavbar>
-          <ion-menu side="start" menu-id="main" content-id="main">
-            <ion-header>
-              <ion-toolbar class={styles.menuTitle}>
-                <ion-title></ion-title>
-              </ion-toolbar>
-            </ion-header>
-            <ion-content>
-              <ion-list>
-                <ion-item-divider>
-                  <ion-label>Banca dati</ion-label>
-                </ion-item-divider>
-                <ion-item href="processetti/metodologia" lines="full">
-                  Metodologia
-                </ion-item>
-                <ion-item lines="full">
-                  ...
-                </ion-item>
-              </ion-list>
-            </ion-content>
-          </ion-menu>
-          <ion-grid class={styles.banner}>
-            <h1>
-              Progetto <br /> ANR Processetti
-            </h1>
-            <div className={styles.bannerImageContainer}>
-              <ion-img
-                class={styles.bannerImage}
-                src="/processetti-main.jpg"
-                alt="Progetto ANR Processetti"
-              />
-            </div>
-          </ion-grid>
-          <ion-grid class={styles.sectionPrimary}>
-            Progetto ANR Processetti
-          </ion-grid>
+          <ProcessettiBanner></ProcessettiBanner>
           <ion-grid class={styles.section}>
             <h2>
               Matrimonio e mobilità a Venezia <br /> XVI-XVII secoli
@@ -395,32 +363,42 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                 init: {
                   'theme': 'base',
                   'themeVariables': {
-                    'cScale0':'#ffebac',
-                    'cScaleLabel0': '#000',
-                    'cScale1':'#d0d9d9',
-                    'cScaleLabel1': '#000',
-                    'cScale2':'#ffebac',
-                    'cScaleLabel2': '#000',
-                    'fontFamily': 'Roboto,RobotoDraft,Helvetica,Arial,sans-serif'          
+          
+                    'cScale0':'#9f7a09',
+                    'cScaleLabel0': '#fff',
+          
+                    'cScale1':'#0892a5',
+                    'cScaleLabel1': '#fff',
+          
+                    'cScale2':'#74a08b',
+                    'cScaleLabel2': '#fff',
+          
+                    'cScale3':'#0892a5',
+                    'cScaleLabel3': '#fff',
+          
+                    'cScale4':'#9f7a09',
+                    'cScaleLabel4': '#fff',
+          
+                    'font-family': 'Roboto,RobotoDraft,Helvetica,Arial,sans-serif'          
                   }
                 }
               }%%
-              
               timeline
-                section 2019
-                  2019: Fornitura della piattaforma Geovistory da parte della società svizzera Kleiolab
-                section 2020-2022 <br> Spoglio archivistico presso l’Archivio storico patriarcale di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
-                  2020: Reclutamento di tre studiosi (J. Cossu, F. Zugno, D. Drago) per una collaborazione della durata di tre anni Contratto post-doc per Teresa Bernardi (Università di Padova, Dipartimento DiSSGeA, progetto di eccellenza "Mobility & Humanities")
-                  2021: Missioni di ricerca presso gli archivi  di Anna Athanasouli (Università di Creta), Katerina Konstantinidou (National and Kapodistrian University of Athens) e Katerina Korrè (Università di Corfu).
-                      : Giornata di studi Contrôle pré-matrimonial, bigamie et mariages mixtes en Europe orientale, 10 t 11 settembre 2021 all’Università nazionale capodistriana di Atene e all’École française d’Athènes.
-                  2022: Convegno Disciplinare il matrimonio, tracciare la mobilità, riconoscere le relazioni.
-                      : Esami prematrimoniali nel mondo cattolico (XVI-XVIII secolo), organizzato all'Università di Padova, 27-28 ottobre 2022.
-                section 2023
-                  2023: Analisi dei dati di Jacopo Cossu.
-                      : Consegna di un libro sul controllo dello stato libero dalla Casa Editrice Viella
+                2019: Fornitura della piattaforma Geovistory da parte della società svizzera Kleiolab
+                2020: Spoglio archivistico presso l’Archivio storico patriarcale di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
+                    : Reclutamento di tre studiosi (J. Cossu, F. Zugno, D. Drago) per una collaborazione della durata di tre anni Contratto post-doc per Teresa Bernardi (Università di Padova, Dipartimento DiSSGeA, progetto di eccellenza "Mobility & Humanities")
+                2021: Spoglio archivistico presso l’Archivio storico patriarcale di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
+                    : Missioni di ricerca presso gli archivi  di Anna Athanasouli (Università di Creta), Katerina Konstantinidou (National and Kapodistrian University of Athens) e Katerina Korrè (Università di Corfu).
+                    : Giornata di studi Contrôle pré-matrimonial, bigamie et mariages mixtes en Europe orientale, 10 t 11 settembre 2021 all’Università nazionale capodistriana di Atene e all’École française d’Athènes.
+                2022: Spoglio archivistico presso l’Archivio storico patriarcale di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
+                    : Convegno Disciplinare il matrimonio, tracciare la mobilità, riconoscere le relazioni.
+                    : Esami prematrimoniali nel mondo cattolico (XVI-XVIII secolo), organizzato all'Università di Padova, 27-28 ottobre 2022.
+                2023: Analisi dei dati di Jacopo Cossu.
+                    : Consegna di un libro sul controllo dello stato libero dalla Casa Editrice Viella
           `}
             </geov-mermaid>
           </ion-grid>
+          <ProjectFooter showEeditiones={false}></ProjectFooter>
         </ion-content>
       </ion-app>
     </>

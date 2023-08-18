@@ -24,13 +24,13 @@ export const Navbar = (props: NavbarProps) => {
             menu="main"
           ></ion-menu-button>
           <span className="ion-hide-md-down" style={{ display: 'flex' }}>
-            <ion-button href="/data" strong={true}>
+            <ion-button href="/data">
               Data
             </ion-button>
-            <ion-button href="/community" strong={true}>
+            <ion-button href="/community">
               Community
             </ion-button>
-            <ion-button href="/documentation" strong={true}>
+            <ion-button href="/documentation">
               Docs
             </ion-button>
 

@@ -1,9 +1,11 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import { Person } from '../../components/elements/Person.component';
+import React from 'react';
+import { ProjectFooter } from '../../components/layouts/ProjectFooter.component';
+import { ProcessettiBanner } from '../../components/project-specific/ProcessettiBanner.component';
 import { ProcessettiNavbar } from '../../components/project-specific/ProcessettiNavbar.component';
-import styles from './index.module.css';
+import theming from './index.module.css';
+import styles from './bibliografia.module.css';
 
 export interface BibliografiaProps {}
 const Bibliografia: NextPage<BibliografiaProps> = (props) => {
@@ -12,21 +14,20 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
       <Head>
         <title>Bibliografia –Processetti</title>
       </Head>
-      <ion-app class={styles.theme}>
-        <ion-content>
+      <ion-app class={theming.theme}>
+        <ion-content class={styles.content}>
           <ProcessettiNavbar
             title="Progetto ANR Processetti"
             projectId={591}
           ></ProcessettiNavbar>
-          <ion-grid fixed>
-            <h2>Bibliografia</h2>
-
+          <ProcessettiBanner></ProcessettiBanner>
+          <ion-grid>
+            <h1>Bibliografia</h1>
             <p>
               Albani Benedetta (2003-2004), Matrimoni e società a Roma nel primo
               Seicento attraverso i processetti matrimoniali, tesi di laurea,
               dir. M. A. Visceglia, La Sapienza Università di Roma.
             </p>
-
             <p>
               Avorio Tiziana, Chianese Stefano, Guarino Nicola (2003), ‘Una
               città senza immigranti? Caratteri della mobilità a Napoli tra
@@ -34,7 +35,6 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
               L’Italia delle migrazioni interne. Donne, uomini, mobilità in età
               moderna e contemporanea Roma, pp. 111-30.
             </p>
-
             <p>
               Belfanti Carlo Marco (1990), ‘Immigrazione e mestieri: i trentini
               a Mantova (secoli XVII e XVIII)’, Bollettino di demografia
@@ -101,6 +101,7 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
               175-93.
             </p>
           </ion-grid>
+          <ProjectFooter showEeditiones={false}></ProjectFooter>
         </ion-content>
       </ion-app>
     </>

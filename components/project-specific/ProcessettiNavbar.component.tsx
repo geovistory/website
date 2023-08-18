@@ -31,10 +31,12 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
             <ion-popover trigger="strumenti-trigger" trigger-action="click">
               <ion-content color="primary">
                 <ion-list lines={'none'}>
-                  <ion-item color="primary" href="/processetti/bibliografia" >
+                  <ion-item color="primary" href="/processetti/bibliografia">
                     Bibliografia
                   </ion-item>
-                  <ion-item color="primary" href="/processetti/fonti">Fonti</ion-item>
+                  <ion-item color="primary" href="/processetti/fonti">
+                    Fonti
+                  </ion-item>
                 </ion-list>
               </ion-content>
             </ion-popover>
@@ -46,20 +48,8 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
                   <ion-item color="primary" href={`/processetti/metodologia`}>
                     Metodologia
                   </ion-item>
-                  <ion-item color="primary" href={`/processetti/search`}>Ricerca</ion-item>
-                  <ion-item color="primary" href={`/processetti/libera`}>libera</ion-item>
-                  <ion-item color="primary" href={`/processetti/sparql`}>SPARQL</ion-item>
-                  <ion-item color="primary"
-                    href={getOntoExlorerUrl(props.projectId, props.title)}
-                    target="blank"
-                  >
-                    OntoExplorer
-                  </ion-item>
-                  <ion-item color="primary"
-                    href={`https://sparklis.geovistory.org/?title=Geovistory%20Processetti%20${props.title}&endpoint=https%3A//sparql.geovistory.org/api_v1_Processetti_${props.projectId}&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label`}
-                    target="blank"
-                  >
-                    Sparklis
+                  <ion-item color="primary" href={`/processetti/search`}>
+                    Ricerca libera
                   </ion-item>
                 </ion-list>
               </ion-content>
@@ -81,6 +71,24 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
           </span>
         </ion-buttons>
       </ion-toolbar>
+      <ion-menu side="start" menu-id="main" content-id="main">
+        <ion-header>
+          <ion-toolbar class={styles.menuTitle}>
+            <ion-title></ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list>
+            <ion-item-divider>
+              <ion-label>Banca dati</ion-label>
+            </ion-item-divider>
+            <ion-item href="processetti/metodologia" lines="full">
+              Metodologia
+            </ion-item>
+            <ion-item lines="full">...</ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
     </div>
   );
 };
