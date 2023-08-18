@@ -1,7 +1,6 @@
-/// <reference path="../node_modules/@geovistory/design-system-web/dist/types/react.d.ts" />
 import { defineCustomElements } from '@geovistory/design-system-web/loader';
 import { version } from '../package.json';
-defineCustomElements()
+defineCustomElements();
 
 export default {
   title: 'Welcome',

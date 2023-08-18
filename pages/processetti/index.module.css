@@ -1,0 +1,92 @@
+.theme {
+    --ion-color-dark: #3e3d3d;
+
+    --ion-color-primary: #9f7a09;
+    --ion-color-primary-rgb: 159, 122, 9;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #8c6b08;
+    --ion-color-primary-tint: #a98722;
+
+    --ion-color-secondary: #884949;
+    --ion-color-secondary-rgb: 136, 73, 73;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #784040;
+    --ion-color-secondary-tint: #945b5b;
+
+    --ion-color-tertiary: #5260ff;
+    --ion-color-tertiary-rgb: 82, 96, 255;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+    --ion-color-tertiary-shade: #4854e0;
+    --ion-color-tertiary-tint: #6370ff;
+
+    --ion-color-success: #2dd36f;
+    --ion-color-success-rgb: 45, 211, 111;
+    --ion-color-success-contrast: #000000;
+    --ion-color-success-contrast-rgb: 0, 0, 0;
+    --ion-color-success-shade: #28ba62;
+    --ion-color-success-tint: #42d77d;
+
+    --ion-color-warning: #ffc409;
+    --ion-color-warning-rgb: 255, 196, 9;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-shade: #e0ac08;
+    --ion-color-warning-tint: #ffca22;
+
+    --ion-color-danger: #eb445a;
+    --ion-color-danger-rgb: 235, 68, 90;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-shade: #cf3c4f;
+    --ion-color-danger-tint: #ed576b;
+
+    --ion-color-medium: #92949c;
+    --ion-color-medium-rgb: 146, 148, 156;
+    --ion-color-medium-contrast: #000000;
+    --ion-color-medium-contrast-rgb: 0, 0, 0;
+    --ion-color-medium-shade: #808289;
+    --ion-color-medium-tint: #9d9fa6;
+
+    --ion-color-light: #f4f5f8;
+    --ion-color-light-rgb: 244, 245, 248;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0, 0, 0;
+    --ion-color-light-shade: #d7d8da;
+    --ion-color-light-tint: #f5f6f9;
+}
+
+
+.section {
+    padding: 1rem 1rem;
+}
+
+.sectionGray {
+    padding: 1rem 1rem;
+    background-color: var(--ion-color-light-shade);
+}
+
+.partners {
+    max-width: 39.6rem;
+    margin: 0 auto;
+    --ion-grid-column-padding: .8rem;
+}
+.partners ion-card {
+    margin: 0;
+}
+
+/* sm and up */
+@media screen and (min-width: 576px) {
+
+    .section {
+        padding: 1rem 1rem;
+    }
+
+    .sectionGray {
+        padding: 1rem 1rem;
+    }
+
+}
+
