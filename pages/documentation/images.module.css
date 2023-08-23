@@ -1,0 +1,19 @@
+.container {
+    background-color: var(--ion-background-color);
+    min-height: 100vh;
+    padding-bottom: 8rem;
+}
+
+.table {
+    border: 1px solid;
+}
+
+.table td {
+    border-right: 1px solid;
+    padding: 4px;
+}
+
+.table thead td {
+    font-weight: 600;
+    border-bottom: 1px solid;
+}
