@@ -58,7 +58,7 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
             <ion-popover trigger="grafici" trigger-action="click">
               <ion-content>
                 <ion-list lines={'none'}>
-                  <ion-item color="primary">Processetti</ion-item>
+                  <ion-item color="primary" href="/processetti/grafici-e-tabelle/processetti">Processetti</ion-item>
                   <ion-item color="primary">Soggetti</ion-item>
                   <ion-item color="primary">Professioni</ion-item>
                   <ion-item color="primary">Origini</ion-item>
