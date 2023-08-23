@@ -5,7 +5,7 @@ import {
   DefaultPageProps,
 } from '../../components/layouts/DefaultPage.component';
 import { projectsParams } from '../../lib/projectParams';
-import styles from './responsiveness.module.css';
+import styles from './images.module.css';
 export interface ResourcesProps {
   defaultPage: DefaultPageProps;
 }
