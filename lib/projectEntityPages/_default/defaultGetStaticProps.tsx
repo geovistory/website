@@ -12,7 +12,12 @@ export const defaultGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
 
   const entityId = context?.params?.entityId as string;
 
-  const ssrProps: SSRProps = { entityId, projectId };
+  const ssrProps: SSRProps = {
+    entityId,
+    projectId,
+    uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
+    uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
+  };
 
   const res = await serverRender(ssr(ssrProps));
 
