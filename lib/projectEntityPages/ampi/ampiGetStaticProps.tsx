@@ -13,7 +13,12 @@ export const ampiGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
 
   const entityId = context?.params?.entityId as string;
 
-  const ssrProps: SSRProps = { entityId, projectId };
+  const ssrProps: SSRProps = {
+    entityId,
+    projectId,
+    uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
+    uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
+  };
 
   const res = await serverRender(ampiSsr(ssrProps));
 
@@ -60,10 +65,8 @@ export function ampiSsr(props: SSRProps) {
     <geov-entity
       sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
       entity-id={props.entityId}
-      uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
-      uri-replace={
-        process.env.NEXT_PUBLIC_GEOV_URI_REPLACE + '?p=' + props.projectId
-      }
+      uri-regex={props.uriRegex}
+      uri-replace={props.uriReplace + '?p=' + props.projectId}
     >
       <div slot="body-end" className="section">
         <ion-grid fixed={true}>
