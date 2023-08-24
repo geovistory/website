@@ -10,6 +10,8 @@ export interface ProjectSearchProps {
   explorerTerm: string | null;
   params: ProjectParams;
   projectPageLayout: ProjectPageLayoutProps;
+  uriRegex: string;
+  uriReplace: string;
 }
 const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
   return (
@@ -23,8 +25,8 @@ const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
               if (e) e.preferredItems = props.params.preferredClasses;
             }}
             url-append={`?p=${props.params.geovID}`}
-            uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
-            uri-replace={`${process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}?p=${props.params.geovID}`}
+            uri-regex={props.uriRegex}
+            uri-replace={`${props.uriReplace}?p=${props.params.geovID}`}
           ></geov-explorer>
         </div>
       </div>
@@ -56,6 +58,8 @@ export const getServerSideProps: GetServerSideProps<ProjectSearchProps> =
         },
       },
       params,
+      uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
+      uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
     };
     return {
       props,
