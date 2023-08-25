@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
 import { getOntoExlorerUrl } from '../../lib/getOntoExploerUrl';
 import styles from './ProjectNavbar.module.css';
@@ -12,14 +13,12 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
     <>
       <ion-toolbar class={styles.toolbar} color="light">
         <ion-buttons class={styles.buttonsLeft}>
-          <Link href="/" passHref={true}>
-            <a>
+          <a href="/">
               <ion-img
                 class={styles.logo}
                 src={'/Geovistory-Logo-No-Text-Gray.svg'}
               />
-            </a>
-          </Link>
+          </a>
           <ion-button href={`/project/${props.projectId}`}>
             {props.title}
           </ion-button>
