@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { projectsParams } from '../../projectParams';
+import { projectParamsToNavbarProps, projectsParams } from '../../projectParams';
 import { serverRender } from '../../serverRender';
 import { DefaultEntityProps, ssr, SSRProps } from './DefaultEntityPage';
 
@@ -26,12 +26,7 @@ export const defaultGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
       ...ssrProps,
       projectPageLayout: {
         headTitle: params.shortName,
-        navbar: {
-          projectId,
-          title: params.shortName,
-          teiLinkEnabled: params.hasTEI,
-          sparqlLinkEnabled: params.hasSPARQL,
-        },
+        navbar: projectParamsToNavbarProps(params)
       },
       _ssrData: res.serverFetchedData,
       _ssrHtmlBody: res.bodyInnerHtml,

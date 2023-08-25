@@ -40,6 +40,9 @@ const args: ProjectPageLayoutProps = {
     projectId: 123,
     title: 'Title of my project',
     sparqlLinkEnabled: true,
+    searchLinkEnabled: true,
+    ontoExplorerLinkEnabled: true,
+    sparklisLinkEnabled: true,
     teiLinkEnabled: true,
   },
 };
