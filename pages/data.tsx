@@ -1,12 +1,14 @@
-import { openOutline, rocketOutline } from 'ionicons/icons';
+import { openOutline } from 'ionicons/icons';
 import type { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import {
   DefaultPage,
-  DefaultPageProps,
+  DefaultPageProps
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../lib/projectParams';
+import sparklisImg from './../public/sparklis.png';
+import sparqlImg from './../public/sparql-code.jpg';
 import styles from './data.module.css';
 export interface ResourcesProps {
   defaultPage: DefaultPageProps;
@@ -71,7 +73,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                   <div className={styles.imgContainer}>
                     <Image
                       className={styles.img}
-                      src="/sparql-code.jpg"
+                      src={sparqlImg}
+                      placeholder="blur"
                       alt="Sparl code image"
                       layout="fill"
                       objectFit="cover"
@@ -101,7 +104,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                   <div className={styles.imgContainer}>
                     <Image
                       className={styles.imgSparklis}
-                      src="/sparklis.png"
+                      src={sparklisImg}
+                      placeholder="blur"
                       alt="Sparklis image"
                       layout="fill"
                       objectFit="cover"
@@ -122,7 +126,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                   <div className={styles.imgContainer}>
                     <Image
                       className={styles.img}
-                      src="/sparql-code.jpg"
+                      src={sparqlImg}
+                      placeholder="blur"
                       alt="Sparl code image"
                       layout="fill"
                       objectFit="cover"
@@ -146,7 +151,7 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle:"Community Data",
+        headTitle: 'Community Data',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

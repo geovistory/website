@@ -73,18 +73,18 @@ const Home: NextPage<HomeProps> = (props) => {
                       ref={(carousel?: Components.GeovCarousel) => {
                         if (carousel)
                           carousel.images = [
-                            '/carousel-1_maquette-lugdunum.jpg',
-                            '/carousel-2_tapisserie-bayeux.jpg',
-                            '/carousel-3_vitrail.jpg',
-                            '/carousel-4_astrolabe-arabe.jpg',
-                            '/carousel-5_quetzalcoatl.jpg',
-                            '/carousel-6_bronzes-benin.jpg',
-                            '/carousel-7_carte-amerique.jpg',
-                            '/carousel-8_assemble-vizille.jpg',
-                            '/carousel-9_acte-deces.jpg',
-                            '/carousel-10_guerre-russo-japonaise.jpg',
-                            '/carousel-11_congret-musique.jpg',
-                            '/carousel-12_toronto.jpg',
+                            '/carousel/1200/carousel-1_maquette-lugdunum.jpg',
+                            '/carousel/1200/carousel-2_tapisserie-bayeux.jpg',
+                            '/carousel/1200/carousel-3_vitrail.jpg',
+                            '/carousel/1200/carousel-4_astrolabe-arabe.jpg',
+                            '/carousel/1200/carousel-5_quetzalcoatl.jpg',
+                            '/carousel/1200/carousel-6_bronzes-benin.jpg',
+                            '/carousel/1200/carousel-7_carte-amerique.jpg',
+                            '/carousel/1200/carousel-8_assemble-vizille.jpg',
+                            '/carousel/1200/carousel-9_acte-deces.jpg',
+                            '/carousel/1200/carousel-10_guerre-russo-japonaise.jpg',
+                            '/carousel/1200/carousel-11_congret-musique.jpg',
+                            '/carousel/1200/carousel-12_toronto.jpg',
                           ];
                       }}
                     ></geov-carousel>

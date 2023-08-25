@@ -1,11 +1,17 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import React from 'react';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
+import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
+import { PlatGeoEhessLogo } from '../../../components/logos/PlatGeoEhessLogo';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
+import bannerImg from '../../../public/romas-deportation.jpg';
+import { IrisLogo } from '../../../components/logos/IrisLogo';
 import styles from './romas-deportation.module.css';
-
+import { FondationSouhaLogo } from '../../../components/logos/FondationSouhaLogo';
+import { UshmmLogo } from '../../../components/logos/UshmmLogo';
 
 const RomasDeportation_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
@@ -16,7 +22,8 @@ const RomasDeportation_component: NextPage<ProjectPageProps> = (props) => {
         <div className={styles.bannerContainer}>
           <Image
             className={styles.bannerImage}
-            src="/romas-deportation.jpg"
+            src={bannerImg}
+            placeholder="blur"
             alt="Roma's deportation"
             layout="fill"
             objectFit={'cover'}
@@ -47,24 +54,28 @@ const RomasDeportation_component: NextPage<ProjectPageProps> = (props) => {
             }}
           ></ion-searchbar>
           <h1 className={styles.title}>
-            <div className={styles.titleLine1}>Roma&apos;s deportation to Transnistria, 1942-1944</div>
+            <div className={styles.titleLine1}>
+              Roma&apos;s deportation to Transnistria, 1942-1944
+            </div>
           </h1>
         </div>
         <ion-grid fixed class="ion-padding">
-          <p className="lead">
-            Individual trajectories, and collective fates.
-          </p>{' '}
+          <p className="lead">Individual trajectories, and collective fates.</p>{' '}
           <p>
-            In order to capture the dislocated world of Romanian Roma during the Second World War, we are reconstructing the spatial and social trajectories of the 25,500 Romanian Roma deported by the Romanian government to the governorate of Transnistria between 1942 and 1944.
+            In order to capture the dislocated world of Romanian Roma during the
+            Second World War, we are reconstructing the spatial and social
+            trajectories of the 25,500 Romanian Roma deported by the Romanian
+            government to the governorate of Transnistria between 1942 and 1944.
             <br />
-            The project is funded by the <i>Fondation pour la mémoire de la Shoah.</i>
+            The project is funded by the{' '}
+            <i>Fondation pour la mémoire de la Shoah.</i>
           </p>
           <h4>Mention RGPD</h4>
           <p>
-            The exercise of the rights of access and rectification of personal data contained in the database can be done by simple request by email to Grégoire Cousin: gregoire.cousin[at]ehess.fr
+            The exercise of the rights of access and rectification of personal
+            data contained in the database can be done by simple request by
+            email to Grégoire Cousin: gregoire.cousin[at]ehess.fr
           </p>
-
-
           <h4>Involved People</h4>
           <p>
             <ion-row>
@@ -114,51 +125,21 @@ const RomasDeportation_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             <ion-row>
               <ion-col size="4">
-                <Image
-                  src="/logo-fondation-pour-la-memoire-de-la-shoah.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Fondation pour la mémoire de la Shoah"
-                />
+                <FondationSouhaLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/iris-logo.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo IRIS"
-                />
+                <IrisLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/logo-plat-geo-ehess.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Plateforme Géographique EHESS"
-                />
+                <PlatGeoEhessLogo />
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="4">
-                <Image
-                  src="/logo-ushmm.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo USHMM"
-                />
+                <UshmmLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/kleiolab-logo.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="KleioLab logo"
-                />
+                <KleiolabLogo />
               </ion-col>
             </ion-row>
           </p>

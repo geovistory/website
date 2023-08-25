@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Person } from '../../components/elements/Person.component';
 import { ProjectFooter } from '../../components/layouts/ProjectFooter.component';
+import { AnrLogo200 } from '../../components/logos/AnrLogo200';
+import { EcoleFrancaisRomeLogo200 } from '../../components/logos/EcoleFrancaisRomeLogo200';
 import { ProcessettiBanner } from '../../components/project-specific/ProcessettiBanner.component';
 import { ProcessettiNavbar } from '../../components/project-specific/ProcessettiNavbar.component';
 import styles from './index.module.css';
@@ -30,15 +32,15 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             <h3>Presentazione breve del progetto</h3>
 
             <p>
-              Il progetto di ricerca &quot;Processetti&quot;. Matrimonio e mobilità a
-              Venezia, XVI-XVIII secolo ha un duplice obiettivo: da un lato, le
-              strutture e i percorsi migratori verso Venezia attraverso lo
-              sfruttamento delle informazioni contenute nelle inchieste
-              prematrimoniali (processetti) a cui venivano sottoposti vedovi e
-              stranieri per stabilire il loro stato libero; dall&apos;altro,
-              studiare l&apos;attuazione di questa procedura di controllo su
-              scala italiana e in una prospettiva comparativa verso il mondo
-              ortodosso.
+              Il progetto di ricerca &quot;Processetti&quot;. Matrimonio e
+              mobilità a Venezia, XVI-XVIII secolo ha un duplice obiettivo: da
+              un lato, le strutture e i percorsi migratori verso Venezia
+              attraverso lo sfruttamento delle informazioni contenute nelle
+              inchieste prematrimoniali (processetti) a cui venivano sottoposti
+              vedovi e stranieri per stabilire il loro stato libero;
+              dall&apos;altro, studiare l&apos;attuazione di questa procedura di
+              controllo su scala italiana e in una prospettiva comparativa verso
+              il mondo ortodosso.
               <br />
               Questo progetto si basa sulla creazione di un database utilizzando
               la piattaforma collaborativa Geovistory fornita dalla società
@@ -193,13 +195,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                       style={{ display: 'flex', background: 'white' }}
                       className="ion-justify-content-center"
                     >
-                      <Image
-                        src="/logo_ANR.gif"
-                        width={200}
-                        height={200}
-                        objectFit={'scale-down'}
-                        alt="Logo Agence Nationale de la Recherche"
-                      />
+                      <AnrLogo200 />
                     </div>
                   </ion-card>
                 </ion-col>
@@ -213,13 +209,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                       style={{ display: 'flex', background: 'white' }}
                       className="ion-justify-content-center"
                     >
-                      <Image
-                        src="/Logo_efr.png"
-                        width={200}
-                        height={200}
-                        objectFit={'scale-down'}
-                        alt="Logo Ecole Française de Rome"
-                      />
+                      <EcoleFrancaisRomeLogo200 />
                     </div>
                   </ion-card>
                 </ion-col>

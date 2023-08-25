@@ -5,6 +5,14 @@ import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
 import styles from './softpowarts.module.css';
+import bannerImg from '../../../public/softpowarts.jpg';
+import { LarhraLogo } from '../../../components/logos/LarhraLogo';
+import { MargeLogo } from '../../../components/logos/MargeLogo';
+import React from 'react';
+import { MshLyonStEtienneLogo } from '../../../components/logos/MshLyonStEtienneLogo';
+import { MuseeRioLogo } from '../../../components/logos/MuseeRioLogo';
+import { TeatroSolisLogo } from '../../../components/logos/TeatroSolisLogo';
+import { UnilaLogo } from '../../../components/logos/UnilaLogo';
 
 const Softpowarts_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
@@ -15,7 +23,8 @@ const Softpowarts_component: NextPage<ProjectPageProps> = (props) => {
         <div className={styles.bannerContainer}>
           <Image
             className={styles.bannerImage}
-            src="/softpowarts.jpg"
+            src={bannerImg}
+            placeholder="blur"
             alt="Softpowarts"
             layout="fill"
             objectFit={'cover'}
@@ -118,58 +127,22 @@ const Softpowarts_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             <ion-row>
               <ion-col size="4">
-                <Image
-                  src="/logo_msh_lyon_st_etienne.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="MSH Lyon St-Etienne"
-                />
+                <MshLyonStEtienneLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/larhra-logo.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="LARHRA"
-                />
+                <LarhraLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/logo_musee_rio.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Musee Rio"
-                />
+                <MuseeRioLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/logo_marge.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="MARGE"
-                />
+                <MargeLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/logo_unila.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="UNILA"
-                />
+                <UnilaLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/logo_teatro_solis.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Teatro Solis"
-                />
+                <TeatroSolisLogo />
               </ion-col>
             </ion-row>
           </p>

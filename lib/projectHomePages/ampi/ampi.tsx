@@ -3,10 +3,15 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
+import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
+import { LarhraLogo } from '../../../components/logos/LarhraLogo';
+import { SnfLogo } from '../../../components/logos/SnfLogo';
+import { UnibasLogo } from '../../../components/logos/UnibasLogo';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
+import ampiImg from '../../../public/image_ampi.jpg';
 import styles from './ampi.module.css';
+import { FagLogo } from '../../../components/logos/FagLogo';
 const AMPI_component: NextPage<ProjectPageProps> = (props) => {
-  // const params = projectsParams.find(pp => pp.geovName == 'AMPI')
   const router = useRouter();
 
   return (
@@ -14,7 +19,8 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
       <ProjectPageLayout {...props.projectPageLayout}>
         <div className={styles.bannerContainer}>
           <Image
-            src="/image_ampi.jpg"
+            src={ampiImg}
+            placeholder="blur"
             alt="AMPI top image"
             layout="fill"
             objectFit={'cover'}
@@ -56,14 +62,12 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             verfasst zwischen 1795 und 1839 (etwa 1200 Seiten).
           </p>
           <p>
-            Die Edition umfasst Texte sowie
-            strukturierte Daten zu Personen, Orten, bibliographischen Angaben
-            und Schlagworten, die in den Texten annotiert sind.
+            Die Edition umfasst Texte sowie strukturierte Daten zu Personen,
+            Orten, bibliographischen Angaben und Schlagworten, die in den Texten
+            annotiert sind.
           </p>
           <p>
-            <ion-button
-              href={props.params.geovID + '/publication'}
-            >
+            <ion-button href={props.params.geovID + '/publication'}>
               Hier geht&apos;s zur Edition
             </ion-button>
             <ion-button href={props.params.geovID + '/search'}>
@@ -71,12 +75,22 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             </ion-button>
           </p>
           <p>
-            Tipp: Die Suchresultate lassen sich nach Klasse filtern, wie zum Beispiel:
+            Tipp: Die Suchresultate lassen sich nach Klasse filtern, wie zum
+            Beispiel:
             <ul>
-              <li><code>Person</code> für Personen</li>
-              <li><code>Geographical Place</code> für Orte</li>
-              <li><code>Manifestation Product Type</code> für bibliographische Angaben</li>
-              <li><code>Tag</code> für Schlagworte</li>
+              <li>
+                <code>Person</code> für Personen
+              </li>
+              <li>
+                <code>Geographical Place</code> für Orte
+              </li>
+              <li>
+                <code>Manifestation Product Type</code> für bibliographische
+                Angaben
+              </li>
+              <li>
+                <code>Tag</code> für Schlagworte
+              </li>
             </ul>
           </p>
 
@@ -184,31 +198,13 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             <ion-row>
               <ion-col>
-                <Image
-                  src="/universitat-basel-logo.svg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Universität Basel logo"
-                />
+                <UnibasLogo />
               </ion-col>
               <ion-col>
-                <Image
-                  src="/kleiolab-logo.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="KleioLab logo"
-                />
+                <KleiolabLogo />
               </ion-col>
               <ion-col>
-                <Image
-                  src="/larhra-logo.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="LARHRA logo"
-                />
+                <LarhraLogo />
               </ion-col>
             </ion-row>
           </p>
@@ -216,31 +212,13 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             <ion-row>
               <ion-col>
-                <Image
-                  src="/SNF_logo_standard_web_sw_pos_d.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Schweizerischer Nationalfonds logo"
-                />
+                <SnfLogo />
               </ion-col>
               <ion-col>
-                <Image
-                  src="/FAG_logo_black.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Freiwillige Akademische Gesellschaft Basel"
-                />
+                <FagLogo />
               </ion-col>
               <ion-col>
-                <Image
-                  src="/universitat-basel-logo.svg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Universität Basel logo"
-                />
+                <UnibasLogo />
               </ion-col>
             </ion-row>
           </p>

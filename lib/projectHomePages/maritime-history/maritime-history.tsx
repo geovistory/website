@@ -4,7 +4,14 @@ import { useRouter } from 'next/router';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
+import bannerImage from '../../../public/maritime-history.jpg';
 import styles from './maritime-history.module.css';
+import huygensImg from '../../../public/huygens-institute.png';
+import kleiolabImg from '../../../public/kleiolab-logo.png';
+import larhraImg from '../../../public/larhra-logo.jpg';
+import { LarhraLogo } from '../../../components/logos/LarhraLogo';
+import { HuygensLogo } from '../../../components/logos/HuygensLogo';
+import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
 const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
 
@@ -14,9 +21,10 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
         <div className={styles.bannerContainer}>
           <Image
             className={styles.bannerImage}
-            src="/maritime-history.jpg"
+            src={bannerImage}
             alt="Maritime history"
             layout="fill"
+            placeholder="blur"
             objectFit={'cover'}
           />
           <ion-searchbar
@@ -101,31 +109,13 @@ const MaritimeHistory_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             <ion-row>
               <ion-col size="4">
-                <Image
-                  src="/kleiolab-logo.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="KleioLab logo"
-                />
+                <KleiolabLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/huygens-institute.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Huygens Institute"
-                />
+                <HuygensLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/larhra-logo.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo LARHRA"
-                />
+                <LarhraLogo />
               </ion-col>
             </ion-row>
           </p>
