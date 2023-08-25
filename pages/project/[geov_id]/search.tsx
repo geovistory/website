@@ -3,7 +3,7 @@ import {
   ProjectPageLayout,
   ProjectPageLayoutProps,
 } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams, projectsParams } from '../../../lib/projectParams';
+import { ProjectParams, projectParamsToNavbarProps, projectsParams } from '../../../lib/projectParams';
 import styles from './sparql.module.css';
 
 export interface ProjectSearchProps {
@@ -50,12 +50,7 @@ export const getServerSideProps: GetServerSideProps<ProjectSearchProps> =
       explorerTerm,
       projectPageLayout: {
         headTitle: 'Search ' + params.shortName,
-        navbar: {
-          projectId,
-          title: params.shortName,
-          teiLinkEnabled: params.hasTEI,
-          sparqlLinkEnabled: params.hasSPARQL,
-        },
+        navbar: projectParamsToNavbarProps(params),
       },
       params,
       uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',

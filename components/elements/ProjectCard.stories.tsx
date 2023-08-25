@@ -33,8 +33,11 @@ const args: ProjectCardProps = {
       'Les Processetti : Migration et mariage à Venise au 16ème/17ème siècle.',
 
     hasPage: true,
-    hasSPARQL: false,
-    hasTEI: false,
+    sparqlLinkEnabled: false,
+    teiLinkEnabled: false,
+    ontoExplorerLinkEnabled:false,
+    sparklisLinkEnabled:false,
+    searchLinkEnabled:false,
   },
 };
 ProjectCardWithButton.args = args;
@@ -60,8 +63,11 @@ const args2: ProjectCardProps = {
        Les Processetti : Migration et mariage à Venise au 16ème/17ème siècle.`,
 
     hasPage: false,
-    hasSPARQL: false,
-    hasTEI: false,
+    sparqlLinkEnabled: false,
+    teiLinkEnabled: false,
+    ontoExplorerLinkEnabled:false,
+    sparklisLinkEnabled:false,
+    searchLinkEnabled:false,
   },
 };
 ProjectCardWithoutButton.args = args2;
