@@ -1,14 +1,13 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
-import euroclimhistImg from '../../../public/euroclimhist.jpg';
-import universitybernImg from '../../../public/university-bern-logo.jpg';
 import { useRouter } from 'next/router';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectPageProps } from '../../../pages/project/[geov_id]';
-import styles from './euroclimhist.module.css';
-import { UnibeLogo } from '../../../components/logos/UnibeLogo';
 import { MeteoSchweizLogo } from '../../../components/logos/MeteoSchweizLogo';
+import { UnibeLogo } from '../../../components/logos/UnibeLogo';
+import { ProjectPageProps } from '../../../pages/project/[geov_id]';
+import euroclimhistImg from '../../../public/euroclimhist.jpg';
+import styles from './euroclimhist.module.css';
 
 const EuroClimHist_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();

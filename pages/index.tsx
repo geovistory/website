@@ -10,6 +10,7 @@ import { ProjectCard } from '../components/elements/ProjectCard.component';
 import styles from './index.module.css';
 import { Components } from '@geovistory/design-system-web/loader';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 export interface HomeProps {
   defaultPage: DefaultPageProps;
   featuredProjects: ProjectParams[];
@@ -146,6 +147,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       featuredProjects,
       defaultPage: {
         headTitle: 'Geovistory',
+        headOgDescription:
+          'Virtual Research Environment for Humanities and Social Sciences',
         footer: {
           featuredProjects,
         },

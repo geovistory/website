@@ -49,6 +49,8 @@ export const getServerSideProps: GetServerSideProps<ProjectSearchProps> =
     const props: ProjectSearchProps = {
       explorerTerm,
       projectPageLayout: {
+        headOgDescription: params.description,
+        headOgImage: params.headOgImage,
         headTitle: 'Search ' + params.shortName,
         navbar: projectParamsToNavbarProps(params),
       },

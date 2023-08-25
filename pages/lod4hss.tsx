@@ -305,6 +305,7 @@ export const getStaticProps: GetStaticProps<Lod4HssProps> = async () => {
     props: {
       defaultPage: {
         headTitle: 'LOD4HSS',
+        headOgDescription:'A project about Linked Open Data for the Humanities and Social Sciences.',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

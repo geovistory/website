@@ -12,6 +12,8 @@ export interface DefaultPageProps {
 
   // the title to be put in <head><title></title></head>
   headTitle: string | null;
+  // the decription for <meta property="og:description">
+  headOgDescription: string | null;
   /**
    * if true: main container for its children takes up the
    *          entire width of the screen
@@ -24,15 +26,28 @@ export interface DefaultPageProps {
 }
 
 export const DefaultPage = (props: DefaultPageProps) => {
+  const title =
+    props.headTitle +
+    (props.headTitle?.includes('Geovistory') ? '' : ' – Geovistory');
   return (
     <>
       <Head>
-        {props.headTitle && (
-          <title>
-            {props.headTitle}
-            {props.headTitle?.includes('Geovistory') ? '' : ' – Geovistory'}
-          </title>
-        )}
+        {props.headTitle && <title>{title}</title>}
+        {/* <meta property="og:url" content="your url" /> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="og:description"
+          content={
+            props.headOgDescription ??
+            props.headTitle ??
+            'Virtual Research Environment for Humanities and Social Sciences'
+          }
+        />
+        <meta property="og:image" content="/socialimage/geovistory.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <ion-app>
         <ion-menu side="start" menu-id="main" content-id="main">

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import {
   DefaultPage,
-  DefaultPageProps
+  DefaultPageProps,
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../lib/projectParams';
 import sparklisImg from './../public/sparklis.png';
@@ -152,6 +152,7 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
     props: {
       defaultPage: {
         headTitle: 'Community Data',
+        headOgDescription: 'Access linked open and FAIR research data.',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

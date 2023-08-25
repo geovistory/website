@@ -27,6 +27,8 @@ export const ampiGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
       ...ssrProps,
       projectPageLayout: {
         headTitle: params.shortName,
+        headOgDescription: params.description,
+        headOgImage: params.headOgImage,
         navbar: projectParamsToNavbarProps(params),
       },
       _ssrData: res.serverFetchedData,

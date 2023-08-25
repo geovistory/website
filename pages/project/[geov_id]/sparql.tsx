@@ -45,6 +45,8 @@ export const getServerSideProps: GetStaticProps<ProjectSparqlProps> = async (
   const props: ProjectSparqlProps = {
     projectPageLayout: {
       headTitle: 'SPARQL ' + params.shortName,
+      headOgDescription: params.description,
+      headOgImage: params.headOgImage,
       navbar: projectParamsToNavbarProps(params),
     },
     params,
