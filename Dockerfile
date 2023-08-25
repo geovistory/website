@@ -8,8 +8,8 @@ WORKDIR /app
 
 # If using npm with a `package-lock.json` comment out above and use below instead
 COPY package.json package-lock.json ./ 
-RUN npm ci 
 RUN npm install -E --save-optional @next/swc-linux-x64-gnu
+RUN npm ci 
 
 # Rebuild the source code only when needed
 FROM node:18-alpine AS builder
