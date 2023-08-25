@@ -35,7 +35,9 @@ const Template: ComponentStory<typeof ProjectPageLayoutComponent> = (args) => {
 
 export const ProjectPageLayoutFixedGrid = Template.bind({});
 const args: ProjectPageLayoutProps = {
-  headTitle:'Title of my Project',
+  headTitle: 'Title of my Project',
+  headOgDescription: 'Description',
+  headOgImage: '/socialimage/processetti.jpg',
   navbar: {
     projectId: 123,
     title: 'Title of my project',

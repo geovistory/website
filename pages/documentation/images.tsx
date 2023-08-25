@@ -79,9 +79,11 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                 </tr>
               </tbody>
             </table>
-
           </p>
-          <p>* Content wrapped in a fixed grid limits to a maximum width for large displays. </p>
+          <p>
+            * Content wrapped in a fixed grid limits to a maximum width for
+            large displays.{' '}
+          </p>
           <h2>Broken image source</h2>
           <ion-grid fixed>
             <p>
@@ -175,7 +177,9 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'Responsiveness',
+        headTitle: 'Images',
+        headOgDescription:
+          'Documentation – How to add images to this website?',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

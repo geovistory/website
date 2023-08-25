@@ -58,6 +58,8 @@ export const getServerSideProps: GetServerSideProps<
     explorerTerm,
     projectPageLayout: {
       headTitle: 'Search ' + params.shortName,
+      headOgDescription: params.description,
+      headOgImage: params.headOgImage,
       navbar: projectParamsToNavbarProps(params),
     },
     params,
