@@ -98,7 +98,7 @@ const AboutUs: NextPage<AboutUsProps> = (props) => {
               </ion-col>
               <ion-col>
                 <OrganizationCard {...kleiolab}>
-                <Image
+                  <Image
                     src={kleiolabImg}
                     alt={'KleioLab logo'}
                     layout="responsive"
@@ -110,7 +110,7 @@ const AboutUs: NextPage<AboutUsProps> = (props) => {
               </ion-col>
               <ion-col>
                 <OrganizationCard {...unibe}>
-                <Image
+                  <Image
                     src={unibeImg}
                     alt={'Universität Bern logo'}
                     layout="responsive"
@@ -159,6 +159,8 @@ export const getStaticProps: GetStaticProps<AboutUsProps> = async () => {
     props: {
       defaultPage: {
         headTitle: 'About Us',
+        headOgDescription:
+          'Behind Geovistory is LARHRA, KleioLab and the University of Bern – learn more...',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

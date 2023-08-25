@@ -1,5 +1,8 @@
 import { GetStaticProps } from 'next';
-import { projectParamsToNavbarProps, projectsParams } from '../../projectParams';
+import {
+  projectParamsToNavbarProps,
+  projectsParams,
+} from '../../projectParams';
 import { serverRender } from '../../serverRender';
 import { DefaultEntityProps, ssr, SSRProps } from './DefaultEntityPage';
 
@@ -25,8 +28,10 @@ export const defaultGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
     props: {
       ...ssrProps,
       projectPageLayout: {
-        headTitle: params.shortName,
-        navbar: projectParamsToNavbarProps(params)
+        headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+        headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} – provided by project ${params.shortName}`,
+        headOgImage: params.headOgImage,
+        navbar: projectParamsToNavbarProps(params),
       },
       _ssrData: res.serverFetchedData,
       _ssrHtmlBody: res.bodyInnerHtml,

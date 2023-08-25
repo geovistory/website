@@ -72,7 +72,11 @@ const Community: NextPage<CommunityProps> = (props) => {
       <h2>Newsletter</h2>
       <p>
         Fill in{' '}
-        <a href="https://stats.sender.net/forms/aKNpMe/view" target="_blank" rel="noreferrer">
+        <a
+          href="https://stats.sender.net/forms/aKNpMe/view"
+          target="_blank"
+          rel="noreferrer"
+        >
           this form
         </a>{' '}
         and receive the Geovistory newsletter so that you don&apos;t miss our
@@ -133,6 +137,8 @@ export const getStaticProps: GetStaticProps<CommunityProps> = async () => {
     props: {
       defaultPage: {
         headTitle: 'Geovistory Community',
+        headOgDescription:
+          'Join the community on Discord, Twitter, GitHub or subscribe to the newsletter!',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

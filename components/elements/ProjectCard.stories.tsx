@@ -38,6 +38,7 @@ const args: ProjectCardProps = {
     ontoExplorerLinkEnabled:false,
     sparklisLinkEnabled:false,
     searchLinkEnabled:false,
+    headOgImage: ''
   },
 };
 ProjectCardWithButton.args = args;
@@ -68,6 +69,7 @@ const args2: ProjectCardProps = {
     ontoExplorerLinkEnabled:false,
     sparklisLinkEnabled:false,
     searchLinkEnabled:false,
+    headOgImage: '/socialimage/processetti.jpg'
   },
 };
 ProjectCardWithoutButton.args = args2;

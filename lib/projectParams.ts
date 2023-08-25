@@ -23,33 +23,12 @@ export interface ProjectParams {
     searchLinkEnabled: boolean;
     ontoExplorerLinkEnabled: boolean;
     sparklisLinkEnabled: boolean;
+
+    headOgImage: string;
 }
 
 
 export const projectsParams: Array<ProjectParams> = [
-    // Default project
-    {
-        geovID: 0,
-        geovName: 'Community',
-
-        preferredClasses: [],
-
-        featured: false,
-
-        teiURL: '',
-        sparqlURL: '',
-
-        fullName: 'Community Project',
-        shortName: 'Community Project',
-        description: 'Community Project',
-
-        hasPage: false,
-        sparqlLinkEnabled: false,
-        searchLinkEnabled: false,
-        ontoExplorerLinkEnabled: false,
-        sparklisLinkEnabled: false,
-        teiLinkEnabled: false
-    },
 
     // AMPI
     {
@@ -67,12 +46,16 @@ export const projectsParams: Array<ProjectParams> = [
         shortName: 'Tagebücher Anna Maria Preiswerk-Iselin',
         description: 'Digitale Edition der Tagebücher der Anna Maria Preiswerk-Iselin (1758-1840).',
 
+
         hasPage: true,
         sparqlLinkEnabled: true,
         searchLinkEnabled: true,
         ontoExplorerLinkEnabled: true,
         sparklisLinkEnabled: true,
-        teiLinkEnabled: true
+        teiLinkEnabled: true,
+
+        headOgImage: '/socialimage/ampi.jpg'
+
     },
 
     // Processetti
@@ -98,6 +81,8 @@ export const projectsParams: Array<ProjectParams> = [
         ontoExplorerLinkEnabled: false,
         sparklisLinkEnabled: false,
 
+        headOgImage: '/socialimage/processetti.jpg'
+
     },
 
     // Maritime History
@@ -122,32 +107,37 @@ export const projectsParams: Array<ProjectParams> = [
         ontoExplorerLinkEnabled: true,
         sparklisLinkEnabled: true,
         teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/maritime-history.jpg'
+
     },
 
 
-    // ANR Globalvat
-    {
-        geovID: -1,
-        geovName: 'GLOBALVAT',
+    // // ANR Globalvat
+    // {
+    //     geovID: -1,
+    //     geovName: 'GLOBALVAT',
 
-        preferredClasses: [],
+    //     preferredClasses: [],
 
-        featured: false,
+    //     featured: false,
 
-        teiURL: '',
-        sparqlURL: '',
+    //     teiURL: '',
+    //     sparqlURL: '',
 
-        fullName: 'ANR Globalvat',
-        shortName: 'ANR Globalvat',
-        description: 'Reconstruire les sociétés et la personne humaine (1939-58) : L’apport des archives vaticanes.',
+    //     fullName: 'ANR Globalvat',
+    //     shortName: 'ANR Globalvat',
+    //     description: 'Reconstruire les sociétés et la personne humaine (1939-58) : L’apport des archives vaticanes.',
 
-        hasPage: false,
-        sparqlLinkEnabled: false,
-        searchLinkEnabled: false,
-        ontoExplorerLinkEnabled: false,
-        sparklisLinkEnabled: false,
-        teiLinkEnabled: false
-    },
+    //     hasPage: false,
+    //     sparqlLinkEnabled: false,
+    //     searchLinkEnabled: false,
+    //     ontoExplorerLinkEnabled: false,
+    //     sparklisLinkEnabled: false,
+    //     teiLinkEnabled: false,
+    //     headOgImage: '/socialimage/ampi.jpg'
+
+    // },
 
     // EuroClimHist
     {
@@ -170,7 +160,10 @@ export const projectsParams: Array<ProjectParams> = [
         searchLinkEnabled: true,
         ontoExplorerLinkEnabled: true,
         sparklisLinkEnabled: true,
-        teiLinkEnabled: false
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/euroclimhist.jpg'
+
     },
 
     // EHESS
@@ -195,6 +188,9 @@ export const projectsParams: Array<ProjectParams> = [
         ontoExplorerLinkEnabled: true,
         sparklisLinkEnabled: true,
         teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/romas-deportation.jpg'
+
     },
     // Softpowarts
     {
@@ -217,7 +213,10 @@ export const projectsParams: Array<ProjectParams> = [
         searchLinkEnabled: true,
         ontoExplorerLinkEnabled: true,
         sparklisLinkEnabled: true,
-        teiLinkEnabled: false
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/softpowarts.jpg'
+
     },
     // Academic Careers
     {
@@ -240,7 +239,10 @@ export const projectsParams: Array<ProjectParams> = [
         searchLinkEnabled: true,
         ontoExplorerLinkEnabled: true,
         sparklisLinkEnabled: true,
-        teiLinkEnabled: false
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/academic-careers.jpg'
+
     }
 
 

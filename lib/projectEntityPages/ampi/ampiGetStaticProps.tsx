@@ -26,7 +26,9 @@ export const ampiGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
     props: {
       ...ssrProps,
       projectPageLayout: {
-        headTitle: params.shortName,
+        headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+        headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} – provided by project ${params.shortName}`,
+        headOgImage: params.headOgImage,
         navbar: projectParamsToNavbarProps(params),
       },
       _ssrData: res.serverFetchedData,
