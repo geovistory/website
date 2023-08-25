@@ -1,9 +1,13 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
+import { AbesLogo } from '../../../components/logos/AbesLogo';
+import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
+import { LarhraLogo } from '../../../components/logos/LarhraLogo';
+import { UnibeLogo } from '../../../components/logos/UnibeLogo';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
+import bannerImg from '../../../public/academic-careers.jpg';
 import styles from './academic-careers.module.css';
 const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
@@ -14,7 +18,8 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
         <div className={styles.bannerContainer}>
           <Image
             className={styles.bannerImage}
-            src="/academic-careers.jpg"
+            src={bannerImg}
+            placeholder="blur"
             alt="Solvay conference 1911"
             layout="fill"
             objectFit={'cover'}
@@ -135,26 +140,14 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
                     style={{ display: 'flex' }}
                     class="ion-justify-content-center"
                   >
-                    <Image
-                      src="/larhra-logo.jpg"
-                      width={150}
-                      height={150}
-                      objectFit={'scale-down'}
-                      alt="Logo LARHRA"
-                    />
+                    <LarhraLogo />
                   </ion-col>
                   <ion-col
                     size="6"
                     style={{ display: 'flex' }}
                     class="ion-justify-content-center"
                   >
-                    <Image
-                      src="/kleiolab-logo.png"
-                      width={150}
-                      height={150}
-                      objectFit={'scale-down'}
-                      alt="KleioLab logo"
-                    />
+                    <KleiolabLogo />
                   </ion-col>
                 </ion-row>
                 <ion-row>
@@ -163,26 +156,14 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
                     style={{ display: 'flex' }}
                     class="ion-justify-content-center"
                   >
-                    <Image
-                      src="/logo-unibe.png"
-                      width={150}
-                      height={150}
-                      objectFit={'scale-down'}
-                      alt="Logo University of Bern"
-                    />
+                    <UnibeLogo />
                   </ion-col>
                   <ion-col
                     size="6"
                     style={{ display: 'flex' }}
                     class="ion-justify-content-center"
                   >
-                    <Image
-                      src="/logo_abes.png"
-                      width={150}
-                      height={150}
-                      objectFit={'scale-down'}
-                      alt="Logo Abes"
-                    />
+                    <AbesLogo />
                   </ion-col>
                 </ion-row>
               </ion-card-content>
