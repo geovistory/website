@@ -127,6 +127,7 @@
   --ion-padding: 16px;
   --ion-grid-padding: 0;
   --ion-grid-column-padding: 0;
+  --ion-grid-padding-xs: 1rem;
 
   /***************************/
   /** Application variables **/
