@@ -6,9 +6,8 @@ import {
   DefaultPage,
   DefaultPageProps,
 } from '../../components/layouts/DefaultPage.component';
-import { serverRender } from '../../lib/serverRender';
 import { ProjectParams, projectsParams } from '../../lib/projectParams';
-import { openOutline } from 'ionicons/icons';
+import { serverRender } from '../../lib/serverRender';
 interface SSRProps {
   entityId: string;
 }
@@ -28,15 +27,7 @@ export default function Resource(props: ResourceProps) {
         {...props.defaultPage}
         noPaddingSlot={
           <div className="mainGridNoPadding ion-color-tertiary-bg">
-            <Head>
-              {toReact(props._ssrHtmlHead)}
-              <title>{props._ssrData?.['entity-label']?.label}</title>
-              <meta
-                name="description"
-                content={`Page about ${props._ssrData?.['entity-label']?.label} on Geovistory`}
-              />
-              <link rel="icon" href="/favicon.ico" />
-            </Head>
+            <Head>{toReact(props._ssrHtmlHead)}</Head>
             <div dangerouslySetInnerHTML={{ __html: props._ssrHtmlBody }}></div>
           </div>
         }
@@ -90,7 +81,8 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
       ...props,
       featuredProjects,
       defaultPage: {
-        headTitle: null, // head title is set within Resource
+        headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+        headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} on Geovistory`,
         footer: {
           featuredProjects,
         },

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 export interface NavbarProps {}
@@ -5,18 +6,16 @@ export const Navbar = (props: NavbarProps) => {
   return (
     <>
       <ion-toolbar class={styles.toolbar} color="light">
-        <Link href="/" passHref={true}>
-          <a>
-            <ion-img
-              class={'ion-hide-md-up ' + styles.logo}
-              src={'/Geovistory-Logo-No-Text-White.svg'}
-            />
-            <ion-img
-              class={'ion-hide-md-down ' + styles.logo}
-              src={'/geovistory-logo.svg'}
-            />
-          </a>
-        </Link>
+        <a href="/">
+          <ion-img
+            class={'ion-hide-md-up ' + styles.logo}
+            src={'/Geovistory-Logo-No-Text-White.svg'}
+          />
+          <ion-img
+            class={'ion-hide-md-down ' + styles.logo}
+            src={'/geovistory-logo.svg'}
+          />
+        </a>
         <ion-buttons slot="end">
           <ion-menu-button
             class="ion-hide-md-up"
@@ -24,15 +23,9 @@ export const Navbar = (props: NavbarProps) => {
             menu="main"
           ></ion-menu-button>
           <span className="ion-hide-md-down" style={{ display: 'flex' }}>
-            <ion-button href="/data">
-              Data
-            </ion-button>
-            <ion-button href="/community">
-              Community
-            </ion-button>
-            <ion-button href="/documentation">
-              Docs
-            </ion-button>
+            <ion-button href="/data">Data</ion-button>
+            <ion-button href="/community">Community</ion-button>
+            <ion-button href="/documentation">Docs</ion-button>
 
             <ion-button id="about-trigger">About</ion-button>
             <ion-popover trigger="about-trigger" trigger-action="click">

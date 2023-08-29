@@ -9,19 +9,38 @@ export interface ProjectPageLayoutProps {
   navbar: ProjectNavbarProps;
   // the title to be put in <head><title></title></head>
   headTitle: string | null;
+  // the decription for <meta property="og:description">
+  headOgDescription: string | null;
+  // the source for <meta property="og:image">
+  headOgImage: string | null;
+
   children?: ReactNode;
 }
 
 export const ProjectPageLayout = (props: ProjectPageLayoutProps) => {
+  const title =
+    props.headTitle +
+    (props.headTitle?.includes('Geovistory') ? '' : ' – Geovistory');
+  const description =
+    props.headOgDescription ??
+    props.headTitle ??
+    'Virtual Research Environment for Humanities and Social Sciences';
   return (
     <>
       <Head>
-        {props.headTitle && (
-          <title>
-            {props.headTitle}
-            {props.headTitle?.includes('Geovistory') ? '' : ' – Geovistory'}
-          </title>
-        )}
+        {props.headTitle && <title>{title}</title>}
+        <meta name="description" content={description} />
+        {/* SOCIAL MEDIA */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={props.headTitle ?? 'Geovistory'} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:image"
+          content={props.headOgImage ?? '/socialimage/geovistory.png'}
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <ion-app>
         <ion-menu side="start" menu-id="main" content-id="main">

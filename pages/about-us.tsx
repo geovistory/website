@@ -1,5 +1,9 @@
 import { Components } from '@geovistory/design-system-web/loader';
 import { mailOutline } from 'ionicons/icons';
+import Image from 'next/image';
+import larhraImg from '../public/larhra-logo.jpg';
+import kleiolabImg from '../public/kleiolab-logo.png';
+import unibeImg from '../public/logo-unibe.png';
 import type { GetStaticProps, NextPage } from 'next';
 import {
   OrganizationCard,
@@ -13,9 +17,6 @@ import { projectsParams } from '../lib/projectParams';
 import styles from './about-us.module.css';
 
 const larhra: OrganizationCardProps = {
-  imageURL: '/larhra-logo.jpg',
-  imageHeight: 414,
-  imageWidth: 500,
   organizationName: 'LARHRA',
   organizationDescription:
     'A joint French research unit in History of the CNRS and the universities of Lyon and Grenoble. A research group of LARHRA, the Digital history research team focuses on digital humanities methods and techniques.',
@@ -23,18 +24,12 @@ const larhra: OrganizationCardProps = {
     'http://larhra.ish-lyon.cnrs.fr/axe-de-recherche-en-histoire-numerique',
 };
 const kleiolab: OrganizationCardProps = {
-  imageURL: '/kleiolab-logo.png',
-  imageHeight: 972,
-  imageWidth: 1174,
   organizationName: 'KleioLab',
   organizationDescription:
     'A Swiss company specializing in information systems in the digital humanities.',
   organizationURL: 'https://kleiolab.ch',
 };
 const unibe: OrganizationCardProps = {
-  imageURL: '/logo-unibe.png',
-  imageHeight: 972,
-  imageWidth: 1174,
   organizationName: 'University of Bern',
   organizationDescription:
     'The Digital Humanities are part of the Walter Benjamin Kolleg at the University of Bern researching and critiquing digital applications in the Humanities.',
@@ -90,13 +85,40 @@ const AboutUs: NextPage<AboutUsProps> = (props) => {
             </ion-row>
             <ion-row>
               <ion-col>
-                <OrganizationCard {...larhra}></OrganizationCard>
+                <OrganizationCard {...larhra}>
+                  <Image
+                    src={larhraImg}
+                    alt={'LARHRA logo'}
+                    layout="responsive"
+                    width={500}
+                    height={414}
+                    placeholder="blur"
+                  />
+                </OrganizationCard>
               </ion-col>
               <ion-col>
-                <OrganizationCard {...kleiolab}></OrganizationCard>
+                <OrganizationCard {...kleiolab}>
+                  <Image
+                    src={kleiolabImg}
+                    alt={'KleioLab logo'}
+                    layout="responsive"
+                    width={1174}
+                    height={972}
+                    placeholder="blur"
+                  />
+                </OrganizationCard>
               </ion-col>
               <ion-col>
-                <OrganizationCard {...unibe}></OrganizationCard>
+                <OrganizationCard {...unibe}>
+                  <Image
+                    src={unibeImg}
+                    alt={'Universität Bern logo'}
+                    layout="responsive"
+                    width={1174}
+                    height={972}
+                    placeholder="blur"
+                  />
+                </OrganizationCard>
               </ion-col>
             </ion-row>
             <ion-row>
@@ -137,6 +159,8 @@ export const getStaticProps: GetStaticProps<AboutUsProps> = async () => {
     props: {
       defaultPage: {
         headTitle: 'About Us',
+        headOgDescription:
+          'Behind Geovistory is LARHRA, KleioLab and the University of Bern – learn more...',
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

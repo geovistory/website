@@ -3,7 +3,16 @@ import Image from 'next/image';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
+import { AnrLogo } from '../../../components/logos/AnrLogo';
 import styles from './processetti.module.css';
+import { EcoleFrancaisRomeLogo } from '../../../components/logos/EcoleFrancaisRomeLogo';
+import { UniAthensLogo } from '../../../components/logos/UniAthensLogo';
+import { UniPadovaLogo } from '../../../components/logos/UniPadovaLogo';
+import { SgaLogo } from '../../../components/logos/SgaLogo';
+import { EcoleFrancaisAthensLogo } from '../../../components/logos/EcoleFrancaisAthensLogo';
+import { LarhraLogo } from '../../../components/logos/LarhraLogo';
+import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
+
 const Processetti_component: NextPage<ProjectPageProps> = (props) => {
   const params = props.params;
 
@@ -117,82 +126,34 @@ const Processetti_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             <ion-row>
               <ion-col size="4">
-                <Image
-                  src="/logo_ANR.gif"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Agence Nationale de la Recherche"
-                />
+                <AnrLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/Logo_efr.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Ecole Française de Rome"
-                />
+                <EcoleFrancaisRomeLogo />
               </ion-col>
 
               <ion-col size="4">
-                <Image
-                  src="/logo_ekpa.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo University of Athens"
-                />
+                <UniAthensLogo />
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="4">
-                <Image
-                  src="/Logo_padova.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Università Delgli Studi Di Padova"
-                />
+                <UniPadovaLogo />
               </ion-col>
 
               <ion-col size="4">
-                <Image
-                  src="/Logo_sga.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo DiSSGeA"
-                />
+                <SgaLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/LOGO-EFA-CT-72.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo Ecole Française d'Athènes"
-                />
+                <EcoleFrancaisAthensLogo />
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="4">
-                <Image
-                  src="/larhra-bleu-blanc-full.jpg"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="Logo LARHRA"
-                />
+                <LarhraLogo />
               </ion-col>
               <ion-col size="4">
-                <Image
-                  src="/kleiolab-logo.png"
-                  width={150}
-                  height={150}
-                  objectFit={'scale-down'}
-                  alt="KleioLab logo"
-                />
+                <KleiolabLogo />
               </ion-col>
             </ion-row>
           </p>

@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { projectsParams } from '../../projectParams';
+import { projectParamsToNavbarProps, projectsParams } from '../../projectParams';
 import { serverRender } from '../../serverRender';
 import { DefaultEntityProps, SSRProps } from '../_default/DefaultEntityPage';
 
@@ -13,7 +13,12 @@ export const ampiGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
 
   const entityId = context?.params?.entityId as string;
 
-  const ssrProps: SSRProps = { entityId, projectId };
+  const ssrProps: SSRProps = {
+    entityId,
+    projectId,
+    uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
+    uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
+  };
 
   const res = await serverRender(ampiSsr(ssrProps));
 
@@ -21,13 +26,10 @@ export const ampiGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
     props: {
       ...ssrProps,
       projectPageLayout: {
-        headTitle: params.shortName,
-        navbar: {
-          projectId,
-          title: params.shortName,
-          teiLinkEnabled: params.hasTEI,
-          sparqlLinkEnabled: params.hasSPARQL,
-        },
+        headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+        headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} – provided by project ${params.shortName}`,
+        headOgImage: params.headOgImage,
+        navbar: projectParamsToNavbarProps(params),
       },
       _ssrData: res.serverFetchedData,
       _ssrHtmlBody: res.bodyInnerHtml,
@@ -60,10 +62,8 @@ export function ampiSsr(props: SSRProps) {
     <geov-entity
       sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
       entity-id={props.entityId}
-      uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
-      uri-replace={
-        process.env.NEXT_PUBLIC_GEOV_URI_REPLACE + '?p=' + props.projectId
-      }
+      uri-regex={props.uriRegex}
+      uri-replace={props.uriReplace + '?p=' + props.projectId}
     >
       <div slot="body-end" className="section">
         <ion-grid fixed={true}>

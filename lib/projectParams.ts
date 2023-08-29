@@ -1,3 +1,5 @@
+import { ProjectNavbarProps } from '../components/layouts/ProjectNavbar.component';
+
 export interface ProjectParams {
     featured: boolean,
 
@@ -15,31 +17,18 @@ export interface ProjectParams {
     description: string,
 
     hasPage: boolean
-    hasSPARQL: boolean
-    hasTEI: boolean
+
+    sparqlLinkEnabled: boolean
+    teiLinkEnabled: boolean
+    searchLinkEnabled: boolean;
+    ontoExplorerLinkEnabled: boolean;
+    sparklisLinkEnabled: boolean;
+
+    headOgImage: string;
 }
 
+
 export const projectsParams: Array<ProjectParams> = [
-    // Default project
-    {
-        geovID: 0,
-        geovName: 'Community',
-
-        preferredClasses: [],
-
-        featured: false,
-
-        teiURL: '',
-        sparqlURL: '',
-
-        fullName: 'Community Project',
-        shortName: 'Community Project',
-        description: 'Community Project',
-
-        hasPage: false,
-        hasSPARQL: false,
-        hasTEI: false
-    },
 
     // AMPI
     {
@@ -57,9 +46,16 @@ export const projectsParams: Array<ProjectParams> = [
         shortName: 'Tagebücher Anna Maria Preiswerk-Iselin',
         description: 'Digitale Edition der Tagebücher der Anna Maria Preiswerk-Iselin (1758-1840).',
 
+
         hasPage: true,
-        hasSPARQL: true,
-        hasTEI: true
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: true,
+
+        headOgImage: '/socialimage/ampi.jpg'
+
     },
 
     // Processetti
@@ -67,7 +63,7 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: 591,
         geovName: 'Processetti',
 
-        preferredClasses: [],
+        preferredClasses: ['c21', 'c363', 'c636'],
 
         featured: true,
 
@@ -79,8 +75,14 @@ export const projectsParams: Array<ProjectParams> = [
         description: 'Les Processetti : Migration et mariage à Venise au 16ème/17ème siècle.',
 
         hasPage: true,
-        hasSPARQL: false,
-        hasTEI: false
+        sparqlLinkEnabled: false,
+        teiLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+
+        headOgImage: '/socialimage/processetti.jpg'
+
     },
 
     // Maritime History
@@ -100,31 +102,42 @@ export const projectsParams: Array<ProjectParams> = [
         description: 'Historical information about the Dutch East India Company, ready to explore and re-use at your hand.',
 
         hasPage: true,
-        hasSPARQL: true,
-        hasTEI: false
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/maritime-history.jpg'
+
     },
 
 
-    // ANR Globalvat
-    {
-        geovID: -1,
-        geovName: 'GLOBALVAT',
+    // // ANR Globalvat
+    // {
+    //     geovID: -1,
+    //     geovName: 'GLOBALVAT',
 
-        preferredClasses: [],
+    //     preferredClasses: [],
 
-        featured: false,
+    //     featured: false,
 
-        teiURL: '',
-        sparqlURL: '',
+    //     teiURL: '',
+    //     sparqlURL: '',
 
-        fullName: 'ANR Globalvat',
-        shortName: 'ANR Globalvat',
-        description: 'Reconstruire les sociétés et la personne humaine (1939-58) : L’apport des archives vaticanes.',
+    //     fullName: 'ANR Globalvat',
+    //     shortName: 'ANR Globalvat',
+    //     description: 'Reconstruire les sociétés et la personne humaine (1939-58) : L’apport des archives vaticanes.',
 
-        hasPage: false,
-        hasSPARQL: false,
-        hasTEI: false
-    },
+    //     hasPage: false,
+    //     sparqlLinkEnabled: false,
+    //     searchLinkEnabled: false,
+    //     ontoExplorerLinkEnabled: false,
+    //     sparklisLinkEnabled: false,
+    //     teiLinkEnabled: false,
+    //     headOgImage: '/socialimage/ampi.jpg'
+
+    // },
 
     // EuroClimHist
     {
@@ -143,8 +156,14 @@ export const projectsParams: Array<ProjectParams> = [
         description: 'The historical climate database Euro-Climhist contains a unique set of data on observations and measurement series of weather phenomena.',
 
         hasPage: true,
-        hasSPARQL: true,
-        hasTEI: false
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/euroclimhist.jpg'
+
     },
 
     // EHESS
@@ -164,8 +183,14 @@ export const projectsParams: Array<ProjectParams> = [
         description: 'Individual trajectories, and collective fates. ',
 
         hasPage: true,
-        hasSPARQL: true,
-        hasTEI: false
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/romas-deportation.jpg'
+
     },
     // Softpowarts
     {
@@ -184,8 +209,14 @@ export const projectsParams: Array<ProjectParams> = [
         description: "Le soft power sud-américain : l'usage politique de la circulation des arts de la scène au XXe siècle",
 
         hasPage: true,
-        hasSPARQL: true,
-        hasTEI: false
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/softpowarts.jpg'
+
     },
     // Academic Careers
     {
@@ -204,8 +235,14 @@ export const projectsParams: Array<ProjectParams> = [
         description: "An open collaborative project of the Geovistory community dedicated to the history of science and universities.",
 
         hasPage: true,
-        hasSPARQL: true,
-        hasTEI: false
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/academic-careers.jpg'
+
     }
 
 
@@ -213,5 +250,13 @@ export const projectsParams: Array<ProjectParams> = [
 
 
 
-
+export const projectParamsToNavbarProps = (params: ProjectParams): ProjectNavbarProps => ({
+    projectId: params.geovID,
+    title: params.shortName,
+    teiLinkEnabled: params.teiLinkEnabled,
+    sparqlLinkEnabled: params.sparqlLinkEnabled,
+    ontoExplorerLinkEnabled: params.ontoExplorerLinkEnabled,
+    searchLinkEnabled: params.searchLinkEnabled,
+    sparklisLinkEnabled: params.sparklisLinkEnabled,
+})
 

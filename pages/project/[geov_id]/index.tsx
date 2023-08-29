@@ -1,6 +1,10 @@
 import { GetStaticProps, NextPage } from 'next';
 import { ProjectPageLayoutProps } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams, projectsParams } from '../../../lib/projectParams';
+import {
+  ProjectParams,
+  projectParamsToNavbarProps,
+  projectsParams,
+} from '../../../lib/projectParams';
 import { projectHomePageMap } from '../../../lib/projectHomePages/projectHomePageMap';
 
 export interface ProjectPageProps {
@@ -24,12 +28,9 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (
   const props: ProjectPageProps = {
     projectPageLayout: {
       headTitle: params.shortName,
-      navbar: {
-        projectId,
-        title: params.shortName,
-        teiLinkEnabled: params.hasTEI,
-        sparqlLinkEnabled: params.hasSPARQL,
-      },
+      headOgDescription: params.description,
+      headOgImage: params.headOgImage,
+      navbar: projectParamsToNavbarProps(params),
     },
     params,
   };

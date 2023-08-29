@@ -3,13 +3,15 @@ import {
   ProjectPageLayout,
   ProjectPageLayoutProps,
 } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams, projectsParams } from '../../../lib/projectParams';
+import { ProjectParams, projectParamsToNavbarProps, projectsParams } from '../../../lib/projectParams';
 import styles from './sparql.module.css';
 
 export interface ProjectSearchProps {
   explorerTerm: string | null;
   params: ProjectParams;
   projectPageLayout: ProjectPageLayoutProps;
+  uriRegex: string;
+  uriReplace: string;
 }
 const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
   return (
@@ -23,8 +25,8 @@ const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
               if (e) e.preferredItems = props.params.preferredClasses;
             }}
             url-append={`?p=${props.params.geovID}`}
-            uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
-            uri-replace={`${process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}?p=${props.params.geovID}`}
+            uri-regex={props.uriRegex}
+            uri-replace={`${props.uriReplace}?p=${props.params.geovID}`}
           ></geov-explorer>
         </div>
       </div>
@@ -47,15 +49,14 @@ export const getServerSideProps: GetServerSideProps<ProjectSearchProps> =
     const props: ProjectSearchProps = {
       explorerTerm,
       projectPageLayout: {
+        headOgDescription: params.description,
+        headOgImage: params.headOgImage,
         headTitle: 'Search ' + params.shortName,
-        navbar: {
-          projectId,
-          title: params.shortName,
-          teiLinkEnabled: params.hasTEI,
-          sparqlLinkEnabled: params.hasSPARQL,
-        },
+        navbar: projectParamsToNavbarProps(params),
       },
       params,
+      uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
+      uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
     };
     return {
       props,
