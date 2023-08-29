@@ -7,6 +7,7 @@ import { ProcessettiBanner } from '../../../components/project-specific/Processe
 import { ProcessettiNavbar } from '../../../components/project-specific/ProcessettiNavbar.component';
 import theming from '../index.module.css';
 import styles from './processetti.module.css';
+import testStyles from './test.module.css';
 
 export interface GETProcessettiProps {}
 const GETProcessetti: NextPage<GETProcessettiProps> = (props) => {
@@ -52,11 +53,11 @@ const GETProcessetti: NextPage<GETProcessettiProps> = (props) => {
               }
             >
               <ion-img
-                class="ion-hide-sm-up"
+                class={`ion-hide-lg-up ${testStyles.border}`}
                 src="/processetti/diagrams/Richiedenti_-_eta_allarrivo_a_Venezia_e_eta_al_processetto_sm.svg"
               ></ion-img>
               <ion-img
-                class="ion-hide-sm-down"
+                class={`ion-hide-lg-down ${testStyles.border}`}
                 src="/processetti/diagrams/Richiedenti_-_eta_allarrivo_a_Venezia_e_eta_al_processetto_xl.svg"
               ></ion-img>
             </ImageWrapper>
@@ -78,16 +79,16 @@ const GETProcessetti: NextPage<GETProcessettiProps> = (props) => {
               }
             >
               <ion-img
-                class="ion-hide-sm-up"
+                class={`ion-hide-lg-up`}
                 src="/processetti/diagrams/Professioni_e_eta_richiedenti_sm.svg"
               ></ion-img>
               <ion-img
-                class="ion-hide-sm-down"
+                class={`ion-hide-lg-down`}
                 src="/processetti/diagrams/Professioni_e_eta_richiedenti_xl.svg"
               ></ion-img>
             </ImageWrapper>
 
-            <h3>Heading</h3>
+            <h3>Età dei testimoni al processetto</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
               quis odio nostrum commodi ducimus earum consequatur enim laborum
@@ -99,16 +100,14 @@ const GETProcessetti: NextPage<GETProcessettiProps> = (props) => {
                 '/processetti/diagrams/Eta_dei_richiedenti_al_processetto_sm.svg',
                 '/processetti/diagrams/Eta_dei_richiedenti_al_processetto_xl.svg',
               ]}
-              legend={
-                'Età dei testimoni al processetto e all’arrivo a Venezia'
-              }
+              legend={'Età dei testimoni al processetto e all’arrivo a Venezia'}
             >
               <ion-img
-                class="ion-hide-sm-up"
+                class="ion-hide-lg-up"
                 src="/processetti/diagrams/Eta_dei_richiedenti_al_processetto_sm.svg"
               ></ion-img>
               <ion-img
-                class="ion-hide-sm-down"
+                class="ion-hide-lg-down"
                 src="/processetti/diagrams/Eta_dei_richiedenti_al_processetto_xl.svg"
               ></ion-img>
             </ImageWrapper>
