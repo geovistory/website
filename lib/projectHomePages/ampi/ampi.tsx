@@ -31,12 +31,12 @@ const AMPI_component: NextPage<ProjectPageProps> = (props) => {
             enterkeyhint="enter"
             placeholder="Suchen und enter drücken…"
             ref={(el: any) => {
-              el?.getInputElement().then(() => {
-                setTimeout(() => {
+              setTimeout(() => {
+                el?.getInputElement().then(() => {
                   console.log('focus on ', el);
                   el?.setFocus();
-                }, 300);
-              });
+                });
+              }, 300);
               el?.addEventListener('keypress', (event: KeyboardEvent) => {
                 if (event.key === 'Enter') {
                   el?.getInputElement().then((inputEl: HTMLInputElement) => {

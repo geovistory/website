@@ -1,10 +1,57 @@
+import {
+  boat,
+  colorFilter,
+  footsteps,
+  gitNetwork,
+  library,
+  storefront,
+  walk,
+} from 'ionicons/icons';
 import Link from 'next/link';
-import { getOntoExlorerUrl } from '../../lib/getOntoExploerUrl';
 import styles from './ProcessettiNavbar.module.css';
 export interface ProcessettiNavbarProps {
   title: string;
   projectId: number;
 }
+
+export const graficiTabelleLinks = [
+  {
+    href: '/processetti/grafici-e-tabelle/processetti',
+    label: 'Processetti',
+    icon: library,
+  },
+  {
+    href: '/processetti/grafici-e-tabelle/soggetti',
+    label: 'Soggetti',
+    icon: colorFilter,
+  },
+  {
+    href: '/processetti/grafici-e-tabelle/professioni',
+    label: 'Professioni',
+    icon: walk,
+  },
+  {
+    href: '/processetti/grafici-e-tabelle/origini',
+    label: 'Origini',
+    icon: footsteps,
+  },
+  {
+    href: '/processetti/grafici-e-tabelle/in-citta',
+    label: 'In città',
+    icon: storefront,
+  },
+
+  {
+    href: '/processetti/grafici-e-tabelle/mobilita',
+    label: 'Mobilità',
+    icon: boat,
+  },
+  {
+    href: '/processetti/grafici-e-tabelle/relazioni',
+    label: 'Relazioni',
+    icon: gitNetwork,
+  },
+];
 export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
   return (
     <div className={styles.theme}>
@@ -58,19 +105,11 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
             <ion-popover trigger="grafici" trigger-action="click">
               <ion-content>
                 <ion-list lines={'none'}>
-                  <ion-item
-                    color="primary"
-                    href="/processetti/grafici-e-tabelle/test"
-                  >
-                    Test
-                  </ion-item>
-                  <ion-item color="primary">Processetti</ion-item>
-                  <ion-item color="primary">Soggetti</ion-item>
-                  <ion-item color="primary">Professioni</ion-item>
-                  <ion-item color="primary">Origini</ion-item>
-                  <ion-item color="primary">In città</ion-item>
-                  <ion-item color="primary">Mobilità</ion-item>
-                  <ion-item color="primary">Relazioni</ion-item>
+                  {graficiTabelleLinks.map((x, i) => (
+                    <ion-item key={i} color="primary" href={x.href}>
+                      {x.label}
+                    </ion-item>
+                  ))}
                 </ion-list>
               </ion-content>
             </ion-popover>

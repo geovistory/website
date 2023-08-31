@@ -287,8 +287,12 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'URI Dereferencing',
-        headOgDescription: 'Documentation of URI Dereferencing of Entities as RDF and HTML.',
+        head: {
+          headTitle: 'URI Dereferencing',
+          headOgDescription:
+            'Documentation of URI Dereferencing of Entities as RDF and HTML.',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

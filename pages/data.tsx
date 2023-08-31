@@ -39,12 +39,12 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                 enterkeyhint="enter"
                 placeholder="Search and hit enter…"
                 ref={(el: any) => {
-                  el?.getInputElement().then(() => {
-                    setTimeout(() => {
+                  setTimeout(() => {
+                    el?.getInputElement().then(() => {
                       console.log('focus on ', el);
                       el?.setFocus();
-                    }, 300);
-                  });
+                    });
+                  }, 300);
                   el?.addEventListener('keypress', (event: KeyboardEvent) => {
                     if (event.key === 'Enter') {
                       el?.getInputElement().then(
@@ -151,8 +151,11 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'Community Data',
-        headOgDescription: 'Access linked open and FAIR research data.',
+        head: {
+          headTitle: 'Community Data',
+          headOgDescription: 'Access linked open and FAIR research data.',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

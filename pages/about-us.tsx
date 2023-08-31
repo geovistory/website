@@ -158,9 +158,12 @@ export const getStaticProps: GetStaticProps<AboutUsProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'About Us',
-        headOgDescription:
-          'Behind Geovistory is LARHRA, KleioLab and the University of Bern – learn more...',
+        head: {
+          headTitle: 'About Us',
+          headOgDescription:
+            'Behind Geovistory is LARHRA, KleioLab and the University of Bern – learn more...',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

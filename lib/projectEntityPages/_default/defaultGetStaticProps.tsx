@@ -28,9 +28,11 @@ export const defaultGetStaticProps: GetStaticProps<DefaultEntityProps> = async (
     props: {
       ...ssrProps,
       projectPageLayout: {
-        headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
-        headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} – provided by project ${params.shortName}`,
-        headOgImage: params.headOgImage,
+        head: {
+          headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+          headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} – provided by project ${params.shortName}`,
+          headOgImage: params.headOgImage,
+        },
         navbar: projectParamsToNavbarProps(params),
       },
       _ssrData: res.serverFetchedData,

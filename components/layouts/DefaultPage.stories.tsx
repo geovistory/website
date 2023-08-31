@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof DefaultPageComponent> = (args) => {
         explicabo eligendi veniam rerum nemo inventore distinctio repellat
         exercitationem, omnis optio illum cum.
       </p>
-      <div style={{ background: 'lightblue', height: 100, paddingTop:20 }}>
+      <div style={{ background: 'lightblue', height: 100, paddingTop: 20 }}>
         <p>Box expanding to grid</p>
       </div>
       <p>
@@ -34,8 +34,11 @@ const Template: ComponentStory<typeof DefaultPageComponent> = (args) => {
 
 export const DefaultPageFixedGrid = Template.bind({});
 const args: DefaultPageProps = {
-  headTitle: 'Tagebücher Anne Maria Preiswerk Iselin',
-  headOgDescription: 'Project Description',
+  head: {
+    headTitle: 'Tagebücher Anne Maria Preiswerk Iselin',
+    headOgDescription: 'Project Description',
+    headOgImage: null,
+  },
   footer: {
     featuredProjects: [
       {

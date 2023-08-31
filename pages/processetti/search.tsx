@@ -17,7 +17,7 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
         <title>Processetti</title>
       </Head>
       <ion-app class={styles.theme}>
-        <ion-content >
+        <ion-content>
           <ProcessettiNavbar
             title="Progetto ANR Processetti"
             projectId={591}
@@ -57,9 +57,11 @@ export const getServerSideProps: GetServerSideProps<
   const props: ProjectSearchProps = {
     explorerTerm,
     projectPageLayout: {
-      headTitle: 'Search ' + params.shortName,
-      headOgDescription: params.description,
-      headOgImage: params.headOgImage,
+      head: {
+        headTitle: 'Search ' + params.shortName,
+        headOgDescription: params.description,
+        headOgImage: params.headOgImage,
+      },
       navbar: projectParamsToNavbarProps(params),
     },
     params,

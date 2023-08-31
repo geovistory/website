@@ -3,7 +3,11 @@ import {
   ProjectPageLayout,
   ProjectPageLayoutProps,
 } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams, projectParamsToNavbarProps, projectsParams } from '../../../lib/projectParams';
+import {
+  ProjectParams,
+  projectParamsToNavbarProps,
+  projectsParams,
+} from '../../../lib/projectParams';
 import styles from './sparql.module.css';
 
 export interface ProjectSearchProps {
@@ -36,29 +40,32 @@ const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
 
 export default ProjectSearchPage;
 
-export const getServerSideProps: GetServerSideProps<ProjectSearchProps> =
-  async (context) => {
-    const projectId = parseInt(context.params?.geov_id as string, 10);
+export const getServerSideProps: GetServerSideProps<
+  ProjectSearchProps
+> = async (context) => {
+  const projectId = parseInt(context.params?.geov_id as string, 10);
 
-    const params = projectsParams.find((pp) => pp.geovID === projectId);
-    if (!params) return { notFound: true };
+  const params = projectsParams.find((pp) => pp.geovID === projectId);
+  if (!params) return { notFound: true };
 
-    const query = context.query;
-    const explorerTerm = query?.term ? query?.term.toString() : null;
+  const query = context.query;
+  const explorerTerm = query?.term ? query?.term.toString() : null;
 
-    const props: ProjectSearchProps = {
-      explorerTerm,
-      projectPageLayout: {
+  const props: ProjectSearchProps = {
+    explorerTerm,
+    projectPageLayout: {
+      head: {
         headOgDescription: params.description,
         headOgImage: params.headOgImage,
         headTitle: 'Search ' + params.shortName,
-        navbar: projectParamsToNavbarProps(params),
       },
-      params,
-      uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
-      uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
-    };
-    return {
-      props,
-    };
+      navbar: projectParamsToNavbarProps(params),
+    },
+    params,
+    uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
+    uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
   };
+  return {
+    props,
+  };
+};

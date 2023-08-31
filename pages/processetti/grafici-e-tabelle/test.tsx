@@ -1,16 +1,15 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import ImageWrapper from '../../../components/elements/ImageWrapper';
+import ImageWrapper from '../../../components/elements/ImageWrapper.component';
 import { ProjectFooter } from '../../../components/layouts/ProjectFooter.component';
 import { ProcessettiBanner } from '../../../components/project-specific/ProcessettiBanner.component';
 import { ProcessettiNavbar } from '../../../components/project-specific/ProcessettiNavbar.component';
 import theming from '../index.module.css';
-import styles from './processetti.module.css';
-import testStyles from './test.module.css';
+import styles from './grafici.module.css';
 
-export interface GETProcessettiProps {}
-const GETProcessetti: NextPage<GETProcessettiProps> = (props) => {
+interface GraficiTabelleProps {}
+const GraficiTabelle: NextPage<GraficiTabelleProps> = (props) => {
   return (
     <>
       <Head>
@@ -53,11 +52,11 @@ const GETProcessetti: NextPage<GETProcessettiProps> = (props) => {
               }
             >
               <ion-img
-                class={`ion-hide-lg-up ${testStyles.border}`}
+                class={`ion-hide-lg-up ${styles.border}`}
                 src="/processetti/diagrams/Richiedenti_-_eta_allarrivo_a_Venezia_e_eta_al_processetto_sm.svg"
               ></ion-img>
               <ion-img
-                class={`ion-hide-lg-down ${testStyles.border}`}
+                class={`ion-hide-lg-down ${styles.border}`}
                 src="/processetti/diagrams/Richiedenti_-_eta_allarrivo_a_Venezia_e_eta_al_processetto_xl.svg"
               ></ion-img>
             </ImageWrapper>
@@ -119,7 +118,7 @@ const GETProcessetti: NextPage<GETProcessettiProps> = (props) => {
   );
 };
 
-export default GETProcessetti;
-export const getStaticProps: GetStaticProps<GETProcessettiProps> = async () => {
+export default GraficiTabelle;
+export const getStaticProps: GetStaticProps<GraficiTabelleProps> = async () => {
   return { props: {} };
 };
