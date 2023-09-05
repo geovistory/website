@@ -101,7 +101,7 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
           ></ion-menu-button>
           <span className="ion-hide-md-down">
             {menuStructure.map((menuItem, mindex) => (
-              <>
+              <span key={mindex}>
                 <ion-button id={'_' + mindex}>{menuItem.label}</ion-button>
                 <ion-popover trigger={'_' + mindex} trigger-action="click">
                   <ion-content color="primary">
@@ -114,7 +114,7 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
                     </ion-list>
                   </ion-content>
                 </ion-popover>
-              </>
+              </span>
             ))}
           </span>
         </ion-buttons>
