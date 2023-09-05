@@ -1,5 +1,5 @@
 .banner {
-    background-color: var(--ion-color-primary-shade);
+    background-color: var(--ion-color-primary);
     color: var(--ion-color-light);
     padding: 0;
     position: relative;
@@ -21,7 +21,7 @@
 }
 .sectionPrimary {
     padding: 1rem 1rem;
-    background-color: var(--ion-color-primary-shade);
+    background-color: var(--ion-color-primary);
     color: var(--ion-color-light);
     text-align: center;
 }

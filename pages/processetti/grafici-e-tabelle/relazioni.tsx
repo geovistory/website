@@ -22,7 +22,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             'Frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni'
           }
           imageUrls={[
-            '/processetti/diagrams/17_tipoRelazioni_sl.svg.svg',
+            '/processetti/diagrams/17_tipoRelazioni_sl.svg',
             '/processetti/diagrams/17_tipoRelazioni_xl.svg',
           ]}
         >
@@ -34,7 +34,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           <ion-img
             class={`ion-hide-lg-up ${styles.border}`}
             alt="Grafico con la frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
-            src="/processetti/diagrams/17_tipoRelazioni_sl.svg.svg"
+            src="/processetti/diagrams/17_tipoRelazioni_sl.svg"
           ></ion-img>
         </ImageWrapper>
 

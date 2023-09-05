@@ -5,6 +5,7 @@ import { ProjectFooter } from '../layouts/ProjectFooter.component';
 import { ProcessettiBanner } from './ProcessettiBanner.component';
 import styles from './ProcessettiLayout.module.css';
 import { ProcessettiNavbar } from './ProcessettiNavbar.component';
+import { ProcessettiSideMenu } from './ProcessettiSideMenu';
 
 interface ProcessettiLayout {
   head: HeadProps;
@@ -29,6 +30,7 @@ export const ProcessettiLayout: FunctionComponent<ProcessettiLayout> = (
           {!props.hideBanner && <ProcessettiBanner></ProcessettiBanner>}
           {props.children}
           <ProjectFooter showEeditiones={false}></ProjectFooter>
+          <ProcessettiSideMenu></ProcessettiSideMenu>
         </ion-content>
       </ion-app>
     </>

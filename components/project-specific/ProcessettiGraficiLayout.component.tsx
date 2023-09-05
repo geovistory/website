@@ -5,12 +5,12 @@ import theming from '../../pages/processetti/index.module.css';
 import { DefaultHead, HeadProps } from '../layouts/DefaultHead';
 import { ProjectFooter } from '../layouts/ProjectFooter.component';
 import { ProcessettiGraficiBanner } from './ProcessettiGraficiBanner.component';
-import { ProcessettiLayout } from './ProcessettiLayout.component';
-import styles from './ProcessettiLayout.module.css';
+import styles from './ProcessettiGraficiLayout.module.css';
 import {
   graficiTabelleLinks,
   ProcessettiNavbar,
 } from './ProcessettiNavbar.component';
+import { ProcessettiSideMenu } from './ProcessettiSideMenu';
 
 interface ProcessettiGraficiLayout {
   head: HeadProps;
@@ -28,25 +28,30 @@ export const ProcessettiGraficiLayout: FunctionComponent<
 
       <ion-app class={theming.theme}>
         <ion-content class={styles.content} fullscreen={true}>
-          <ProcessettiNavbar
-            title="Progetto ANR Processetti"
-            projectId={591}
-          ></ProcessettiNavbar>
+          <div className={styles.navBar}>
+            <ProcessettiNavbar
+              title="Progetto ANR Processetti"
+              projectId={591}
+            ></ProcessettiNavbar>
+          </div>
           <ProcessettiGraficiBanner></ProcessettiGraficiBanner>
+          <div className={styles.tabBar}>
+            <ion-tab-bar color="primary" class={styles.tabBar}>
+              {graficiTabelleLinks.map((x, i) => (
+                <TabButton
+                  key={i}
+                  href={x.href}
+                  label={x.label}
+                  icon={x.icon}
+                ></TabButton>
+              ))}
+            </ion-tab-bar>
+          </div>
 
           {props.children}
           <ProjectFooter showEeditiones={false}></ProjectFooter>
+          <ProcessettiSideMenu></ProcessettiSideMenu>
         </ion-content>
-        <ion-tab-bar translucent={true} color="" class={styles.tabBar}>
-          {graficiTabelleLinks.map((x, i) => (
-            <TabButton
-              key={i}
-              href={x.href}
-              label={x.label}
-              icon={x.icon}
-            ></TabButton>
-          ))}
-        </ion-tab-bar>
       </ion-app>
     </>
   );
