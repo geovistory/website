@@ -15,6 +15,26 @@ export interface ProcessettiNavbarProps {
   className?: string;
 }
 
+export const bancaDatiLinks = [
+  {
+    href: '/processetti/metodologia',
+    label: 'Metodologia',
+  },
+  {
+    href: '/processetti/search',
+    label: 'Ricerca libera',
+  },
+];
+export const strumentiLinks = [
+  {
+    href: '/processetti/bibliografia',
+    label: 'Bibliografia',
+  },
+  {
+    href: '/processetti/fonti',
+    label: 'Fonti',
+  },
+];
 export const graficiTabelleLinks = [
   {
     href: '/processetti/grafici-e-tabelle/processetti',
@@ -53,6 +73,11 @@ export const graficiTabelleLinks = [
     icon: gitNetwork,
   },
 ];
+export const menuStructure = [
+  { label: 'Strumenti', links: strumentiLinks },
+  { label: 'Banca dati', links: bancaDatiLinks },
+  { label: 'Grafici e tabelle', links: graficiTabelleLinks },
+];
 export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
   return (
     <div className={styles.theme}>
@@ -75,50 +100,25 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
             menu="main"
           ></ion-menu-button>
           <span className="ion-hide-md-down">
-            <ion-button id="strumenti-trigger">Strumenti</ion-button>
-            <ion-popover trigger="strumenti-trigger" trigger-action="click">
-              <ion-content color="primary">
-                <ion-list lines={'none'}>
-                  <ion-item color="primary" href="/processetti/bibliografia">
-                    Bibliografia
-                  </ion-item>
-                  <ion-item color="primary" href="/processetti/fonti">
-                    Fonti
-                  </ion-item>
-                </ion-list>
-              </ion-content>
-            </ion-popover>
-
-            <ion-button id="banca-dati-trigger">Banca dati</ion-button>
-            <ion-popover trigger="banca-dati-trigger" trigger-action="click">
-              <ion-content>
-                <ion-list lines={'none'}>
-                  <ion-item color="primary" href={`/processetti/metodologia`}>
-                    Metodologia
-                  </ion-item>
-                  <ion-item color="primary" href={`/processetti/search`}>
-                    Ricerca libera
-                  </ion-item>
-                </ion-list>
-              </ion-content>
-            </ion-popover>
-            <ion-button id="grafici">Grafici e tabelle</ion-button>
-            <ion-popover trigger="grafici" trigger-action="click">
-              <ion-content>
-                <ion-list lines={'none'}>
-                  {graficiTabelleLinks.map((x, i) => (
-                    <ion-item key={i} color="primary" href={x.href}>
-                      {x.label}
-                    </ion-item>
-                  ))}
-                </ion-list>
-              </ion-content>
-            </ion-popover>
+            {menuStructure.map((menuItem, mindex) => (
+              <>
+                <ion-button id={'_' + mindex}>{menuItem.label}</ion-button>
+                <ion-popover trigger={'_' + mindex} trigger-action="click">
+                  <ion-content color="primary">
+                    <ion-list lines={'none'}>
+                      {menuItem.links.map((x, i) => (
+                        <ion-item key={i} color="primary" href={x.href}>
+                          {x.label}
+                        </ion-item>
+                      ))}
+                    </ion-list>
+                  </ion-content>
+                </ion-popover>
+              </>
+            ))}
           </span>
         </ion-buttons>
       </ion-toolbar>
     </div>
   );
 };
-
-

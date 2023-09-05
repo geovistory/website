@@ -1,28 +1,15 @@
 import type { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
-import { ProjectFooter } from '../../components/layouts/ProjectFooter.component';
-import { ProcessettiBanner } from '../../components/project-specific/ProcessettiBanner.component';
-import { ProcessettiNavbar } from '../../components/project-specific/ProcessettiNavbar.component';
+import { ProcessettiLayout } from '../../components/project-specific/ProcessettiLayout.component';
 import {
   projectParamsToNavbarProps,
-  projectsParams,
+  projectsParams
 } from '../../lib/projectParams';
 import { ProjectSearchProps } from '../project/[geov_id]/search';
-import styles from './index.module.css';
 
 const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
   return (
-    <>
-      <Head>
-        <title>Processetti</title>
-      </Head>
-      <ion-app class={styles.theme}>
-        <ion-content>
-          <ProcessettiNavbar
-            title="Progetto ANR Processetti"
-            projectId={591}
-          ></ProcessettiNavbar>
-          {/* <ProcessettiBanner></ProcessettiBanner> */}
+    <ProcessettiLayout head={props.projectPageLayout.head} hideBanner={true}>
+   
           <ion-grid class="ion-margin-top">
             <geov-explorer
               init-search-string={props.explorerTerm ?? undefined}
@@ -35,10 +22,8 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
               uri-replace={`${props.uriReplace}?p=${props.params.geovID}`}
             ></geov-explorer>
           </ion-grid>
-          <ProjectFooter showEeditiones={false}></ProjectFooter>
-        </ion-content>
-      </ion-app>
-    </>
+
+    </ProcessettiLayout>
   );
 };
 
