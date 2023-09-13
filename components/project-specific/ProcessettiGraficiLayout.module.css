@@ -7,7 +7,7 @@
 }
 
 .tabBar {
-  --border: none;
+  /* --border: none; */
   position: -webkit-sticky;
   position: sticky;
   height: 50px;
@@ -24,8 +24,8 @@
   }
 
   .tabBar {
-    --border: 1rem solid var(--ion-color-primary);
-    border-bottom: 1rem solid var(--ion-color-primary);  
+/*    --border: none;  1rem solid var(--ion-color-primary);*/
+    /* border-bottom: 1rem solid var(--ion-color-primary);   */
     height: 50px;
     top: 78px;
     margin-bottom: 6rem;

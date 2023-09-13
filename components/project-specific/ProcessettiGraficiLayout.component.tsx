@@ -35,7 +35,7 @@ export const ProcessettiGraficiLayout: FunctionComponent<
             ></ProcessettiNavbar>
           </div>
           <ProcessettiGraficiBanner></ProcessettiGraficiBanner>
-          <div className={styles.tabBar}>
+          <div className={`${styles.tabBar} ion-hide-sm-down`}>
             <ion-tab-bar color="primary" class={styles.tabBar}>
               {graficiTabelleLinks.map((x, i) => (
                 <TabButton
@@ -70,10 +70,10 @@ const TabButton: FunctionComponent<{
       ref={button}
       class={styles.tabButton}
       href={x.href}
-      layout="icon-top"
+      layout="icon-hide"
     >
-      <ion-icon icon={x.icon ? x.icon : libraryOutline}></ion-icon>
-      <ion-label>{x.label}</ion-label>
+      {/* <ion-icon icon={x.icon ? x.icon : libraryOutline}></ion-icon> */}
+      <ion-label styles={{fontSize:'10px'}}>{x.label}</ion-label>
     </ion-tab-button>
   );
 };

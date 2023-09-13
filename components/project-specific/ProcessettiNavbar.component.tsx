@@ -21,7 +21,7 @@ export const bancaDatiLinks = [
     label: 'Metodologia',
   },
   {
-    href: '/processetti/search',
+    href: '/processetti/ricerca-libera',
     label: 'Ricerca libera',
   },
 ];
@@ -36,6 +36,11 @@ export const strumentiLinks = [
   },
 ];
 export const graficiTabelleLinks = [
+  {
+    href: '/processetti/grafici-e-tabelle',
+    label: 'Presentazione',
+    icon: library,
+  },
   {
     href: '/processetti/grafici-e-tabelle/processetti',
     label: 'Processetti',
