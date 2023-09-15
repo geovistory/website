@@ -249,9 +249,9 @@ export const projectsParams: Array<ProjectParams> = [
         geovID: 941447,
         geovName: 'The Roman senate under the tetrarchs',
 
-        preferredClasses: ['c21', 'c68'],
+        preferredClasses: ['c21', 'c68', 'c363'],
 
-        featured: true,
+        featured: false,
 
         teiURL: '',
         sparqlURL: '',

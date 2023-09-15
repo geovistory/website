@@ -26,9 +26,9 @@
 }
 
 .title {
-    color: #fff;
+    color: #36353d;
     font-size: 1.4rem;
-    text-shadow: rgb(51, 38, 76) 1px 0 10px;
+    /* text-shadow: rgb(51, 38, 76) 1px 0 10px; */
     position: absolute;
     left: 1rem;
     right: 1rem;

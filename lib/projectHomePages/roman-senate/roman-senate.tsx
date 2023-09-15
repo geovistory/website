@@ -76,7 +76,7 @@ const RomanSenate_component: NextPage<ProjectPageProps> = (props) => {
             origins of <i>viri clarissimi</i> as well as the collective
             activities of distinguished senatorial office-holders.{' '}
           </p>
-          <p>
+          <p className="ion-text-center">
             <ion-button color="primary" href={`${props.params.geovID}/search`}>
               Access data
             </ion-button>
