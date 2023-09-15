@@ -243,6 +243,32 @@ export const projectsParams: Array<ProjectParams> = [
 
         headOgImage: '/socialimage/academic-careers.jpg'
 
+    },
+    // Roman Senate
+    {
+        geovID: 941447,
+        geovName: 'The Roman senate under the tetrarchs',
+
+        preferredClasses: ['c21', 'c68', 'c363'],
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'The Roman senate under the tetrarchs',
+        shortName: 'The Roman senate under the tetrarchs',
+        description: "A prosopographical collection of members of the senatorial order from 284-306 CE",
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/roman-senate.jpg'
+
     }
 
 
