@@ -1,59 +1,40 @@
-import { libraryOutline } from 'ionicons/icons';
 import router from 'next/router';
 import { FunctionComponent, LegacyRef, useEffect, useRef } from 'react';
 import theming from '../../pages/processetti/index.module.css';
 import { DefaultHead, HeadProps } from '../layouts/DefaultHead';
 import { ProjectFooter } from '../layouts/ProjectFooter.component';
-import { ProcessettiGraficiBanner } from './ProcessettiGraficiBanner.component';
+import { ProcessettiBanner } from './ProcessettiBanner.component';
 import styles from './ProcessettiGraficiLayout.module.css';
 import {
-  graficiTabelleLinks,
   ProcessettiNavbar,
+  graficiTabelleLinks,
 } from './ProcessettiNavbar.component';
 import { ProcessettiSideMenu } from './ProcessettiSideMenu';
+import { ProcessettiLayout } from './ProcessettiLayout.component';
 
 interface ProcessettiGraficiLayout {
   head: HeadProps;
+  hideBanner?: boolean;
 }
 export const ProcessettiGraficiLayout: FunctionComponent<
   ProcessettiGraficiLayout
 > = (props) => {
   return (
-    <>
-      <DefaultHead
-        headTitle={props.head.headTitle}
-        headOgImage={props.head.headOgImage}
-        headOgDescription={props.head.headOgDescription}
-      ></DefaultHead>
-
-      <ion-app class={theming.theme}>
-        <ion-content class={styles.content} fullscreen={true}>
-          <div className={styles.navBar}>
-            <ProcessettiNavbar
-              title="Progetto ANR Processetti"
-              projectId={591}
-            ></ProcessettiNavbar>
-          </div>
-          <ProcessettiGraficiBanner></ProcessettiGraficiBanner>
-          <div className={`${styles.tabBar} ion-hide-sm-down`}>
-            <ion-tab-bar color="primary" class={styles.tabBar}>
-              {graficiTabelleLinks.map((x, i) => (
-                <TabButton
-                  key={i}
-                  href={x.href}
-                  label={x.label}
-                  icon={x.icon}
-                ></TabButton>
-              ))}
-            </ion-tab-bar>
-          </div>
-
-          {props.children}
-          <ProjectFooter showEeditiones={false}></ProjectFooter>
-          <ProcessettiSideMenu></ProcessettiSideMenu>
-        </ion-content>
-      </ion-app>
-    </>
+    <ProcessettiLayout head={props.head} hideBanner={props.hideBanner}>
+      <div className={`${styles.tabBar} ion-hide-sm-down`}>
+        <ion-tab-bar color="primary" class={styles.tabBar}>
+          {graficiTabelleLinks.map((x, i) => (
+            <TabButton
+              key={i}
+              href={x.href}
+              label={x.label}
+              icon={x.icon}
+            ></TabButton>
+          ))}
+        </ion-tab-bar>
+      </div>
+      {props.children}
+    </ProcessettiLayout>
   );
 };
 const TabButton: FunctionComponent<{
@@ -73,7 +54,7 @@ const TabButton: FunctionComponent<{
       layout="icon-hide"
     >
       {/* <ion-icon icon={x.icon ? x.icon : libraryOutline}></ion-icon> */}
-      <ion-label styles={{fontSize:'10px'}}>{x.label}</ion-label>
+      <ion-label styles={{ fontSize: '10px' }}>{x.label}</ion-label>
     </ion-tab-button>
   );
 };

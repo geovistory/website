@@ -13,7 +13,7 @@ export const ProcessettiSideMenu: FunctionComponent<{}> = () => (
       <ion-list color="dark">
         {menuStructure.map((menuItem, mindex) => (
           <div key={mindex}>
-            <ion-item-divider color="primary">
+            <ion-item-divider color="dark">
               <ion-label>{menuItem.label}</ion-label>
             </ion-item-divider>
             {menuItem.links.map((linkItem, lindex) => (

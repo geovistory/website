@@ -21,7 +21,7 @@
     --padding-bottom: 10px;
     --padding-start: var(--ion-padding, 16px);
     --padding-end: var(--ion-padding, 16px);
-    /* --ion-color-base: var(--gv-bg-project-toolbar, none) !important; */
+    --ion-color-dark: rgba(230, 28, 28, 0);
 }
 
 

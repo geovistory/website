@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import {
   boat,
   colorFilter,
+  dice,
   footsteps,
   gitNetwork,
   library,
@@ -15,11 +17,18 @@ export interface ProcessettiNavbarProps {
   className?: string;
 }
 
-export const bancaDatiLinks = [
-  {
-    href: '/processetti/metodologia',
-    label: 'Metodologia',
-  },
+export const metodologiaLinks = [
+  { href: '/processetti/metodologia', label: 'Metodologia' },
+  { href: '/processetti/metodologia/introduzione', label: 'Introduzione' },
+  { href: '/processetti/metodologia/tag', label: 'Tag (annotazione)' },
+  { href: '/processetti/metodologia/motivation-type', label: 'Motivation Type' },
+  { href: '/processetti/metodologia/mobility', label: 'Mobility' },
+  { href: '/processetti/metodologia/interazioni-sociali', label: 'Interazioni sociali' },
+  { href: '/processetti/metodologia/temporalità', label: 'Temporalità' },
+  { href: '/processetti/metodologia/professioni', label: 'Professioni' },
+  { href: '/processetti/metodologia/luoghi', label: 'Luoghi' },
+];
+export const ricercaLinks = [
   {
     href: '/processetti/ricerca-libera',
     label: 'Ricerca libera',
@@ -35,6 +44,7 @@ export const strumentiLinks = [
     label: 'Fonti',
   },
 ];
+
 export const graficiTabelleLinks = [
   {
     href: '/processetti/grafici-e-tabelle',
@@ -80,48 +90,64 @@ export const graficiTabelleLinks = [
 ];
 export const menuStructure = [
   { label: 'Strumenti', links: strumentiLinks },
-  { label: 'Banca dati', links: bancaDatiLinks },
+  { label: 'Metodologia Banca dati', links: metodologiaLinks },
   { label: 'Grafici e tabelle', links: graficiTabelleLinks },
+  { label: 'Ricerca libera', links: ricercaLinks },
 ];
 export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
   return (
     <div className={styles.theme}>
       <ion-toolbar class={styles.toolbar} color="dark">
-        <ion-buttons class={styles.buttonsLeft}>
-          <Link href="/" passHref={true}>
-            <a>
-              <ion-img
-                class={styles.logo}
-                src={'/Geovistory-Logo-No-Text-Gray.svg'}
-              />
-            </a>
-          </Link>
-          <ion-button href={`/processetti`}>{props.title}</ion-button>
-        </ion-buttons>
-        <ion-buttons slot="end">
+        <ion-buttons slot="start" class={styles.buttonsLeft}>
           <ion-menu-button
             class="ion-hide-md-up"
             id="main"
             menu="main"
           ></ion-menu-button>
+          <ion-button class="ion-hide-md-up" href={`/processetti`}>
+            {props.title}
+          </ion-button>
+          <a href="/" className="ion-hide-md-down">
+            <ion-img
+              class={styles.logo}
+              src={'/Geovistory-Logo-No-Text-Gray.svg'}
+            />
+          </a>
           <span className="ion-hide-md-down">
+            <ion-button href={`/processetti`}>Presentazione</ion-button>
             {menuStructure.map((menuItem, mindex) => (
               <span key={mindex}>
-                <ion-button id={'_' + mindex}>{menuItem.label}</ion-button>
-                <ion-popover trigger={'_' + mindex} trigger-action="click">
-                  <ion-content color="primary">
-                    <ion-list lines={'none'}>
-                      {menuItem.links.map((x, i) => (
-                        <ion-item key={i} color="primary" href={x.href}>
-                          {x.label}
-                        </ion-item>
-                      ))}
-                    </ion-list>
-                  </ion-content>
-                </ion-popover>
+                {menuItem.links.length === 1 ? (
+                  <ion-button href={menuItem.links[0].href}>
+                    {menuItem.label}
+                  </ion-button>
+                ) : (
+                  <>
+                    <ion-button id={'_' + mindex}>{menuItem.label}</ion-button>
+                    <ion-popover trigger={'_' + mindex} trigger-action="click">
+                      <ion-content color="primary">
+                        <ion-list lines={'none'}>
+                          {menuItem.links.map((x, i) => (
+                            <ion-item key={i} color="primary" href={x.href}>
+                              {x.label}
+                            </ion-item>
+                          ))}
+                        </ion-list>
+                      </ion-content>
+                    </ion-popover>
+                  </>
+                )}
               </span>
             ))}
           </span>
+        </ion-buttons>
+        <ion-buttons class="ion-hide-md-up" slot="end">
+          <a href="/">
+            <ion-img
+              class={styles.logo}
+              src={'/Geovistory-Logo-No-Text-Gray.svg'}
+            />
+          </a>
         </ion-buttons>
       </ion-toolbar>
     </div>

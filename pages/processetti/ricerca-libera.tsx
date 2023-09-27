@@ -8,7 +8,7 @@ import { ProjectSearchProps } from '../project/[geov_id]/search';
 
 const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
   return (
-    <ProcessettiLayout head={props.projectPageLayout.head} hideBanner={true}>
+    <ProcessettiLayout head={props.projectPageLayout.head} hideBanner={false}>
       <ion-grid class="ion-margin-top">
         <h1>Ricerca libera</h1>
         <p>

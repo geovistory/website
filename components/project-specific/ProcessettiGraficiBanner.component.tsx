@@ -1,5 +1,6 @@
 import styles from './ProcessettiBanner.module.css';
-export interface ProcessettiBannerProps {}
+export interface ProcessettiBannerProps {
+}
 export const ProcessettiGraficiBanner = () => {
   return (
     <>

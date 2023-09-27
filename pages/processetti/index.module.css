@@ -1,12 +1,12 @@
 .theme {
-    --ion-color-dark: #3e3d3d;
+    --ion-color-dark: #292528;
 
-    --ion-color-primary: #9f7a09;
-    --ion-color-primary-rgb: 159, 122, 9;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255, 255, 255;
-    --ion-color-primary-shade: #8c6b08;
-    --ion-color-primary-tint: #a98722;
+    --ion-color-primary: #65002a;
+	--ion-color-primary-rgb: 101,0,42;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #590025;
+	--ion-color-primary-tint: #741a3f;
 
     --ion-color-secondary: #884949;
     --ion-color-secondary-rgb: 136, 73, 73;

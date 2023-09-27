@@ -23,11 +23,17 @@ export const ProcessettiLayout: FunctionComponent<ProcessettiLayout> = (
       ></DefaultHead>
       <ion-app class={theming.theme}>
         <ion-content class={styles.content}>
-          <ProcessettiNavbar
-            title="Progetto ANR Processetti"
-            projectId={591}
-          ></ProcessettiNavbar>
-          {!props.hideBanner && <ProcessettiBanner></ProcessettiBanner>}
+          <div className={styles.navbar}>
+            <ProcessettiNavbar
+              title="Progetto ANR Processetti"
+              projectId={591}
+            ></ProcessettiNavbar>
+          </div>
+          {!props.hideBanner && (
+            <div className={styles.banner}>
+              <ProcessettiBanner></ProcessettiBanner>
+            </div>
+          )}
           {props.children}
           <ProjectFooter showEeditiones={false}></ProjectFooter>
           <ProcessettiSideMenu></ProcessettiSideMenu>
