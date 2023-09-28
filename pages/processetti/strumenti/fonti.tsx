@@ -2,11 +2,11 @@ import type { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
 import ImageWrapper from '../../../components/elements/ImageWrapper.component';
 import { HeadProps } from '../../../components/layouts/DefaultHead';
-import { ProcessettiLayout } from '../../../components/project-specific/ProcessettiLayout.component';
-import img1 from '../../../public/processetti/sources/img1.jpg';
-import img2 from '../../../public/processetti/sources/img2.jpg';
 import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
 import { strumentiLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
+import img1 from '../../../public/processetti/sources/img1.jpg';
+import img2 from '../../../public/processetti/sources/img2.jpg';
+import img3 from '../../../public/processetti/sources/img3.jpg';
 
 export interface FontiProps {
   head: HeadProps;
@@ -139,16 +139,16 @@ const Fonti: NextPage<FontiProps> = (props) => {
             legend={
               'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
             }
-            imageUrls={['/processetti/sources/img2.jpg']}
+            imageUrls={['/processetti/sources/img3.jpg']}
             dialogChildren={
               <Image
-                src={img2}
+                src={img3}
                 alt="Struttura e contenuti del processetto matrimoniale"
               />
             }
           >
             <Image
-              src={img2}
+              src={img3}
               placeholder="blur"
               width={608}
               height={365}
