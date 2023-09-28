@@ -1,38 +1,41 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { GetStaticProps, NextPage } from 'next';
-import React from 'react';
-import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
-import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
-import styles from './grafici.module.css';
 import ImageWrapper from '../../../components/elements/ImageWrapper.component';
+import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
 import { ImageTitle } from '../../../components/project-specific/ImageTitle.component';
+import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
+import { graficiTabelleLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
 import { Subtitle } from '../../../components/project-specific/Subtitle.component';
+import styles from './grafici.module.css';
+
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
-    <ProcessettiGraficiLayout head={props.head}>
+    <ProcessettiGraficiLayout head={props.head} links={graficiTabelleLinks}>
       <ion-grid fixed>
         <h1>Processetti</h1>
         <ImageTitle>
           Numero di processetti matrimoniali annotati in Geovistory
         </ImageTitle>
-        <ImageWrapper
-          legend={'Distribuzione dei processetti trattati'}
-          imageUrls={[
-            '/processetti/diagrams/01_numeroProcessetti_sl.svg',
-            '/processetti/diagrams/01_numeroProcessetti_xl.svg',
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory"
-            src="/processetti/diagrams/01_numeroProcessetti_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory"
-            src="/processetti/diagrams/01_numeroProcessetti_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={'Distribuzione dei processetti trattati'}
+            imageUrls={[
+              '/processetti/diagrams/01_numeroProcessetti_sl.svg',
+              '/processetti/diagrams/01_numeroProcessetti_xl.svg',
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory"
+              src="/processetti/diagrams/01_numeroProcessetti_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory"
+              src="/processetti/diagrams/01_numeroProcessetti_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           Sono stati trattati 4640 processetti, iscritti in un arco temporale
           che dal 1592 si protrae fino al 1650, assumendo due distinte prassi.

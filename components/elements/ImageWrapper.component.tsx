@@ -3,6 +3,7 @@ import { closeOutline, downloadOutline, expandOutline } from 'ionicons/icons';
 import React, {
   FunctionComponent,
   LegacyRef,
+  ReactNode,
   useEffect,
   useRef,
   useState,
@@ -11,12 +12,16 @@ import styles from './ImageWrapper.module.css';
 interface ImageWithDownloadProps {
   imageUrls: string[];
   legend?: string;
+  dialogChildren?: ReactNode;
+  noDialogPadding?: boolean;
 }
 
 const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
   imageUrls,
   legend,
   children,
+  dialogChildren,
+  noDialogPadding,
 }) => {
   // const [isFullscreen, setIsFullscreen] = useState(false);
   const modalRef: LegacyRef<HTMLIonModalElement> = useRef(null);
@@ -67,22 +72,6 @@ const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
   const closeModal = () => {
     modalRef.current?.dismiss();
   };
-  // const handleToggleFullscreen = () => {
-  //   setIsFullscreen(!isFullscreen);
-  // };
-
-  // useEffect(() => {
-  //   const handleKeyDown = (event: KeyboardEvent) => {
-  //     if (isFullscreen && event.key === 'Escape') {
-  //       setIsFullscreen(false);
-  //     }
-  //   };
-  //   window.addEventListener('keydown', handleKeyDown);
-
-  //   return () => {
-  //     window.removeEventListener('keydown', handleKeyDown);
-  //   };
-  // }, [isFullscreen]);
 
   return (
     <div style={{ marginBottom: '2rem' }}>
@@ -110,7 +99,9 @@ const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
             </ion-buttons>
           </ion-toolbar>
         </ion-header>
-        <ion-content class="ion-padding">{children}</ion-content>
+        <ion-content class={noDialogPadding ? '' : 'ion-padding'}>
+          {dialogChildren ?? children}
+        </ion-content>
       </ion-modal>
 
       <div

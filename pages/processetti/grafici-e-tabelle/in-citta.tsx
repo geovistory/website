@@ -7,10 +7,11 @@ import styles from './grafici.module.css';
 import { ImageTitle } from '../../../components/project-specific/ImageTitle.component';
 import { Subtitle } from '../../../components/project-specific/Subtitle.component';
 import ImageWrapper from '../../../components/elements/ImageWrapper.component';
+import { graficiTabelleLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
-    <ProcessettiGraficiLayout head={props.head}>
+    <ProcessettiGraficiLayout head={props.head} links={graficiTabelleLinks}>
       <ion-grid fixed>
         <h1>In città</h1>
 

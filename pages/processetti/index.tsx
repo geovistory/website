@@ -20,7 +20,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         </h2>
       </ion-grid>
       <ion-grid class={styles.sectionGray}>
-        <h3>Presentazione breve del progetto</h3>
+        <h3>Presentazione del progetto</h3>
 
         <p>
           Il progetto di ricerca &quot;Processetti&quot;. Matrimonio e mobilità

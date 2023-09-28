@@ -2,15 +2,15 @@
 import {
   boat,
   colorFilter,
-  dice,
   footsteps,
   gitNetwork,
   library,
   storefront,
   walk,
 } from 'ionicons/icons';
-import Link from 'next/link';
 import styles from './ProcessettiNavbar.module.css';
+import { useRouter } from 'next/router';
+
 export interface ProcessettiNavbarProps {
   title: string;
   projectId: number;
@@ -18,30 +18,39 @@ export interface ProcessettiNavbarProps {
 }
 
 export const metodologiaLinks = [
-  { href: '/processetti/metodologia', label: 'Metodologia' },
-  { href: '/processetti/metodologia/introduzione', label: 'Introduzione' },
+  { href: '/processetti/metodologia', label: 'Introduzione' },
   { href: '/processetti/metodologia/tag', label: 'Tag (annotazione)' },
-  { href: '/processetti/metodologia/motivation-type', label: 'Motivation Type' },
-  { href: '/processetti/metodologia/mobility', label: 'Mobility' },
-  { href: '/processetti/metodologia/interazioni-sociali', label: 'Interazioni sociali' },
-  { href: '/processetti/metodologia/temporalità', label: 'Temporalità' },
+  {
+    href: '/processetti/metodologia/motivation-type',
+    label: 'Motivation Type',
+  },
+  { href: '/processetti/metodologia/mobilita', label: 'Mobilità' },
+  {
+    href: '/processetti/metodologia/interazioni-sociali',
+    label: 'Interazioni sociali',
+  },
+  { href: '/processetti/metodologia/temporalita', label: 'Temporalità' },
   { href: '/processetti/metodologia/professioni', label: 'Professioni' },
   { href: '/processetti/metodologia/luoghi', label: 'Luoghi' },
 ];
 export const ricercaLinks = [
   {
     href: '/processetti/ricerca-libera',
-    label: 'Ricerca libera',
+    label: 'Introduzione',
+  },
+  {
+    href: '/processetti/ricerca-libera/ricerca',
+    label: 'Ricerca',
   },
 ];
 export const strumentiLinks = [
   {
-    href: '/processetti/bibliografia',
-    label: 'Bibliografia',
+    href: '/processetti/strumenti/fonti',
+    label: 'Fonti',
   },
   {
-    href: '/processetti/fonti',
-    label: 'Fonti',
+    href: '/processetti/strumenti/bibliografia',
+    label: 'Bibliografia',
   },
 ];
 
@@ -89,12 +98,29 @@ export const graficiTabelleLinks = [
   },
 ];
 export const menuStructure = [
-  { label: 'Strumenti', links: strumentiLinks },
-  { label: 'Metodologia Banca dati', links: metodologiaLinks },
-  { label: 'Grafici e tabelle', links: graficiTabelleLinks },
-  { label: 'Ricerca libera', links: ricercaLinks },
+  {
+    label: 'Strumenti',
+    links: strumentiLinks,
+    activateFor: '/strumenti',
+  },
+  {
+    label: 'Metodologia Banca dati',
+    links: metodologiaLinks,
+    activateFor: '/metodologia',
+  },
+  {
+    label: 'Grafici e tabelle',
+    links: graficiTabelleLinks,
+    activateFor: '/grafici-e-tabelle',
+  },
+  {
+    label: 'Ricerca libera',
+    links: ricercaLinks,
+    activateFor: '/ricerca-libera',
+  },
 ];
 export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
+  const router = useRouter();
   return (
     <div className={styles.theme}>
       <ion-toolbar class={styles.toolbar} color="dark">
@@ -114,13 +140,27 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
             />
           </a>
           <span className="ion-hide-md-down">
-            <ion-button href={`/processetti`}>Presentazione</ion-button>
+            <ion-button
+              href={`/processetti`}
+              style={
+                router.pathname === '/processetti' ? { fontWeight: '600' } : {}
+              }
+            >
+              Presentazione
+            </ion-button>
             {menuStructure.map((menuItem, mindex) => (
               <span key={mindex}>
-                {menuItem.links.length === 1 ? (
-                  <ion-button href={menuItem.links[0].href}>
-                    {menuItem.label}
-                  </ion-button>
+                <ion-button
+                  href={menuItem.links[0].href}
+                  style={
+                    router.pathname.includes(menuItem.activateFor)
+                      ? { fontWeight: '600' }
+                      : {}
+                  }
+                >
+                  {menuItem.label}
+                </ion-button>
+                {/* {menuItem.links.length === 1 ? (
                 ) : (
                   <>
                     <ion-button id={'_' + mindex}>{menuItem.label}</ion-button>
@@ -136,7 +176,7 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
                       </ion-content>
                     </ion-popover>
                   </>
-                )}
+                )} */}
               </span>
             ))}
           </span>

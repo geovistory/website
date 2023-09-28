@@ -15,6 +15,11 @@ import { ProcessettiLayout } from './ProcessettiLayout.component';
 interface ProcessettiGraficiLayout {
   head: HeadProps;
   hideBanner?: boolean;
+  links: {
+    href: string;
+    label: string;
+    icon?: string;
+  }[];
 }
 export const ProcessettiGraficiLayout: FunctionComponent<
   ProcessettiGraficiLayout
@@ -23,7 +28,7 @@ export const ProcessettiGraficiLayout: FunctionComponent<
     <ProcessettiLayout head={props.head} hideBanner={props.hideBanner}>
       <div className={`${styles.tabBar} ion-hide-sm-down`}>
         <ion-tab-bar color="primary" class={styles.tabBar}>
-          {graficiTabelleLinks.map((x, i) => (
+          {props.links.map((x, i) => (
             <TabButton
               key={i}
               href={x.href}

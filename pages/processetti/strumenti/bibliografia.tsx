@@ -1,20 +1,14 @@
 import type { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
-import React from 'react';
-import { HeadProps } from '../../components/layouts/DefaultHead';
-import { ProjectFooter } from '../../components/layouts/ProjectFooter.component';
-import { ProcessettiBanner } from '../../components/project-specific/ProcessettiBanner.component';
-import { ProcessettiLayout } from '../../components/project-specific/ProcessettiLayout.component';
-import { ProcessettiNavbar } from '../../components/project-specific/ProcessettiNavbar.component';
-import styles from './bibliografia.module.css';
-import theming from './index.module.css';
+import { HeadProps } from '../../../components/layouts/DefaultHead';
+import { strumentiLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
+import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
 
 export interface BibliografiaProps {
   head: HeadProps;
 }
 const Bibliografia: NextPage<BibliografiaProps> = (props) => {
   return (
-    <ProcessettiLayout head={props.head}>
+    <ProcessettiGraficiLayout head={props.head} links={strumentiLinks}>
       <ion-grid>
         <h1>Bibliografia</h1>
         <p>
@@ -92,7 +86,7 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
           la storia economica e sociale di Bergamo, pp. 175-93.
         </p>
       </ion-grid>
-    </ProcessettiLayout>
+    </ProcessettiGraficiLayout>
   );
 };
 

@@ -1,16 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { GetStaticProps, NextPage } from 'next';
-import React from 'react';
-import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
 import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
-import styles from './grafici.module.css';
-import { ImageTitle } from '../../../components/project-specific/ImageTitle.component';
-import { Subtitle } from '../../../components/project-specific/Subtitle.component';
-import ImageWrapper from '../../../components/elements/ImageWrapper.component';
+import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
+import { graficiTabelleLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
-    <ProcessettiGraficiLayout head={props.head}>
+    <ProcessettiGraficiLayout head={props.head} links={graficiTabelleLinks}>
       <ion-grid fixed>
         <h1>Presentazione</h1>
 
