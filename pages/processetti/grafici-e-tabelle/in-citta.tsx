@@ -88,31 +88,14 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Rimane ad oggi difficile stabilire la logica di questa concentrazione.
         </p>
         <p>
-          Spostando l’attenzione sui luoghi di lavoro dei richiedenti, emerge
-          una geografia diversa da quella dei luoghi d’abitazione. Ad esempio,
-          la parrocchia di San Pietro di Castello era il luogo di residenza
-          degli operai che dichiaravano di lavorare all'Arsenale. Rialto e le
-          Mercerie, l'asse commerciale nel cuore della città, attraevano
-          negozianti e artigiani che vivevano in altre zone a causa dell'elevato
-          costo degli alloggi del centro.
+        Spostando l’attenzione sui luoghi di lavoro dei richiedenti, emerge una geografia diversa da quella dei luoghi d’abitazione. Ad esempio, la parrocchia di San Pietro di Castello era il luogo di residenza degli operai che dichiaravano di lavorare all'Arsenale. Rialto e le Mercerie, l'asse commerciale nel cuore della città, attraevano negozianti e artigiani che vivevano in altre zone a causa dell'elevato costo degli alloggi del centro.
         </p>
         <p>
-          Come i richiedenti, i testimoni abitavano in tutta la città in
-          proporzione alle dimensioni di ciascuna parrocchia. Ciò è motivato dal
-          fatto che i testimoni venivano scelti per la loro prossimità allo
-          sposo, in termini sociali e geografici. Alcuni, ad esempio, erano
-          vicini di casa e, come tali, avevano contatti quotidiani e un’ottima
-          conoscenza della situazione matrimoniale dell’inquisito.{" "}
+        Come i richiedenti, i testimoni abitavano in tutta la città in proporzione alle dimensioni di ciascuna parrocchia. Ciò è motivato dal fatto che i testimoni venivano scelti per la loro prossimità allo sposo, in termini sociali e geografici. Alcuni, ad esempio, erano vicini di casa e, come tali, avevano contatti quotidiani e un’ottima conoscenza della situazione matrimoniale dell’inquisito.
+
         </p>
         <p>
-          Il fatto che i testimoni tendenzialmente avessero uno status sociale
-          più elevato rispetto ai richiedenti si riflette sul dato della
-          distribuzione urbana: questi assumono un peso maggiore rispetto agli
-          sposi nelle parrocchie centrali della città, di fatto più variegate
-          dal punto di vista professionale e sociale. Al contrario, la
-          parrocchia di San Geremia, che registra un’ampia concentrazione di
-          richiedenti, aveva proporzionalmente meno testimoni rispetto alle
-          altre parrocchie.
+        Il fatto che i testimoni tendenzialmente avessero uno status sociale più elevato rispetto ai richiedenti si riflette sul dato della distribuzione urbana: questi assumono un peso maggiore rispetto agli sposi nelle parrocchie centrali della città, di fatto più variegate dal punto di vista professionale e sociale. Al contrario, la parrocchia di San Geremia, che registra un’ampia concentrazione di richiedenti, aveva proporzionalmente meno testimoni rispetto alle altre parrocchie.
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>
