@@ -21,26 +21,26 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
 
         <p>
-        <ImageWrapper
-          legend={
-            "Frequenza d'uso dei concetti per la descrizione degli spostamenti extraurbani"
-          }
-          imageUrls={[
-            "/processetti/diagrams/24_concettiAccount_sl.svg",
-            "/processetti/diagrams/24_concettiAccount_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la frequenza d'uso dei concetti per la descrizione degli spostamenti extra-urbani"
-            src="/processetti/diagrams/24_concettiAccount_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la frequenza d'uso dei concetti per la descrizione degli spostamenti extra-urbani"
-            src="/processetti/diagrams/24_concettiAccount_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+          <ImageWrapper
+            legend={
+              "Frequenza d'uso dei concetti per la descrizione degli spostamenti extraurbani"
+            }
+            imageUrls={[
+              "/processetti/diagrams/24_concettiAccount_sl.svg",
+              "/processetti/diagrams/24_concettiAccount_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la frequenza d'uso dei concetti per la descrizione degli spostamenti extra-urbani"
+              src="/processetti/diagrams/24_concettiAccount_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la frequenza d'uso dei concetti per la descrizione degli spostamenti extra-urbani"
+              src="/processetti/diagrams/24_concettiAccount_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
         </p>
         <p>
           Le autorità ecclesiastiche sospettavano che la mobilità fosse un
@@ -76,52 +76,52 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
-        <ImageWrapper
-          legend={
-            "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-          }
-          imageUrls={[
-            "/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg",
-            "/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-            src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-            src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+          <ImageWrapper
+            legend={
+              "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+            }
+            imageUrls={[
+              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg",
+              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
         </p>
         <ImageTitle>
           Origini dei richiedenti che tornano temporaneamente al paese
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-        <p>       
-        <ImageWrapper
-          legend={
-            "Origini dei richiedenti con almeno un ritorno temporaneo al paese d'origine"
-          }
-          imageUrls={[
-            "/processetti/diagrams/26_originiRitorno_sl.svg",
-            "/processetti/diagrams/26_originiRitorno_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Mappa con le origini dei richiedenti aventi almeno un ritorno temporaneo al paese d'origine"
-            src="/processetti/diagrams/26_originiRitorno_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Mappa con le origini dei richiedenti aventi almeno un ritorno temporaneo al paese d'origine"
-            src="/processetti/diagrams/26_originiRitorno_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Origini dei richiedenti con almeno un ritorno temporaneo al paese d'origine"
+            }
+            imageUrls={[
+              "/processetti/diagrams/26_originiRitorno_sl.svg",
+              "/processetti/diagrams/26_originiRitorno_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Mappa con le origini dei richiedenti aventi almeno un ritorno temporaneo al paese d'origine"
+              src="/processetti/diagrams/26_originiRitorno_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Mappa con le origini dei richiedenti aventi almeno un ritorno temporaneo al paese d'origine"
+              src="/processetti/diagrams/26_originiRitorno_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
         </p>
         <p>
           Il ritorno al paese d'origine, che avrebbe potuto rappresentare per il
