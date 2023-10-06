@@ -38,7 +38,7 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
           Canepari Eleonora (2003), &quote;Mestiere e spazio urbano nella costruzione
           dei legami sociali degli immigrati a Roma in età moderna&quote;, in A. Arru
           e F. Ramella (a cura di), <i>L'Italia delle migrazioni interne. Donne,
-          uomini, mobilità in età moderna e contemporanea</i>, Roma, pp. 33-76.
+          e F. Ramella (a cura di), <i>L&apos;Italia delle migrazioni interne. Donne,
         </p>
 
         <p>
