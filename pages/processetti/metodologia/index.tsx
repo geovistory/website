@@ -151,7 +151,40 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
         <a name="2013">
+        <p id="2013">
           Beretta Francesco, Butez Charlotte (2013), “Un SIG Collaboratif Pour
+          La Recherche Historique”, in “Géomatique Expert”, 91, pp. 30-35 / 92,
+          pp. 48-54
+        </p>
+
+        <p id="2016">
+          Beretta Francesco (2016), “Pour une annotation sémantique des textes:
+          le projet symogih.org et la Text encoding initiative”, in “Bruniana e
+          Campanelliana, Ricerche filosofiche e materiali storico - testuali”,
+          XXII.2 , pp. 453-65 [https://doi.org/10.19272/201604102005]
+        </p>
+
+        <p id="2021">
+          Beretta Francesco (2021), “A Challenge for Historical Research: Making
+          Data FAIR Using a Collaborative Ontology Management Environment
+          (OntoME)”, in “Semantic Web”, 12.2, pp. 279-94
+          [https://doi.org/10.3233/SW-200416]
+        </p>
+
+        <p id="2022">
+          Beretta Francesco (2022), “Interopérabilité Des Données de La
+          Recherche et Ontologies Fondationnelles: Un Écosystème d”extensions Du
+          CIDOC CRM Pour Les Sciences Humaines et Sociales”, in N. Lasolle, O.
+          Bruneau, J. Lieber (a cura di),{' '}
+          <i>Actes Des Journées Humanités Numériques et Web Sémantique</i>,
+          Nancy, pp. 2-22 [https://doi.org/10.5281/zenodo.7014341]
+        </p>
+
+        <p id="2023">
+          Beretta Francesco (2023), “Données ouvertes liées et recherche
+          historique: un changement de paradigme”, in “Humanités numériques”, 7
+          [https://doi.org/10.4000/revuehn.3349]
+        </p>
           La Recherche Historique”, in “Géomatique Expert”, 91, pp. 30-35 / 92,
           pp. 48-54
         </a>
