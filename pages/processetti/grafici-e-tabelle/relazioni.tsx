@@ -17,52 +17,55 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Tipologia delle relazioni tra il richiedente e i suoi testimoni{" "}
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
-          }
-          imageUrls={[
-            "/processetti/diagrams/17_tipoRelazioni_sl.svg",
-            "/processetti/diagrams/17_tipoRelazioni_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
-            src="/processetti/diagrams/17_tipoRelazioni_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
-            src="/processetti/diagrams/17_tipoRelazioni_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
+            }
+            imageUrls={[
+              "/processetti/diagrams/17_tipoRelazioni_sl.svg",
+              "/processetti/diagrams/17_tipoRelazioni_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
+              src="/processetti/diagrams/17_tipoRelazioni_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
+              src="/processetti/diagrams/17_tipoRelazioni_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
 
         <ImageTitle>
           Durata della relazione tra il richiedente e i suoi testimoni
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-
-        <ImageWrapper
-          legend={
-            "Durata delle relazioni sociali intercorse tra i richiedenti e i loro testimoni"
-          }
-          imageUrls={[
-            "/processetti/diagrams/18_durataRelazioni_sl.svg",
-            "/processetti/diagrams/18_durataRelazioni_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la durata delle relazioni sociali intercorse tra i richiedenti e i loro testimoni"
-            src="/processetti/diagrams/18_durataRelazioni_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la durata delle relazioni sociali intercorse tra i richiedenti e i loro testimoni"
-            src="/processetti/diagrams/18_durataRelazioni_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Durata delle relazioni sociali intercorse tra i richiedenti e i loro testimoni"
+            }
+            imageUrls={[
+              "/processetti/diagrams/18_durataRelazioni_sl.svg",
+              "/processetti/diagrams/18_durataRelazioni_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la durata delle relazioni sociali intercorse tra i richiedenti e i loro testimoni"
+              src="/processetti/diagrams/18_durataRelazioni_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la durata delle relazioni sociali intercorse tra i richiedenti e i loro testimoni"
+              src="/processetti/diagrams/18_durataRelazioni_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
 
         <p>
           La verifica dello stato libero richiedeva la collaborazione attiva di
