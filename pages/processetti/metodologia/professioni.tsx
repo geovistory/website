@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { GetStaticProps, NextPage } from 'next';
-import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
-import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
-import { metodologiaLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
-import ImageWrapper from '../../../components/elements/ImageWrapper.component';
-import Image from 'next/image';
-import img1 from '../../../public/processetti/metodologia/text_annotation.png';
+import type { GetStaticProps, NextPage } from "next";
+import { GraficiTabelleProps } from "../../../components/project-specific/GraficiTabelleProps";
+import { ProcessettiGraficiLayout } from "../../../components/project-specific/ProcessettiGraficiLayout.component";
+import { metodologiaLinks } from "../../../components/project-specific/ProcessettiNavbar.component";
+import ImageWrapper from "../../../components/elements/ImageWrapper.component";
+import Image from "next/image";
+import img1 from "../../../public/processetti/metodologia/text_annotation.png";
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
@@ -28,9 +28,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           La creazione di una tassonomia delle professioni fa sì che
-          un’indicazione occupazionale <i>‘generica’</i> si trovi a raccogliere
-          tutte le sue specializzazioni, seguendo il più fedelmente possibile
-          l’orizzonte culturale della fonte.
+          un’indicazione occupazionale &quot;<i>generica</i>&quot; si trovi a
+          raccogliere tutte le sue specializzazioni, seguendo il più fedelmente
+          possibile l’orizzonte culturale della fonte.
         </p>
 
         <h4>Mercante</h4>
@@ -42,28 +42,29 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
 
         <p>
           Poiché in questo tipo di sistematica, tutti i termini per essere
-          generalizzati devono obbligatoriamente afferire alla classe{' '}
+          generalizzati devono obbligatoriamente afferire alla classe
           <i>Occupation</i>, per affinare ulteriormente la classificazione si è
           reputato utile ricondurre le singole professioni a uno o più domini di
-          attività (Activity Domain), intesi come{' '}
-          <i>“a collection of occupations or other kinds of activities”</i>.{' '}
+          attività (<i>Activity Domain</i>), intesi come “a collection of
+          occupations or other kinds of activities” (<a href="https://ontome.net/class/897/namespace/112">
+            OntoME, sdh-so:C34 Activity Domain</a>).{" "}
         </p>
         <p>
-          Vale a dire che sul piano logico queste ultime rientrano tra le{' '}
-          <i>Intentional Collection</i>: una classe dell'ontologia CIDOC CRM{' '}
-          <i>Top-Level Extension for Humanities and Social sciences</i> (SDHSS)
-          volta a raccogliere, giusta la definizione che l’accompagna,
-          collezioni “di entità come concepite o immaginate da una persona,
-          senza una necessaria corrispondenza nella realtà fisica o fattuale”
-          (“of entities as conceived or imagined by a person, with no necessary
-          correspondence in physical or factual reality”).
+          Vale a dire che sul piano logico queste ultime rientrano tra le
+          <i>Intentional Collection</i>: una classe dell'ontologia CIDOC CRM <i>Top-Level
+          Extension for Humanities and Social sciences</i> (SDHSS) volta a
+          raccogliere, giusta la definizione che l’accompagna, collezioni “of
+          entities as conceived or imagined by a person, with no necessary
+          correspondence in physical or factual reality”
+          (<a href="https://ontome.net/class/897/namespace/112">
+            OntoME, sdh:C40 Intentional Collection</a>).
         </p>
         <p>
-          Sono state perciò integrate nel modello semantico del project tanto la
-          classe <i>Activity Domain</i>, quanto una sua specifica proprietà
-          (denominata <i>belongs to activity domain (classifies occupation)</i>)
-          in grado di associare ogni singola professione al tipo di attività che
-          la classifica.
+          Sono state perciò integrate nel modello semantico del <i>project</i> tanto la
+          classe <i>Activity Domain</i>, quanto una sua specifica proprietà (denominata
+            <i>belongs to activity domain (classifies occupation)</i>) in grado di
+          associare ogni singola professione al tipo di attività che la
+          classifica.
         </p>
 
         <h4>Commercio (Act. Dom.) </h4>
@@ -72,7 +73,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <h4>Mercante da panni (Occ.) </h4>
         <pre>
           . . . .NT1 Mercante da panni de lana (Occ.)
-          <br />. . . .NT1 Mercante da panni de seda (Occ.){' '}
+          <br />. . . .NT1 Mercante da panni de seda (Occ.){" "}
         </pre>
 
         <h4>Tessile (Act. Dom.) </h4>
@@ -103,9 +104,9 @@ export const getStaticProps: GetStaticProps<GraficiTabelleProps> = async () => {
   return {
     props: {
       head: {
-        headOgDescription: 'Metodologia > Professioni',
-        headTitle: 'Metodologia > Professioni',
-        headOgImage: '/socialimage/processetti.jpg',
+        headOgDescription: "Metodologia > Professioni",
+        headTitle: "Metodologia > Professioni",
+        headOgImage: "/socialimage/processetti.jpg",
       },
     },
   };
