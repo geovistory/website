@@ -22,7 +22,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           tra la definizione puramente astratta della classe <i>Place</i> e quella più
           pragmatica dei <i>Physical Feature</i>, definendo quest’ultima anche la
           posizione geografica di entità fisiche, nella sua dimensione più
-          &quote;reale&quote; (Beretta, 2013). In tal senso i <i>Geographical Place</i> vengono a
+          &quote;reale&quote; (<a href="index.tsx#2013">Beretta, 2013</a>). In tal senso i <i>Geographical Place</i> vengono a
           riferirsi a porzioni della superficie terrestre intese come
           costellazioni di materia che possono essere graficamente rappresentate
           (<a href="https://ontome.net/class/363/namespace/3">OntoMe, sdh:C13 Geographical Place</a>).{" "}
