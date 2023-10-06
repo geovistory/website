@@ -20,6 +20,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
 
+        <p>
         <ImageWrapper
           legend={
             "Frequenza d'uso dei concetti per la descrizione degli spostamenti extraurbani"
@@ -40,7 +41,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/24_concettiAccount_sl.svg"
           ></ion-img>
         </ImageWrapper>
-
+        </p>
         <p>
           Le autorità ecclesiastiche sospettavano che la mobilità fosse un
           fattore in grado di favorire la poligamia, per tale ragione si
@@ -74,7 +75,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Venezia
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-
+        <p>
         <ImageWrapper
           legend={
             "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
@@ -95,11 +96,12 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg"
           ></ion-img>
         </ImageWrapper>
-
+        </p>
         <ImageTitle>
           Origini dei richiedenti che tornano temporaneamente al paese
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
+        <p>       
         <ImageWrapper
           legend={
             "Origini dei richiedenti con almeno un ritorno temporaneo al paese d'origine"
@@ -120,7 +122,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/26_originiRitorno_sl.svg"
           ></ion-img>
         </ImageWrapper>
-
+        </p>
         <p>
           Il ritorno al paese d'origine, che avrebbe potuto rappresentare per il
           richiedente l’occasione di contrarre un altro vincolo matrimoniale, fu
