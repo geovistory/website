@@ -65,22 +65,16 @@ const AboutGeovistory: NextPage<AboutGeovistoryProps> = (props) => {
         researchers and interested parties (the general public) can review
         projects, directly access and evaluate curated data. The publication
         platform is designed in such a way that external software engineers can
-        develop and integrate their own components (web components). On the
-        other hand, this is the access to the virtual research environment, the{' '}
-        <a href="https://toolbox.geovistory.org/home">Toolbox</a>, where
-        researchers collect, curate and evaluate data.{' '}
+        develop and integrate their own components (web components). The second
+        access point is the{' '}
+        <a href="https://toolbox.geovistory.org/home">Geovistory Toolbox</a>, a
+        virtual research environment, where researchers collect, curate and
+        evaluate data.
       </p>
       <p>
-        The information system is used by an active community, which constantly
-        develops and documents it. For this purpose, suitable channels, forums
-        and a good documentation are available (for the use of the toolbox, as
-        well as for the technical further development of Geovistory).
-      </p>
-      <p>
-        Geovistory is complemented by appropriate exchange spaces &
-        documentation (for academia, education, journalism, tourism etc) for
-        developing a community of active researches (prosumers) and data users
-        (consumers) that bring the platform to life.
+        The information system is used by an active{' '}
+        <a href="https://www.geovistory.org/community">community</a>, which
+        constantly develops and documents it.
       </p>
 
       <h2>To whom Geovistory belongs</h2>
@@ -93,11 +87,24 @@ const AboutGeovistory: NextPage<AboutGeovistoryProps> = (props) => {
           LOD4HSS-project
         </Link>
         , co-funded by swissuniversities, structures these efforts. The data
-        publication platform <Link href="/">Geovistory.org</Link> is developed
-        open source and available to the community via GitHub. The appropriate
-        open-source licensing yet needs to be decided. The publication platform
-        is designed in such a way that external software engineers can develop
-        and integrate their own components (
+        publication platform <Link href="/">Geovistory.org</Link> and the{' '}
+        <a
+          href="https://toolbox.geovistory.org/home"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Geovistory Toolbox
+        </a>{' '}
+        are developed open source and available to the community via{' '}
+        <a
+          href="https://github.com/geovistory"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        . The publication platform is designed in such a way that external
+        software engineers can develop and integrate their own components (
         <a
           href="https://design.geovistory.org/?path=/story/welcome--welcome"
           target="_blank"
@@ -108,11 +115,7 @@ const AboutGeovistory: NextPage<AboutGeovistoryProps> = (props) => {
         ). We invite all contributors to develop these components also open
         source and will do so ourselves.
       </p>
-      <p>
-        The Toolbox is owned, developed and maintained by KleioLab. It is not
-        open source. However, this is about to change. The Toolbox is freely
-        accessible for all individual projects.
-      </p>
+      <p>The Toolbox is freely accessible for all individual projects.</p>
 
       <h2>The data and their accessibility</h2>
       <p>

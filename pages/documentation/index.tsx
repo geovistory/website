@@ -62,6 +62,22 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           representations of the entities in HTML and RDF.
         </ion-card-content>
       </ion-card>
+      <br />
+      <ion-card
+        class="restricted-width"
+        href="https://github.com/geovistory"
+        target="_blank"
+      >
+        <ion-card-header>
+          <ion-card-subtitle>Source Code</ion-card-subtitle>
+          <ion-card-title>Open Source</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          GitHub Organization developing and maintaining the open source
+          Geovistory infrastructure.
+        </ion-card-content>
+      </ion-card>
     </DefaultPage>
   );
 };

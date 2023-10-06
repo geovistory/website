@@ -1,4 +1,4 @@
-import { arrowForwardOutline } from 'ionicons/icons';
+import { arrowForwardOutline, logoGithub } from 'ionicons/icons';
 import Link from 'next/link';
 import { version } from '../../package.json';
 import styles from './Footer.module.css';
@@ -31,8 +31,16 @@ export const Footer = (props: FooterProps) => {
           <div className={styles.legalNotice}>
             <div>Geovistory 2022 Imprint</div>
             <div>v{version}</div>
-            <div><Link href="/legal">legal notice</Link></div>
-
+            <div>
+              <Link href="/legal">legal notice</Link>
+            </div>
+            <a
+              href="https://github.com/geovistory"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ion-icon size="large" icon={logoGithub}></ion-icon>
+            </a>
           </div>
         </ion-col>
 
