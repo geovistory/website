@@ -71,8 +71,11 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'Documentation',
-        headOgDescription: 'Documentation of the Geovistory ecosystem.',
+        head: {
+          headTitle: 'Documentation',
+          headOgDescription: 'Documentation of the Geovistory ecosystem.',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

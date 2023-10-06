@@ -1,5 +1,5 @@
 .banner {
-    background-color: var(--ion-color-primary-shade);
+    background-color: var(--ion-color-primary);
     color: var(--ion-color-light);
     padding: 0;
     position: relative;
@@ -10,70 +10,64 @@
 }
 
 .bannerImage {
-    height: 100px;
+    height: 150px;
     object-fit: cover;
-    object-position: 100% 25%;
+    object-position: 100% 80%;
 }
 
-.banner h1 {
+.bannerTitle {
     position: absolute;
     display: none;
-}
-.sectionPrimary {
-    padding: 1rem 1rem;
-    background-color: var(--ion-color-primary-shade);
-    color: var(--ion-color-light);
-    text-align: center;
+
+    left: 2rem;
+    bottom: 1rem;
 }
 
+.bannerTitle h1,
+.bannerTitle h2 {
+    font-weight: 400;
+    margin: 0;
+}
+
+.bannerTitle h2{
+    font-size: 1.5;
+}
 
 /* sm and up */
 @media screen and (min-width: 576px) {
-
-    .sectionPrimary {
-        display: none;
-    }
-
-    .bannerImageContainer {
-        position: relative;
-        height: 300px;
-        width: 300px;
-        border-top-right-radius: 300px;
-        border-bottom-right-radius: 300px;
-        display: flex;
-        align-items: center;
-        overflow: hidden
-    }
-
     .bannerImage {
-        margin-top: 140px;
-        margin-left: -90px;
-        height: 500px;
-        object-fit: cover;
-        object-position: 40% 60%;
+        height: 130px;
     }
 
-    .banner h1 {
-        position: absolute;
-        display: block;
-        text-align: right;
-        right: 1rem;
-        bottom: 1rem;
-        margin: 0;
-        font-size: 2rem;
-    }
 }
 
 /* md and up */
 @media screen and (min-width: 768px) {
-    .banner h1 {
+    .bannerImage {
+        height: 220px;
+    }
+    .bannerTitle {
+        display: block;
         font-size: 2.5rem;
     }
 }
 
 /* lg and up */
 @media screen and (min-width: 992px) {
-    .banner h1 {
+    .bannerImage {
+        height: 260px;
+    }
+    .bannerTitle {
         font-size: 3rem;
+    }
+}
+
+/* xl and up */
+@media screen and (min-width: 1200px) {
+    .bannerImage {
+        height: 330px;
+    }
+    .bannerTitle {
+        font-size: 3.5rem;
     }
 }

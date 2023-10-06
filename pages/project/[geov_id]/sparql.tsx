@@ -5,7 +5,11 @@ import {
   ProjectPageLayout,
   ProjectPageLayoutProps,
 } from '../../../components/layouts/ProjectPageLayout.component';
-import { ProjectParams, projectParamsToNavbarProps, projectsParams } from '../../../lib/projectParams';
+import {
+  ProjectParams,
+  projectParamsToNavbarProps,
+  projectsParams,
+} from '../../../lib/projectParams';
 import styles from './sparql.module.css';
 
 export interface ProjectSparqlProps {
@@ -44,9 +48,11 @@ export const getServerSideProps: GetStaticProps<ProjectSparqlProps> = async (
   if (!params) return { notFound: true };
   const props: ProjectSparqlProps = {
     projectPageLayout: {
-      headTitle: 'SPARQL ' + params.shortName,
-      headOgDescription: params.description,
-      headOgImage: params.headOgImage,
+      head: {
+        headTitle: 'SPARQL ' + params.shortName,
+        headOgDescription: params.description,
+        headOgImage: params.headOgImage,
+      },
       navbar: projectParamsToNavbarProps(params),
     },
     params,

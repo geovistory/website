@@ -67,6 +67,7 @@ h6 {
   margin-block-start: 2em;
   margin-block-end: .5em;
 }
+
 h1:first-child,
 h2:first-child,
 h3:first-child,
@@ -167,6 +168,7 @@ h5+h6 {
   }
 }
 
+pre,
 .restricted-width {
   max-width: 38rem;
   margin: auto;

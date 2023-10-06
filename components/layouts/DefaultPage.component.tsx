@@ -2,6 +2,7 @@ import { openOutline } from 'ionicons/icons';
 import Head from 'next/head';
 
 import React, { ReactNode } from 'react';
+import { DefaultHead, HeadProps } from './DefaultHead';
 import styles from './DefaultPage.module.css';
 import { Footer, FooterProps } from './Footer.component';
 import { Navbar } from './Navbar.component';
@@ -9,11 +10,8 @@ export interface DefaultPageProps {
   children?: ReactNode;
   noPaddingSlot?: ReactNode;
   footer: FooterProps;
+  head: HeadProps;
 
-  // the title to be put in <head><title></title></head>
-  headTitle: string | null;
-  // the decription for <meta property="og:description">
-  headOgDescription: string | null;
   /**
    * if true: main container for its children takes up the
    *          entire width of the screen
@@ -26,29 +24,13 @@ export interface DefaultPageProps {
 }
 
 export const DefaultPage = (props: DefaultPageProps) => {
-  const title =
-    props.headTitle +
-    (props.headTitle?.includes('Geovistory') ? '' : ' – Geovistory');
-  const description =
-    props.headOgDescription ??
-    props.headTitle ??
-    'Virtual Research Environment for Humanities and Social Sciences';
   return (
     <>
-      <Head>
-        {props.headTitle && <title>{title}</title>}
-        <meta name="description" content={description} />
-        {/* SOCIAL MEDIA */}
-        {/* <meta property="og:url" content="your url" /> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={props.headTitle ?? 'Geovistory'} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="/socialimage/geovistory.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <DefaultHead
+        headTitle={props.head.headTitle}
+        headOgImage={props.head.headOgImage}
+        headOgDescription={props.head.headOgDescription}
+      ></DefaultHead>
       <ion-app>
         <ion-menu side="start" menu-id="main" content-id="main">
           <ion-header>

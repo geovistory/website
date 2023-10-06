@@ -27,9 +27,11 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (
   if (!params) return { notFound: true };
   const props: ProjectPageProps = {
     projectPageLayout: {
-      headTitle: params.shortName,
-      headOgDescription: params.description,
-      headOgImage: params.headOgImage,
+      head: {
+        headTitle: params.shortName,
+        headOgDescription: params.description,
+        headOgImage: params.headOgImage,
+      },
       navbar: projectParamsToNavbarProps(params),
     },
     params,

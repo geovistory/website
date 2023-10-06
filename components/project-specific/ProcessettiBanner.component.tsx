@@ -1,22 +1,22 @@
 import styles from './ProcessettiBanner.module.css';
-export interface ProcessettiBannerProps {}
-export const ProcessettiBanner = () => {
+export interface ProcessettiBannerProps {
+  className?: string;
+}
+export const ProcessettiBanner = (props: ProcessettiBannerProps) => {
   return (
     <>
       <ion-grid class={styles.banner}>
-        <h1>
-          Progetto <br /> ANR Processetti
-        </h1>
+        <div className={styles.bannerTitle}>
+          <h2>Progetto ANR</h2>
+          <h1>Processetti</h1>
+        </div>
         <div className={styles.bannerImageContainer}>
           <ion-img
             class={styles.bannerImage}
-            src="/processetti-main.jpg"
+            src="/processetti/banner3.jpg"
             alt="Progetto ANR Processetti"
           />
         </div>
-      </ion-grid>
-      <ion-grid class={styles.sectionPrimary}>
-        Progetto ANR Processetti
       </ion-grid>
     </>
   );

@@ -177,9 +177,12 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'Images',
-        headOgDescription:
-          'Documentation – How to add images to this website?',
+        head: {
+          headTitle: 'Images',
+          headOgDescription:
+            'Documentation – How to add images to this website?',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

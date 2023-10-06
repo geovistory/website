@@ -134,20 +134,23 @@ const AboutGeovistory: NextPage<AboutGeovistoryProps> = (props) => {
 };
 
 export default AboutGeovistory;
-export const getStaticProps: GetStaticProps<AboutGeovistoryProps> =
-  async () => {
-    return {
-      props: {
-        defaultPage: {
+export const getStaticProps: GetStaticProps<
+  AboutGeovistoryProps
+> = async () => {
+  return {
+    props: {
+      defaultPage: {
+        head: {
           headTitle: 'About Geovistory',
           headOgDescription:
             'Geovistory brings a paradigm shift to social sciences and humanities – learn more...',
-
-          footer: {
-            featuredProjects: projectsParams.filter((pp) => pp.featured),
-          },
+          headOgImage: null,
+        },
+        footer: {
+          featuredProjects: projectsParams.filter((pp) => pp.featured),
         },
       },
-      revalidate: 86400,
-    };
+    },
+    revalidate: 86400,
   };
+};

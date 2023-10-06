@@ -40,12 +40,12 @@ const Home: NextPage<HomeProps> = (props) => {
                       enterkeyhint="enter"
                       placeholder="Search and hit enter…"
                       ref={(el: any) => {
-                        el?.getInputElement().then(() => {
-                          setTimeout(() => {
+                        setTimeout(() => {
+                          el?.getInputElement().then(() => {
                             console.log('focus on ', el);
                             el?.setFocus();
-                          }, 300);
-                        });
+                          });
+                        }, 300);
                         el?.addEventListener(
                           'keypress',
                           (event: KeyboardEvent) => {
@@ -146,9 +146,12 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     props: {
       featuredProjects,
       defaultPage: {
-        headTitle: 'Geovistory',
-        headOgDescription:
-          'Virtual Research Environment for Humanities and Social Sciences',
+        head: {
+          headTitle: 'Geovistory',
+          headOgDescription:
+            'Virtual Research Environment for Humanities and Social Sciences',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects,
         },

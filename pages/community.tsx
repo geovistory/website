@@ -136,9 +136,12 @@ export const getStaticProps: GetStaticProps<CommunityProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'Geovistory Community',
-        headOgDescription:
-          'Join the community on Discord, Twitter, GitHub or subscribe to the newsletter!',
+        head: {
+          headTitle: 'Geovistory Community',
+          headOgDescription:
+            'Join the community on Discord, Twitter, GitHub or subscribe to the newsletter!',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },

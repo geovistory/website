@@ -81,8 +81,11 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
       ...props,
       featuredProjects,
       defaultPage: {
-        headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
-        headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} on Geovistory`,
+        head: {
+          headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+          headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} on Geovistory`,
+          headOgImage: null,
+        },
         footer: {
           featuredProjects,
         },

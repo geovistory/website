@@ -377,8 +377,11 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       defaultPage: {
-        headTitle: 'Legal Notice',
-        headOgDescription: 'Legal Notice',
+        head: {
+          headTitle: 'Legal Notice',
+          headOgDescription: 'Legal Notice',
+          headOgImage: null,
+        },
         footer: {
           featuredProjects: projectsParams.filter((pp) => pp.featured),
         },
