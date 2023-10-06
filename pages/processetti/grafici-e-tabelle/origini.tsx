@@ -17,64 +17,70 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Origine geografica dei testimoni e dei richiedenti
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={"Origine geografiche dei richiedenti e dei testimoni"}
-          imageUrls={[
-            "/processetti/diagrams/19_origineGeografica_sl.svg",
-            "/processetti/diagrams/19_origineGeografica_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Visualizzazione su mappa dell'origine geografica dei richiedenti e dei testimoni"
-            src="/processetti/diagrams/19_origineGeografica_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Visualizzazione su mappa dell'origine geografica dei richiedenti e dei testimoni"
-            src="/processetti/diagrams/19_origineGeografica_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
-        <ImageWrapper
-          legend={
-            "Distribuzione percentuale dei richiedenti e dei testimoni per luogo d'origine"
-          }
-          imageUrls={[
-            "/processetti/diagrams/20_origineGeograficaTab_sl.svg",
-            "/processetti/diagrams/20_origineGeograficaTab_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la distribuzione percentuale dei richiedenti e dei testimoni per luogo d'origine"
-            src="/processetti/diagrams/20_origineGeograficaTab_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la distribuzione percentuale dei richiedenti e dei testimoni per luogo d'origine"
-            src="/processetti/diagrams/20_origineGeograficaTab_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={"Origine geografiche dei richiedenti e dei testimoni"}
+            imageUrls={[
+              "/processetti/diagrams/19_origineGeografica_sl.svg",
+              "/processetti/diagrams/19_origineGeografica_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Visualizzazione su mappa dell'origine geografica dei richiedenti e dei testimoni"
+              src="/processetti/diagrams/19_origineGeografica_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Visualizzazione su mappa dell'origine geografica dei richiedenti e dei testimoni"
+              src="/processetti/diagrams/19_origineGeografica_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
+        <p>
+          <ImageWrapper
+            legend={
+              "Distribuzione percentuale dei richiedenti e dei testimoni per luogo d'origine"
+            }
+            imageUrls={[
+              "/processetti/diagrams/20_origineGeograficaTab_sl.svg",
+              "/processetti/diagrams/20_origineGeograficaTab_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la distribuzione percentuale dei richiedenti e dei testimoni per luogo d'origine"
+              src="/processetti/diagrams/20_origineGeograficaTab_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la distribuzione percentuale dei richiedenti e dei testimoni per luogo d'origine"
+              src="/processetti/diagrams/20_origineGeograficaTab_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <ImageTitle> Origine nel retroterra veneto</ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={"Origine dei richiedenti nel retroterra veneto"}
-          imageUrls={[
-            "/processetti/diagrams/27_originientroterraVeneto_sl.svg",
-            "/processetti/diagrams/27_originientroterraVeneto_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Mappa con le origini dei richiedenti"
-            src="/processetti/diagrams/27_originientroterraVeneto_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Mappa con le origini dei richiedenti"
-            src="/processetti/diagrams/27_originientroterraVeneto_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={"Origine dei richiedenti nel retroterra veneto"}
+            imageUrls={[
+              "/processetti/diagrams/27_originientroterraVeneto_sl.svg",
+              "/processetti/diagrams/27_originientroterraVeneto_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Mappa con le origini dei richiedenti"
+              src="/processetti/diagrams/27_originientroterraVeneto_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Mappa con le origini dei richiedenti"
+              src="/processetti/diagrams/27_originientroterraVeneto_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           Non è certo che la mappa delle origini sarebbe la stessa se si
           conoscesse la provenienza di tutti i forestieri che transitarono o si
@@ -129,26 +135,28 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Origine geografica dei richiedenti secondo il genere{" "}
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e prime trenta origine geografica dei richiedenti secondo il genere"
-          }
-          imageUrls={[
-            "/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_sl.svg",
-            "/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con l'età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e prime trenta origine geografica dei richiedenti secondo il genere"
-            src="/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con l'età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e prime trenta origine geografica dei richiedenti secondo il genere"
-            src="/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e prime trenta origine geografica dei richiedenti secondo il genere"
+            }
+            imageUrls={[
+              "/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_sl.svg",
+              "/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e prime trenta origine geografica dei richiedenti secondo il genere"
+              src="/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e prime trenta origine geografica dei richiedenti secondo il genere"
+              src="/processetti/diagrams/21_etaMediaOrigineRichiedentigenere_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           Il Friuli, che costituiva il principale bacino migratorio di Venezia,
           era anche l'area dalla quale proveniva il maggior numero di donne che
