@@ -150,14 +150,14 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           sottesa alla definizione infrastrutturale di Geovistory si vedano:
         </p>
         <p>
-        <a nome="2013">
+        <a name="2013">
           Beretta Francesco, Butez Charlotte (2013), “Un SIG Collaboratif Pour
           La Recherche Historique”, in “Géomatique Expert”, 91, pp. 30-35 / 92,
           pp. 48-54
         </a>
         </p>
         <p>
-        <a nome="2016">
+        <a name="2016">
           Beretta Francesco (2016), “Pour une annotation sémantique des textes:
           le projet symogih.org et la Text encoding initiative”, in “Bruniana e
           Campanelliana, Ricerche filosofiche e materiali storico - testuali”,
@@ -165,7 +165,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </a>
         </p>
         <p>
-        <a nome="2021">
+        <a name="2021">
           Beretta Francesco (2021), “A Challenge for Historical Research: Making
           Data FAIR Using a Collaborative Ontology Management Environment
           (OntoME)”, in “Semantic Web”, 12.2, pp. 279-94
@@ -173,7 +173,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </a>
         </p>
         <p>
-        <a nome="2022">
+        <a name="2022">
           Beretta Francesco (2022), “Interopérabilité Des Données de La
           Recherche et Ontologies Fondationnelles: Un Écosystème d”extensions Du
           CIDOC CRM Pour Les Sciences Humaines et Sociales”, in N. Lasolle, O.
@@ -183,7 +183,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </a>
         </p>
         <p>
-        <a nome="2023">
+        <a name="2023">
           Beretta Francesco (2023), “Données ouvertes liées et recherche
           historique: un changement de paradigme”, in “Humanités numériques”, 7
           [https://doi.org/10.4000/revuehn.3349]
