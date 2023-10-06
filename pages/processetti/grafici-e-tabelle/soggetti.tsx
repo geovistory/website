@@ -16,24 +16,26 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
 
         <ImageTitle>Statuto dei soggetti e distribuzione per genere</ImageTitle>
         <Subtitle>(periodo 1592-1605)</Subtitle>
-        <ImageWrapper
-          legend={"Statuto dei soggetti e distribuzione di genere"}
-          imageUrls={[
-            "/processetti/diagrams/05_statudoPerson_sl.svg",
-            "/processetti/diagrams/05_statudoPerson_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la distribuzione dei soggetti per ruolo e distribuzione di genere"
-            src="/processetti/diagrams/05_statudoPerson_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la distribuzione dei soggetti per ruolo e distribuzione di genere"
-            src="/processetti/diagrams/05_statudoPerson_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={"Statuto dei soggetti e distribuzione di genere"}
+            imageUrls={[
+              "/processetti/diagrams/05_statudoPerson_sl.svg",
+              "/processetti/diagrams/05_statudoPerson_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la distribuzione dei soggetti per ruolo e distribuzione di genere"
+              src="/processetti/diagrams/05_statudoPerson_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la distribuzione dei soggetti per ruolo e distribuzione di genere"
+              src="/processetti/diagrams/05_statudoPerson_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           Gli attori intorno ai quali si articola un processetto si dividono in
           tre categorie: richiedenti, testimoni e persone decedute, delle quali
@@ -77,24 +79,26 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <ImageTitle>Età dei richiedenti al processetto</ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={"Età dei richiedenti al momento del processetto"}
-          imageUrls={[
-            "/processetti/diagrams/07_etàProcessettoRichiedenti_sl.svg",
-            "/processetti/diagrams/07_etàProcessettoRichiedenti_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con l'età dei richiedenti al momento del processetto, distinti per genere"
-            src="/processetti/diagrams/07_etàProcessettoRichiedenti_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con l'età dei richiedenti al momento del processetto, distinti per genere"
-            src="/processetti/diagrams/07_etàProcessettoRichiedenti_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={"Età dei richiedenti al momento del processetto"}
+            imageUrls={[
+              "/processetti/diagrams/07_etàProcessettoRichiedenti_sl.svg",
+              "/processetti/diagrams/07_etàProcessettoRichiedenti_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età dei richiedenti al momento del processetto, distinti per genere"
+              src="/processetti/diagrams/07_etàProcessettoRichiedenti_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età dei richiedenti al momento del processetto, distinti per genere"
+              src="/processetti/diagrams/07_etàProcessettoRichiedenti_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           L'età dei richiedenti e dei testimoni è una delle informazioni più
           interessanti contenute nei processetti. Con sensibili discrepanze da
@@ -123,49 +127,52 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <ImageTitle>Età dei richiedenti all’arrivo a Venezia</ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-
-        <ImageWrapper
-          legend={"Età dei richiedenti al momento del loro arrivo a Venezia"}
-          imageUrls={[
-            "/processetti/diagrams/08_etàArrivoRichiedenti_sl.svg",
-            "/processetti/diagrams/08_etàArrivoRichiedenti_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con l'età dei richiedenti al momento del loro arrivo a Venezia, distinti per genere"
-            src="/processetti/diagrams/08_etàArrivoRichiedenti_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con l'età dei richiedenti al momento del loro arrivo a Venezia, distinti per genere"
-            src="/processetti/diagrams/08_etàArrivoRichiedenti_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={"Età dei richiedenti al momento del loro arrivo a Venezia"}
+            imageUrls={[
+              "/processetti/diagrams/08_etàArrivoRichiedenti_sl.svg",
+              "/processetti/diagrams/08_etàArrivoRichiedenti_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età dei richiedenti al momento del loro arrivo a Venezia, distinti per genere"
+              src="/processetti/diagrams/08_etàArrivoRichiedenti_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età dei richiedenti al momento del loro arrivo a Venezia, distinti per genere"
+              src="/processetti/diagrams/08_etàArrivoRichiedenti_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <ImageTitle>
           Rapporto tra l’età all’arrivo a Venezia e l’età al processetto
         </ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
-          }
-          imageUrls={[
-            "/processetti/diagrams/09_arrivoProcessettoRichiedenti_sl.svg",
-            "/processetti/diagrams/09_arrivoProcessettoRichiedenti_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
-            src="/processetti/diagrams/09_arrivoProcessettoRichiedenti_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
-            src="/processetti/diagrams/09_arrivoProcessettoRichiedenti_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
+            }
+            imageUrls={[
+              "/processetti/diagrams/09_arrivoProcessettoRichiedenti_sl.svg",
+              "/processetti/diagrams/09_arrivoProcessettoRichiedenti_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
+              src="/processetti/diagrams/09_arrivoProcessettoRichiedenti_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
+              src="/processetti/diagrams/09_arrivoProcessettoRichiedenti_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           I processetti forniscono informazioni anche sull'età dei soggetti al
           momento del loro arrivo a Venezia. I forestieri, qualsiasi fosse il
@@ -185,26 +192,28 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <ImageTitle>Permanenza dei richiedenti a Venezia</ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Tempo di permanenza dei richiedenti a Venezia, prima del processetto"
-          }
-          imageUrls={[
-            "/processetti/diagrams/10_permanenzaRichiedenti_sl.svg",
-            "/processetti/diagrams/10_permanenzaRichiedenti_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con il tempo di permanenza dei richiedenti a Venezia, prima del processetto, distinti per genere"
-            src="/processetti/diagrams/10_permanenzaRichiedenti_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con il tempo di permanenza dei richiedenti a Venezia, prima del processetto, distinti per genere"
-            src="/processetti/diagrams/10_permanenzaRichiedenti_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Tempo di permanenza dei richiedenti a Venezia, prima del processetto"
+            }
+            imageUrls={[
+              "/processetti/diagrams/10_permanenzaRichiedenti_sl.svg",
+              "/processetti/diagrams/10_permanenzaRichiedenti_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con il tempo di permanenza dei richiedenti a Venezia, prima del processetto, distinti per genere"
+              src="/processetti/diagrams/10_permanenzaRichiedenti_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con il tempo di permanenza dei richiedenti a Venezia, prima del processetto, distinti per genere"
+              src="/processetti/diagrams/10_permanenzaRichiedenti_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           Dall'età di arrivo in città e da quella del matrimonio possiamo
           dedurre un terzo dato: ovvero il tempo trascorso tra l’unione
