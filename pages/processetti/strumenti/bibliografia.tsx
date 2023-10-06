@@ -81,7 +81,7 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
 
         <p>
           Zannini Andrea (1998), &quote;L'altra Bergamo in laguna: la comunità
-          bergamasca a Venezia&quote;, in <i>Storia economica e sociale di Bergamo. Il
+          Zannini Andrea (1998), &quot;L&apos;altra Bergamo in laguna: la comunità
           tempo della Serenissima. Il lungo Cinquecento</i>, Bergamo, pp. 175-93.
         </p>
       </ion-grid>
