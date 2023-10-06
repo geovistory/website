@@ -72,7 +72,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           urbane) come luogo di lavoro, luogo di abitazione, o forme intermedie,
           ad esempio “Abitazione e possibile luogo di lavoro” o “Luogo di lavoro
           e possibile abitazione”, e quindi di poter potenzialmente tracciare
-          sia la mobilità &quote;residenziale&quot; che quella lavorativa; là
+          sia la mobilità &quot;residenziale&quot; che quella lavorativa; là
           dove possibile con attenzione alla successione temporale.
         </p>
         <p>

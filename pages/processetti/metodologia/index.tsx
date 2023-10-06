@@ -57,7 +57,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Questo processo si è svolto tenendo fermi due aspetti non
           trascurabili: d’un lato la necessità di una forte atomizzazione dei
           dati, ovvero la loro scomposizione in elementi che corrispondono a
-          &quote;unità minime di conoscenza&quote;, e dall’altro un approccio
+          &quot;unità minime di conoscenza&quot;, e dall’altro un approccio
           alle fonti volto all’estrinsecazione dei fatti (
           <i>factual information</i>), piuttosto che la mera registrazione dei
           fattoidi (<i>factoid</i>) - vale a dire la produzione di informazioni
@@ -102,7 +102,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           oggetti (<i>object-oriented structured data model</i>), quello
           event-centered, oltre ad assicurare una ricca discretizzazione,
           garantisce una maggiore flessibilità nel trattare le incertezze e i
-          cambiamenti nel tempo degli &quote;attributi&quote; delle entità
+          cambiamenti nel tempo degli &quot;attributi&quot; delle entità
           persistenti (<a href="#2022">Beretta, 2022</a>).
         </p>
         <p>

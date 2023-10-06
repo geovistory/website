@@ -28,7 +28,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           La creazione di una tassonomia delle professioni fa sì che
-          un’indicazione occupazionale &quote;<i>generica</i>&quote; si trovi a
+          un’indicazione occupazionale &quot;<i>generica</i>&quot; si trovi a
           raccogliere tutte le sue specializzazioni, seguendo il più fedelmente
           possibile l’orizzonte culturale della fonte.
         </p>
