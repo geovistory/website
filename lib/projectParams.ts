@@ -29,7 +29,32 @@ export interface ProjectParams {
 
 
 export const projectsParams: Array<ProjectParams> = [
+    // Academic Careers
+    {
+        geovID: 1483135,
+        geovName: 'Academic Education & Careers',
 
+        preferredClasses: ['c21', 'c859', 'c861', 'c860', 'c850', 'c68'],
+
+        featured: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Academic Education & Careers',
+        shortName: 'Academic Education & Careers',
+        description: "An open collaborative project of the Geovistory community dedicated to the history of science and universities.",
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/academic-careers.jpg'
+
+    },
     // AMPI
     {
         geovID: 924033,
@@ -218,32 +243,7 @@ export const projectsParams: Array<ProjectParams> = [
         headOgImage: '/socialimage/softpowarts.jpg'
 
     },
-    // Academic Careers
-    {
-        geovID: 1483135,
-        geovName: 'Academic Education & Careers',
 
-        preferredClasses: ['c21', 'c859', 'c861', 'c860', 'c850', 'c68'],
-
-        featured: true,
-
-        teiURL: '',
-        sparqlURL: '',
-
-        fullName: 'Academic Education & Careers',
-        shortName: 'Academic Education & Careers',
-        description: "An open collaborative project of the Geovistory community dedicated to the history of science and universities.",
-
-        hasPage: true,
-        sparqlLinkEnabled: true,
-        searchLinkEnabled: true,
-        ontoExplorerLinkEnabled: true,
-        sparklisLinkEnabled: true,
-        teiLinkEnabled: false,
-
-        headOgImage: '/socialimage/academic-careers.jpg'
-
-    },
     // Roman Senate
     {
         geovID: 941447,
