@@ -5,8 +5,9 @@ import { ProcessettiGraficiLayout } from "../../../components/project-specific/P
 import { metodologiaLinks } from "../../../components/project-specific/ProcessettiNavbar.component";
 import ImageWrapper from "../../../components/elements/ImageWrapper.component";
 import Image from "next/image";
-import img1 from ;
-import img2 from ;
+import img1 from '../../../public/processetti/metodologia/intro-data-model.jpg';
+import img2 from '../../../public/processetti/metodologia/intro-dik-pyramid.png';
+import mainStyles from '../index.module.css'
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
@@ -149,27 +150,27 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Per una più analitica descrizione della metodologia e della semantica
           sottesa alla definizione infrastrutturale di Geovistory si vedano:
         </p>
-        <p id="2013">
+        <p id="2013" className={mainStyles.indent1}>
           Beretta Francesco, Butez Charlotte (2013), “Un SIG Collaboratif Pour
           La Recherche Historique”, in “Géomatique Expert”, 91, pp. 30-35 / 92,
           pp. 48-54
         </p>
 
-        <p id="2016">
+        <p id="2016" className={mainStyles.indent1}>
           Beretta Francesco (2016), “Pour une annotation sémantique des textes:
           le projet symogih.org et la Text encoding initiative”, in “Bruniana e
           Campanelliana, Ricerche filosofiche e materiali storico - testuali”,
           XXII.2 , pp. 453-65 [https://doi.org/10.19272/201604102005]
         </p>
 
-        <p id="2021">
+        <p id="2021" className={mainStyles.indent1}>
           Beretta Francesco (2021), “A Challenge for Historical Research: Making
           Data FAIR Using a Collaborative Ontology Management Environment
           (OntoME)”, in “Semantic Web”, 12.2, pp. 279-94
           [https://doi.org/10.3233/SW-200416]
         </p>
 
-        <p id="2022">
+        <p id="2022" className={mainStyles.indent1}>
           Beretta Francesco (2022), “Interopérabilité Des Données de La
           Recherche et Ontologies Fondationnelles: Un Écosystème d”extensions Du
           CIDOC CRM Pour Les Sciences Humaines et Sociales”, in N. Lasolle, O.
@@ -178,47 +179,10 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Nancy, pp. 2-22 [https://doi.org/10.5281/zenodo.7014341]
         </p>
 
-        <p id="2023">
+        <p id="2023" className={mainStyles.indent1}>
           Beretta Francesco (2023), “Données ouvertes liées et recherche
           historique: un changement de paradigme”, in “Humanités numériques”, 7
           [https://doi.org/10.4000/revuehn.3349]
-        </p>
-          La Recherche Historique”, in “Géomatique Expert”, 91, pp. 30-35 / 92,
-          pp. 48-54
-        
-        </p>
-        <p id="2016">
-        
-          Beretta Francesco (2016), “Pour une annotation sémantique des textes:
-          le projet symogih.org et la Text encoding initiative”, in “Bruniana e
-          Campanelliana, Ricerche filosofiche e materiali storico - testuali”,
-          XXII.2 , pp. 453-65 [https://doi.org/10.19272/201604102005]
-        
-        </p>
-        <p id="2021">
-       
-          Beretta Francesco (2021), “A Challenge for Historical Research: Making
-          Data FAIR Using a Collaborative Ontology Management Environment
-          (OntoME)”, in “Semantic Web”, 12.2, pp. 279-94
-          [https://doi.org/10.3233/SW-200416]
-        
-        </p>
-        <p id="2022">
-        
-          Beretta Francesco (2022), “Interopérabilité Des Données de La
-          Recherche et Ontologies Fondationnelles: Un Écosystème d”extensions Du
-          CIDOC CRM Pour Les Sciences Humaines et Sociales”, in N. Lasolle, O.
-          Bruneau, J. Lieber (a cura di),{" "}
-          <i>Actes Des Journées Humanités Numériques et Web Sémantique</i>,
-          Nancy, pp. 2-22 [https://doi.org/10.5281/zenodo.7014341]
-        
-        </p>
-        <p id="2023">
-        
-          Beretta Francesco (2023), “Données ouvertes liées et recherche
-          historique: un changement de paradigme”, in “Humanités numériques”, 7
-          [https://doi.org/10.4000/revuehn.3349]
-    
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>
