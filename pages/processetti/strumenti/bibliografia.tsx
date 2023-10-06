@@ -20,7 +20,7 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
           Avorio Tiziana, Chianese Stefano, Guarino Nicola (2003), &quote;Una città
           senza immigranti? Caratteri della mobilità a Napoli tra Settecento e
           Ottocento&quote;, in A. Arru e F. Ramella (a cura di), <i>L'Italia delle
-          migrazioni interne. Donne, uomini, mobilità in età moderna e
+          Ottocento&quote;, in A. Arru e F. Ramella (a cura di), <i>L&apos;Italia delle
           contemporanea</i>, Roma, pp. 111-30.
         </p>
         <p>
