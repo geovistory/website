@@ -19,7 +19,6 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
         <p>
           Avorio Tiziana, Chianese Stefano, Guarino Nicola (2003), &quot;Una città
           senza immigranti? Caratteri della mobilità a Napoli tra Settecento e
-          Ottocento&quot;, in A. Arru e F. Ramella (a cura di), <i>L'Italia delle
           Ottocento&quot;, in A. Arru e F. Ramella (a cura di), <i>L&apos;Italia delle
           contemporanea</i>, Roma, pp. 111-30.
         </p>
@@ -37,7 +36,6 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
         <p>
           Canepari Eleonora (2003), &quot;Mestiere e spazio urbano nella costruzione
           dei legami sociali degli immigrati a Roma in età moderna&quot;, in A. Arru
-          e F. Ramella (a cura di), <i>L'Italia delle migrazioni interne. Donne,
           e F. Ramella (a cura di), <i>L&apos;Italia delle migrazioni interne. Donne,
         </p>
 
