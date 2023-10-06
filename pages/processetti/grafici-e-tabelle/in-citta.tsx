@@ -21,6 +21,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
 
+        <p>
         <ImageWrapper
           legend={
             "Distribuzione per parrocchia dei luoghi di abitazione e lavoro dei richiedenti"
@@ -41,12 +42,13 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/22_abitazioneLavoroRichiedenti_sl.svg"
           ></ion-img>
         </ImageWrapper>
+        </p>
 
         <ImageTitle>
           Parrocchia di abitazione dei richiedenti e dei testimoni
         </ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
-
+        <p>
         <ImageWrapper
           legend={
             "Confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
@@ -67,7 +69,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/23_abitazioneRichiedentiTestimoni_sl.svg"
           ></ion-img>
         </ImageWrapper>
-
+        </p>
         <p>
           I nubendi che si rivolgevano alla curia patriarcale per ottenere la
           fede di libertà provenivano da tutte le 71 parrocchie veneziane,
