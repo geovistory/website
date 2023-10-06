@@ -72,8 +72,8 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
             professorship.
           </p>
           <p>
-            Background: This project was initiated at the virtual DHd (German
-            Digital Humanities Conference) in 2021, as part of a collaborative
+            This project was initiated at the virtual DHd (German Digital
+            Humanities Conference) in 2021, as part of a collaborative
             experiment. The original description of the experiment can be found{' '}
             <a
               href="https://vdhd2021.hypotheses.org/264"
@@ -89,22 +89,36 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
           </p>
           <h4>What can you do?</h4>
           <p>
-            Explore the available information using the graphical data explorer
-            or the sparql endpoint. For example, you might want to explore the
-            existing scholars per domain.
+            You can explore the available information using the graphical data
+            explorer or the sparql endpoint. For example, you might want to
+            explore the existing scholars per domain.
           </p>
           <p>
             <ion-button href={props.params.geovID + '/search'}>
               Search data
             </ion-button>
           </p>
-          {/* <p>
-             [Collaborate and contribute to the project by creating an account
-            in the Geovistory Toolbox. You will then have direct access to the
-            Academic Education and Careers project&apos;s data curation
-            platform. Start adding data points! For a more detailed description
-            of how to do this, click here.] 
-          </p> */}
+          <p>
+            Or you can create an account in the{' '}
+            <a
+              href="https://toolbox.geovistory.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Geovistory Toolbox
+            </a>{' '}
+            and contribute to the community project as described in the Project
+            manual.
+          </p>
+          <p>
+            <ion-button
+              href={
+                'https://docs.geovistory.com/start/community-project-academic-education-and-careers'
+              }
+            >
+              Project manual
+            </ion-button>
+          </p>
           <p>
             Contact us in case of questions! Either on{' '}
             <a
