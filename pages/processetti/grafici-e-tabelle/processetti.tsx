@@ -72,6 +72,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
 
         <ImageTitle>Una visione d’insieme dei dati registrati</ImageTitle>
+        <p>
         <ImageWrapper
           legend={"Quantificazione per classe delle istanze prodotte"}
           imageUrls={[
@@ -90,6 +91,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/03_classDistribution_sl.svg"
           ></ion-img>
         </ImageWrapper>
+        </p>
         <p>
           Le cifre che seguono restituiscono la misura dell’entità dei dati
           registrati: 13185 persone (richiedenti, testimoni, altri); 17992
@@ -103,6 +105,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           spostamento; 1597 entità geografiche ecc.
         </p>
         <ImageTitle>Tipologia dei processetti</ImageTitle>
+        <p>
         <ImageWrapper
           legend={"Distribuzione dei processetti secondo il tipo"}
           imageUrls={[
@@ -121,6 +124,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/02_distribuzioneTipooProcessetti_sl.svg"
           ></ion-img>
         </ImageWrapper>
+        </p>
         <p>
           Si identificano generalmente tre categorie di individui chiamate a
           dimostrare lo stato libero: le persone migranti (forestieri e sudditi
@@ -148,6 +152,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <ImageTitle>Durata del processetto</ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
+        <p>
         <ImageWrapper
           legend={"Durata dei processetti"}
           imageUrls={[
@@ -166,6 +171,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             src="/processetti/diagrams/04_durataProcessetto_sl.svg"
           ></ion-img>
         </ImageWrapper>
+        </p>
         <p>
           La raccolta delle deposizioni volte a certificare lo stato libero si
           svolgeva in genere nell'arco di una giornata (9 volte su 10).
