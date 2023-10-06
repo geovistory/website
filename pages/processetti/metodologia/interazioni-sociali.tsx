@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { GetStaticProps, NextPage } from 'next';
-import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
-import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
-import { metodologiaLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
-import ImageWrapper from '../../../components/elements/ImageWrapper.component';
+import type { GetStaticProps, NextPage } from "next";
+import { GraficiTabelleProps } from "../../../components/project-specific/GraficiTabelleProps";
+import { ProcessettiGraficiLayout } from "../../../components/project-specific/ProcessettiGraficiLayout.component";
+import { metodologiaLinks } from "../../../components/project-specific/ProcessettiNavbar.component";
+import ImageWrapper from "../../../components/elements/ImageWrapper.component";
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
@@ -38,7 +38,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           deposizioni erano, non solo le relazioni di eventuale intrinsecità con
           l’inquisito e soprattutto con il coniuge scomparso, ma anche la
           possibile presenza del testimone nei momenti estremi della morte e
-          della sepoltura del defunto.{' '}
+          della sepoltura del defunto.{" "}
         </p>
         <p>
           La grande varietà di forme assunte dalle interazioni sociali che
@@ -56,16 +56,27 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           maestro e garzone durante il periodo di garzonato, o quello tra
           locatore e locatario nell’affittanza di un alloggiamento).
         </p>
+        <p>
+          Poiché come si è detto ad assumere particolare significato nel
+          contesto dei processetti erano soprattutto le relazioni di lunga
+          corso, un aspetto tanto centrale quanto problematico concerne la
+          descrizione della temporalità dell’evento relazionale. Si è tentato di
+          registrare il più integralmente possibile la dimensione temporale
+          delle interazioni sociali, tuttavia va ammesso che le coordinate utili
+          a una loro puntualizzazione cronologica sono spesso scarse - sia per
+          la laconicità della fonte, sia per la vaghezza nella descrizione della
+          successione degli eventi.
+        </p>
 
         <p>
           <ImageWrapper
-            legend={'Distribuzione per Social Relationship Type'}
-            imageUrls={['/processetti/metodologia/text_annotation.png']}
+            legend={"Distribuzione per Social Relationship Type"}
+            imageUrls={["/processetti/metodologia/text_annotation.png"]}
             dialogChildren={
               <ion-img
-              alt="Elencazione e distribuzione delle Social Relationship Type assunte nella descrizione delle interazioni sociali"
-              src="/processetti/metodologia/interazioni-sociali.svg"
-            ></ion-img>
+                alt="Elencazione e distribuzione delle Social Relationship Type assunte nella descrizione delle interazioni sociali"
+                src="/processetti/metodologia/interazioni-sociali.svg"
+              ></ion-img>
             }
           >
             <ion-img
@@ -84,7 +95,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           delle interazioni sociali, tuttavia va ammesso che le coordinate utili
           a una loro puntualizzazione cronologica sono spesso scarse – sia per
           la laconicità della fonte, sia per la vaghezza nella descrizione della
-          successione degli eventi.{' '}
+          successione degli eventi.{" "}
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>
@@ -96,9 +107,9 @@ export const getStaticProps: GetStaticProps<GraficiTabelleProps> = async () => {
   return {
     props: {
       head: {
-        headOgDescription: 'Metodologia > Interazioni Sociali',
-        headTitle: 'Metodologia > Interazioni Sociali',
-        headOgImage: '/socialimage/processetti.jpg',
+        headOgDescription: "Metodologia > Interazioni Sociali",
+        headTitle: "Metodologia > Interazioni Sociali",
+        headOgImage: "/socialimage/processetti.jpg",
       },
     },
   };

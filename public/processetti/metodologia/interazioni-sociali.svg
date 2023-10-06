@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="322.792mm" height="200.025mm"
  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
-<title>SRType</title>
+<title>SRTypeG</title>
 <desc>Rendered by Tableau</desc>
 <defs>
 </defs>
@@ -696,7 +696,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#a6d0ea" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#c6c8c7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="707" width="70" height="17"/>
@@ -705,7 +705,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#95c3e2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#b7baba" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="685" width="133" height="17"/>
@@ -714,7 +714,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#94c2e1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#b6b9b9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="663" width="135" height="17"/>
@@ -723,7 +723,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b7dcf0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d3d4d3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="641" width="11" height="17"/>
@@ -732,7 +732,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#78a9cf" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#9aa2a4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="619" width="254" height="17"/>
@@ -741,7 +741,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#9cc8e5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#bdc0bf" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="597" width="107" height="17"/>
@@ -750,7 +750,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b9ddf1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d5d5d5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="575" width="2" height="17"/>
@@ -759,7 +759,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#a0cbe7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#c1c3c2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="553" width="92" height="17"/>
@@ -768,7 +768,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#a0cbe7" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#c1c3c2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="531" width="92" height="17"/>
@@ -777,7 +777,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b3d9ef" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d0d1d1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="509" width="25" height="17"/>
@@ -786,7 +786,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#a2cde8" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#c2c5c4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="487" width="85" height="17"/>
@@ -795,7 +795,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b2d9ef" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d0d1d0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="465" width="26" height="17"/>
@@ -804,7 +804,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#84b4d8" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#a8adae" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="443" width="198" height="17"/>
@@ -813,7 +813,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#9ac7e4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#bbbebe" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="421" width="114" height="17"/>
@@ -822,7 +822,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#2a5783" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#49525e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="399" width="662" height="17"/>
@@ -831,7 +831,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b9ddf1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d5d5d5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="377" width="4" height="17"/>
@@ -840,7 +840,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#a4cfe9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#c5c7c6" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="355" width="75" height="17"/>
@@ -849,7 +849,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b8dcf1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d4d4d4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="333" width="8" height="17"/>
@@ -858,7 +858,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#81b1d5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#a4aaab" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="311" width="213" height="17"/>
@@ -867,7 +867,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#9dc9e6" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#bec1c0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="289" width="101" height="17"/>
@@ -876,7 +876,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b6dbf0" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d2d3d3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="267" width="15" height="17"/>
@@ -885,7 +885,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#acd4ed" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#cbcccc" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="245" width="48" height="17"/>
@@ -894,7 +894,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b3d9ef" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d0d1d1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="223" width="24" height="17"/>
@@ -903,7 +903,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#afd6ed" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#cdcecd" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="201" width="40" height="17"/>
@@ -912,7 +912,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b1d8ee" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#cfd0cf" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="179" width="32" height="17"/>
@@ -921,7 +921,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#94c2e1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#b6b9b9" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="157" width="134" height="17"/>
@@ -930,7 +930,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b8ddf1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d4d5d5" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="135" width="6" height="17"/>
@@ -939,7 +939,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#96c4e2" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#b8bbbb" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="113" width="127" height="17"/>
@@ -948,7 +948,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#a1cce8" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#c1c4c3" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="91" width="89" height="17"/>
@@ -957,7 +957,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#7babd1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#9ea4a6" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="69" width="241" height="17"/>
@@ -966,7 +966,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#a2cde8" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#c2c4c4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="47" width="86" height="17"/>
@@ -975,7 +975,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#acd4ed" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#cbcccc" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="25" width="48" height="17"/>
@@ -984,7 +984,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 
 <g  clip-path="url(#clip24)" 
 >
-<g fill="#b7dcf1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d3d4d4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 <rect x="0" y="3" width="11" height="17"/>
@@ -996,7 +996,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 </clipPath>
 <g  clip-path="url(#clip25)" 
 >
-<g fill="#b7dcf1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d3d4d4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 </g>
@@ -1007,7 +1007,7 @@ font-family="Arial" font-size="15" font-weight="400" font-style="normal"
 </clipPath>
 <g  clip-path="url(#clip26)" 
 >
-<g fill="#b7dcf1" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
+<g fill="#d3d4d4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,476,0)"
 font-family="Arial" font-size="15" font-weight="400" font-style="normal" 
 >
 </g>
