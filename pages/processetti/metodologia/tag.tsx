@@ -18,8 +18,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           in XML, secondo le linee guida fornite dalla{" "}
           <i>Text Encoding Initiative</i>
           (TEI) - è intesa, sulla base delle esperienze e infrastrutture già
-          elaborata nell’ambito del progetto symogih.org (<a href="index.tsx#2016">Beretta, 2016<a/>), a
           elaborata nell’ambito del progetto symogih.org (<a href="index.tsx#2016">Beretta, 2016</a>), a
+          ristabilire il nesso tra i dati strutturati e le porzioni di testo che
           li hanno motivati, esiste tuttavia un gruppo di marcatori svincolati
           dalla diretta referenziazione di dati semanticamente definiti e
           unicamente finalizzati alla annotazione del testo.
