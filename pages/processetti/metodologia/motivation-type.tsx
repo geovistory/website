@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { GetStaticProps, NextPage } from 'next';
-import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
-import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
-import { metodologiaLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
-import ImageWrapper from '../../../components/elements/ImageWrapper.component';
-import Image from 'next/image';
-import img1 from '../../../public/processetti/metodologia/motivation-type.jpg';
+import type { GetStaticProps, NextPage } from "next";
+import { GraficiTabelleProps } from "../../../components/project-specific/GraficiTabelleProps";
+import { ProcessettiGraficiLayout } from "../../../components/project-specific/ProcessettiGraficiLayout.component";
+import { metodologiaLinks } from "../../../components/project-specific/ProcessettiNavbar.component";
+import ImageWrapper from "../../../components/elements/ImageWrapper.component";
+import Image from "next/image";
+import img1 from "../../../public/processetti/metodologia/motivation-type.jpg";
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
@@ -24,16 +24,16 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           volume 45 degli <i>Examina matrimoniorum</i>. É per questo che in una
           prima fase ci si è mossi nel convincimento che i processetti fossero
           “motivated by a characteristic of the applicant, be this a foreigner,
-          a widow, a citizen who was long years abroad, etc.”
-          <i>(Internal encoding manual)</i>.
+          a widow, a citizen who was long years abroad, etc.” (
+          <i>Internal encoding manual</i>).
         </p>
 
         <p>
           <ImageWrapper
             legend={
-              'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol 45, c. n.n'
+              "ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol 45, c. n.n"
             }
-            imageUrls={['/processetti/metodologia/motivation-type.jpg']}
+            imageUrls={["/processetti/metodologia/motivation-type.jpg"]}
             dialogChildren={
               <Image
                 src={img1}
@@ -46,7 +46,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
               placeholder="blur"
               width={608}
               height={280}
-              objectFit={'scale-down'}
+              objectFit={"scale-down"}
               alt="Riproduzione della nota introduttiva al volume 45 degli Examinum Matrimoniorum"
             />
           </ImageWrapper>
@@ -59,7 +59,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           ha reso necessaria l'introduzione del <i>type</i> “Processetto
           atipico”: utile strumento per raccogliere, aggregare e rendere
           facilmente recuperabile una <i>varietas</i> di casi apparentemente
-          così ‘rari’ da essere reputati quasi unici.
+          così &quot;rari&quot; da essere reputati quasi unici.
         </p>
         <p>
           A seguito della sistematica raccolta di un numero crescente di
@@ -80,21 +80,23 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           Le ragioni del processetto sono state dunque individuate tanto su base
-          esplicita (espressa mediante ricorso a formulari quali{' '}
+          esplicita (espressa mediante ricorso a formulari quali{" "}
           <i>
-            “ad constandum se non esse exoratum et annos decem et ultra
-            habitasse in hac civitate Venetiis”
+            &quot;ad constandum se non esse exoratum et annos decem et ultra
+            habitasse in hac civitate Venetiis&quot;
           </i>
-          , o ancora{' '}
-          <i>“ad constandum de obitu praedicti Valerii olim eius viri”</i>)
-          quanto su aspetti impliciti e desumibili dal contenuto testuale delle
-          deposizioni. È stata operata quindi una verifica andando di volta in
-          volta a valutare la convergenza o la divergenza della ragione
+          , o ancora{" "}
+          <i>
+            &quot;ad constandum de obitu praedicti Valerii olim eius viri&quot;
+          </i>
+          ) quanto su aspetti impliciti e desumibili dal contenuto testuale
+          delle deposizioni. È stata operata quindi una verifica andando di
+          volta in volta a valutare la convergenza o la divergenza della ragione
           dichiarata nell'<i>incipit</i> latino, del <i>tenor</i> del testo
           volgare e delle dichiarazioni dei testimoni in riferimento ai soggetti
           su cui veniva puntata l’attenzione nell’inchiesta (non sempre sul
           richiedente; nei casi di vedovanza la focalizzazione è spostata sul
-          coniuge defunto).{' '}
+          coniuge defunto).{" "}
         </p>
         <p>
           Non va trascurata la possibile esistenza di motivazioni plurime,
@@ -113,9 +115,9 @@ export const getStaticProps: GetStaticProps<GraficiTabelleProps> = async () => {
   return {
     props: {
       head: {
-        headOgDescription: 'Metodologia > Motivation Type',
-        headTitle: 'Metodologia > Motivation Type',
-        headOgImage: '/socialimage/processetti.jpg',
+        headOgDescription: "Metodologia > Motivation Type",
+        headTitle: "Metodologia > Motivation Type",
+        headOgImage: "/socialimage/processetti.jpg",
       },
     },
   };
