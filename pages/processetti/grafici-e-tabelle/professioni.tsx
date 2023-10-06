@@ -20,26 +20,28 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           (al momento del processetto)
         </ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Età media dei richiedenti al processetto e all'arrivo a Venezia, per le prime trenta professioni rappresentate"
-          }
-          imageUrls={[
-            "/processetti/diagrams/11_etaProf_sl.svg",
-            "/processetti/diagrams/11_etaProf_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con l'età media dei richiedenti al processetto e all'arrivo a Venezia, per le prime trenta professioni rappresentate"
-            src="/processetti/diagrams/11_etaProf_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con l'età media dei richiedenti al processetto e all'arrivo a Venezia, per le prime trenta professioni rappresentate"
-            src="/processetti/diagrams/11_etaProf_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Età media dei richiedenti al processetto e all'arrivo a Venezia, per le prime trenta professioni rappresentate"
+            }
+            imageUrls={[
+              "/processetti/diagrams/11_etaProf_sl.svg",
+              "/processetti/diagrams/11_etaProf_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età media dei richiedenti al processetto e all'arrivo a Venezia, per le prime trenta professioni rappresentate"
+              src="/processetti/diagrams/11_etaProf_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età media dei richiedenti al processetto e all'arrivo a Venezia, per le prime trenta professioni rappresentate"
+              src="/processetti/diagrams/11_etaProf_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           L'intero spettro delle professioni esercitate nel contesto urbano
           trova rappresentazione tra le occupazioni dei richiedenti, a
@@ -76,64 +78,70 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Età dei testimoni al processetto e all’arrivo a Venezia
         </ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={"Età dei testimoni al momento del processetto"}
-          imageUrls={[
-            "/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg",
-            "/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
-            src="/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
-            src="/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
-        <ImageWrapper
-          legend={"Età dei testimoni al momento del loro arrivo a Venezia"}
-          imageUrls={[
-            "/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg",
-            "/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
-            src="/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
-            src="/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={"Età dei testimoni al momento del processetto"}
+            imageUrls={[
+              "/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg",
+              "/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
+              src="/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
+              src="/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
+        <p>
+          <ImageWrapper
+            legend={"Età dei testimoni al momento del loro arrivo a Venezia"}
+            imageUrls={[
+              "/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg",
+              "/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
+              src="/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
+              src="/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <ImageTitle>Permanenza dei testimoni a Venezia</ImageTitle>{" "}
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Tempo di permanenza dei testimoni a Venezia, prima del processetto"
-          }
-          imageUrls={[
-            "/processetti/diagrams/14_testimoniPermanenza_sl.svg",
-            "/processetti/diagrams/14_testimoniPermanenza_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
-            src="/processetti/diagrams/14_testimoniPermanenza_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
-            src="/processetti/diagrams/14_testimoniPermanenza_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Tempo di permanenza dei testimoni a Venezia, prima del processetto"
+            }
+            imageUrls={[
+              "/processetti/diagrams/14_testimoniPermanenza_sl.svg",
+              "/processetti/diagrams/14_testimoniPermanenza_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
+              src="/processetti/diagrams/14_testimoniPermanenza_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
+              src="/processetti/diagrams/14_testimoniPermanenza_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           I testimoni che prendevano parte a un processetto avevano mediamente
           una decina di anni in più rispetto allo sposo, circa 38. Tale
@@ -169,48 +177,52 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Confronto delle professioni dei richiedenti e dei testimoni
         </ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Distribuzione dei richiedenti e dei testimoni entro le prime trenta professioni più rappresentate"
-          }
-          imageUrls={[
-            "/processetti/diagrams/15_occupation_sl.svg",
-            "/processetti/diagrams/15_occupation_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la distribuzione dei richiedenti e dei testimoni entro le prime trenta professioni più rappresentate"
-            src="/processetti/diagrams/15_occupation_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la distribuzione dei richiedenti e dei testimoni entro le prime trenta professioni più rappresentate"
-            src="/processetti/diagrams/15_occupation_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Distribuzione dei richiedenti e dei testimoni entro le prime trenta professioni più rappresentate"
+            }
+            imageUrls={[
+              "/processetti/diagrams/15_occupation_sl.svg",
+              "/processetti/diagrams/15_occupation_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la distribuzione dei richiedenti e dei testimoni entro le prime trenta professioni più rappresentate"
+              src="/processetti/diagrams/15_occupation_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la distribuzione dei richiedenti e dei testimoni entro le prime trenta professioni più rappresentate"
+              src="/processetti/diagrams/15_occupation_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <ImageTitle> Professioni dei testimoni secondo il genere</ImageTitle>
         <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <ImageWrapper
-          legend={
-            "Distribuzione professionale tra i testimoni, distinto per genere"
-          }
-          imageUrls={[
-            "/processetti/diagrams/16_professioneGenere_sl.svg",
-            "/processetti/diagrams/16_professioneGenere_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la distribuzione professionale tra i testimoni, distinto per genere"
-            src="/processetti/diagrams/16_professioneGenere_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la distribuzione professionale tra i testimoni, distinto per genere"
-            src="/processetti/diagrams/16_professioneGenere_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+        <p>
+          <ImageWrapper
+            legend={
+              "Distribuzione professionale tra i testimoni, distinto per genere"
+            }
+            imageUrls={[
+              "/processetti/diagrams/16_professioneGenere_sl.svg",
+              "/processetti/diagrams/16_professioneGenere_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la distribuzione professionale tra i testimoni, distinto per genere"
+              src="/processetti/diagrams/16_professioneGenere_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la distribuzione professionale tra i testimoni, distinto per genere"
+              src="/processetti/diagrams/16_professioneGenere_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
         <p>
           Un confronto tra i profili professionali dei richiedenti e dei
           testimoni rivela differenze significative, che sembrano riconducibili

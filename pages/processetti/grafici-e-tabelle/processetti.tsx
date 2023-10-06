@@ -73,24 +73,24 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
 
         <ImageTitle>Una visione d’insieme dei dati registrati</ImageTitle>
         <p>
-        <ImageWrapper
-          legend={"Quantificazione per classe delle istanze prodotte"}
-          imageUrls={[
-            "/processetti/diagrams/03_classDistribution_sl.svg",
-            "/processetti/diagrams/03_classDistribution_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la quantificazione per classe delle istanze prodotte in Geovistory"
-            src="/processetti/diagrams/03_classDistribution_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la quantificazione per classe delle istanze prodotte in Geovistory"
-            src="/processetti/diagrams/03_classDistribution_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+          <ImageWrapper
+            legend={"Quantificazione per classe delle istanze prodotte"}
+            imageUrls={[
+              "/processetti/diagrams/03_classDistribution_sl.svg",
+              "/processetti/diagrams/03_classDistribution_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la quantificazione per classe delle istanze prodotte in Geovistory"
+              src="/processetti/diagrams/03_classDistribution_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la quantificazione per classe delle istanze prodotte in Geovistory"
+              src="/processetti/diagrams/03_classDistribution_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
         </p>
         <p>
           Le cifre che seguono restituiscono la misura dell’entità dei dati
@@ -106,24 +106,24 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <ImageTitle>Tipologia dei processetti</ImageTitle>
         <p>
-        <ImageWrapper
-          legend={"Distribuzione dei processetti secondo il tipo"}
-          imageUrls={[
-            "/processetti/diagrams/02_distribuzioneTipooProcessetti_sl.svg",
-            "/processetti/diagrams/02_distribuzioneTipooProcessetti_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory distinti per tipo"
-            src="/processetti/diagrams/02_distribuzioneTipooProcessetti_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory distinti per tipo"
-            src="/processetti/diagrams/02_distribuzioneTipooProcessetti_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+          <ImageWrapper
+            legend={"Distribuzione dei processetti secondo il tipo"}
+            imageUrls={[
+              "/processetti/diagrams/02_distribuzioneTipooProcessetti_sl.svg",
+              "/processetti/diagrams/02_distribuzioneTipooProcessetti_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory distinti per tipo"
+              src="/processetti/diagrams/02_distribuzioneTipooProcessetti_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con il numero di processetti matrimoniali annotati in Geovistory distinti per tipo"
+              src="/processetti/diagrams/02_distribuzioneTipooProcessetti_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
         </p>
         <p>
           Si identificano generalmente tre categorie di individui chiamate a
@@ -153,41 +153,41 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <ImageTitle>Durata del processetto</ImageTitle>
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
-        <ImageWrapper
-          legend={"Durata dei processetti"}
-          imageUrls={[
-            "/processetti/diagrams/04_durataProcessetto_sl.svg",
-            "/processetti/diagrams/04_durataProcessetto_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Grafico con la durata dei processetto distinti per tipo"
-            src="/processetti/diagrams/04_durataProcessetto_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Grafico con la durata dei processetto distinti per tipo"
-            src="/processetti/diagrams/04_durataProcessetto_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
+          <ImageWrapper
+            legend={"Durata dei processetti"}
+            imageUrls={[
+              "/processetti/diagrams/04_durataProcessetto_sl.svg",
+              "/processetti/diagrams/04_durataProcessetto_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con la durata dei processetto distinti per tipo"
+              src="/processetti/diagrams/04_durataProcessetto_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con la durata dei processetto distinti per tipo"
+              src="/processetti/diagrams/04_durataProcessetto_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
         </p>
         <p>
           La raccolta delle deposizioni volte a certificare lo stato libero si
           svolgeva in genere nell'arco di una giornata (9 volte su 10).
           L'istruzione del processetto, l'esame dei testimoni, la registrazione
-          e il rilascio dell'attestazione (<i>fede</i>) avvenivano tendenzialmente in
-          stretta successione. Solo in alcuni casi, la raccolta delle
-          deposizioni richiedeva più tempo; anche se spesso finiva per
-          concludersi non oltre il giorno successivo all’audizione del primo
-          testimone. I processi in cui le testimonianze risultano temporalmente
-          distanti tra loro (ad es. con uno scarto di più di due settimane) si
-          spiegano con la necessità di ascoltare deponenti che non si erano
-          subito resi disponibili (o perchè abitanti in località extra-lagunari,
-          o perché assenti dalla città per ragioni professionali); altrimenti,
-          con l’esigenza delle autorità di approfondire alcuni casi attraverso
-          l’audizione di nuovi testimoni (soprattutto a seguito di testimonianze
-          laconiche o ambigue).
+          e il rilascio dell'attestazione (<i>fede</i>) avvenivano
+          tendenzialmente in stretta successione. Solo in alcuni casi, la
+          raccolta delle deposizioni richiedeva più tempo; anche se spesso
+          finiva per concludersi non oltre il giorno successivo all’audizione
+          del primo testimone. I processi in cui le testimonianze risultano
+          temporalmente distanti tra loro (ad es. con uno scarto di più di due
+          settimane) si spiegano con la necessità di ascoltare deponenti che non
+          si erano subito resi disponibili (o perchè abitanti in località
+          extra-lagunari, o perché assenti dalla città per ragioni
+          professionali); altrimenti, con l’esigenza delle autorità di
+          approfondire alcuni casi attraverso l’audizione di nuovi testimoni
+          (soprattutto a seguito di testimonianze laconiche o ambigue).
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>
