@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { GetStaticProps, NextPage } from 'next';
-import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
-import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
-import { metodologiaLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
-import ImageWrapper from '../../../components/elements/ImageWrapper.component';
-import Image from 'next/image';
-import img1 from '../../../public/processetti/metodologia/text_annotation.png';
+import type { GetStaticProps, NextPage } from "next";
+import { GraficiTabelleProps } from "../../../components/project-specific/GraficiTabelleProps";
+import { ProcessettiGraficiLayout } from "../../../components/project-specific/ProcessettiGraficiLayout.component";
+import { metodologiaLinks } from "../../../components/project-specific/ProcessettiNavbar.component";
+import ImageWrapper from "../../../components/elements/ImageWrapper.component";
+import Image from "next/image";
+import img1 from "../../../public/processetti/metodologia/text_annotation.png";
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
@@ -19,7 +19,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           immaginabile, infatti, i testimoni non sempre fornivano notizie
           omogenee e complete sul conto del richiedente o sulla tempistica degli
           eventi e, ancora, non sempre le testimonianze risultano tra loro
-          concordanti.{' '}
+          concordanti.{" "}
         </p>
         <p>
           A mero titolo esemplificativo si può ricordare che l’età, in
@@ -32,24 +32,24 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           dell’Arsenale, le pestilenze, le carestie, e gli eventi bellici).
           Quanto agli spostamenti abitativi o ai cambiamenti di professione,
           essi possono essere descritti anche solo nel loro mero susseguirsi
-          diacronico senza precisi ancoraggi cronologici.{' '}
+          diacronico senza precisi ancoraggi cronologici.{" "}
         </p>
         <p>
           Per evitare un approccio sovra-interpretativo, nello sforzo di
           rispettare tanto il dichiarato della fonte quanto la necessità di
-          produrre <i>factual information</i>, la temporalità degli eventi è
-          stata descritta non solo per mezzo di indicazioni puntuali, ma anche
+          produrre <i>factual information</i>, la temporalità degli eventi è stata
+          descritta non solo per mezzo di indicazioni puntuali, ma anche
           attraverso intervalli cronologici in grado di definire l’estensione
           temporale degli eventi stessi secondo diverse scale di precisione e
-          attendibilità, o ancora attraverso la concatenazione di{' '}
-          <i>temporal entity</i> (mediante proprietà specifiche quali ‘occurs
-          before’, ‘meets in time with’, ‘occurs after’ ecc.).
+          attendibilità, o ancora attraverso la concatenazione di <i>temporal
+          entity</i> (mediante proprietà specifiche quali &quot;occurs before&quot;, &quot;meets in
+          time with&quot;, &quot;occurs after&quot; ecc.).
         </p>
 
         <p>
           <ImageWrapper
-            legend={'Time span (KleioLab, 2020)'}
-            imageUrls={['/processetti/metodologia/text_annotation.png']}
+            legend={"Time span (KleioLab, 2020)"}
+            imageUrls={["/processetti/metodologia/text_annotation.png"]}
             dialogChildren={
               <ion-img
                 alt="Time span in Geovistory (and CIDOC-CRM)"
@@ -73,9 +73,9 @@ export const getStaticProps: GetStaticProps<GraficiTabelleProps> = async () => {
   return {
     props: {
       head: {
-        headOgDescription: 'Metodologia > Temporalità',
-        headTitle: 'Metodologia > Temporalità',
-        headOgImage: '/socialimage/processetti.jpg',
+        headOgDescription: "Metodologia > Temporalità",
+        headTitle: "Metodologia > Temporalità",
+        headOgImage: "/socialimage/processetti.jpg",
       },
     },
   };
