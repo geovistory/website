@@ -54,7 +54,8 @@ function ssr(props: SSRProps) {
                 href={`http://geovistory.org/resource/${props.entityId}`}
               >
                 <ion-label>
-                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                  <p>URI</p>
+                  http://geovistory.org/resource/{props.entityId}
                 </ion-label>
               </ion-item>
             </ion-list>
