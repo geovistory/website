@@ -269,7 +269,33 @@ export const projectsParams: Array<ProjectParams> = [
 
         headOgImage: '/socialimage/roman-senate.jpg'
 
-    }
+    },
+    // Switzerland & Beyond
+    {
+        geovID: 153,
+        geovName: 'Switzerland and Beyond',
+
+        preferredClasses: ['c363', 'c21'],
+
+        featured: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Switzerland and Beyond',
+        shortName: 'Switzerland and Beyond',
+        description: 'Linking Historical People, Places, and Organizations.',
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/switzerland-and-beyond.jpeg'
+
+    },
 
 
 ]
