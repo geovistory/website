@@ -1,0 +1,102 @@
+.theme {
+    --ion-background-color: #fff;
+    --gv-bg-project-toolbar: #EBF8FF;
+}
+
+.logosTitle {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.logosContainer {
+    margin-top: 4rem;
+    background-color: white;
+    --ion-grid-column-padding: var(--ion-padding);
+}
+
+.bannerContainer {
+    position: relative;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.bannerImage {
+    object-position: 40% 70%;
+}
+
+.title {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #fff;
+    font-size: 1.4rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 0.3rem;
+    /* background: linear-gradient(0deg, #ff0000 0 50%, blue 50% 100%); */
+    /* background: linear-gradient(to top, #ff0000, #333 50%, #ff0000); */
+    background: rgba(255,0,0,0.9);
+    border: 1px solid white;
+    border-radius: 8px
+}
+/* sm and up */
+@media screen and (min-width: 576px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .bannerContainer {
+        height: 350px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}
+
+/* md and up */
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 2.1rem;
+    }
+
+    .bannerContainer {
+        height: 425px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}
+
+/* lg and up */
+@media screen and (min-width: 992px) {
+    .title {
+        font-size: 2.6rem;
+    }
+
+    .bannerContainer {
+        height: 500px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}
+
+/* xl and up */
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 3.1rem;
+    }
+
+    .bannerContainer {
+        height: 650px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}
