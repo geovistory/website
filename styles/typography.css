@@ -168,7 +168,7 @@ h5+h6 {
   }
 }
 
-pre,
+pre:not(.CodeMirror-line),
 .restricted-width {
   max-width: 38rem;
   margin: auto;

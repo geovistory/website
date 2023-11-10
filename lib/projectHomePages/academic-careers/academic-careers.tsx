@@ -87,6 +87,50 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
             enriched with data from various projects, such as the siprojuris
             project on French law professors.
           </p>
+          <geov-yasgui
+            class="restricted-width"
+            id="el-1"
+            default-plugin="mapCircles"
+            collapse="true"
+            ref={(el: HTMLGeovYasguiElement) => {
+              el.plugins = new Set<'mapCircles'>(['mapCircles']);
+              el.queryTabs = [
+                {
+                  name: 'Birth Place',
+                  sparqlEndpoint:
+                    'https://sparql.geovistory.org/api_v1_project_1483135',
+                  query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT 
+  ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Birth place" as ?type) ?link
+WHERE {
+
+  # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
+  ?s ontome:p147i/ontome:p148 ?place.
+
+  # Geographical Place -label-> label
+  ?s rdfs:label ?label.
+
+  # Geographical Place -is place of-> Birth
+  ?s ontome:p7i ?sv.
+
+  # Extract lat and long from WKT
+  bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
+  bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
+  bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+
+  # Append the project query param to the URI
+  bind(concat(str(?s), "?p=1483135") as ?link )
+}
+GROUP BY ?label ?long ?lat ?type ?link                
+                `,
+                },
+              ];
+            }}
+          ></geov-yasgui>
+
           <h4>What can you do?</h4>
           <p>
             You can explore the available information using the graphical data
@@ -96,6 +140,16 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
           <p>
             <ion-button href={props.params.geovID + '/search'}>
               Search data
+            </ion-button>
+          </p>
+          <p>
+            Query and visualize the data, starting from an example map
+            visualization where you can adapt the SPARQL query to
+            show other geographical information of this community project.
+          </p>
+          <p>
+            <ion-button href={props.params.geovID + '/sparql'}>
+              Query and visualize data
             </ion-button>
           </p>
           <p>

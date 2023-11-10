@@ -1,3 +1,4 @@
+import { QueryTab } from '@geovistory/design-system-web/loader';
 import { ProjectNavbarProps } from '../components/layouts/ProjectNavbar.component';
 
 export interface ProjectParams {
@@ -25,6 +26,8 @@ export interface ProjectParams {
     sparklisLinkEnabled: boolean;
 
     headOgImage: string;
+
+    sparqlQueryTabs?: QueryTab[]
 }
 
 
@@ -52,7 +55,60 @@ export const projectsParams: Array<ProjectParams> = [
         sparklisLinkEnabled: true,
         teiLinkEnabled: false,
 
-        headOgImage: '/socialimage/academic-careers.jpg'
+        headOgImage: '/socialimage/academic-careers.jpg',
+        sparqlQueryTabs: [
+            {
+                name: 'Birth Places',
+                sparqlEndpoint: 'https://sparql.geovistory.org/api_v1_project_1483135',
+                selectedPlugin: 'mapCircles',
+                query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Birth place" as ?type) ?link
+WHERE {
+
+    # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
+    ?s ontome:p147i/ontome:p148 ?place.
+
+    # Geographical Place -label-> label
+    ?s rdfs:label ?label.
+
+    # Geographical Place -is place of-> Birth
+    ?s ontome:p7i ?sv.
+
+    # Extract lat and long from WKT
+    bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
+    bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
+    bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+
+    # Append the project query param to the URI
+    bind(concat(str(?s), "?p=1483135") as ?link )
+}
+GROUP BY ?label ?long ?lat ?type ?link
+                `
+            },
+            {
+                name: 'Selection of triples',
+                sparqlEndpoint: `https://sparql.geovistory.org/api_v1_project_1483135`,
+                selectedPlugin: 'table',
+                query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX geov: <http://geovistory.org/resource/>
+
+SELECT ?subject ?predicate ?object
+WHERE {
+?subject ?predicate ?object .
+}
+LIMIT 10`,
+            }
+        ]
 
     },
     // AMPI
