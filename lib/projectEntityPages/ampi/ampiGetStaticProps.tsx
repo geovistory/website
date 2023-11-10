@@ -81,17 +81,16 @@ export function ampiSsr(props: SSRProps) {
                 href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
               >
                 <ion-label>
-                  <p>
-                    Project URL:{' '}
-                    {`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-                  </p>
+                  <p> Project URL</p>
+                  {`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
                 </ion-label>
               </ion-item>
               <ion-item
                 href={`http://geovistory.org/resource/${props.entityId}`}
               >
                 <ion-label>
-                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                  <p>URI</p>
+                  http://geovistory.org/resource/{props.entityId}
                 </ion-label>
               </ion-item>
             </ion-list>
@@ -101,7 +100,7 @@ export function ampiSsr(props: SSRProps) {
           sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
           sparql-query={isAnnotated}
         >
-          <p>
+          <p className="ion-text-center">
             <br />
             <ion-button
               fill="outline"
