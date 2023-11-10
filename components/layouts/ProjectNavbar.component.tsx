@@ -40,7 +40,7 @@ export const ProjectNavbar = (props: ProjectNavbarProps) => {
             )}
             {props.sparqlLinkEnabled && (
               <ion-button href={`/project/${props.projectId}/sparql`}>
-                SPARQL
+                SPARQL & Visualize
               </ion-button>
             )}
             {props.ontoExplorerLinkEnabled && (
