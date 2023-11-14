@@ -93,13 +93,14 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
             default-plugin="mapCircles"
             collapse="true"
             ref={(el: HTMLGeovYasguiElement) => {
-              el.plugins = new Set<'mapCircles'>(['mapCircles']);
-              el.queryTabs = [
-                {
-                  name: 'Birth Place',
-                  sparqlEndpoint:
-                    'https://sparql.geovistory.org/api_v1_project_1483135',
-                  query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+              if (el) {
+                el.plugins = new Set<'mapCircles'>(['mapCircles']);
+                el.queryTabs = [
+                  {
+                    name: 'Birth Place',
+                    sparqlEndpoint:
+                      'https://sparql.geovistory.org/api_v1_project_1483135',
+                    query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ontome: <https://ontome.net/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -126,8 +127,9 @@ WHERE {
 }
 GROUP BY ?label ?long ?lat ?type ?link                
                 `,
-                },
-              ];
+                  },
+                ];
+              }
             }}
           ></geov-yasgui>
 
@@ -144,8 +146,8 @@ GROUP BY ?label ?long ?lat ?type ?link
           </p>
           <p>
             Query and visualize the data, starting from an example map
-            visualization where you can adapt the SPARQL query to
-            show other geographical information of this community project.
+            visualization where you can adapt the SPARQL query to show other
+            geographical information of this community project.
           </p>
           <p>
             <ion-button href={props.params.geovID + '/sparql'}>
