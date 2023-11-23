@@ -69,33 +69,9 @@ export function ampiSsr(props: SSRProps) {
       entity-id={props.entityId}
       uri-regex={props.uriRegex}
       uri-replace={props.uriReplace + '?p=' + props.projectId}
+      project-id={props.projectId}
     >
       <div slot="body-end" className="section">
-        <ion-grid fixed={true}>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-subtitle>Metadata</ion-card-subtitle>
-            </ion-card-header>
-            <ion-list lines="none">
-              <ion-item
-                href={`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-              >
-                <ion-label>
-                  <p> Project URL</p>
-                  {`http://geovistory.org/resource/${props.entityId}?p=${props.projectId}`}
-                </ion-label>
-              </ion-item>
-              <ion-item
-                href={`http://geovistory.org/resource/${props.entityId}`}
-              >
-                <ion-label>
-                  <p>URI</p>
-                  http://geovistory.org/resource/{props.entityId}
-                </ion-label>
-              </ion-item>
-            </ion-list>
-          </ion-card>
-        </ion-grid>
         <geov-if
           sparql-endpoint={`https://sparql.geovistory.org/api_v1_project_${props.projectId}`}
           sparql-query={isAnnotated}
