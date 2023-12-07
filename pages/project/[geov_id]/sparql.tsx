@@ -43,14 +43,14 @@ const ProjectSparqlPage: NextPage<ProjectSparqlProps> = (props) => {
 PREFIX ontome: <https://ontome.net/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?label ?long ?lat ?link ("Geographical Place" as ?type)
+SELECT ?label ?long ?lat ?link ("Geographical Place" as ?type) ${props.params.geovID ? "(count(?label) as ?radius)" : ""}
 WHERE {
 
   # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
-  ?s ontome:p147i/ontome:p148 ?place.
+  ?geoplace ontome:p147i/ontome:p148 ?place.
 
   # Geographical Place -label-> label
-  ?s rdfs:label ?label.
+  ?geoplace rdfs:label ?label.
 
   # Extract lat and long from WKT
   bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
@@ -58,7 +58,12 @@ WHERE {
   bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
 
   # Append the project query param to the URI
-  bind(concat(str(?s), "?p=${props.params.geovID}") as ?link )
+  bind(concat(str(?geoplace), "?p=${props.params.geovID}") as ?link )
+
+  ${props.params.geovID == 153 ?
+  `# Find how much event are linked
+  ?event ontome:p7 ?geoplace`
+  : ""}
 }
 GROUP BY ?label ?long ?lat ?type ?link
                   
