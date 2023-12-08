@@ -32,8 +32,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           percorsi migratori verso Venezia, attraverso lo sfruttamento delle
           informazioni contenute nelle inchieste prematrimoniali (
           <i>processetti</i>) a cui venivano sottoposti vedovi e stranieri per
-          stabilire il loro stato libero; dall&aposaltro, studiare
-          l&aposattuazione di questa specifica procedura di controllo su scala
+          stabilire il loro stato libero; dall&apos;altro, studiare
+          l&apos;attuazione di questa specifica procedura di controllo su scala
           italiana e, in prospettiva comparativa, nel mondo ortodosso.
           <br />
           Il progetto, nella persistente tensione tra la complessa natura del
@@ -43,16 +43,16 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           piattaforma collaborativa Geovistory, realizzata e messa a
           disposizione dalla società svizzera KleioLab.
           <br />
-          L&aposimplementazione contenutistica della base di dati, condotta nel
+          L&apos;implementazione contenutistica della base di dati, condotta nel
           corso di un triennio, ha ampiamente beneficiato della attiva
-          collaborazione dell&aposArchivio Storico del Patriarcato di Venezia
-          che, oltre a agevolare l&aposaccesso alle fonti documentarie, ha messo
-          a disposizione del <i>team</i> di ricerca anche l&aposimprescindibile{" "}
+          collaborazione dell&apos;Archivio Storico del Patriarcato di Venezia
+          che, oltre a agevolare l&apos;accesso alle fonti documentarie, ha messo
+          a disposizione del <i>team</i> di ricerca anche l&apos;imprescindibile{" "}
           <i>expertise</i> archivistico e paleografico.
         </p>
         <p>
           Il sito intende offrire strumenti di ricerca (bibliografia), esporre
-          sinteticamente la metodologia utilizzata nell&aposestrinsecazione e
+          sinteticamente la metodologia utilizzata nell&apos;estrinsecazione e
           strutturazione dei dati storici e consentire la visualizzazione di
           parte dei risultati di indagine riguardanti la tipologia dei
           processetti, la natura delle relazioni che intercorrono fra i
