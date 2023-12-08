@@ -1,12 +1,12 @@
-import type { GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
-import { Person } from '../../components/elements/Person.component';
-import { HeadProps } from '../../components/layouts/DefaultHead';
-import { AnrLogo200 } from '../../components/logos/AnrLogo200';
-import { EcoleFrancaisRomeLogo200 } from '../../components/logos/EcoleFrancaisRomeLogo200';
-import { ProcessettiBanner } from '../../components/project-specific/ProcessettiBanner.component';
-import { ProcessettiLayout } from '../../components/project-specific/ProcessettiLayout.component';
-import styles from './index.module.css';
+import type { GetStaticProps, NextPage } from "next";
+import Image from "next/image";
+import { Person } from "../../components/elements/Person.component";
+import { HeadProps } from "../../components/layouts/DefaultHead";
+import { AnrLogo200 } from "../../components/logos/AnrLogo200";
+import { EcoleFrancaisRomeLogo200 } from "../../components/logos/EcoleFrancaisRomeLogo200";
+import { ProcessettiBanner } from "../../components/project-specific/ProcessettiBanner.component";
+import { ProcessettiLayout } from "../../components/project-specific/ProcessettiLayout.component";
+import styles from "./index.module.css";
 
 export interface ResourcesProps {
   head: HeadProps;
@@ -23,28 +23,44 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         <h3>Presentazione del progetto</h3>
 
         <p>
-          Il progetto di ricerca &quot;Processetti&quot;. Matrimonio e mobilità
-          a Venezia, XVI-XVIII secolo ha un duplice obiettivo: da un lato, le
-          strutture e i percorsi migratori verso Venezia attraverso lo
-          sfruttamento delle informazioni contenute nelle inchieste
-          prematrimoniali (processetti) a cui venivano sottoposti vedovi e
-          stranieri per stabilire il loro stato libero; dall&apos;altro,
-          studiare l&apos;attuazione di questa procedura di controllo su scala
-          italiana e in una prospettiva comparativa verso il mondo ortodosso.
+          Il progetto di ricerca{" "}
+          <i>
+            &quot;Processetti&quot;. Matrimonio e mobilità a Venezia, XVI-XVIII
+            secolo
+          </i>{" "}
+          ha un duplice obiettivo: da un lato, indagare le strutture e i
+          percorsi migratori verso Venezia, attraverso lo sfruttamento delle
+          informazioni contenute nelle inchieste prematrimoniali (
+          <i>processetti</i>) a cui venivano sottoposti vedovi e stranieri per
+          stabilire il loro stato libero; dall&aposaltro, studiare
+          l&aposattuazione di questa specifica procedura di controllo su scala
+          italiana e, in prospettiva comparativa, nel mondo ortodosso.
           <br />
-          Questo progetto si basa sulla creazione di un database utilizzando la
-          piattaforma collaborativa Geovistory fornita dalla società svizzera
-          kleiolab.
+          Il progetto, nella persistente tensione tra la complessa natura del
+          contenuto documentario e la necessità di un trattamento dei dati
+          storici in una prospettiva integrata - tanto qualitativa quanto
+          quantitativa -, ha previsto la creazione di un database ospitato dalla
+          piattaforma collaborativa Geovistory, realizzata e messa a
+          disposizione dalla società svizzera KleioLab.
+          <br />
+          L&aposimplementazione contenutistica della base di dati, condotta nel
+          corso di un triennio, ha ampiamente beneficiato della attiva
+          collaborazione dell&aposArchivio Storico del Patriarcato di Venezia
+          che, oltre a agevolare l&aposaccesso alle fonti documentarie, ha messo
+          a disposizione del <i>team</i> di ricerca anche l&aposimprescindibile{" "}
+          <i>expertise</i> archivistico e paleografico.
         </p>
         <p>
-          Il sito offre strumenti di ricerca (bibliografia), sviluppa la
-          metodologia utilizzata per strutturare i dati e consente di
-          visualizzare i risultati dell&apos;indagine riguardanti la tipologia
-          dei processetti, la natura delle relazioni che intercorrono fra i
-          richiedenti e i loro testimoni, il loro mestieri e le loro origini
-          geografiche.
-          <br />
-          Permette di effettuare semplici interrogazioni.
+          Il sito intende offrire strumenti di ricerca (bibliografia), esporre
+          sinteticamente la metodologia utilizzata nell&aposestrinsecazione e
+          strutturazione dei dati storici e consentire la visualizzazione di
+          parte dei risultati di indagine riguardanti la tipologia dei
+          processetti, la natura delle relazioni che intercorrono fra i
+          richiedenti e i loro testimoni, le professioni e le origini
+          geografiche dei soggetti registrati.
+          <br />A partire da specifici strumenti di ricerca, il sito consente,
+          infine, di effettuare semplici interrogazioni esplorative e consultare
+          i dati raccolti, anche nelle loro molteplici interdipendenze.
         </p>
       </ion-grid>
       <ion-grid class={styles.section}>
@@ -159,7 +175,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <ion-row>
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card
@@ -167,7 +183,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                 target="_blank"
               >
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <AnrLogo200 />
@@ -176,12 +192,12 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             </ion-col>
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card href="http://resefe.fr/" target="_blank">
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <EcoleFrancaisRomeLogo200 />
@@ -191,19 +207,19 @@ const Resources: NextPage<ResourcesProps> = (props) => {
 
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card href="#" target="_blank">
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <Image
                     src="/logo_ekpa.png"
                     width={200}
                     height={200}
-                    objectFit={'scale-down'}
+                    objectFit={"scale-down"}
                     alt="Logo University of Athens"
                   />
                 </div>
@@ -213,19 +229,19 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <ion-row>
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card href="https://www.unipd.it/" target="_blank">
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <Image
                     src="/Logo_padova.png"
                     width={200}
                     height={200}
-                    objectFit={'scale-down'}
+                    objectFit={"scale-down"}
                     alt="Logo Università Delgli Studi Di Padova"
                   />
                 </div>
@@ -234,19 +250,19 @@ const Resources: NextPage<ResourcesProps> = (props) => {
 
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card href="#h" target="_blank">
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <Image
                     src="/Logo_sga.png"
                     width={200}
                     height={200}
-                    objectFit={'scale-down'}
+                    objectFit={"scale-down"}
                     alt="Logo DiSSGeA"
                   />
                 </div>
@@ -254,19 +270,19 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             </ion-col>
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card href="http://www.efa.gr/" target="_blank">
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <Image
                     src="/LOGO-EFA-CT-72.jpg"
                     width={200}
                     height={200}
-                    objectFit={'scale-down'}
+                    objectFit={"scale-down"}
                     alt="Logo Ecole Française d'Athènes"
                   />
                 </div>
@@ -276,19 +292,19 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <ion-row>
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card href="http://larhra.ish-lyon.cnrs.fr/" target="_blank">
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <Image
                     src="/larhra-bleu-blanc-full.jpg"
                     width={200}
                     height={200}
-                    objectFit={'scale-down'}
+                    objectFit={"scale-down"}
                     alt="Logo LARHRA"
                   />
                 </div>
@@ -296,19 +312,19 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             </ion-col>
             <ion-col
               size="4"
-              style={{ display: 'flex' }}
+              style={{ display: "flex" }}
               class="ion-justify-content-center"
             >
               <ion-card href="https://kleiolab.ch" target="_blank">
                 <div
-                  style={{ display: 'flex', background: 'white' }}
+                  style={{ display: "flex", background: "white" }}
                   className="ion-justify-content-center"
                 >
                   <Image
                     src="/kleiolab-logo.png"
                     width={200}
                     height={200}
-                    objectFit={'scale-down'}
+                    objectFit={"scale-down"}
                     alt="KleioLab logo"
                   />
                 </div>
@@ -369,9 +385,9 @@ export const getStaticProps: GetStaticProps<ResourcesProps> = async () => {
   return {
     props: {
       head: {
-        headOgDescription: 'Progetto ANR Processetti',
-        headTitle: 'Progetto ANR Processetti',
-        headOgImage: '/socialimage/processetti.jpg',
+        headOgDescription: "Progetto ANR Processetti",
+        headTitle: "Progetto ANR Processetti",
+        headOgImage: "/socialimage/processetti.jpg",
       },
     },
   };
