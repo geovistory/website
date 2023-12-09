@@ -46,7 +46,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           L&apos;implementazione contenutistica della base di dati, condotta nel
           corso di un triennio, ha ampiamente beneficiato della attiva
           collaborazione dell&apos;Archivio Storico del Patriarcato di Venezia
-          che, oltre a agevolare l&apos;accesso alle fonti documentarie, ha messo
+          che, oltre ad aver agevolato l&apos;accesso alle fonti documentarie, ha messo
           a disposizione del <i>team</i> di ricerca anche l&apos;imprescindibile{" "}
           <i>expertise</i> archivistico e paleografico.
         </p>
@@ -62,6 +62,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           infine, di effettuare semplici interrogazioni esplorative e consultare
           i dati raccolti, anche nelle loro molteplici interdipendenze.
         </p>
+        <!-- A Elisa, ragione ultima di ogni mio sforzo. Jacopo -->
       </ion-grid>
       <ion-grid class={styles.section}>
         <h3>Responsabile scientifico</h3>
