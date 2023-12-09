@@ -11,7 +11,9 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
   return (
     <ProcessettiGraficiLayout head={props.head} links={strumentiLinks}>
       <ion-grid>
-      
+      <!-- Latest version -->
+      <!-- A Pico, fulgida lucciola della mia vita -->
+
       <h1>Bibliografia</h1>
         <p className={mainStyles.indent1}>
           Albani Benedetta (2003-2004),{" "}
