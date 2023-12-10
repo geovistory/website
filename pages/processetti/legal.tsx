@@ -29,8 +29,15 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         <p>
           Intellectual property:
           <br />
-          Except where otherwise noted, content on this site is licensed under a
-          Creative Commons Attribution-ShareAlike 4.0 International license .
+          Except where otherwise noted, content on this site is licensed under a{' '}
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Creative Commons Attribution-ShareAlike 4.0 International
+          </a>{' '}
+          license.
         </p>
       </ion-grid>
     </ProcessettiLayout>

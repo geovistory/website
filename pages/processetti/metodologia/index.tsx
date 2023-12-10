@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-import type { GetStaticProps, NextPage } from "next";
-import { GraficiTabelleProps } from "../../../components/project-specific/GraficiTabelleProps";
-import { ProcessettiGraficiLayout } from "../../../components/project-specific/ProcessettiGraficiLayout.component";
-import { metodologiaLinks } from "../../../components/project-specific/ProcessettiNavbar.component";
-import ImageWrapper from "../../../components/elements/ImageWrapper.component";
-import Image from "next/image";
-import img1 from '../../../public/processetti/metodologia/intro-data-model.jpg';
-import img2 from '../../../public/processetti/metodologia/intro-dik-pyramid.png';
-import mainStyles from '../index.module.css'
+import type { GetStaticProps, NextPage } from 'next';
+import { GraficiTabelleProps } from '../../../components/project-specific/GraficiTabelleProps';
+import { ProcessettiGraficiLayout } from '../../../components/project-specific/ProcessettiGraficiLayout.component';
+import { metodologiaLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
+import ImageWrapper from '../../../components/elements/ImageWrapper.component';
+import Image from 'next/image';
+import img1 from '../../../public/processetti/metodologia/intro-dik-pyramid.png';
+import img2 from '../../../public/processetti/metodologia/intro-data-model.jpg';
+import mainStyles from '../index.module.css';
 
 const P: NextPage<GraficiTabelleProps> = (props) => {
   return (
@@ -20,7 +20,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           <i>semantic data</i>, gestire le <i>digital reproduction</i> e attuare
           l’annotazione semantica dei testi, il progetto si è avvalso di
           Geovistory, un
-          <i>virtual research environment</i> esplicitamente progettato per le{" "}
+          <i>virtual research environment</i> esplicitamente progettato per le{' '}
           <i>digital humanities</i> e ideato allo scopo di supportare tutte le
           fasi del <i>cycle of historical knowledge production</i>, secondo una
           prospettiva collaborativa.
@@ -30,7 +30,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           interoperabili e riutilizzabili. Ogni dato è semanticamente definito
           (secondo l’ontologia formale CIDOC-CRM e l’estensione SDHSS),
           pubblicato sotto licenza Creative Commons e collegato a risorse
-          esterne secondo la visione dei <i>linked open data for research</i>{" "}
+          esterne secondo la visione dei <i>linked open data for research</i>{' '}
           (LOD-R) e i principi FAIR (<a href="#2023">Beretta, 2023</a>).
         </p>
         <p>
@@ -58,18 +58,18 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Questo processo si è svolto tenendo fermi due aspetti non
           trascurabili: d’un lato la necessità di una forte atomizzazione dei
           dati, ovvero la loro scomposizione in elementi che corrispondono a
-          &quot;unità minime di conoscenza&quot;, e dall’altro un approccio
-          alle fonti volto all’estrinsecazione dei fatti (
-          <i>factual information</i>), piuttosto che la mera registrazione dei
-          fattoidi (<i>factoid</i>) - vale a dire la produzione di informazioni
-          sulla realtà basata sull’interpretazione critica della fonte
-          attraverso congettura, inferenza, contestualizzazione ecc. (<a href="#2021">Beretta,
-          2021</a>).
+          &quot;unità minime di conoscenza&quot;, e dall’altro un approccio alle
+          fonti volto all’estrinsecazione dei fatti (<i>factual information</i>
+          ), piuttosto che la mera registrazione dei fattoidi (<i>factoid</i>) -
+          vale a dire la produzione di informazioni sulla realtà basata
+          sull’interpretazione critica della fonte attraverso congettura,
+          inferenza, contestualizzazione ecc. (<a href="#2021">Beretta, 2021</a>
+          ).
         </p>
         <p>
           <ImageWrapper
-            legend={"Knowledge Pyramid e Research Flow (F. Beretta, 2020)"}
-            imageUrls={[""]}
+            legend={'Knowledge Pyramid e Research Flow (F. Beretta, 2020)'}
+            imageUrls={['/processetti/metodologia/intro-dik-pyramid.png']}
             dialogChildren={
               <Image
                 src={img1}
@@ -82,7 +82,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
               placeholder="blur"
               width={608}
               height={280}
-              objectFit={"scale-down"}
+              objectFit={'scale-down'}
               alt="Diagramma rappresentante la Knowledge Pyramid e il Research Flow, tratta da F. Beretta, ‘A Challenge for Historical Research: Making Data FAIR Using a Collaborative Ontology Management Environment (OntoME)’, Semantic Web, 12.2 (2021), 279–94 "
             />
           </ImageWrapper>
@@ -94,7 +94,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           <i>event centered data model</i>). Questo specifico modello di dati si
           fonda sulla distinzione tra <i>persistent item</i>, ovvero entità
           persistenti (come ad esempio le persone o i luoghi geografici, ma
-          anche classi più astratte, come le professioni), e le{" "}
+          anche classi più astratte, come le professioni), e le{' '}
           <i>temporal entities</i> (o <i>events</i>), che includono fenomeni
           situati nel tempo in grado di caratterizzare le istanze delle classi
           persistenti (per esempio la nascita di un individuo, la sua
@@ -108,8 +108,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={"Event centered data model"}
-            imageUrls={[""]}
+            legend={'Event centered data model'}
+            imageUrls={['/processetti/metodologia/intro-data-model.jpg']}
             dialogChildren={
               <Image
                 src={img2}
@@ -121,8 +121,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
               src={img2}
               placeholder="blur"
               width={608}
-              height={280}
-              objectFit={"scale-down"}
+              height={460}
+              objectFit={'scale-down'}
               alt="Schematizzazione del Event centered data model tratta dalla documentazione di KleioLab"
             />
           </ImageWrapper>
@@ -150,6 +150,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Per una più analitica descrizione della metodologia e della semantica
           sottesa alla definizione infrastrutturale di Geovistory si vedano:
         </p>
+        <p></p>
         <p id="2013" className={mainStyles.indent1}>
           Beretta Francesco, Butez Charlotte (2013), “Un SIG Collaboratif Pour
           La Recherche Historique”, in “Géomatique Expert”, 91, pp. 30-35 / 92,
@@ -194,9 +195,9 @@ export const getStaticProps: GetStaticProps<GraficiTabelleProps> = async () => {
   return {
     props: {
       head: {
-        headOgDescription: "Metodologia > Introduzione",
-        headTitle: "Metodologia > Introduzione",
-        headOgImage: "/socialimage/processetti.jpg",
+        headOgDescription: 'Metodologia > Introduzione',
+        headTitle: 'Metodologia > Introduzione',
+        headOgImage: '/socialimage/processetti.jpg',
       },
     },
   };

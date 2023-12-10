@@ -41,6 +41,8 @@ function ssr(props: SSRProps) {
     <geov-entity
       sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
       entity-id={props.entityId}
+      uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
+      uri-replace={process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}
     >
       <div slot="body-end" className="section">
         <ion-grid fixed={true}>
@@ -54,7 +56,8 @@ function ssr(props: SSRProps) {
                 href={`http://geovistory.org/resource/${props.entityId}`}
               >
                 <ion-label>
-                  <p>URI: http://geovistory.org/resource/{props.entityId}</p>
+                  <p>URI</p>
+                  http://geovistory.org/resource/{props.entityId}
                 </ion-label>
               </ion-item>
             </ion-list>

@@ -1,3 +1,4 @@
+import { QueryTab } from '@geovistory/design-system-web/loader';
 import { ProjectNavbarProps } from '../components/layouts/ProjectNavbar.component';
 
 export interface ProjectParams {
@@ -25,11 +26,91 @@ export interface ProjectParams {
     sparklisLinkEnabled: boolean;
 
     headOgImage: string;
+
+    sparqlQueryTabs?: QueryTab[]
 }
 
 
 export const projectsParams: Array<ProjectParams> = [
+    // Academic Careers
+    {
+        geovID: 1483135,
+        geovName: 'Academic Education & Careers',
 
+        preferredClasses: ['c21', 'c859', 'c861', 'c860', 'c850', 'c68'],
+
+        featured: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Academic Education & Careers',
+        shortName: 'Academic Education & Careers',
+        description: "An open collaborative project of the Geovistory community dedicated to the history of science and universities.",
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/academic-careers.jpg',
+        sparqlQueryTabs: [
+            {
+                name: 'Birth Places',
+                sparqlEndpoint: 'https://sparql.geovistory.org/api_v1_project_1483135',
+                selectedPlugin: 'mapCircles',
+                query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Birth place" as ?type) ?link
+WHERE {
+
+    # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
+    ?s ontome:p147i/ontome:p148 ?place.
+
+    # Geographical Place -label-> label
+    ?s rdfs:label ?label.
+
+    # Geographical Place -is place of-> Birth
+    ?s ontome:p7i ?sv.
+
+    # Extract lat and long from WKT
+    bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
+    bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
+    bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+
+    # Append the project query param to the URI
+    bind(concat(str(?s), "?p=1483135") as ?link )
+}
+GROUP BY ?label ?long ?lat ?type ?link
+                `
+            },
+            {
+                name: 'Selection of triples',
+                sparqlEndpoint: `https://sparql.geovistory.org/api_v1_project_1483135`,
+                selectedPlugin: 'table',
+                query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX geov: <http://geovistory.org/resource/>
+
+SELECT ?subject ?predicate ?object
+WHERE {
+?subject ?predicate ?object .
+}
+LIMIT 10`,
+            }
+        ]
+
+    },
     // AMPI
     {
         geovID: 924033,
@@ -108,8 +189,88 @@ export const projectsParams: Array<ProjectParams> = [
         sparklisLinkEnabled: true,
         teiLinkEnabled: false,
 
-        headOgImage: '/socialimage/maritime-history.jpg'
+        headOgImage: '/socialimage/maritime-history.jpg',
+        sparqlQueryTabs: [
+            {
+                name: 'Ship Voyages',
+                sparqlEndpoint: 'https://sparql.geovistory.org/api_v1_project_84760',
+                selectedPlugin: 'mapCircles',
+                query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+SELECT *
+WHERE {
+    {
+    SELECT ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Arrival Place" as ?type) ?link
+    WHERE {
+
+    # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
+    ?s ontome:p147i/ontome:p148 ?place.
+
+    # Geographical Place -label-> label
+    ?s rdfs:label ?label.
+
+    # Geographical Place -is arrival place of-> Ship Voyage
+    ?s <https://ontome.net/ontology/p1336i> ?sv.
+
+    # Extract lat and long from WKT
+    bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
+    bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
+    bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+
+    # Append the project query param to the URI
+    bind(concat(str(?s), "?p=84760") as ?link )
+    }
+    GROUP BY ?label ?long ?lat ?type ?link
+    }
+    UNION
+    {
+    SELECT ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Departure Place" as ?type) ?link
+    WHERE {
+
+    # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
+    ?s ontome:p147i/ontome:p148 ?place.
+
+    # Geographical Place -label-> label
+    ?s rdfs:label ?label.
+
+    # Geographical Place -is arrival place of-> Ship Voyage
+    ?s <https://ontome.net/ontology/p1335i> ?sv.
+
+    # Extract lat and long from WKT
+    bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
+    bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
+    bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+
+    # Append the project query param to the URI
+    bind(concat(str(?s), "?p=84760") as ?link )
+    }
+    GROUP BY ?label ?long ?lat ?type ?link
+    }
+}`
+            },
+            {
+                name: 'Selection of triples',
+                sparqlEndpoint: `https://sparql.geovistory.org/api_v1_project_1483135`,
+                selectedPlugin: 'table',
+                query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX geov: <http://geovistory.org/resource/>
+
+SELECT ?subject ?predicate ?object
+WHERE {
+    ?subject ?predicate ?object .
+}
+LIMIT 10`,
+            }
+        ]
     },
 
 
@@ -218,32 +379,7 @@ export const projectsParams: Array<ProjectParams> = [
         headOgImage: '/socialimage/softpowarts.jpg'
 
     },
-    // Academic Careers
-    {
-        geovID: 1483135,
-        geovName: 'Academic Education & Careers',
 
-        preferredClasses: ['c21', 'c859', 'c861', 'c860', 'c850', 'c68'],
-
-        featured: true,
-
-        teiURL: '',
-        sparqlURL: '',
-
-        fullName: 'Academic Education & Careers',
-        shortName: 'Academic Education & Careers',
-        description: "An open collaborative project of the Geovistory community dedicated to the history of science and universities.",
-
-        hasPage: true,
-        sparqlLinkEnabled: true,
-        searchLinkEnabled: true,
-        ontoExplorerLinkEnabled: true,
-        sparklisLinkEnabled: true,
-        teiLinkEnabled: false,
-
-        headOgImage: '/socialimage/academic-careers.jpg'
-
-    },
     // Roman Senate
     {
         geovID: 941447,
@@ -269,7 +405,33 @@ export const projectsParams: Array<ProjectParams> = [
 
         headOgImage: '/socialimage/roman-senate.jpg'
 
-    }
+    },
+    // Switzerland & Beyond
+    {
+        geovID: 153,
+        geovName: 'Switzerland and Beyond',
+
+        preferredClasses: ['c363', 'c21'],
+
+        featured: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Switzerland and Beyond',
+        shortName: 'Switzerland and Beyond',
+        description: 'Linking Historical People, Places, and Organizations.',
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/switzerland-and-beyond.jpeg'
+
+    },
 
 
 ]

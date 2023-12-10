@@ -20,8 +20,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         target="_blank"
       >
         <ion-card-header>
-          <ion-card-subtitle>User Manual</ion-card-subtitle>
           <ion-card-title>Toolbox Documentation</ion-card-title>
+          <ion-card-subtitle>User Manual</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
@@ -36,8 +36,8 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         target="_blank"
       >
         <ion-card-header>
-          <ion-card-subtitle>Developer Documentation</ion-card-subtitle>
           <ion-card-title>Webcomponents</ion-card-title>
+          <ion-card-subtitle>Developer Documentation</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
@@ -53,13 +53,29 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         target="_blank"
       >
         <ion-card-header>
-          <ion-card-subtitle>Data API</ion-card-subtitle>
           <ion-card-title>URI Dereferencing</ion-card-title>
+          <ion-card-subtitle>Data API</ion-card-subtitle>
         </ion-card-header>
 
         <ion-card-content>
           Geovistory entities have URIs. Learn here how to obtain different
           representations of the entities in HTML and RDF.
+        </ion-card-content>
+      </ion-card>
+      <br />
+      <ion-card
+        class="restricted-width"
+        href="https://github.com/geovistory"
+        target="_blank"
+      >
+        <ion-card-header>
+          <ion-card-title>Open Source</ion-card-title>
+          <ion-card-subtitle>Source Code</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          Geovistory is developed and maintained by the GitHub Organization
+          Geovistory. Click to open the GitHub page.
         </ion-card-content>
       </ion-card>
     </DefaultPage>
