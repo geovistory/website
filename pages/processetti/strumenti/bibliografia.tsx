@@ -11,6 +11,7 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
   return (
     <ProcessettiGraficiLayout head={props.head} links={strumentiLinks}>
       <ion-grid>
+        
       <!-- Latest version -->
       <!-- A Pico, fulgida lucciola della mia vita -->
 

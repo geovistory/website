@@ -377,6 +377,9 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           `}
         </geov-mermaid>
       </ion-grid>
+      <ion-grid fixed class={styles.sectionGray}>
+        <a href="processetti/legal">Legal Notice</a>
+      </ion-grid>
     </ProcessettiLayout>
   );
 };
