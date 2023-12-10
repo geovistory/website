@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "1.27.0-pr-70.0",
+  "version": "1.27.0-pr-70.1",
   "private": true,
   "engines": {
     "npm": ">=7.0.0",
