@@ -12,8 +12,8 @@ const Bibliografia: NextPage<BibliografiaProps> = (props) => {
     <ProcessettiGraficiLayout head={props.head} links={strumentiLinks}>
       <ion-grid>
         
-      <!-- Latest version -->
-      <!-- A Pico, fulgida lucciola della mia vita -->
+      {/* <!-- Latest version -->
+      <!-- A Pico, fulgida lucciola della mia vita --> */}
 
       <h1>Bibliografia</h1>
         <p className={mainStyles.indent1}>
