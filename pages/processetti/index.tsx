@@ -62,7 +62,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           infine, di effettuare semplici interrogazioni esplorative e consultare
           i dati raccolti, anche nelle loro molteplici interdipendenze.
         </p>
-        <!-- A Elisa, ragione ultima di ogni mio sforzo. Jacopo -->
+       {/* A Elisa, ragione ultima di ogni mio sforzo. Jacopo */}
       </ion-grid>
       <ion-grid class={styles.section}>
         <h3>Responsabile scientifico</h3>
