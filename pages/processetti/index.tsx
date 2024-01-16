@@ -331,6 +331,26 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                 </div>
               </ion-card>
             </ion-col>
+            <ion-col
+          	size="4"
+          	style={{ display: "flex" }}
+          	class="ion-justify-content-center"
+        	>
+          	<ion-card href="http://www.archiviostoricodelpatriarcatodivenezia.it/" target="_blank">
+            	<div
+              	style={{ display: "flex", background: "white" }}
+              	className="ion-justify-content-center"
+            	>
+              	<Image
+                	src="/Logo_ASPV.png"
+                	width={200}
+                	height={200}
+                	objectFit={"scale-down"}
+                	alt="Logo Archivio storico del Patriarcato di Venezia"
+              	/>
+            	</div>
+          	</ion-card>
+        	</ion-col>
           </ion-row>
         </div>
       </ion-grid>
