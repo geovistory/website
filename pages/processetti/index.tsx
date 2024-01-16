@@ -364,12 +364,12 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               }%%
               timeline
                 2019: Fornitura della piattaforma Geovistory da parte della società svizzera Kleiolab
-                2020: Spoglio archivistico presso l’Archivio storico patriarcale di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
+                2020: Spoglio archivistico presso l’Archivio storico del Patriarcato di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
                     : Reclutamento di tre studiosi (J. Cossu, F. Zugno, D. Drago) per una collaborazione della durata di tre anni Contratto post-doc per Teresa Bernardi (Università di Padova, Dipartimento DiSSGeA, progetto di eccellenza "Mobility & Humanities")
-                2021: Spoglio archivistico presso l’Archivio storico patriarcale di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
+                2021: Spoglio archivistico presso l’Archivio storico del Patriarcato di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
                     : Missioni di ricerca presso gli archivi  di Anna Athanasouli (Università di Creta), Katerina Konstantinidou (National and Kapodistrian University of Athens) e Katerina Korrè (Università di Corfu).
                     : Giornata di studi Contrôle pré-matrimonial, bigamie et mariages mixtes en Europe orientale, 10 t 11 settembre 2021 all’Università nazionale capodistriana di Atene e all’École française d’Athènes.
-                2022: Spoglio archivistico presso l’Archivio storico patriarcale di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
+                2022: Spoglio archivistico presso l’Archivio storico del Patriarcato di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
                     : Convegno Disciplinare il matrimonio, tracciare la mobilità, riconoscere le relazioni.
                     : Esami prematrimoniali nel mondo cattolico (XVI-XVIII secolo), organizzato all'Università di Padova, 27-28 ottobre 2022.
                 2023: Analisi dei dati di Jacopo Cossu.
