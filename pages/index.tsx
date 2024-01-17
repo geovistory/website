@@ -65,7 +65,7 @@ const Home: NextPage<HomeProps> = (props) => {
                       }}
                     ></ion-searchbar>
                     <h3 className={styles.subheading + ' ion-hide-md-down'}>
-                      Featured Projects
+                      Featured Projects Hello world
                     </h3>
                   </ion-col>
                   <ion-col>
