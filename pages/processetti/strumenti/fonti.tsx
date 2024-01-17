@@ -18,7 +18,7 @@ const Fonti: NextPage<FontiProps> = (props) => {
         <h1>Fonti</h1>
         <p>
           Archivio storico del Patriarcato di Venezia,{' '}
-          <i>Curia patriarcale di Venezia, Sezione antica</i>
+          <i>Curia patriarcale di Venezia. Sezione antica</i>,
         </p>
         <ul className="restricted-width">
           <li>
@@ -37,7 +37,7 @@ const Fonti: NextPage<FontiProps> = (props) => {
               target="_blank"
               rel="noreferrer"
             >
-              Filcea Causarum{' '}
+              Filciae causarum{' '}
             </a>
           </li>
 
@@ -89,9 +89,9 @@ const Fonti: NextPage<FontiProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
-              'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
-            }
+            legend={[
+              "ASPV, ", <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, ", vol. 2, cc. n.n., ", <i>r</i>
+            ]}
             imageUrls={['/processetti/sources/img1.jpg']}
             dialogChildren={
               <Image
@@ -113,9 +113,9 @@ const Fonti: NextPage<FontiProps> = (props) => {
 
         <p>
           <ImageWrapper
-            legend={
-              'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
-            }
+            legend={[
+              "ASPV, ", <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, ", vol. 2, cc. n.n., ", <i>r</i>
+            ]}
             imageUrls={['/processetti/sources/img2.jpg']}
             dialogChildren={
               <Image
@@ -136,9 +136,9 @@ const Fonti: NextPage<FontiProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
-              'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
-            }
+            legend={[
+              "ASPV, ", <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, ", vol. 2, cc. n.n.,", <i>r</i>
+            ]}
             imageUrls={['/processetti/sources/img3.jpg']}
             dialogChildren={
               <Image
