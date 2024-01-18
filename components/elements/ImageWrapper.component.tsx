@@ -78,7 +78,9 @@ const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
       <ion-modal class={styles.modal} ref={modalRef}>
         <ion-header>
           <ion-toolbar color="primary">
-            <ion-title>{legend}</ion-title>
+            <ion-title>
+              <span dangerouslySetInnerHTML={{ __html: legend ?? "" }}></span>
+            </ion-title>
             <ion-buttons slot="end">
               <ion-button
                 title="download"
@@ -138,7 +140,7 @@ const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
               color: 'var(--ion-color-step-500)',
             }}
           >
-            {legend}
+            <span dangerouslySetInnerHTML={{ __html: legend }}></span>
           </ion-label>
         </div>
       )}
