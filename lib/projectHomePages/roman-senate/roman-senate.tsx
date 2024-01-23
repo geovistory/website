@@ -32,12 +32,12 @@ const RomanSenate_component: NextPage<ProjectPageProps> = (props) => {
             enterkeyhint="enter"
             placeholder="Search and hit enter…"
             ref={(el: any) => {
-              el?.getInputElement().then(() => {
-                setTimeout(() => {
+              setTimeout(() => {
+                el?.getInputElement().then(() => {
                   console.log('focus on ', el);
                   el?.setFocus();
-                }, 300);
-              });
+                });
+              }, 300);
               el?.addEventListener('keypress', (event: KeyboardEvent) => {
                 if (event.key === 'Enter') {
                   el?.getInputElement().then((inputEl: HTMLInputElement) => {
