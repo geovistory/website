@@ -432,6 +432,32 @@ LIMIT 10`,
         headOgImage: '/socialimage/switzerland-and-beyond.jpeg'
 
     },
+    // Stadt.Geschichte.Basel Band 6
+    {
+        geovID: 1719422,
+        geovName: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine',
+
+        preferredClasses: ['c363', 'c21'],
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine',
+        shortName: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine',
+        description: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine.',
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/switzerland-and-beyond.jpeg'
+
+    },
 
 
 ]
