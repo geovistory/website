@@ -458,6 +458,32 @@ LIMIT 10`,
         headOgImage: '/socialimage/switzerland-and-beyond.jpeg'
 
     },
+    // Student Internationalism
+    {
+        geovID: 11172552,
+        geovName: 'From Student Internationalism to Erasmus',
+
+        preferredClasses: [],
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'From Student Internationalism to Erasmus',
+        shortName: 'From Student Internationalism to Erasmus',
+        description: 'From Student Internationalism to Erasmus',
+
+        hasPage: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/student-internationalism.jpg'
+
+    },
 
 
 ]

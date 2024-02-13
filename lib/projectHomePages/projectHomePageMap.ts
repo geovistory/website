@@ -10,6 +10,7 @@ import Softpowarts_component from './softpowarts/softpowarts';
 import AcademicCareers_component from './academic-careers/academic-careers';
 import RomanSenate_component from './roman-senate/roman-senate';
 import SwitzerlandAndBeyond_component from './switzerland-and-beyond/switzerland-and-beyond';
+import StudentInternationalism_component from './student-internationalism/student-internationalism';
 
 
 interface Map {
@@ -41,6 +42,8 @@ export const projectHomePageMap: Map = {
     941447: RomanSenate_component,
 
     // Switzerland and beyond
-    153: SwitzerlandAndBeyond_component
+    153: SwitzerlandAndBeyond_component,
+    
+    11172552: StudentInternationalism_component
 
 };
