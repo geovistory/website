@@ -37,7 +37,7 @@
 }
 
 .bannerImage {
-    object-position: 40% 20%;
+    object-position: 50% 50%;
 }
 
 .title {
@@ -62,7 +62,7 @@
     }
 
     .bannerImage {
-        object-position: 100% 20%;
+        object-position: 50% 50%;
     }
 }
 
@@ -77,7 +77,7 @@
     }
 
     .bannerImage {
-        object-position: 100% 20%;
+        object-position: 50% 50%;
     }
 }
 
@@ -92,7 +92,7 @@
     }
 
     .bannerImage {
-        object-position: 100% 20%;
+        object-position: 50% 50%;
     }
 }
 
@@ -107,6 +107,6 @@
     }
 
     .bannerImage {
-        object-position: 100% 20%;
+        object-position: 50% 50%;
     }
 }

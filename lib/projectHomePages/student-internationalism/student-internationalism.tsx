@@ -117,7 +117,7 @@ const StudentInternationalism_component: NextPage<ProjectPageProps> = (
           <div className={styles.partners}>
             <ion-row>
               <ion-col
-                size="6"
+                size="4"
                 style={{ display: 'flex' }}
                 class="ion-justify-content-center"
               >
@@ -131,7 +131,7 @@ const StudentInternationalism_component: NextPage<ProjectPageProps> = (
                 </ion-card>
               </ion-col>
               <ion-col
-                size="6"
+                size="4"
                 style={{ display: 'flex' }}
                 class="ion-justify-content-center"
               >
@@ -147,7 +147,7 @@ const StudentInternationalism_component: NextPage<ProjectPageProps> = (
             </ion-row>
             <ion-row>
               <ion-col
-                size="6"
+                size="4"
                 style={{ display: 'flex' }}
                 class="ion-justify-content-center"
               >
@@ -161,7 +161,7 @@ const StudentInternationalism_component: NextPage<ProjectPageProps> = (
                 </ion-card>
               </ion-col>
               <ion-col
-                size="6"
+                size="4"
                 style={{ display: 'flex' }}
                 class="ion-justify-content-center"
               >

@@ -95,7 +95,7 @@ const UrbanBiographies_component: NextPage<ProjectPageProps> = (props) => {
           <div className={styles.partners}>
             <ion-row>
               <ion-col
-                size="6"
+                size="4"
                 style={{ display: 'flex' }}
                 class="ion-justify-content-center"
               >
@@ -109,7 +109,7 @@ const UrbanBiographies_component: NextPage<ProjectPageProps> = (props) => {
                 </ion-card>
               </ion-col>
               <ion-col
-                size="6"
+                size="4"
                 style={{ display: 'flex' }}
                 class="ion-justify-content-center"
               >
