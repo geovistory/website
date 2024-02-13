@@ -485,7 +485,32 @@ LIMIT 10`,
 
     },
 
+    // Urban Biographies
+    {
+        geovID: 6619613,
+        geovName: 'Urban Biographies of the Roman and Late Antique Worlds',
 
+        preferredClasses: [],
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Urban Biographies of the Roman and Late Antique Worlds',
+        shortName: 'Urban Biographies of the Roman and Late Antique Worlds',
+        description: 'Urban Biographies of the Roman and Late Antique Worlds',
+
+        hasPage: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/urban-biographies.jpg'
+
+    },
 ]
 
 
