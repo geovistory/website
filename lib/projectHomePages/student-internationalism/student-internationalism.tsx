@@ -74,6 +74,17 @@ const StudentInternationalism_component: NextPage<ProjectPageProps> = (
               project website
             </a>{' '}
             of the University of Fribourg.
+          </p>{' '}
+          <p>
+            The project works with the{' '}
+            <a
+              href="https://toolbox.geovistory.org"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Geovistory Toolbox
+            </a>{' '}
+            to create, curate and publish its research data.
           </p>
         </ion-grid>
         <ion-grid class={styles.section}>

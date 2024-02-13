@@ -11,6 +11,7 @@ import { ProjectPageProps } from '../../../pages/project/[geov_id]';
 import bannerImg from '../../../public/urban-biographies.jpg';
 import styles from './urban-biographies.module.css';
 import { UnibasLogo200 } from '../../../components/logos/UnibasLogo200';
+import { KleiolabLogo200 } from '../../../components/logos/KleiolabLogo200';
 
 const UrbanBiographies_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
@@ -27,9 +28,11 @@ const UrbanBiographies_component: NextPage<ProjectPageProps> = (props) => {
             layout="fill"
             objectFit={'cover'}
           />
+          <h1 className={styles.title}>
+            <div className={styles.titleLine1}>{props.params.fullName}</div>
+          </h1>
         </div>
         <ion-grid fixed class="ion-padding">
-          <h1>{props.params.fullName}</h1>
           <p className="lead">
             Antinoopolis and Heracleopolis in Egypt, c. 100- c. 650 CE.
           </p>
@@ -58,6 +61,7 @@ const UrbanBiographies_component: NextPage<ProjectPageProps> = (props) => {
             series of workshops and international conferences.
           </p>
           <p>
+            {' '}
             Find more information on the{' '}
             <a
               href="https://romegyptcities.philhist.unibas.ch/en"
@@ -68,6 +72,18 @@ const UrbanBiographies_component: NextPage<ProjectPageProps> = (props) => {
             </a>{' '}
             of the University of Basel.
           </p>
+          <p>
+            The project works with the{' '}
+            <a
+              href="https://toolbox.geovistory.org"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Geovistory Toolbox
+            </a>{' '}
+            to create, curate and publish its research data.{' '}
+          </p>
+    
         </ion-grid>
         <ion-grid class={styles.section}>
           <h3>Involved People</h3>
@@ -119,6 +135,20 @@ const UrbanBiographies_component: NextPage<ProjectPageProps> = (props) => {
                     className="ion-justify-content-center"
                   >
                     <UnibasLogo200 />
+                  </div>
+                </ion-card>
+              </ion-col>
+              <ion-col
+                size="4"
+                style={{ display: 'flex' }}
+                class="ion-justify-content-center"
+              >
+                <ion-card href="https://www.kleiolab.ch" target="_blank">
+                  <div
+                    style={{ display: 'flex', background: 'white' }}
+                    className="ion-justify-content-center"
+                  >
+                    <KleiolabLogo200 />
                   </div>
                 </ion-card>
               </ion-col>

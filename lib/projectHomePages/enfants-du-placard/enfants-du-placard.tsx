@@ -49,15 +49,26 @@ const EnfantsDuPlacard_component: NextPage<ProjectPageProps> = (props) => {
             depuis les années 1970, ainsi que sur les sources orales.
           </p>
           <p>
-            Find more information on the{' '}
+            Plus d&apos;informations sur{' '}
             <a
               href="https://www.unine.ch/histoire/home/recherche-1/une-socio-histoire-des-gens-qui.html"
               target="_blank"
               rel="noreferrer"
             >
-              project website
+              le site du projet
             </a>{' '}
-            of the University of Neuchâtel.
+            de l&apos;Université de Neuchâtel.{' '}
+          </p>
+          <p>
+            Le projet travaille avec{' '}
+            <a
+              href="https://toolbox.geovistory.org"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Geovistory Toolbox
+            </a>{' '}
+            pour créer, gérer et publier ses données de recherche. Plus
           </p>
         </ion-grid>
         <ion-grid class={styles.section}>
@@ -143,25 +154,6 @@ const EnfantsDuPlacard_component: NextPage<ProjectPageProps> = (props) => {
                 </ion-card>
               </ion-col>
             </ion-row>
-          </div>
-        </ion-grid>
-        <ion-grid class={styles.section}>
-          <div className="restricted-width">
-            <ion-label>
-              <small>
-                <a
-                  href="https://digitalcollections.nypl.org/items/510d47e0-1069-a3d9-e040-e00a18064a99"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Photo
-                </a>
-                : Rare Book Division, The New York Public Library. &quot;
-                Antinoë [Antinoöpolis]. Vue des ruines de la ville, prise du
-                côté du sud-ouest.&quot;{' '}
-                <i>The New York Public Library Digital Collections</i>. 1817.
-              </small>
-            </ion-label>
           </div>
         </ion-grid>
       </ProjectPageLayout>
