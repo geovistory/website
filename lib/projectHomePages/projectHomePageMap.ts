@@ -12,6 +12,7 @@ import RomanSenate_component from './roman-senate/roman-senate';
 import SwitzerlandAndBeyond_component from './switzerland-and-beyond/switzerland-and-beyond';
 import StudentInternationalism_component from './student-internationalism/student-internationalism';
 import UrbanBiographies_component from './urban-biographies/urban-biographies';
+import EnfantsDuPlacard_component from './enfants-du-placard/enfants-du-placard';
 
 
 interface Map {
@@ -47,5 +48,7 @@ export const projectHomePageMap: Map = {
     
     11172552: StudentInternationalism_component,
 
-    6619613: UrbanBiographies_component
+    6619613: UrbanBiographies_component,
+    
+    1458522: EnfantsDuPlacard_component
 };

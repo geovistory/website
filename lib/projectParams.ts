@@ -511,6 +511,33 @@ LIMIT 10`,
         headOgImage: '/socialimage/urban-biographies.jpg'
 
     },
+
+    // Enfants du placard
+    {
+        geovID: 1458522,
+        geovName: 'Les « enfants du placard »',
+
+        preferredClasses: [],
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Les « enfants du placard »',
+        shortName: 'Les « enfants du placard »',
+        description: 'Les « enfants du placard »',
+
+        hasPage: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/enfants-du-placard.jpg'
+
+    },
 ]
 
 
