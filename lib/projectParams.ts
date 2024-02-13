@@ -458,8 +458,86 @@ LIMIT 10`,
         headOgImage: '/socialimage/switzerland-and-beyond.jpeg'
 
     },
+    // Student Internationalism
+    {
+        geovID: 11172552,
+        geovName: 'From Student Internationalism to Erasmus',
 
+        preferredClasses: [],
 
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'From Student Internationalism to Erasmus',
+        shortName: 'From Student Internationalism to Erasmus',
+        description: 'From Student Internationalism to Erasmus',
+
+        hasPage: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/student-internationalism.jpg'
+
+    },
+
+    // Urban Biographies
+    {
+        geovID: 6619613,
+        geovName: 'Urban Biographies of the Roman and Late Antique Worlds',
+
+        preferredClasses: [],
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Urban Biographies of the Roman and Late Antique Worlds',
+        shortName: 'Urban Biographies of the Roman and Late Antique Worlds',
+        description: 'Urban Biographies of the Roman and Late Antique Worlds',
+
+        hasPage: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/urban-biographies.jpg'
+
+    },
+
+    // Enfants du placard
+    {
+        geovID: 1458522,
+        geovName: 'Les « enfants du placard »',
+
+        preferredClasses: [],
+
+        featured: false,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Les « enfants du placard »',
+        shortName: 'Les « enfants du placard »',
+        description: 'Les « enfants du placard »',
+
+        hasPage: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/enfants-du-placard.jpg'
+
+    },
 ]
 
 
