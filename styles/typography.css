@@ -170,6 +170,7 @@ h5+h6 {
 }
 
 pre:not(.CodeMirror-line),
+figcaption,
 .restricted-width {
   max-width: 38rem;
   margin: auto;
@@ -186,4 +187,17 @@ code {
   border-left: 4px solid var(--gv-color-background-code);
   border-right: 4px solid var(--gv-color-background-code);
   border-radius: 3px;
+}
+
+figure.jumbo {
+  margin: 0;
+}
+
+.jumbo figcaption {
+  text-align: center;
+}
+
+figcaption {
+  padding-top: .5rem;
+  color: var(--ion-color-step-600);
 }

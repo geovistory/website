@@ -80,6 +80,10 @@
     top: 400px;
     z-index: 1;
     display: flex;
+    flex-direction: column;
+  }
+  .featuredProjectsContainer swiper-container{
+    width: 100%;
   }
 
   .projectCardContainer {
@@ -126,6 +130,7 @@
     height: 500px;
     max-width: 450px;
   }
+
   .subheading {
     position: absolute;
     bottom: 70px;
@@ -143,5 +148,4 @@
 }
 
 
-@media screen and (min-width: 1460px) {
-}
+@media screen and (min-width: 1460px) {}

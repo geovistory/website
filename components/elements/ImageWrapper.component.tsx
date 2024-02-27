@@ -1,32 +1,37 @@
 import { createAnimation } from '@ionic/core';
 import { closeOutline, downloadOutline, expandOutline } from 'ionicons/icons';
-import React, {
+import {
   FunctionComponent,
   LegacyRef,
   ReactNode,
   useEffect,
   useRef,
-  useState,
 } from 'react';
 import styles from './ImageWrapper.module.css';
-interface ImageWithDownloadProps {
-  imageUrls: string[];
-  legend?: string;
+
+export interface ImageWrapperProps {
+  imageUrls?: string[];
+  caption?: string | ReactNode;
+  noDialog?: boolean;
   dialogChildren?: ReactNode;
   noDialogPadding?: boolean;
+  className?: string | undefined;
+  height?: string;
 }
 
-const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
+export const ImageWrapper: FunctionComponent<ImageWrapperProps> = ({
   imageUrls,
-  legend,
+  caption,
   children,
   dialogChildren,
+  noDialog,
   noDialogPadding,
+  height,
 }) => {
   // const [isFullscreen, setIsFullscreen] = useState(false);
   const modalRef: LegacyRef<HTMLIonModalElement> = useRef(null);
   const handleDownload = () => {
-    imageUrls.forEach((imageUrl) => {
+    imageUrls?.forEach((imageUrl) => {
       // Create a fake anchor element to trigger the download
       const link = document.createElement('a');
       link.href = imageUrl;
@@ -67,24 +72,64 @@ const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
         (modalRef.current.leaveAnimation = leaveAnimation);
   });
   const openModal = () => {
-    modalRef.current?.present();
+    if (!noDialog) modalRef.current?.present();
   };
   const closeModal = () => {
     modalRef.current?.dismiss();
   };
 
   return (
-    <div style={{ marginBottom: '2rem' }}>
+    <figure
+      style={{
+        flex: '1 0 auto',
+        margin: '0 0 2rem 0',
+        position: 'relative',
+        height,
+      }}
+    >
+      <div
+        style={{
+          position: 'relative',
+          cursor: noDialog ? 'unset' : 'pointer',
+          height,
+        }}
+        onClick={openModal}
+      >
+        {children}
+        {!noDialog && (
+          <div
+            style={{
+              position: 'absolute',
+              top: '0',
+              right: '0',
+            }}
+          >
+            <ion-button
+              color="primary"
+              fill="clear"
+              size="small"
+              onClick={openModal}
+            >
+              <ion-icon slot="icon-only" icon={expandOutline}></ion-icon>
+            </ion-button>
+          </div>
+        )}
+      </div>
+      {caption && renderCaption(caption)}
+
       <ion-modal class={styles.modal} ref={modalRef}>
         <ion-header>
           <ion-toolbar color="primary">
-            <ion-title>{legend}</ion-title>
+            <ion-title>{caption}</ion-title>
             <ion-buttons slot="end">
               <ion-button
                 title="download"
                 color=""
                 fill="clear"
-                onClick={handleDownload}
+                onClick={() => {
+                  alert();
+                  handleDownload();
+                }}
               >
                 <ion-icon slot="icon-only" icon={downloadOutline}></ion-icon>
               </ion-button>
@@ -92,7 +137,7 @@ const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
                 title="close"
                 color=""
                 fill="clear"
-                onClick={closeModal}
+                onClick={() => closeModal()}
               >
                 <ion-icon slot="icon-only" icon={closeOutline}></ion-icon>
               </ion-button>
@@ -103,47 +148,28 @@ const ImageWrapper: FunctionComponent<ImageWithDownloadProps> = ({
           {dialogChildren ?? children}
         </ion-content>
       </ion-modal>
-
-      <div
-        style={{ position: 'relative', cursor: 'pointer' }}
-        onClick={openModal}
-      >
-        {children}
-        <div
-          style={{
-            position: 'absolute',
-            top: '0',
-            right: '0',
-          }}
-        >
-          <ion-button
-            color="primary"
-            fill="clear"
-            size="small"
-            onClick={openModal}
-          >
-            <ion-icon slot="icon-only" icon={expandOutline}></ion-icon>
-          </ion-button>
-        </div>
-      </div>
-      {legend && (
-        <div
-          style={{
-            paddingTop: '0.5rem',
-            textAlign: 'center',
-          }}
-        >
-          <ion-label
-            style={{
-              color: 'var(--ion-color-step-500)',
-            }}
-          >
-            {legend}
-          </ion-label>
-        </div>
-      )}
-    </div>
+    </figure>
   );
 };
 
 export default ImageWrapper;
+function renderCaption(caption: string | ReactNode): ReactNode {
+  if (typeof caption === 'string')
+    return (
+      <figcaption
+        style={{
+          paddingTop: '0.5rem',
+          textAlign: 'center',
+        }}
+      >
+        <ion-label
+          style={{
+            color: 'var(--ion-color-step-500)',
+          }}
+        >
+          {caption}
+        </ion-label>
+      </figcaption>
+    );
+  else return caption;
+}

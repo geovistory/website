@@ -11,6 +11,7 @@ import styles from './index.module.css';
 import { Components } from '@geovistory/design-system-web/loader';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 export interface HomeProps {
   defaultPage: DefaultPageProps;
   featuredProjects: ProjectParams[];
@@ -19,6 +20,11 @@ register();
 const Home: NextPage<HomeProps> = (props) => {
   const router = useRouter();
 
+  const moreProjectsButton = (
+    <ion-button fill="clear" href="/projects">
+      More projects…
+    </ion-button>
+  );
   return (
     <DefaultPage
       {...props.defaultPage}
@@ -93,7 +99,6 @@ const Home: NextPage<HomeProps> = (props) => {
                 </ion-row>
               </ion-grid>
             </div>
-
             <div className={'ion-hide-md-up'}>
               <h3 className={styles.subheading}>Featured Projects</h3>
 
@@ -111,6 +116,7 @@ const Home: NextPage<HomeProps> = (props) => {
                   )}
                 </ion-row>
               </ion-grid>
+              {moreProjectsButton}
             </div>
           </ion-grid>{' '}
           <div
@@ -132,6 +138,7 @@ const Home: NextPage<HomeProps> = (props) => {
                 </swiper-slide>
               ))}
             </swiper-container>
+            <ion-grid fixed={true}>{moreProjectsButton}</ion-grid>
           </div>
         </div>
       }

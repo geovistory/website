@@ -13,6 +13,7 @@ import SwitzerlandAndBeyond_component from './switzerland-and-beyond/switzerland
 import StudentInternationalism_component from './student-internationalism/student-internationalism';
 import UrbanBiographies_component from './urban-biographies/urban-biographies';
 import EnfantsDuPlacard_component from './enfants-du-placard/enfants-du-placard';
+import BaselNonProtestants_component from './basel-non-protestants/basel-non-protestants';
 
 
 interface Map {
@@ -50,5 +51,7 @@ export const projectHomePageMap: Map = {
 
     6619613: UrbanBiographies_component,
     
-    1458522: EnfantsDuPlacard_component
+    1458522: EnfantsDuPlacard_component,
+    
+    1719422: BaselNonProtestants_component
 };

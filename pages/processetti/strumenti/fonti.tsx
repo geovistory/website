@@ -89,7 +89,7 @@ const Fonti: NextPage<FontiProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
             }
             imageUrls={['/processetti/sources/img1.jpg']}
@@ -113,7 +113,7 @@ const Fonti: NextPage<FontiProps> = (props) => {
 
         <p>
           <ImageWrapper
-            legend={
+            caption={
               'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
             }
             imageUrls={['/processetti/sources/img2.jpg']}
@@ -136,7 +136,7 @@ const Fonti: NextPage<FontiProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
             }
             imageUrls={['/processetti/sources/img3.jpg']}

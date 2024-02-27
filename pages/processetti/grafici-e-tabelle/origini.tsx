@@ -19,7 +19,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={"Origine geografiche dei richiedenti e dei testimoni"}
+            caption={"Origine geografiche dei richiedenti e dei testimoni"}
             imageUrls={[
               "/processetti/diagrams/19_origineGeografica_sl.svg",
               "/processetti/diagrams/19_origineGeografica_xl.svg",
@@ -39,7 +39,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Distribuzione percentuale dei richiedenti e dei testimoni per luogo d'origine"
             }
             imageUrls={[
@@ -63,7 +63,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={"Origine dei richiedenti nel retroterra veneto"}
+            caption={"Origine dei richiedenti nel retroterra veneto"}
             imageUrls={[
               "/processetti/diagrams/27_originientroterraVeneto_sl.svg",
               "/processetti/diagrams/27_originientroterraVeneto_xl.svg",
@@ -137,7 +137,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e prime trenta origine geografica dei richiedenti secondo il genere"
             }
             imageUrls={[

@@ -77,7 +77,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Il processetto di Clemente Puchiarino da Arezzo (ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 3, cc. n.n., 31r-32r) datato 26 gennaio 1596, descrive una varietà di traiettorie che comprendono diversi spostamenti dopo il suo trasferimento in laguna. Clemente partecipò alla guerra di Cipro (1570-1573) e in quell’occasione venne ridotto in schiavitù dai Turchi a Costantinopoli. Solo dopo 12 anni di prigionia riuscì a fuggire, soggiornando prima a Corfù e rientrando poi a Venezia. Successivamente venne ingaggiato, almeno due volte, come capitano nell’Armata della Serenissima, e come tale si recò a Creta, per una durata complessiva non inferiore a 10 anni. Nel suo peregrinare Clemente trovò l’occasione di tornare al paese d’origine, Arezzo: una prima volta, per pochi giorni, al ritorno dalla prigionia; la seconda in un momento compreso tra i due periodi trascorsi a Candia."
             }
             imageUrls={["/processetti/metodologia/mobilita.png"]}

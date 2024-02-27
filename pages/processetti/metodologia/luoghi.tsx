@@ -61,7 +61,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={"Rineia nel database ANR Processettiy"}
+            caption={"Rineia nel database ANR Processettiy"}
             imageUrls={["/processetti/metodologia/luoghi_rineia.png"]}
             dialogChildren={
               <Image
@@ -82,7 +82,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "M. Boschini, L’Arcipelago con tutte le isole, scogli, secche e bassi fondi, In Venetia, Per Francesco Nicolini, 1658"
             }
             imageUrls={["/processetti/metodologia/luoghi_fermenia.png"]}
@@ -134,7 +134,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Proiezione su mappa delle entità Geographical Place del database ANR Processetti"
             }
             imageUrls={["/processetti/metodologia/luoghi.png"]}
