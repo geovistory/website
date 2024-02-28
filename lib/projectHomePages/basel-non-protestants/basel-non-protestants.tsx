@@ -68,13 +68,7 @@ const BaselNonProtestants_component: NextPage<ProjectPageProps> = (props) => {
             height="100%"
             caption={
               <FigCaption collapsible={true} collapsed={true}>
-                Rund um den Gemsbrunnen am Unterer Heuberg 4/2 Ecke Gemsberg
-                bildete sich ein erstes Zentrum jüdischen Lebens in Basel. Georg
-                Wolf, Inhaber des Lithographiegeschäfts am Unteren Heuberg 2,
-                war Gründungsmitglied des Männervereins Dowor Tow. Die Synagoge,
-                die von 1850 bis 1868 in Betrieb war, befand sich im Gebäude am
-                Ende der Strasse links. Das Bild stammt von ca. 1910. (Quelle:
-                StaBS NEG 1823)
+                Quelle: StaBS NEG 1823
               </FigCaption>
             }
             noDialog={true}
@@ -194,7 +188,7 @@ const BaselNonProtestants_component: NextPage<ProjectPageProps> = (props) => {
             katholische Kirche mit religiösem und sozialem Leben im Grossbasel
             entstanden war.{' '}
           </p>
-        
+
           <p>
             Die Arbeit ist im Rahmen der Arbeiten zum 6. Band des Projekts
             Stadt.Geschichte.Basel entstanden und hat zur Datenerfassung mit der
@@ -213,14 +207,15 @@ const BaselNonProtestants_component: NextPage<ProjectPageProps> = (props) => {
           <h3>Partner</h3>
           <div className={styles.partners}>
             <ion-row>
-   
-       
               <ion-col
                 size="4"
                 style={{ display: 'flex' }}
                 class="ion-justify-content-center"
               >
-                <ion-card href="https://stadtgeschichtebasel.ch/" target="_blank">
+                <ion-card
+                  href="https://stadtgeschichtebasel.ch/"
+                  target="_blank"
+                >
                   <div
                     style={{ display: 'flex', background: 'white' }}
                     className="ion-justify-content-center"
@@ -249,7 +244,15 @@ const BaselNonProtestants_component: NextPage<ProjectPageProps> = (props) => {
         <ion-grid class={styles.section}>
           <div className="restricted-width">
             <ion-label>
-              <small>Bild: StaBS NEG 1823</small>
+              <small>
+                Bild: Rund um den Gemsbrunnen am Unterer Heuberg 4/2 Ecke
+                Gemsberg bildete sich ein erstes Zentrum jüdischen Lebens in
+                Basel. Georg Wolf, Inhaber des Lithographiegeschäfts am Unteren
+                Heuberg 2, war Gründungsmitglied des Männervereins Dowor Tow.
+                Die Synagoge, die von 1850 bis 1868 in Betrieb war, befand sich
+                im Gebäude am Ende der Strasse links. Das Bild stammt von ca.
+                1910. (Quelle: StaBS NEG 1823)
+              </small>
             </ion-label>
           </div>
         </ion-grid>

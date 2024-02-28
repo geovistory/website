@@ -27,7 +27,6 @@ const Page: NextPage<ResourcesProps> = (props) => {
             <p className={styles.title2 + ' lead'}>
               Created by the Geovistory Community{' '}
             </p>
-
             <p>
               <ion-list>
                 {projectsParams
