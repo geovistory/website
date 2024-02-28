@@ -19,7 +19,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Frequenza dei tipi di interazione sociale tra richiedenti e i loro testimoni"
             }
             imageUrls={[
@@ -46,7 +46,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Durata delle relazioni sociali intercorse tra i richiedenti e i loro testimoni"
             }
             imageUrls={[

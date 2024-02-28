@@ -22,7 +22,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Età media dei richiedenti al processetto e all'arrivo a Venezia, per le prime trenta professioni rappresentate"
             }
             imageUrls={[
@@ -80,7 +80,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={"Età dei testimoni al momento del processetto"}
+            caption={"Età dei testimoni al momento del processetto"}
             imageUrls={[
               "/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg",
               "/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg",
@@ -100,7 +100,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={"Età dei testimoni al momento del loro arrivo a Venezia"}
+            caption={"Età dei testimoni al momento del loro arrivo a Venezia"}
             imageUrls={[
               "/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg",
               "/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg",
@@ -122,7 +122,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Tempo di permanenza dei testimoni a Venezia, prima del processetto"
             }
             imageUrls={[
@@ -179,7 +179,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Distribuzione dei richiedenti e dei testimoni entro le prime trenta professioni più rappresentate"
             }
             imageUrls={[
@@ -203,7 +203,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Distribuzione professionale tra i testimoni, distinto per genere"
             }
             imageUrls={[

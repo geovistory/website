@@ -18,7 +18,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </ImageTitle>
         <p>
           <ImageWrapper
-            legend={"Distribuzione dei processetti trattati"}
+            caption={"Distribuzione dei processetti trattati"}
             imageUrls={[
               "/processetti/diagrams/01_numeroProcessetti_sl.svg",
               "/processetti/diagrams/01_numeroProcessetti_xl.svg",
@@ -74,7 +74,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <ImageTitle>Una visione d’insieme dei dati registrati</ImageTitle>
         <p>
           <ImageWrapper
-            legend={"Quantificazione per classe delle istanze prodotte"}
+            caption={"Quantificazione per classe delle istanze prodotte"}
             imageUrls={[
               "/processetti/diagrams/03_classDistribution_sl.svg",
               "/processetti/diagrams/03_classDistribution_xl.svg",
@@ -107,7 +107,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <ImageTitle>Tipologia dei processetti</ImageTitle>
         <p>
           <ImageWrapper
-            legend={"Distribuzione dei processetti secondo il tipo"}
+            caption={"Distribuzione dei processetti secondo il tipo"}
             imageUrls={[
               "/processetti/diagrams/02_distribuzioneTipooProcessetti_sl.svg",
               "/processetti/diagrams/02_distribuzioneTipooProcessetti_xl.svg",
@@ -154,7 +154,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={"Durata dei processetti"}
+            caption={"Durata dei processetti"}
             imageUrls={[
               "/processetti/diagrams/04_durataProcessetto_sl.svg",
               "/processetti/diagrams/04_durataProcessetto_xl.svg",

@@ -156,6 +156,18 @@ const EnfantsDuPlacard_component: NextPage<ProjectPageProps> = (props) => {
             </ion-row>
           </div>
         </ion-grid>
+        <ion-grid class={styles.section}>
+          <div className="restricted-width">
+            <ion-label>
+              <small>
+                Foto: Manifestation de saisonniers à Genève, le 5.10.1991.
+                <br />
+                Monnin, Patrick. © Schweizerisches Sozialarchiv :
+                F_5031-Fc-1239.
+              </small>
+            </ion-label>
+          </div>
+        </ion-grid>{' '}
       </ProjectPageLayout>
     </div>
   );

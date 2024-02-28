@@ -2,7 +2,10 @@ import { QueryTab } from '@geovistory/design-system-web/loader';
 import { ProjectNavbarProps } from '../components/layouts/ProjectNavbar.component';
 
 export interface ProjectParams {
+    // if true, the project is listed in geovistory.org/
     featured: boolean,
+    // if true, the project is listed in geovistory.org/projects
+    listed: boolean;
 
     // preferred classe in entity explorer
     preferredClasses: string[]
@@ -18,6 +21,7 @@ export interface ProjectParams {
     description: string,
 
     hasPage: boolean
+
 
     sparqlLinkEnabled: boolean
     teiLinkEnabled: boolean
@@ -40,6 +44,7 @@ export const projectsParams: Array<ProjectParams> = [
         preferredClasses: ['c21', 'c859', 'c861', 'c860', 'c850', 'c68'],
 
         featured: true,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -119,6 +124,7 @@ LIMIT 10`,
         preferredClasses: ['c21', 'c219', 'c635', 'c785', 'c633'],
 
         featured: true,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -147,6 +153,7 @@ LIMIT 10`,
         preferredClasses: ['c21', 'c363', 'c636'],
 
         featured: true,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -174,6 +181,7 @@ LIMIT 10`,
         preferredClasses: ['c523', 'c21', 'c363', 'c522', 'c529'],
 
         featured: true,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -282,6 +290,7 @@ LIMIT 10`,
     //     preferredClasses: [],
 
     //     featured: false,
+    // listed: false,
 
     //     teiURL: '',
     //     sparqlURL: '',
@@ -308,6 +317,7 @@ LIMIT 10`,
         preferredClasses: [],
 
         featured: false,
+        listed: false,
 
         teiURL: '',
         sparqlURL: '',
@@ -335,6 +345,7 @@ LIMIT 10`,
         preferredClasses: ['c363', 'c21', 'c68', 'c636',],
 
         featured: true,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -361,6 +372,7 @@ LIMIT 10`,
         preferredClasses: ['c363', 'c21', 'c870', 'c247', 'c698', 'c68'],
 
         featured: false,
+        listed: false,
 
         teiURL: '',
         sparqlURL: '',
@@ -388,6 +400,7 @@ LIMIT 10`,
         preferredClasses: ['c21', 'c68', 'c363'],
 
         featured: false,
+        listed: false,
 
         teiURL: '',
         sparqlURL: '',
@@ -414,6 +427,7 @@ LIMIT 10`,
         preferredClasses: ['c363', 'c21'],
 
         featured: true,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -421,32 +435,6 @@ LIMIT 10`,
         fullName: 'Switzerland and Beyond',
         shortName: 'Switzerland and Beyond',
         description: 'Linking Historical People, Places, and Organizations.',
-
-        hasPage: true,
-        sparqlLinkEnabled: true,
-        searchLinkEnabled: true,
-        ontoExplorerLinkEnabled: true,
-        sparklisLinkEnabled: true,
-        teiLinkEnabled: false,
-
-        headOgImage: '/socialimage/switzerland-and-beyond.jpeg'
-
-    },
-    // Stadt.Geschichte.Basel Band 6
-    {
-        geovID: 1719422,
-        geovName: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine',
-
-        preferredClasses: ['c363', 'c21'],
-
-        featured: false,
-
-        teiURL: '',
-        sparqlURL: '',
-
-        fullName: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine',
-        shortName: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine',
-        description: 'Stadt.Geschichte.Basel Band 6 Parteien & Vereine.',
 
         hasPage: true,
         sparqlLinkEnabled: true,
@@ -466,6 +454,7 @@ LIMIT 10`,
         preferredClasses: [],
 
         featured: false,
+        listed: false,
 
         teiURL: '',
         sparqlURL: '',
@@ -493,6 +482,7 @@ LIMIT 10`,
         preferredClasses: [],
 
         featured: false,
+        listed: false,
 
         teiURL: '',
         sparqlURL: '',
@@ -520,6 +510,7 @@ LIMIT 10`,
         preferredClasses: [],
 
         featured: false,
+        listed: false,
 
         teiURL: '',
         sparqlURL: '',
@@ -536,6 +527,33 @@ LIMIT 10`,
         teiLinkEnabled: false,
 
         headOgImage: '/socialimage/enfants-du-placard.jpg'
+
+    },
+    // Basel non-protestants
+    {
+        geovID: 1719422,
+        geovName: 'Jüdische & katholische Zentren Basels',
+
+        preferredClasses: ['c363', 'c21'],
+
+        featured: false,
+        listed: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Jüdische & katholische Zentren Basels',
+        shortName: 'Jüdische & katholische Zentren Basels',
+        description: 'Jüdische & katholische Zentren Basels. 1850 – 1914',
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/basel-non-protestants.jpg'
 
     },
 ]

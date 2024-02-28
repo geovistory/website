@@ -20,9 +20,10 @@ const args: ProjectCardProps = {
     geovID: 591,
     geovName: 'Processetti',
 
-    preferredClasses:[],
+    preferredClasses: [],
 
     featured: true,
+    listed: true,
 
     teiURL: '',
     sparqlURL: '',
@@ -35,10 +36,10 @@ const args: ProjectCardProps = {
     hasPage: true,
     sparqlLinkEnabled: false,
     teiLinkEnabled: false,
-    ontoExplorerLinkEnabled:false,
-    sparklisLinkEnabled:false,
-    searchLinkEnabled:false,
-    headOgImage: ''
+    ontoExplorerLinkEnabled: false,
+    sparklisLinkEnabled: false,
+    searchLinkEnabled: false,
+    headOgImage: '',
   },
 };
 ProjectCardWithButton.args = args;
@@ -50,14 +51,16 @@ const args2: ProjectCardProps = {
     geovName: 'Processetti',
 
     preferredClasses: [],
-    
+
     featured: true,
+    listed: true,
 
     teiURL: '',
     sparqlURL: '',
 
     fullName: 'ANR Processetti',
-    shortName: 'Project with an overflowing title, because the title is very, very long.',
+    shortName:
+      'Project with an overflowing title, because the title is very, very long.',
     description: `Les Processetti : Migration et mariage à Venise au 16ème/17ème siècle.
       Les Processetti : Migration et mariage à Venise au 16ème/17ème siècle.
        16ème/17ème siècle. 16ème/17ème siècle.16ème/17ème siècle.16ème/17ème siècle. 
@@ -66,10 +69,10 @@ const args2: ProjectCardProps = {
     hasPage: false,
     sparqlLinkEnabled: false,
     teiLinkEnabled: false,
-    ontoExplorerLinkEnabled:false,
-    sparklisLinkEnabled:false,
-    searchLinkEnabled:false,
-    headOgImage: '/socialimage/processetti.jpg'
+    ontoExplorerLinkEnabled: false,
+    sparklisLinkEnabled: false,
+    searchLinkEnabled: false,
+    headOgImage: '/socialimage/processetti.jpg',
   },
 };
 ProjectCardWithoutButton.args = args2;

@@ -22,7 +22,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
 
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Frequenza d'uso dei concetti per la descrizione degli spostamenti extraurbani"
             }
             imageUrls={[
@@ -77,7 +77,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
             }
             imageUrls={[
@@ -103,7 +103,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Origini dei richiedenti con almeno un ritorno temporaneo al paese d'origine"
             }
             imageUrls={[
