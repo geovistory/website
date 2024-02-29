@@ -372,7 +372,7 @@ LIMIT 10`,
         preferredClasses: ['c363', 'c21', 'c870', 'c247', 'c698', 'c68'],
 
         featured: false,
-        listed: false,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -400,7 +400,7 @@ LIMIT 10`,
         preferredClasses: ['c21', 'c68', 'c363'],
 
         featured: false,
-        listed: false,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -454,7 +454,7 @@ LIMIT 10`,
         preferredClasses: [],
 
         featured: false,
-        listed: false,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -482,7 +482,7 @@ LIMIT 10`,
         preferredClasses: [],
 
         featured: false,
-        listed: false,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
@@ -510,7 +510,7 @@ LIMIT 10`,
         preferredClasses: [],
 
         featured: false,
-        listed: false,
+        listed: true,
 
         teiURL: '',
         sparqlURL: '',
