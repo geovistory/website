@@ -89,9 +89,8 @@ const Fonti: NextPage<FontiProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            // legend={"ASPV, <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, vol. 2, cc. n.n., <i>r</i>"}
             caption={
-              'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
+              <>ASPV, <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, vol. 2, cc. n.n., <i>r</i></>
             }
             imageUrls={['/processetti/sources/img1.jpg']}
             dialogChildren={
@@ -114,9 +113,7 @@ const Fonti: NextPage<FontiProps> = (props) => {
 
         <p>
           <ImageWrapper
-            // legend={"ASPV, <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, vol. 2, cc. n.n., <i>r</i>"}
             caption={
-              // 'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
               <>ASPV, <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, vol. 2, cc. n.n., <i>r</i></>
             }
             
@@ -140,9 +137,8 @@ const Fonti: NextPage<FontiProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            // legend={"ASPV, <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, vol. 2, cc. n.n.,<i>r</i>"}
             caption={
-              'ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol. 2, cc. n.n., r'
+              <>ASPV, <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, vol. 2, cc. n.n.,<i>r</i></>
             }
             imageUrls={['/processetti/sources/img3.jpg']}
             dialogChildren={
