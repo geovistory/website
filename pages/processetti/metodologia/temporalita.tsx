@@ -48,7 +48,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
 
         <p>
           <ImageWrapper
-            legend={"Time span (KleioLab, 2020)"}
+            caption={"Time span (KleioLab, 2020)"}
             imageUrls={["/processetti/metodologia/text_annotation.png"]}
             dialogChildren={
               <ion-img

@@ -26,7 +26,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Riproduzione e annotazione semantica della fonte in Geovistory"
             }
             imageUrls={["/processetti/metodologia/text_annotation.png"]}

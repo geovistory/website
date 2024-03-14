@@ -68,7 +68,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={'Knowledge Pyramid e Research Flow (F. Beretta, 2020)'}
+            caption={'Knowledge Pyramid e Research Flow (F. Beretta, 2020)'}
             imageUrls={['/processetti/metodologia/intro-dik-pyramid.png']}
             dialogChildren={
               <Image
@@ -108,7 +108,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           <ImageWrapper
-            legend={'Event centered data model'}
+            caption={'Event centered data model'}
             imageUrls={['/processetti/metodologia/intro-data-model.jpg']}
             dialogChildren={
               <Image

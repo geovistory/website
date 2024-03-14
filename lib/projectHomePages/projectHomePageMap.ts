@@ -10,6 +10,10 @@ import Softpowarts_component from './softpowarts/softpowarts';
 import AcademicCareers_component from './academic-careers/academic-careers';
 import RomanSenate_component from './roman-senate/roman-senate';
 import SwitzerlandAndBeyond_component from './switzerland-and-beyond/switzerland-and-beyond';
+import StudentInternationalism_component from './student-internationalism/student-internationalism';
+import UrbanBiographies_component from './urban-biographies/urban-biographies';
+import EnfantsDuPlacard_component from './enfants-du-placard/enfants-du-placard';
+import BaselNonProtestants_component from './basel-non-protestants/basel-non-protestants';
 
 
 interface Map {
@@ -41,6 +45,13 @@ export const projectHomePageMap: Map = {
     941447: RomanSenate_component,
 
     // Switzerland and beyond
-    153: SwitzerlandAndBeyond_component
+    153: SwitzerlandAndBeyond_component,
+    
+    11172552: StudentInternationalism_component,
 
+    6619613: UrbanBiographies_component,
+    
+    1458522: EnfantsDuPlacard_component,
+    
+    1719422: BaselNonProtestants_component
 };

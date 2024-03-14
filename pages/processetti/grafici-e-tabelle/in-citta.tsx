@@ -23,7 +23,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
 
         <p>
         <ImageWrapper
-          legend={
+          caption={
             "Distribuzione per parrocchia dei luoghi di abitazione e lavoro dei richiedenti"
           }
           imageUrls={[
@@ -50,7 +50,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
         <ImageWrapper
-          legend={
+          caption={
             "Confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
           }
           imageUrls={[

@@ -30,7 +30,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
 
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol 45, c. n.n"
             }
             imageUrls={["/processetti/metodologia/motivation-type.jpg"]}

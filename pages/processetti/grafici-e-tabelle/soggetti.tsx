@@ -18,7 +18,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(periodo 1592-1605)</Subtitle>
         <p>
           <ImageWrapper
-            legend={"Statuto dei soggetti e distribuzione di genere"}
+            caption={"Statuto dei soggetti e distribuzione di genere"}
             imageUrls={[
               "/processetti/diagrams/05_statudoPerson_sl.svg",
               "/processetti/diagrams/05_statudoPerson_xl.svg",
@@ -81,7 +81,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={"Età dei richiedenti al momento del processetto"}
+            caption={"Età dei richiedenti al momento del processetto"}
             imageUrls={[
               "/processetti/diagrams/07_etàProcessettoRichiedenti_sl.svg",
               "/processetti/diagrams/07_etàProcessettoRichiedenti_xl.svg",
@@ -129,7 +129,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={"Età dei richiedenti al momento del loro arrivo a Venezia"}
+            caption={"Età dei richiedenti al momento del loro arrivo a Venezia"}
             imageUrls={[
               "/processetti/diagrams/08_etàArrivoRichiedenti_sl.svg",
               "/processetti/diagrams/08_etàArrivoRichiedenti_xl.svg",
@@ -153,7 +153,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
             }
             imageUrls={[
@@ -194,7 +194,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
-            legend={
+            caption={
               "Tempo di permanenza dei richiedenti a Venezia, prima del processetto"
             }
             imageUrls={[
