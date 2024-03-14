@@ -163,7 +163,7 @@ LIMIT 10`,
         description: 'Les Processetti : Migration et mariage à Venise au 16ème/17ème siècle.',
 
         hasPage: true,
-        sparqlLinkEnabled: false,
+        sparqlLinkEnabled: true,
         teiLinkEnabled: false,
         searchLinkEnabled: false,
         ontoExplorerLinkEnabled: false,

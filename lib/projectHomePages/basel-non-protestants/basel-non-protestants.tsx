@@ -66,7 +66,7 @@ const BaselNonProtestants_component: NextPage<ProjectPageProps> = (props) => {
         <div className={styles.bannerContainer}>
           <ImageWrapperComponent
             height="100%"
-            caption={
+            figCaption={
               <FigCaption collapsible={true} collapsed={true}>
                 Quelle: StaBS NEG 1823
               </FigCaption>

@@ -12,6 +12,7 @@ import styles from './ImageWrapper.module.css';
 export interface ImageWrapperProps {
   imageUrls?: string[];
   caption?: string | ReactNode;
+  figCaption?: ReactNode;
   noDialog?: boolean;
   dialogChildren?: ReactNode;
   noDialogPadding?: boolean;
@@ -22,6 +23,7 @@ export interface ImageWrapperProps {
 export const ImageWrapper: FunctionComponent<ImageWrapperProps> = ({
   imageUrls,
   caption,
+  figCaption,
   children,
   dialogChildren,
   noDialog,
@@ -116,7 +118,8 @@ export const ImageWrapper: FunctionComponent<ImageWrapperProps> = ({
         )}
       </div>
       {caption && renderCaption(caption)}
-
+      {figCaption}
+          
       <ion-modal class={styles.modal} ref={modalRef}>
         <ion-header>
           <ion-toolbar color="primary">
@@ -154,7 +157,6 @@ export const ImageWrapper: FunctionComponent<ImageWrapperProps> = ({
 
 export default ImageWrapper;
 function renderCaption(caption: string | ReactNode): ReactNode {
-  if (typeof caption === 'string')
     return (
       <figcaption
         style={{
@@ -171,5 +173,4 @@ function renderCaption(caption: string | ReactNode): ReactNode {
         </ion-label>
       </figcaption>
     );
-  else return caption;
 }

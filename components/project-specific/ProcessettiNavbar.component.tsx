@@ -181,6 +181,11 @@ export const ProcessettiNavbar = (props: ProcessettiNavbarProps) => {
             ))}
           </span>
         </ion-buttons>
+
+        <ion-buttons slot="end">
+          <ion-button href={`/project/591/sparql`}>SPARQL</ion-button>
+        </ion-buttons>
+
         <ion-buttons class="ion-hide-md-up" slot="end">
           <a href="/">
             <ion-img
