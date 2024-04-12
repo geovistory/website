@@ -200,7 +200,7 @@ LIMIT 10`,
         headOgImage: '/socialimage/maritime-history.jpg',
         sparqlQueryTabs: [
             {
-                name: 'Ship Voyages',
+                name: 'Ship Voyages Map',
                 sparqlEndpoint: 'https://sparql.geovistory.org/api_v1_project_84760',
                 selectedPlugin: 'mapCircles',
                 query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -257,6 +257,48 @@ WHERE {
     GROUP BY ?label ?long ?lat ?type ?link
     }
 }`
+            },
+            {
+                name: 'Ship Voyages Timeline',
+                sparqlEndpoint: 'https://sparql.geovistory.org/api_v1_project_84760',
+                selectedPlugin: 'timeline',
+                query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX geov: <http://geovistory.org/resource/>
+
+SELECT (concat(str(?e), "?p=84760") as ?entityLink) (MIN(?date) as ?startDate) (MAX(?date) as ?endDate) (SAMPLE(?l) as ?entityLabel) ?entityClassLabel
+WHERE {
+    ### Definition of the events we want to display on a timeline
+    
+    # Geo-Place "Texel NL" -> is departure place of -> ship voyage
+    geov:i209502 ^ontome:p1335 ?e .
+    # event -> is a -> ship voyages
+    ?e a ontome:c523 .
+    # Ship voyage -> class label
+    ontome:c523 rdfs:label ?entityClassLabel .
+    
+    ### Join temproal information for the time line ###
+
+    # event -> has -> time span
+    ?e ontome:p4 ?timespan.
+    # time span -> timeprop -> date time description
+    ?timespan ontome:p71|ontome:p72|ontome:p150|ontome:p151|ontome:p152|ontome:p153 ?dtd.
+    # date time description -> year;month;day
+    ?dtd time:year ?y ; time:month ?m  ; time:day ?d .
+    FILTER regex(str(?y), '^-') # necessary because of https://github.com/geovistory/toolbox-streams/issues/124
+    # parse to xsd:date
+    bind(xsd:date(concat(replace(str(?y), "^-", "" ), replace(str(?m), "^-", "" ),replace(str(?d), "^--", "" ))) as ?date)
+    # event -> has -> label
+    ?e rdfs:label ?l .
+}
+GROUP BY ?e ?entityClassLabel
+LIMIT 10`
             },
             {
                 name: 'Selection of triples',
