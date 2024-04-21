@@ -8,7 +8,8 @@ export const ProcessettiBanner = (props: ProcessettiBannerProps) => {
       <ion-grid class={styles.banner}>
         <div className={styles.bannerTitle}>
           <h2>Progetto ANR</h2>
-          <h1>Processetti</h1>
+          <h1>Processetti Matrimoniali</h1>
+          <h2>(Venezia, XVI-XVII secolo)</h2>
         </div>
         <div className={styles.bannerImageContainer}>
           <ion-img
