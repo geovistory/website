@@ -53,7 +53,7 @@ const Fonti: NextPage<FontiProps> = (props) => {
         </ul>
         <h2>Descrizione della fonte</h2>
         <p>
-          Poiché lo scopo di questa prescrizione era quello di certificare
+          Poiché lo scopo delle inchieste prematrimoniali era quello di certificare
           l’inesistenza di vincoli matrimoniali pregressi, ancorché contratti in
           altro luogo – o ancora in essere, nei casi di vedovanza – i testimoni
           convocati erano chiamati a pronunciarsi non solo sulla condizione
