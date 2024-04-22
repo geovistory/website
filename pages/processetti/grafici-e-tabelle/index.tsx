@@ -15,7 +15,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           nell’interpretazione e nella ricontestualizzazione storica di quanto evidenziato dai dati tabellari e dai diagrammi prodotti in base
           all'analisi quantitativa dei dati raccolti. 
         </p>
-        <p>Le tabelle e le visualizzazioni riguardano dati demografici, sociali e spaziali che, dopo una prima presentazione complessiva, si concentrano sul periodo 1592-1604</p>
+        <p>Le tabelle e le visualizzazioni riguardano dati demografici, sociali e spaziali che, dopo una prima presentazione complessiva, si concentrano sul periodo 1592-1604.</p>
         <p>
           Le restituzioni tabellari e i grafici realizzati sono solo una parte delle analisi
           che potrebbero essere effettuate a partire dai dati acquisiti. In un

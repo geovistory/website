@@ -16,10 +16,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <h1>In città</h1>
 
         <ImageTitle>
-          Parrocchia di abitazione dei richiedenti <br />
-          Luogo di lavoro dei richiedenti
+          Parrocchia di abitazione e luogo di lavoro dei richiedenti (1592-1604)
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
 
         <p>
         <ImageWrapper
@@ -44,32 +43,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </ImageWrapper>
         </p>
 
-        <ImageTitle>
-          Parrocchia di abitazione dei richiedenti e dei testimoni
-        </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
-        <p>
-        <ImageWrapper
-          caption={
-            "Confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
-          }
-          imageUrls={[
-            "/processetti/diagrams/23_abitazioneRichiedentiTestimoni_sl.svg",
-            "/processetti/diagrams/23_abitazioneRichiedentiTestimoni_xl.svg",
-          ]}
-        >
-          <ion-img
-            class={`ion-hide-lg-down ${styles.border}`}
-            alt="Mappe con il confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
-            src="/processetti/diagrams/23_abitazioneRichiedentiTestimoni_xl.svg"
-          ></ion-img>
-          <ion-img
-            class={`ion-hide-lg-up ${styles.border}`}
-            alt="Mappe con il confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
-            src="/processetti/diagrams/23_abitazioneRichiedentiTestimoni_sl.svg"
-          ></ion-img>
-        </ImageWrapper>
-        </p>
+       
         <p>
           I nubendi che si rivolgevano alla curia patriarcale per ottenere la
           fede di libertà provenivano da tutte le 71 parrocchie veneziane,
@@ -97,6 +71,32 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           Mercerie, l'asse commerciale nel cuore della città, attraevano
           negozianti e artigiani che vivevano in altre zone a causa dell'elevato
           costo degli alloggi del centro.
+        </p>
+        <ImageTitle>
+          Parrocchia di abitazione dei richiedenti e dei testimoni
+        </ImageTitle>
+        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <p>
+        <ImageWrapper
+          caption={
+            "Confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
+          }
+          imageUrls={[
+            "/processetti/diagrams/23_abitazioneRichiedentiTestimoni_sl.svg",
+            "/processetti/diagrams/23_abitazioneRichiedentiTestimoni_xl.svg",
+          ]}
+        >
+          <ion-img
+            class={`ion-hide-lg-down ${styles.border}`}
+            alt="Mappe con il confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
+            src="/processetti/diagrams/23_abitazioneRichiedentiTestimoni_xl.svg"
+          ></ion-img>
+          <ion-img
+            class={`ion-hide-lg-up ${styles.border}`}
+            alt="Mappe con il confronto tra le parrocchie d'abitazione dei richiedenti e dei testimoni"
+            src="/processetti/diagrams/23_abitazioneRichiedentiTestimoni_sl.svg"
+          ></ion-img>
+        </ImageWrapper>
         </p>
         <p>
           Come i richiedenti, i testimoni abitavano in tutta la città in

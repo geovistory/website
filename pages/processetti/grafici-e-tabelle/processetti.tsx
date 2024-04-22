@@ -14,11 +14,11 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
       <ion-grid fixed>
         <h1>Processetti</h1>
         <ImageTitle>
-          Numero di processetti matrimoniali annotati in Geovistory
+          Processetti matrimoniali trattati in Geovistory
         </ImageTitle>
         <p>
           <ImageWrapper
-            caption={"Distribuzione dei processetti trattati"}
+            caption={"Distribuzione dei processetti trattati in Geovistory"}
             imageUrls={[
               "/processetti/diagrams/01_numeroProcessetti_sl.svg",
               "/processetti/diagrams/01_numeroProcessetti_xl.svg",
@@ -37,16 +37,16 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           </ImageWrapper>
         </p>
         <p>
-          Sono stati trattati 4640 processetti, iscritti in un arco temporale
-          che si protrae dal 1592 al 1650, assumendo due prassi distinte.
+          Sono stati trattati, secondo due distinte prassi, non meno di 4640 processetti, iscritti in un arco temporale
+          che si protrae dal 1592 al 1650.
         </p>
         <p>
           Per quanto riguarda il decennio che va dal 1592 al 1604, i processetti
           sono stati trascritti e annotati integralmente. Sebbene sia possibile
           rintracciare processetti antecedenti al 1592, questo primo gruppo
           coincide <i>de facto</i> con l'inizio della serie archivistica (
-          <i>Examinum matrimoniorum</i>, b. 1-8). Per colmare l’assenza dei
-          documenti risalenti al 1593, sono stati presi in considerazione anche
+          <i>Examinum matrimoniorum</i>, bb. 1-8). Per colmare l’assenza dei
+          documenti risalenti al 1595, sono stati presi in considerazione anche
           i processetti conservati in maniera sparsa nella serie{" "}
           <i>Filciae causarum</i>.
         </p>
@@ -65,13 +65,13 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <p>
           La scelta di operare un’annotazione parziale e semplificata è stata
           determinata dal fatto che il processo di trascrizione, produzione dei
-          dati semantici e annotazione dei singoli processetti richiedesse dei
+          dati semantici e annotazione dei singoli processetti richiede per sua nature dei
           tempi molto lunghi. È stato comunque possibile analizzare e
           confrontare i diversi modelli migratori in essere tra la fine del XVI
           secolo e la metà del XVII secolo.
         </p>
 
-        <ImageTitle>Una visione d’insieme dei dati registrati</ImageTitle>
+        <ImageTitle>Sguardo d'insieme sui dati rilevati</ImageTitle>
         <p>
           <ImageWrapper
             caption={"Quantificazione per classe delle istanze prodotte"}
@@ -104,7 +104,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           di svolgimento di una professione; 2047 resoconti di viaggio o
           spostamento; 1597 entità geografiche ecc.
         </p>
-        <ImageTitle>Tipologia dei processetti</ImageTitle>
+        <ImageTitle>Tipologie di processetti matrimoniali</ImageTitle>
         <p>
           <ImageWrapper
             caption={"Distribuzione dei processetti secondo il tipo"}
@@ -135,7 +135,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <p>
           Tuttavia, l'emergere di casi eccezionali per forma e contenuto ha reso
-          necessaria l'introduzione del <i>type</i>
+          necessaria l'introduzione del <i>type</i>{" "}
           “Processetto atipico”. In questa categoria sono stati inclusi casi di
           bigamia, concubinato, verifica dell’identità del nubendo o del
           defunto, abbandono del nucleo domestico, indigenza, verifica dei
@@ -187,7 +187,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           extra-lagunari, o perché assenti dalla città per ragioni
           professionali); altrimenti, con l’esigenza delle autorità di
           approfondire alcuni casi attraverso l’audizione di nuovi testimoni
-          (soprattutto a seguito di testimonianze laconiche o ambigue).
+          (soprattutto a seguito di testimonianze laconiche, ambigue o addirittura contraddittorie).
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>

@@ -14,9 +14,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
       <ion-grid fixed>
         <h1>Origini</h1>
         <ImageTitle>
-          Origine geografica dei testimoni e dei richiedenti
+          Origine geografica dei testimoni e dei richiedenti (1592-1604)
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
             caption={"Origine geografiche dei richiedenti e dei testimoni"}
@@ -59,8 +58,6 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             ></ion-img>
           </ImageWrapper>
         </p>
-        <ImageTitle> Origine nel retroterra veneto</ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
             caption={"Origine dei richiedenti nel retroterra veneto"}
@@ -131,10 +128,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <ImageTitle>
           {" "}
-          Età media all’arrivo a Venezia e al processetto secondo l’origine /
-          Origine geografica dei richiedenti secondo il genere{" "}
+          Età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e distribuzione di genere (1592-1604){" "}
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
         <p>
           <ImageWrapper
             caption={
@@ -175,7 +171,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           migratori) avveniva per lo più su brevi e medie distanze, seguendo i
           principali canali migratori; dall’altro, tenendo conto che
           l'immigrazione da luoghi più lontani era spesso più qualificata e
-          coinvolgeva individui di età più avanzata. Ad esempio, i promessi
+          coinvolgeva individui di età più matura. Ad esempio, i promessi
           sposi provenienti dalla Germania e dal Regno di Napoli tendevano ad
           arrivare a Venezia intorno ai 19 anni, mentre quelli francesi erano
           soliti giungervi intorno ai 22 anni, quando l'età media di arrivo era

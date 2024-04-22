@@ -14,9 +14,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
       <ion-grid fixed>
         <h1>Relazioni</h1>
         <ImageTitle>
-          Tipologia delle relazioni tra il richiedente e i suoi testimoni{" "}
+          Tipologia e perduranza delle relazioni tra il richiedente e i suoi testimoni (1592-1604){" "}
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
         <p>
           <ImageWrapper
             caption={
@@ -39,11 +39,6 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             ></ion-img>
           </ImageWrapper>
         </p>
-
-        <ImageTitle>
-          Durata della relazione tra il richiedente e i suoi testimoni
-        </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
             caption={
@@ -72,11 +67,11 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           più soggetti: il nubendo stesso, che forniva ai parroci le
           attestazioni ottenute da altre autorità (il certificato di battesimo,
           il certificato di morte, o le fedi di libertà rilasciate da un'altra
-          diocesi); e i testimoni che egli sceglieva in base alle prove da
+          diocesi), e i testimoni, scelti in base alle evidenze da
           presentare alla curia patriarcale. L'autorità ecclesiastica, inoltre,
           non poteva fare a meno dell'aiuto della società tutta, che esercitava,
           più o meno consapevolmente, una forma di vigilanza necessaria a
-          stabilire l'identità e lo status degli individui.
+          stabilire l'identità e lo <i>status</i> degli individui.
         </p>
         <p>
           La scelta dei testimoni rispondeva dunque alle aspettative delle
@@ -94,12 +89,12 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           rilasciata.
         </p>
         <p>
-          Lo <i>status</i> del testimone non dovrebbe essere assunto come
+          Lo <i>status</i> del testimone non può essere acriticamente assunto come
           riflesso dell'ambiente sociale o del grado di integrazione del
           richiedente a Venezia, poiché il contenuto delle testimonianze
           riguardava principalmente la sua vita passata, e in particolare i
           periodi in cui non aveva dimorato in città. Con il trascorrere del
-          tempo dall'arrivo a Venezia, il ricorso a compaesani e parenti cedeva
+          tempo dall'arrivo a Venezia, invero, il ricorso a compaesani e parenti cedeva
           il posto al coinvolgimento di compagni di lavoro e vicini di casa, in
           grado di fornire un resoconto più dettagliato degli avvenimenti
           successivi allo stabilirsi in città.

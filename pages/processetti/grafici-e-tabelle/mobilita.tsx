@@ -15,10 +15,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <h1>Mobilità</h1>
 
         <ImageTitle>
-          Spostamento temporaneo fuori Venezi/Tappa intermedia tra il paese di
-          origine e l’arrivo a Venezia{" "}
+         Spostamenti extraurbani dei richiedenti, prima e dopo il loro arrivo a Venezia (1592-1604){" "}
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
 
         <p>
           <ImageWrapper
@@ -70,11 +69,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
 
         <ImageTitle>
-          Ritorno temporaneo al paese di origine dopo l’arrivo a Venezia <br />
-          Frequenza del ritorno temporaneo al paese d’origine dopo l’arrivo a
-          Venezia
+          Ritorno temporaneo al paese d'origine dopo l’arrivo a Venezia (1592-1604)
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
         <p>
           <ImageWrapper
             caption={
@@ -97,10 +94,6 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             ></ion-img>
           </ImageWrapper>
         </p>
-        <ImageTitle>
-          Origini dei richiedenti che tornano temporaneamente al paese
-        </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
             caption={

@@ -14,12 +14,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
       <ion-grid fixed>
         <h1>Professioni</h1>
         <ImageTitle>
-          Professioni dei richiedenti
-          <br />
-          Età all’arrivo a Venezia e età al processetto secondo la professione
-          (al momento del processetto)
+          Età del richiedente all’arrivo a Venezia e età al processetto distinte per professione (1592-1604)
         </ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
+        <br />
         <p>
           <ImageWrapper
             caption={
@@ -74,109 +71,11 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           passavano una dozzina di anni, indipendentemente dalla professione
           svolta dal richiedente.
         </p>
+       
         <ImageTitle>
-          Età dei testimoni al processetto e all’arrivo a Venezia
+          Confronto delle professioni di richiedenti e testimoni (1592-1604)
         </ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <p>
-          <ImageWrapper
-            caption={"Età dei testimoni al momento del processetto"}
-            imageUrls={[
-              "/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg",
-              "/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg",
-            ]}
-          >
-            <ion-img
-              class={`ion-hide-lg-down ${styles.border}`}
-              alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
-              src="/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg"
-            ></ion-img>
-            <ion-img
-              class={`ion-hide-lg-up ${styles.border}`}
-              alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
-              src="/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg"
-            ></ion-img>
-          </ImageWrapper>
-        </p>
-        <p>
-          <ImageWrapper
-            caption={"Età dei testimoni al momento del loro arrivo a Venezia"}
-            imageUrls={[
-              "/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg",
-              "/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg",
-            ]}
-          >
-            <ion-img
-              class={`ion-hide-lg-down ${styles.border}`}
-              alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
-              src="/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg"
-            ></ion-img>
-            <ion-img
-              class={`ion-hide-lg-up ${styles.border}`}
-              alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
-              src="/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg"
-            ></ion-img>
-          </ImageWrapper>
-        </p>
-        <ImageTitle>Permanenza dei testimoni a Venezia</ImageTitle>{" "}
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
-        <p>
-          <ImageWrapper
-            caption={
-              "Tempo di permanenza dei testimoni a Venezia, prima del processetto"
-            }
-            imageUrls={[
-              "/processetti/diagrams/14_testimoniPermanenza_sl.svg",
-              "/processetti/diagrams/14_testimoniPermanenza_xl.svg",
-            ]}
-          >
-            <ion-img
-              class={`ion-hide-lg-down ${styles.border}`}
-              alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
-              src="/processetti/diagrams/14_testimoniPermanenza_xl.svg"
-            ></ion-img>
-            <ion-img
-              class={`ion-hide-lg-up ${styles.border}`}
-              alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
-              src="/processetti/diagrams/14_testimoniPermanenza_sl.svg"
-            ></ion-img>
-          </ImageWrapper>
-        </p>
-        <p>
-          I testimoni che prendevano parte a un processetto avevano mediamente
-          una decina di anni in più rispetto allo sposo, circa 38. Tale
-          differenza anagrafica trova ragione nella natura dei rapporti
-          intercorsi tra il richiedente e i suoi testimoni, chiamati a fornire
-          informazioni non solo sulla sua condizione contingente, ma anche sul
-          suo passato. Far testimoniare persone dello stesso paese, o accomunate
-          per professione, spesso significava scegliere testimoni della stessa
-          generazione o addirittura della stessa fascia d'età. Tuttavia, se la
-          differenza di età risulta in media così marcata, è evidente che il
-          singolo testimone veniva scelto soprattutto in virtù della credibilità
-          attribuibile alla sua parola, che era sì proporzionale al grado di
-          conoscenza, ma anche determinata dallo <i>status sociale</i>. Ad
-          esempio, la parola del maestro contava di più di quella di un compagno
-          di apprendistato. In questo senso, anche l'età avrebbe costituito un
-          elemento in grado di conferire maggiore o minore autorevolezza alle
-          dichiarazioni.
-        </p>
-        <p>
-          L'età in cui i testimoni forestieri giungevano in città risulta
-          tendenzialmente più alta di quella dei richiedenti: una media di 19
-          anni rispetto a quella di 14. Questa discrepanza va messa in relazione
-          all'età più avanzata in cui alcuni professionisti qualificati si
-          trasferivano a Venezia, e tra i quali i testimoni potevano essere
-          selezionati in modo preferenziale, sempre che soddisfacessero i
-          criteri richiesti. Va detto che l’arrivo più tardivo non sembra aver
-          influito sulla durata della loro permanenza a Venezia, che in media si
-          attestava attorno ai 17 anni. Il tempo trascorso in città costituiva
-          con ogni evidenza un consolidamento del riconoscimento sociale del
-          testimone, conferendo così ulteriore credibilità alla deposizione.
-        </p>
-        <ImageTitle>
-          Confronto delle professioni dei richiedenti e dei testimoni
-        </ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
+        <br />
         <p>
           <ImageWrapper
             caption={
@@ -199,8 +98,6 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             ></ion-img>
           </ImageWrapper>
         </p>
-        <ImageTitle> Professioni dei testimoni secondo il genere</ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
         <p>
           <ImageWrapper
             caption={
