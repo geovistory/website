@@ -73,7 +73,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
        
         <ImageTitle>
-          Confronto delle professioni di richiedenti e testimoni (1592-1604)
+          Confronto delle professioni dei richiedenti e dei testimoni (1592-1604)
         </ImageTitle>
         <br />
         <p>

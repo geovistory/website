@@ -7,6 +7,7 @@ import {
 } from '../../../lib/projectParams';
 import { ProjectSearchProps } from '../../project/[geov_id]/search';
 
+
 const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
   return (
     <ProcessettiGraficiLayout
@@ -14,79 +15,90 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
       hideBanner={false}
       links={ricercaLinks}
     >
-      <ion-grid class="ion-margin-top">
+      <ion-grid class="ion-margin-top" fixed>
         <h1>Ricerca libera</h1>
 
         <p>
           La pagina garantisce la possibilità di esplorare ed effettuare
           semplici ricerche sui dati presenti nel database ANR Processetti,
-          ospitato in Geovistory.{' '}
+          ospitato in Geovistory. Questo consente di condurre ricerche, tra le
+          altre, sulle <b>persone</b>, sui <b>luoghi geografici</b> (siano essi
+          luoghi d&apos;origine, tappe di uno spostamento o luoghi di abitazione
+          o lavoro, entro o fuori Venezia) o, ancora, sulle <b>professioni</b>{" "}
+          svolte dai soggetti.
         </p>
 
         <p>
-          <ion-button href="/processetti/ricerca-libera/ricerca" color="primary">
+          <ion-button
+            href="/processetti/ricerca-libera/ricerca"
+            color="primary"
+          >
             Ricerca
           </ion-button>
         </p>
 
         <p>
-          Le ricerche effettuabili interessano tutte e 42 le classi attivate
-          entro il modello semantico. Ciò rende possibile operare ricerche, tra
-          le altre, sulle persona (nome, cognome), sui luoghi geografici (siano
-          essi luoghi d&apos;origine, tappe di uno spostamento o luoghi di
-          abitazione o lavoro, entro o fuori Venezia) o, ancora, sulle
-          professioni svolte dai soggetti.{' '}
+          Per iniziare un&apos;esplorazione dei dati attraverso la{" "}
+          <i>ricerca libera</i>, il primo passo è la scelta del{" "}
+          <i>Class Filter</i>. Sebbene una lista a scomparsa garantisca la
+          selezione di una qualsiasi delle classi attivate nell&apos;ambito del
+          progetto, tre di queste sono poste in evidenza: si tratta di{" "}
+          <i>Person</i>, <i>Geographical place</i> e <i>Occupation</i>.{" "}
         </p>
         <p>
-          Per compiere un&apos;esplorazione dei dati attraverso la{' '}
-          <i>ricerca libera</i>, il primo passo è la scelta del Class Filter.
-          Sebbene una lista a scomparsa garantisce la selezione di una qualsiasi
-          delle classi attivate entro la base di dati, tre di queste sono poste
-          in evidenza: si tratta di <i>Person, Geographical place</i> e{' '}
-          <i>Occupation</i>. Selezionata la classe radice, nella finestra
-          principale vengono visualizzate tutte le istanze afferenti alla classe
-          selezionata, rese a loro volta filtrabili per mezzo di un campo di
-          ricerca libera. A questo livello il filtraggio è svolta tenendo in
-          considerazione il nome preferenziale attribuito all&apos;entità. Se
+          Per orientarsi nell&apos;individuazione delle varie entità riferibili
+          a luoghi geografici o professioni presenti nel{" "}
+          <i>database - ANR Processetti</i>, è possibile consultare gli indici
+          qui sotto riportati:
+        </p>
+
+        {/* <!-- add occupation file --> */}
+        {/* <!-- add geo_place file --> */}
+
+        <p>
+          Una volta selezionata la classe radice, nella finestra principale
+          vengono visualizzate tutte le istanze afferenti alla classe prescelta,
+          rese a loro volta filtrabili per mezzo di un campo di ricerca a
+          compilazione libera. A questo livello il filtraggio è svolta tenendo
+          in considerazione il nome preferenziale attribuito all&apos;entità. Se
           per i luoghi l&apos;appellativo principale corrisponde alla forma
-          italianizzata del toponimo, e per le professioni è la forma
+          italianizzata del toponimo e per le professioni coincide alla forma
           canonizzata all&apos;uso antico, i nomi di persona sono stati
-          uniformati ponendo in sequenza nome, patronimico e cognome, a cui sono
-          stati riportati tra parentesi tonde il luogo di origine del soggetto
-          interessato e la sua professione, così da garantire un efficace
-          processo di disambiguazione delle entità.
+          uniformati ponendo in sequenza l&apos;italianizzazione del nome, del
+          patronimico e del cognome, a cui sono state aggiunte, tra parentesi
+          tonde, informazioni relative al luogo di origine e alla professione
+          del soggetto interessato, così da garantire un efficace processo di
+          disambiguazione delle entità.
         </p>
         <p>
-          Selezionando dall&apos;elenco una delle entità visualizzate, si accede
-          a una scheda riportante tutte le proprietà rilevanti dell&apos;entità
-          prescelta; a loro volta costituite da istanze di classi e quindi punto
-          di accesso per ulteriori esplorazioni.
+          Selezionando dall&apos;elenco una delle voci visualizzate, si accede a
+          una scheda riportante tutte le proprietà rilevanti dell&apos;entità
+          prescelta; a loro volta istanze di classi e quindi punto di accesso
+          per ulteriori esplorazioni.
         </p>
 
         <p>
           Ad esempio, partendo dalla classe Person, si ottiene l&apos;elenco
-          delle 13185 entità presenti nel database. Selezionando una delle voci
-          si accede alla scheda in cui sono sintetizzate tutte le proprietà
-          rilevanti registrate di quel soggetto. Selezionando dall&apos;elenco
-          Bartolomeo di Andrea Giovanetti (da Bergamo, ligador), si accede alla
-          scheda di sintesi, dove è possibile apprendere che, oltre ad essere
-          originario di Bergamo ed esercitare la professione di ligador, egli
-          risiedeva nella parrocchia di S. Silvestro e che venne convocato in
-          veste di testimone in occasione del processetto di Bono di Alvise De
-          Sais, celebratosi il 25 giugno del 1639 e documentato nel 40 volume
-          della serie.{' '}
+          delle 13185 entità presenti nel database. Selezionando
+          dall&apos;elenco{" "}
+          <b>Bartolomeo di Andrea Giovanetti (da Bergamo, ligador)</b>, si
+          accede alla scheda di sintesi, dove è possibile apprendere che, oltre
+          ad essere originario di Bergamo ed esercitare la professione di
+          ligador, egli risiedeva nella parrocchia di S. Silvestro e che venne
+          convocato in veste di testimone in occasione del processetto di{" "}
+          <b>Bono di Alvise De Sais</b>, tenutosi il 25 giugno del 1639 e
+          documentato nel 40° volume della serie <i>Examinum Matrimoniorum</i>.
         </p>
 
         <p>
-          Ognuna delle <i>property</i> cards permette di spostarsi nella scheda
-          della specifica informazione verso cui si è orientata
-          l&apos;attenzione, così da approfondire la comprensione del suo
-          contenuto specifico. Tutte le informazioni sono sempre riconducibili
-          su base logica al processetto (o ai processetti) da cui sono
-          criticamente tratte e, almeno per il gruppo di processetti che dal
-          1592 giunge fino al 1604, è espressamente riportato il passaggio
-          testuale (o i passaggi testuali) della fonte che ne motivano il
-          contenuto.
+          Ogni <i>property cards</i> permette di spostarsi nella scheda della
+          specifica informazione verso cui si è orientata l&apos;attenzione,
+          così da approfondire la comprensione del suo contenuto specifico.
+          Tutte le informazioni sono sempre riconducibili su base logica al
+          processetto (o ai processetti) da cui sono criticamente tratte e,
+          almeno per il gruppo di processetti che dal 1592 giunge fino al 1604,
+          è espressamente riportato il passaggio testuale (o i passaggi
+          testuali) della fonte che ne motivano il contenuto.
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>

@@ -128,7 +128,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
         <ImageTitle>
           {" "}
-          Età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e distribuzione di genere (1592-1604){" "}
+          Età media dei richiedenti all’arrivo a Venezia e al processetto secondo l’origine e la distribuzione di genere (1592-1604){" "}
         </ImageTitle>
         <br />
         <p>

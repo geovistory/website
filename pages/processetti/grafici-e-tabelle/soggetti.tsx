@@ -14,7 +14,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
       <ion-grid fixed>
         <h1>Soggetti</h1>
 
-        <ImageTitle>Statuto dei soggetti e distribuzione per genere (1592-1605)</ImageTitle>
+        <ImageTitle>Statuto dei soggetti e distribuzione di genere (1592-1605)</ImageTitle>
         <br />
         <p>
           <ImageWrapper
@@ -187,8 +187,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           matrimonio in età 'precoce'. Chi giungeva in città intorno ai 13 anni,
           ad esempio, tendeva a sposarsi verso i 22.
         </p>
-        <ImageTitle>Permanenza dei richiedenti a Venezia</ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
+        <ImageTitle>Permanenza dei richiedenti a Venezia (1592-1604)</ImageTitle>
         <p>
           <ImageWrapper
             caption={

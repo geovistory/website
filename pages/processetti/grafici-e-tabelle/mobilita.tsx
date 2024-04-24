@@ -75,28 +75,6 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <p>
           <ImageWrapper
             caption={
-              "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-            }
-            imageUrls={[
-              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg",
-              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg",
-            ]}
-          >
-            <ion-img
-              class={`ion-hide-lg-down ${styles.border}`}
-              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg"
-            ></ion-img>
-            <ion-img
-              class={`ion-hide-lg-up ${styles.border}`}
-              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg"
-            ></ion-img>
-          </ImageWrapper>
-        </p>
-        <p>
-          <ImageWrapper
-            caption={
               "Origini dei richiedenti con almeno un ritorno temporaneo al paese d'origine"
             }
             imageUrls={[
@@ -116,6 +94,29 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             ></ion-img>
           </ImageWrapper>
         </p>
+        <p>
+          <ImageWrapper
+            caption={
+              "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+            }
+            imageUrls={[
+              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg",
+              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
+       
         <p>
           Il ritorno al paese d'origine, che avrebbe potuto rappresentare per il
           richiedente l’occasione di contrarre un altro vincolo matrimoniale, fu

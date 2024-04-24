@@ -14,7 +14,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
       <ion-grid fixed>
         <h1>Relazioni</h1>
         <ImageTitle>
-          Tipologia e perduranza delle relazioni tra il richiedente e i suoi testimoni (1592-1604){" "}
+          Tipologia e perduranza delle relazioni tra i richiedenti e i loro testimoni (1592-1604){" "}
         </ImageTitle>
         <br />
         <p>

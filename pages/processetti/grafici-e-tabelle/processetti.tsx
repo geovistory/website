@@ -150,8 +150,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           generalizzata a tutta la popolazione originaria di Venezia, si sarebbe
           istituzionalizzata solo a partire dall’inizio del Settecento.
         </p>
-        <ImageTitle>Durata del processetto</ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <ImageTitle>Durata del processetto matrimoniale (1592-1604)</ImageTitle>
+        <br />
         <p>
           <ImageWrapper
             caption={"Durata dei processetti"}

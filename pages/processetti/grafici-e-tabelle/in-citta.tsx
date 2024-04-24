@@ -73,9 +73,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           costo degli alloggi del centro.
         </p>
         <ImageTitle>
-          Parrocchia di abitazione dei richiedenti e dei testimoni
+          Parrocchia di abitazione dei richiedenti e dei testimoni (1592-1604)
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
         <p>
         <ImageWrapper
           caption={
