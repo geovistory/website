@@ -21,13 +21,8 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
         <p>
           La pagina garantisce la possibilità di esplorare ed effettuare
           semplici ricerche sui dati presenti nel database ANR Processetti,
-          ospitato in Geovistory. Questo consente di condurre ricerche, tra le
-          altre, sulle <b>persone</b>, sui <b>luoghi geografici</b> (siano essi
-          luoghi d&apos;origine, tappe di uno spostamento o luoghi di abitazione
-          o lavoro, entro o fuori Venezia) o, ancora, sulle <b>professioni</b>{" "}
-          svolte dai soggetti.
+          ospitato in Geovistory. 
         </p>
-
         <p>
           <ion-button
             href="/processetti/ricerca-libera/ricerca"
@@ -36,6 +31,15 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
             Ricerca
           </ion-button>
         </p>
+        <p>
+          Questo consente di condurre ricerche, tra le
+          altre, sulle persone, sui luoghi geografici (siano essi
+          luoghi d&apos;origine, tappe di uno spostamento o luoghi di abitazione
+          o lavoro, entro o fuori Venezia) o, ancora, sulle professioni{" "}
+          svolte dai soggetti.
+        </p>
+
+        
 
         <p>
           Per iniziare un&apos;esplorazione dei dati attraverso la{" "}
