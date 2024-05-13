@@ -371,12 +371,15 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           
                     'cScale2':'#74a08b',
                     'cScaleLabel2': '#fff',
-          
-                    'cScale3':'#0892a5',
+
+                    'cScale3':'#74a08b',
                     'cScaleLabel3': '#fff',
           
-                    'cScale4':'#9f7a09',
+                    'cScale4':'#0892a5',
                     'cScaleLabel4': '#fff',
+          
+                    'cScale5':'#9f7a09',
+                    'cScaleLabel5': '#fff',
           
                     'font-family': 'Roboto,RobotoDraft,Helvetica,Arial,sans-serif'          
                   }
@@ -392,7 +395,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
                 2022: Spoglio archivistico presso l’Archivio storico del Patriarcato di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
                     : Convegno "Disciplinare il matrimonio, tracciare la mobilità, riconoscere le relazioni. Esami prematrimoniali nel mondo cattolico (XVI-XVIII secolo)", svoltosi presso l'Università di Padova (27-28 ottobre 2022)                
                 2023: Preparazione e analisi dati a cura di Jacopo Cossu
-                    : Consegna alla Casa Editrice Viella di una raccolta di saggi sul controllo dello stato libero
+                2025: Consegna di una raccolta di saggi sul controllo dello stato libero
           `}
         </geov-mermaid>
       </ion-grid>
