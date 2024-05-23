@@ -31,7 +31,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <p>
           <ImageWrapper
             caption={
-              "ASPVe, Curia patriarcale di Venezia, Sezione antica, Examinum Matrimoniorum, vol 45, c. n.n"
+              <>ASPVe, <i>Curia patriarcale di Venezia. Sezione antica, Examinum Matrimoniorum</i>, vol 45, c. n.n, <i>r</i></>
             }
             imageUrls={["/processetti/metodologia/motivation-type.jpg"]}
             dialogChildren={

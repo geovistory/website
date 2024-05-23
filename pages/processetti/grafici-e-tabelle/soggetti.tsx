@@ -14,8 +14,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
       <ion-grid fixed>
         <h1>Soggetti</h1>
 
-        <ImageTitle>Statuto dei soggetti e distribuzione per genere</ImageTitle>
-        <Subtitle>(periodo 1592-1605)</Subtitle>
+        <ImageTitle>Statuto dei soggetti e distribuzione di genere (1592-1605)</ImageTitle>
+        <br />
         <p>
           <ImageWrapper
             caption={"Statuto dei soggetti e distribuzione di genere"}
@@ -39,7 +39,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <p>
           Gli attori intorno ai quali si articola un processetto si dividono in
           tre categorie: richiedenti, testimoni e persone decedute, delle quali
-          il processetto mira a comprovare la morte. I testimoni risultano il
+          il processetto mira a comprovare la morte. I testimoni risultano più del
           doppio dei richiedenti poiché le norme procedurali prevedevano la
           presenza di almeno due persone chiamate a deporre.
         </p>
@@ -77,8 +77,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           ulteriormente approfonditi intersecando i processetti con altre
           tipologie di documentazione e valutando alcuni casi di studio.
         </p>
-        <ImageTitle>Età dei richiedenti al processetto</ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
+        <ImageTitle>Età dei richiedenti al processetto (1592-1604)</ImageTitle>
+        <br />
         <p>
           <ImageWrapper
             caption={"Età dei richiedenti al momento del processetto"}
@@ -113,10 +113,10 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           familiare, le informazioni a nostra disposizione su questo aspetto
           (perlomeno per quanto attiene al contesto veneziano) risultano
           scarsissime. I processetti ci permettono di rintracciare gli anni di
-          due categorie di persone: i forestieri e i vedovi. L'età media è di 36
+          due categorie di persone, in particolare: i forestieri e i vedovi. L'età media è di 36
           anni per i vedovi e 26 per i forestieri, indipendentemente dal sesso.
           Non tenendo conto della popolazione autoctona, il dato anagrafico non
-          permette di calcolare l'età media al matrimonio a Venezia; ciò
+          permette di calcolare l'età media di matrimonio a Venezia; ciò
           nonostante appare coerente con i dati esistenti per altre città. L’età
           apparentemente tardiva è comprensibile rammentando che essa è legata
           anche alle condizioni di insediamento professionale. L'età al
@@ -125,8 +125,8 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           fuori Venezia, sembra suggerire che l'età al matrimonio dei nativi
           fosse un po’ più bassa di quella dei forestieri.
         </p>
-        <ImageTitle>Età dei richiedenti all’arrivo a Venezia</ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
+        <ImageTitle>Età dei richiedenti all’arrivo a Venezia (1592-1604)</ImageTitle>
+        <br />
         <p>
           <ImageWrapper
             caption={"Età dei richiedenti al momento del loro arrivo a Venezia"}
@@ -147,14 +147,11 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             ></ion-img>
           </ImageWrapper>
         </p>
-        <ImageTitle>
-          Rapporto tra l’età all’arrivo a Venezia e l’età al processetto
-        </ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
+        <br />
         <p>
           <ImageWrapper
             caption={
-              "Distribuzione dei richiedenti per età al momento del processetto e dell'arrivo a Venezia"
+              "Rapporto tra l’età dei richiedenti all’arrivo a Venezia e l’età al processetto"
             }
             imageUrls={[
               "/processetti/diagrams/09_arrivoProcessettoRichiedenti_sl.svg",
@@ -180,18 +177,17 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           coincidenza con l’inizio di un periodo di apprendistato presso un
           artigiano, oppure, nel caso delle giovani donne, del lavoro domestico.
           La fonte permette di comprendere meglio anche la mobilità verso
-          Venezia in età più avanzata. Le vedove e i vedovi che si risposavano a
+          Venezia in età più matura. Le vedove e i vedovi che si risposavano a
           Venezia, sebbene nati altrove, tendevano a giungere in città a un’età
           più avanzata, intorno ai 24-25 anni.
         </p>
         <p>
           Incrociando l'età di arrivo a Venezia con l'età del processetto è
           possibile notare una convergenza tra arrivo in età infantile e
-          matrimonio in età “precoce”. Chi giungeva in città intorno ai 13 anni,
+          matrimonio in età 'precoce'. Chi giungeva in città intorno ai 13 anni,
           ad esempio, tendeva a sposarsi verso i 22.
         </p>
-        <ImageTitle>Permanenza dei richiedenti a Venezia</ImageTitle>
-        <Subtitle>(Periodo 1592-1604)</Subtitle>
+        <ImageTitle>Permanenza dei richiedenti a Venezia (1592-1604)</ImageTitle>
         <p>
           <ImageWrapper
             caption={
@@ -224,6 +220,103 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           età adolescenziale e dalla parallela necessità di un certo grado di
           stabilità professionale prima del matrimonio. Ciò nonostante, arrivare
           in età più avanzata non significava sposarsi più rapidamente.
+        </p>
+        <ImageTitle>
+          Età dei testimoni al processetto, età all’arrivo a Venezia e tempo di permanenza in città (1592-1604)
+        </ImageTitle>
+        <br />
+        <p>
+          <ImageWrapper
+            caption={"Età dei testimoni al momento del processetto"}
+            imageUrls={[
+              "/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg",
+              "/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
+              src="/processetti/diagrams/12_testimoniEtaProcessetto_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del processetto, distinti per genere"
+              src="/processetti/diagrams/12_testimoniEtaProcessetto_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
+        <p>
+          <ImageWrapper
+            caption={"Età dei testimoni al momento del loro arrivo a Venezia"}
+            imageUrls={[
+              "/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg",
+              "/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
+              src="/processetti/diagrams/13_testimoniArrivoVenezia_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con l'età dei testimoni al momento del loro arrivo a Venezia, distinti per genere"
+              src="/processetti/diagrams/13_testimoniArrivoVenezia_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
+        <p>
+          <ImageWrapper
+            caption={
+              "Tempo di permanenza dei testimoni a Venezia, prima del processetto"
+            }
+            imageUrls={[
+              "/processetti/diagrams/14_testimoniPermanenza_sl.svg",
+              "/processetti/diagrams/14_testimoniPermanenza_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
+              src="/processetti/diagrams/14_testimoniPermanenza_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Grafico con il tempo di permanenza dei testimoni a Venezia, prima del processetto, distinti per genere"
+              src="/processetti/diagrams/14_testimoniPermanenza_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
+        <p>
+          I testimoni che prendevano parte a un processetto avevano mediamente
+          una decina di anni in più rispetto allo sposo, circa 38. Tale
+          differenza anagrafica trova ragione nella natura dei rapporti
+          intercorsi tra il richiedente e i suoi testimoni, chiamati a fornire
+          informazioni non solo sulla sua condizione contingente, ma anche sul
+          suo passato. Far testimoniare persone dello stesso paese, o accomunate
+          per professione, spesso significava scegliere testimoni della stessa
+          generazione o addirittura della stessa fascia d'età. Tuttavia, se la
+          differenza di età risulta in media così marcata, è evidente che il
+          singolo testimone veniva scelto soprattutto in virtù della credibilità
+          attribuibile alla sua parola, che era sì proporzionale al grado di
+          conoscenza, ma anche determinata dallo <i>status sociale</i>. Ad
+          esempio, la parola del maestro contava di più di quella di un compagno
+          di apprendistato. In questo senso, anche l'età avrebbe costituito un
+          elemento in grado di conferire maggiore o minore autorevolezza alle
+          dichiarazioni.
+        </p>
+        <p>
+          L'età in cui i testimoni forestieri giungevano in città risulta
+          tendenzialmente più alta di quella dei richiedenti: una media di 19
+          anni rispetto a quella di 14. Questa discrepanza va messa in relazione
+          all'età più avanzata in cui alcuni professionisti qualificati si
+          trasferivano a Venezia, e tra i quali i testimoni potevano essere
+          selezionati in modo preferenziale, sempre che soddisfacessero i
+          criteri richiesti. Va detto che l’arrivo più tardivo non sembra aver
+          influito sulla durata della loro permanenza a Venezia, che in media si
+          attestava attorno ai 17 anni. Il tempo trascorso in città costituiva
+          con ogni evidenza un consolidamento del riconoscimento sociale del
+          testimone, conferendo così ulteriore credibilità alla deposizione.
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>
