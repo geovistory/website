@@ -6,7 +6,7 @@ import {
   projectsParams,
 } from '../../../lib/projectParams';
 import { ProjectSearchProps } from '../../project/[geov_id]/search';
-
+import { downloadOutline } from 'ionicons/icons';
 
 const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
   return (
@@ -21,7 +21,7 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
         <p>
           La pagina garantisce la possibilità di esplorare ed effettuare
           semplici ricerche sui dati presenti nel database ANR Processetti,
-          ospitato in Geovistory. 
+          ospitato in Geovistory.
         </p>
         <p>
           <ion-button
@@ -32,33 +32,46 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
           </ion-button>
         </p>
         <p>
-          Questo consente di condurre ricerche, tra le
-          altre, sulle persone, sui luoghi geografici (siano essi
-          luoghi d&apos;origine, tappe di uno spostamento o luoghi di abitazione
-          o lavoro, entro o fuori Venezia) o, ancora, sulle professioni{" "}
-          svolte dai soggetti.
+          Questo consente di condurre ricerche, tra le altre, sulle persone, sui
+          luoghi geografici (siano essi luoghi d&apos;origine, tappe di uno
+          spostamento o luoghi di abitazione o lavoro, entro o fuori Venezia) o,
+          ancora, sulle professioni svolte dai soggetti.
         </p>
 
-        
-
         <p>
-          Per iniziare un&apos;esplorazione dei dati attraverso la{" "}
-          <i>ricerca libera</i>, il primo passo è la scelta del{" "}
+          Per iniziare un&apos;esplorazione dei dati attraverso la{' '}
+          <i>ricerca libera</i>, il primo passo è la scelta del{' '}
           <i>Class Filter</i>. Sebbene una lista a scomparsa garantisca la
           selezione di una qualsiasi delle classi attivate nell&apos;ambito del
-          progetto, tre di queste sono poste in evidenza: si tratta di{" "}
-          <i>Person</i>, <i>Geographical place</i> e <i>Occupation</i>.{" "}
+          progetto, tre di queste sono poste in evidenza: si tratta di{' '}
+          <i>Person</i>, <i>Geographical place</i> e <i>Occupation</i>.{' '}
         </p>
         <p>
           Per orientarsi nell&apos;individuazione delle varie entità riferibili
-          a luoghi geografici o professioni presenti nel{" "}
+          a luoghi geografici o professioni presenti nel{' '}
           <i>database - ANR Processetti</i>, è possibile consultare gli indici
           qui sotto riportati:
         </p>
-
-        {/* <!-- add occupation file --> */}
-        {/* <!-- add geo_place file --> */}
-
+        <p>
+          <ion-button
+            fill="outline"
+            href="/processetti/documents/occupation.xlsx"
+            color="primary"
+            download="professioni.xlsx"
+          >
+            <ion-icon slot="start" icon={downloadOutline}></ion-icon>
+            Professioni (.xlsx)
+          </ion-button>
+          <ion-button
+            fill="outline"
+            href="/processetti/documents/place.xlsx"
+            color="primary"
+            download="luoghi.xlsx"
+          >
+            <ion-icon slot="start" icon={downloadOutline}></ion-icon>
+            Luoghi geografici (.xlsx)
+          </ion-button>
+        </p>
         <p>
           Una volta selezionata la classe radice, nella finestra principale
           vengono visualizzate tutte le istanze afferenti alla classe prescelta,
@@ -84,12 +97,12 @@ const ProcessettiSearch: NextPage<ProjectSearchProps> = (props) => {
         <p>
           Ad esempio, partendo dalla classe Person, si ottiene l&apos;elenco
           delle 13185 entità presenti nel database. Selezionando
-          dall&apos;elenco{" "}
+          dall&apos;elenco{' '}
           <b>Bartolomeo di Andrea Giovanetti (da Bergamo, ligador)</b>, si
           accede alla scheda di sintesi, dove è possibile apprendere che, oltre
           ad essere originario di Bergamo ed esercitare la professione di
           ligador, egli risiedeva nella parrocchia di S. Silvestro e che venne
-          convocato in veste di testimone in occasione del processetto di{" "}
+          convocato in veste di testimone in occasione del processetto di{' '}
           <b>Bono di Alvise De Sais</b>, tenutosi il 25 giugno del 1639 e
           documentato nel 40° volume della serie <i>Examinum Matrimoniorum</i>.
         </p>
