@@ -39,7 +39,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           Il progetto, nella persistente tensione tra la complessa natura del
           contenuto documentario e la necessità di un trattamento dei dati
           storici in una prospettiva integrata - tanto qualitativa quanto
-          quantitativa -, ha previsto la creazione di un database ospitato dalla
+          quantitativa -, ha previsto la creazione di un <i>database</i> ospitato dalla
           piattaforma collaborativa Geovistory, realizzata e messa a
           disposizione dalla società svizzera KleioLab.
           <br />
@@ -54,12 +54,12 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           Il sito intende offrire strumenti di ricerca (bibliografia), esporre
           sinteticamente la metodologia utilizzata nell&apos;estrinsecazione e
           strutturazione dei dati storici e consentire la visualizzazione di
-          parte dei risultati di indagine riguardanti la tipologia dei
+          parte dei risultati di indagine, inclusi la tipologia dei
           processetti, la natura delle relazioni che intercorrono fra i
           richiedenti e i loro testimoni, le professioni e le origini
           geografiche dei soggetti registrati.
-          <br />A partire da specifici strumenti di ricerca, il sito consente,
-          infine, di effettuare semplici interrogazioni esplorative e consultare
+          <br />Attraverso specifici strumenti di ricerca, il sito offre inoltre la possibilità
+          di effettuare semplici interrogazioni esplorative e consultare
           i dati raccolti, anche nelle loro molteplici interdipendenze.
         </p>
        {/* A Elisa, ragione ultima di ogni mio sforzo. Jacopo */}
@@ -69,7 +69,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         <p>
           <Person
             name="Professeur Jean-François Chauvard"
-            description="Professeur d’histoire moderne, Université Paris 1
+            description="Université Paris 1
                   Panthéon-Sorbonne"
           />
         </p>
@@ -80,21 +80,21 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <ion-col size="6">
             <Person
               name="Francesca Zungo"
-              description="Collaboratrice du projet"
+              description="Collaboratrice del progetto"
             />
           </ion-col>
           <ion-col size="6">
-            <Person name="Davide Drago" description="Collaborateur du projet" />
+            <Person name="Davide Drago" description="Collaboratore del progetto" />
           </ion-col>
         </ion-row>
         <ion-row class="restricted-width">
           <ion-col size="6">
-            <Person name="Jacopo Cossu" description="Collaborateur du projet" />
+            <Person name="Jacopo Cossu" description="Collaboratore del progetto" />
           </ion-col>
           <ion-col size="6">
             <Person
               name="Teresa Bernardi"
-              description="Post-doctorat Université de Padoue"
+              description="Post-doc, DiSSGeA, Università di Padova"
             />
           </ion-col>
         </ion-row>
@@ -115,7 +115,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <ion-col size="6">
             <Person
               name="Prof. Anna Bellavitis"
-              description="Université de Rouen"
+              description="Università di Rouen-Normandie"
             />
           </ion-col>
           <ion-col size="6">
@@ -129,13 +129,13 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           <ion-col size="6">
             <Person
               name="Dr. Habil. Francesco Beretta"
-              description="CNRS-LARHRA"
+              description="LARHRA, CNRS"
             />
           </ion-col>
           <ion-col size="6">
             <Person
               name="Eleonora Canepari"
-              description="Aix Marseille Université"
+              description="Aix-Marseille Université"
             />
           </ion-col>
         </ion-row>
@@ -147,7 +147,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
             />
           </ion-col>
           <ion-col size="6">
-            <Person name="Katerina Korrè" description="Università di Corfu" />
+            <Person name="Katerina Korrè" description=" Ionian University" />
           </ion-col>
         </ion-row>
         <ion-row class="restricted-width">
@@ -371,12 +371,15 @@ const Resources: NextPage<ResourcesProps> = (props) => {
           
                     'cScale2':'#74a08b',
                     'cScaleLabel2': '#fff',
-          
-                    'cScale3':'#0892a5',
+
+                    'cScale3':'#74a08b',
                     'cScaleLabel3': '#fff',
           
-                    'cScale4':'#9f7a09',
+                    'cScale4':'#0892a5',
                     'cScaleLabel4': '#fff',
+          
+                    'cScale5':'#9f7a09',
+                    'cScaleLabel5': '#fff',
           
                     'font-family': 'Roboto,RobotoDraft,Helvetica,Arial,sans-serif'          
                   }
@@ -385,15 +388,14 @@ const Resources: NextPage<ResourcesProps> = (props) => {
               timeline
                 2019: Fornitura della piattaforma Geovistory da parte della società svizzera Kleiolab
                 2020: Spoglio archivistico presso l’Archivio storico del Patriarcato di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
-                    : Reclutamento di tre studiosi (J. Cossu, F. Zugno, D. Drago) per una collaborazione della durata di tre anni Contratto post-doc per Teresa Bernardi (Università di Padova, Dipartimento DiSSGeA, progetto di eccellenza "Mobility & Humanities")
+                    : Reclutamento di tre studiosi (J. Cossu, F. Zugno, D. Drago) per una collaborazione della durata di tre anni. Stipula di un contratto post-doc con Teresa Bernardi (Università di Padova, Dipartimento DiSSGeA, progetto di eccellenza "Mobility & Humanities")
                 2021: Spoglio archivistico presso l’Archivio storico del Patriarcato di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
-                    : Missioni di ricerca presso gli archivi  di Anna Athanasouli (Università di Creta), Katerina Konstantinidou (National and Kapodistrian University of Athens) e Katerina Korrè (Università di Corfu).
-                    : Giornata di studi Contrôle pré-matrimonial, bigamie et mariages mixtes en Europe orientale, 10 t 11 settembre 2021 all’Università nazionale capodistriana di Atene e all’École française d’Athènes.
+                    : Missioni di ricerca presso gli archivi compiute da Anna Athanasouli (Università di Creta), Katerina Konstantinidou (National and Kapodistrian University of Athens) e Katerina Korrè (Ionian University)
+                    : Giornata di studi "Contrôle pré-matrimonial, bigamie et mariages mixtes en Europe orientale", svoltasi presso l’Università nazionale capodistriana di Atene e all’École française d’Athènes (10-11 settembre 2021)
                 2022: Spoglio archivistico presso l’Archivio storico del Patriarcato di Venezia. Trascrizione, annotazione semantica, strutturazione dei dati
-                    : Convegno Disciplinare il matrimonio, tracciare la mobilità, riconoscere le relazioni.
-                    : Esami prematrimoniali nel mondo cattolico (XVI-XVIII secolo), organizzato all'Università di Padova, 27-28 ottobre 2022.
-                2023: Analisi dei dati di Jacopo Cossu.
-                    : Consegna di un libro sul controllo dello stato libero dalla Casa Editrice Viella
+                    : Convegno "Disciplinare il matrimonio, tracciare la mobilità, riconoscere le relazioni. Esami prematrimoniali nel mondo cattolico (XVI-XVIII secolo)", svoltosi presso l'Università di Padova (27-28 ottobre 2022)                
+                2023: Preparazione e analisi dati a cura di Jacopo Cossu
+                2025: Consegna di una raccolta di saggi sul controllo dello stato libero
           `}
         </geov-mermaid>
       </ion-grid>

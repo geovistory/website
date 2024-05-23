@@ -16,7 +16,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <p>
           Se l’annotazione semantica delle trascrizioni - il tagging del testo
           in XML, secondo le linee guida fornite dalla{" "}
-          <i>Text Encoding Initiative</i>
+          <i>Text Encoding Initiative</i>{" "}
           (TEI) - è intesa, sulla base delle esperienze e infrastrutture già
           elaborata nell’ambito del progetto symogih.org (<a href="index.tsx#2016">Beretta, 2016</a>), a
           ristabilire il nesso tra i dati strutturati e le porzioni di testo che
@@ -56,7 +56,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
           si sovrappongono nel testo alle annotazioni semantiche di entità
           definite. In tal modo ne è esplicitata la natura provvisoria e ne
           viene assicurato il facile reperimento nel tempo, così da agevolare la
-          <i>data curation</i>, intesa come l’arricchimento e il miglioramento
+          {" "}<i>data curation</i>, intesa come l’arricchimento e il miglioramento
           progressivo dei dati di ricerca al fine di garantirne la qualità,
           l’accessibilità e la conservazione (così come intesa nei principi
           FAIR).

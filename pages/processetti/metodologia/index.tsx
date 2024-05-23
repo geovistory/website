@@ -16,7 +16,7 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <h1>Introduzione metodologica</h1>
 
         <p>
-          Per realizzare il database ANR Processetti, produrre e curare i
+          Per realizzare il <i>database</i> ANR Processetti, produrre e curare i
           <i>semantic data</i>, gestire le <i>digital reproduction</i> e attuare
           l’annotazione semantica dei testi, il progetto si è avvalso di
           Geovistory, un
@@ -153,37 +153,38 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <p></p>
         <p id="2013" className={mainStyles.indent1}>
           Beretta Francesco, Butez Charlotte (2013), “Un SIG Collaboratif Pour
-          La Recherche Historique”, in “Géomatique Expert”, 91, pp. 30-35 / 92,
+          La Recherche Historique”, in <i>Géomatique Expert</i>, 91, pp. 30-35 / 92,
           pp. 48-54
         </p>
 
         <p id="2016" className={mainStyles.indent1}>
           Beretta Francesco (2016), “Pour une annotation sémantique des textes:
-          le projet symogih.org et la Text encoding initiative”, in “Bruniana e
-          Campanelliana, Ricerche filosofiche e materiali storico - testuali”,
-          XXII.2 , pp. 453-65 [https://doi.org/10.19272/201604102005]
+          le projet symogih.org et la Text encoding initiative”, in <i>Bruniana e
+          Campanelliana, Ricerche filosofiche e materiali storico - testuali</i>,
+          XXII.2 , pp. 453-465 
+          (https://doi.org/10.19272/201604102005)
         </p>
 
         <p id="2021" className={mainStyles.indent1}>
           Beretta Francesco (2021), “A Challenge for Historical Research: Making
           Data FAIR Using a Collaborative Ontology Management Environment
-          (OntoME)”, in “Semantic Web”, 12.2, pp. 279-94
-          [https://doi.org/10.3233/SW-200416]
+          (OntoME)”, in <i>Semantic Web</i>, 12.2, pp. 279-294
+          (https://doi.org/10.3233/SW-200416)
         </p>
 
         <p id="2022" className={mainStyles.indent1}>
           Beretta Francesco (2022), “Interopérabilité Des Données de La
           Recherche et Ontologies Fondationnelles: Un Écosystème d”extensions Du
           CIDOC CRM Pour Les Sciences Humaines et Sociales”, in N. Lasolle, O.
-          Bruneau, J. Lieber (a cura di),{' '}
+          Bruneau e J. Lieber (a cura di),{' '}
           <i>Actes Des Journées Humanités Numériques et Web Sémantique</i>,
-          Nancy, pp. 2-22 [https://doi.org/10.5281/zenodo.7014341]
+          Nancy, pp. 2-22 (https://doi.org/10.5281/zenodo.7014341)
         </p>
 
         <p id="2023" className={mainStyles.indent1}>
           Beretta Francesco (2023), “Données ouvertes liées et recherche
-          historique: un changement de paradigme”, in “Humanités numériques”, 7
-          [https://doi.org/10.4000/revuehn.3349]
+          historique: un changement de paradigme”, in <i>Humanités numériques</i>, 7
+          (https://doi.org/10.4000/revuehn.3349)
         </p>
       </ion-grid>
     </ProcessettiGraficiLayout>

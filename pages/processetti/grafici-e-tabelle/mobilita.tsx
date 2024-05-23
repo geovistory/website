@@ -15,10 +15,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         <h1>Mobilità</h1>
 
         <ImageTitle>
-          Spostamento temporaneo fuori Venezi/Tappa intermedia tra il paese di
-          origine e l’arrivo a Venezia{" "}
+         Spostamenti extraurbani dei richiedenti, prima e dopo il loro arrivo a Venezia (1592-1604){" "}
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
 
         <p>
           <ImageWrapper
@@ -70,37 +69,9 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
         </p>
 
         <ImageTitle>
-          Ritorno temporaneo al paese di origine dopo l’arrivo a Venezia <br />
-          Frequenza del ritorno temporaneo al paese d’origine dopo l’arrivo a
-          Venezia
+          Ritorno temporaneo al paese d'origine dopo l’arrivo a Venezia (1592-1604)
         </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
-        <p>
-          <ImageWrapper
-            caption={
-              "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-            }
-            imageUrls={[
-              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg",
-              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg",
-            ]}
-          >
-            <ion-img
-              class={`ion-hide-lg-down ${styles.border}`}
-              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg"
-            ></ion-img>
-            <ion-img
-              class={`ion-hide-lg-up ${styles.border}`}
-              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
-              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg"
-            ></ion-img>
-          </ImageWrapper>
-        </p>
-        <ImageTitle>
-          Origini dei richiedenti che tornano temporaneamente al paese
-        </ImageTitle>
-        <Subtitle>(periodo 1592-1604)</Subtitle>
+        <br />
         <p>
           <ImageWrapper
             caption={
@@ -123,6 +94,29 @@ const P: NextPage<GraficiTabelleProps> = (props) => {
             ></ion-img>
           </ImageWrapper>
         </p>
+        <p>
+          <ImageWrapper
+            caption={
+              "Rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+            }
+            imageUrls={[
+              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg",
+              "/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg",
+            ]}
+          >
+            <ion-img
+              class={`ion-hide-lg-down ${styles.border}`}
+              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_xl.svg"
+            ></ion-img>
+            <ion-img
+              class={`ion-hide-lg-up ${styles.border}`}
+              alt="Tabella che pone in rapporto tra la frequenza degli spostamenti extraurbani e il tempo di stabile permanenza a Venezia"
+              src="/processetti/diagrams/25_frequenzaMobilitàPermanenza_sl.svg"
+            ></ion-img>
+          </ImageWrapper>
+        </p>
+       
         <p>
           Il ritorno al paese d'origine, che avrebbe potuto rappresentare per il
           richiedente l’occasione di contrarre un altro vincolo matrimoniale, fu
