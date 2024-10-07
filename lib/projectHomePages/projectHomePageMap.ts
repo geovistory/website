@@ -14,6 +14,7 @@ import StudentInternationalism_component from './student-internationalism/studen
 import UrbanBiographies_component from './urban-biographies/urban-biographies';
 import EnfantsDuPlacard_component from './enfants-du-placard/enfants-du-placard';
 import BaselNonProtestants_component from './basel-non-protestants/basel-non-protestants';
+import OBJECTive_component from './objective/objective';
 
 
 interface Map {
@@ -53,5 +54,7 @@ export const projectHomePageMap: Map = {
     
     1458522: EnfantsDuPlacard_component,
     
-    1719422: BaselNonProtestants_component
+    1719422: BaselNonProtestants_component,
+
+    11200212: OBJECTive_component,
 };

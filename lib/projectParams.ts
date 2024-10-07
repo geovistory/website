@@ -598,6 +598,33 @@ LIMIT 10`,
         headOgImage: '/socialimage/basel-non-protestants.jpg'
 
     },
+    // OBJECTive
+    {
+        geovID: 11200212,
+        geovName: 'OBJECTive',
+
+        preferredClasses: [],
+
+        featured: false,
+        listed: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'OBJECTive',
+        shortName: 'OBJECTive',
+        description: 'Tracking Objets d\'art in Time through the Art Market',
+
+        hasPage: true,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/objective.png'
+
+    },
 ]
 
 
