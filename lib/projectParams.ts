@@ -613,7 +613,7 @@ LIMIT 10`,
 
         fullName: 'OBJECTive',
         shortName: 'OBJECTive',
-        description: 'Tracking Objets d\'art in Time through the Art Market',
+        description: "Tracking Objets d'art in Time through the Art Market",
 
         hasPage: true,
         sparqlLinkEnabled: true,

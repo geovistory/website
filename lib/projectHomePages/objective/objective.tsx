@@ -70,24 +70,24 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
         <ion-grid fixed class="ion-padding">
           <p className="lead">
             <strong>
-              Tracking <i>Objets d'art</i> in Time through the Art Market<br />
+              Tracking <i>Objets d&apos;art</i> in Time through the Art Market<br />
               Historical data on auctions in the modern era (1750-1950), ready to explore and reuse
             </strong>
           </p>{' '}
           <p>
-            <i>Objets d'art</i> (or decorative arts) are challenging to research as they include a vast array of objects, encompassing ceramics, 
+            <i>Objets d&apos;art</i> (or decorative arts) are challenging to research as they include a vast array of objects, encompassing ceramics, 
             furniture, glass, metalwork, and textiles, all with distinctive forms, functions and materials, and their creators are often unknown.
             Under-represented in cultural economics and heritage studies, the absence of a comprehensive dataset is an obstacle to study and track pieces across time.
           </p>
           <p>
-            This project aims to create a database on <i>objets d'art</i> auction sales (from 1750s until 1950s) by working from a consistent source: the auction catalogue.
+            This project aims to create a database on <i>objets d&apos;art</i> auction sales (from 1750s until 1950s) by working from a consistent source: the auction catalogue.
           </p>
           <p>
             From the mid-18th century auctions have been organised, mainly in Paris and London, to sell and disperse objects, 
             increasing greatly in the first half of the 19th century to reach a rhythm of several thousand sales per decade.
             Individual auctions have always both combined and dispersed a great diversity of fine objects, from a multitude of origins.
             The catalogue is a crucial record. In many cases annotated catalogues exist (with hammer prices and buyers) and others can be cross-referenced 
-            with auctioneers' archives. The core of the dataset will be built up from the selection of a vast corpus of auction catalogues for the decorative arts. 
+            with auctioneers&apos; archives. The core of the dataset will be built up from the selection of a vast corpus of auction catalogues for the decorative arts. 
             These catalogues will be interrogated through digital methods (extraction, processing and machine learning) and Geovistory will be used to 
             integrate and structure various data collections. The database will offer a new tool for identification and provenance research but will also 
             focus on the individuals and institutions involved (sellers/buyers), allowing for a study of the networks and characteristics of this market over a long period.
