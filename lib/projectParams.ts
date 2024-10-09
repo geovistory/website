@@ -616,10 +616,10 @@ LIMIT 10`,
         description: "Tracking Objets d'art in Time through the Art Market",
 
         hasPage: true,
-        sparqlLinkEnabled: true,
-        searchLinkEnabled: true,
-        ontoExplorerLinkEnabled: true,
-        sparklisLinkEnabled: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
         teiLinkEnabled: false,
 
         headOgImage: '/socialimage/objective.png'

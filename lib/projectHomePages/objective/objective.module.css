@@ -1,3 +1,10 @@
+.emphasize {
+    background: #ccc;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .theme {
     --ion-background-color: #fff;
     --gv-bg-project-toolbar: #EBF8FF;
@@ -27,7 +34,7 @@
 
 .title {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 5rem;
     position: absolute;
     left: 1rem;
     bottom: 0.3rem;
@@ -35,7 +42,7 @@
 /* sm and up */
 @media screen and (min-width: 576px) {
     .title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .bannerContainer {
@@ -50,7 +57,7 @@
 /* md and up */
 @media screen and (min-width: 768px) {
     .title {
-        font-size: 2.1rem;
+        font-size: 3rem;
     }
 
     .bannerContainer {
@@ -65,7 +72,7 @@
 /* lg and up */
 @media screen and (min-width: 992px) {
     .title {
-        font-size: 2.6rem;
+        font-size: 3.5rem;
     }
 
     .bannerContainer {
@@ -80,7 +87,7 @@
 /* xl and up */
 @media screen and (min-width: 1200px) {
     .title {
-        font-size: 3.1rem;
+        font-size: 4rem;
     }
 
     .bannerContainer {

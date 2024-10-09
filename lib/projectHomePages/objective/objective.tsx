@@ -28,6 +28,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
           />
 
           <ion-searchbar
+            style={{marginTop: '12rem !important'}}
             class="restricted-width"
             color="light"
             enterkeyhint="enter"
@@ -52,20 +53,11 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
               });
             }}
           ></ion-searchbar>
+
           <h1 className={styles.title}>
             <div className={styles.titleLine1}>OBJECTive</div>
           </h1>
         </div>
-
-
-
-        <div className="restricted-width">
-            <ion-label>
-              <small>
-                Image: Ignacio de León y Escosura, Auction Sale in Clinton Hall, New York, 1876, The Metropolitan Museum of Art, 83.11, Gift of the Artist, 1883
-              </small>
-            </ion-label>
-          </div>
 
         <ion-grid fixed class="ion-padding">
           <p className="lead">
@@ -92,7 +84,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
             integrate and structure various data collections. The database will offer a new tool for identification and provenance research but will also 
             focus on the individuals and institutions involved (sellers/buyers), allowing for a study of the networks and characteristics of this market over a long period.
           </p>
-          <p>
+          <p className={styles.emphasize}>
             <strong>
               From September 2023 to 2025 this project benefits from an ANR/Access ERC funding, 
               to explore the corpus, map the project planning and test the methods with the input of the LARHRA engineers.
@@ -151,6 +143,15 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
               </ion-col>
             </ion-row>
           </p>
+
+        <div className="restricted-width">
+          <ion-label>
+            <small>
+              Image: Ignacio de León y Escosura, Auction Sale in Clinton Hall, New York, 1876, The Metropolitan Museum of Art, 83.11, Gift of the Artist, 1883
+            </small>
+          </ion-label>
+        </div>
+
         </ion-grid>
       </ProjectPageLayout>
     </div>
