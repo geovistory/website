@@ -27,7 +27,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
             objectFit={'cover'}
           />
 
-          <ion-searchbar
+          {/* <ion-searchbar
             style={{marginTop: '12rem !important'}}
             class="restricted-width"
             color="light"
@@ -52,7 +52,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                 }
               });
             }}
-          ></ion-searchbar>
+          ></ion-searchbar> */}
 
           <h1 className={styles.title}>
             <div className={styles.titleLine1}>OBJECTive</div>
