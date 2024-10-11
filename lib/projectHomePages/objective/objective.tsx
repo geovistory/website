@@ -54,27 +54,34 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
             }}
           ></ion-searchbar> */}
 
-          <h1 className={styles.title}>
-            <div className={styles.titleLine1}>OBJECTive</div>
-          </h1>
+          <div className={styles.title}>
+            <h1 className={styles.title1}>OBJECTive</h1>
+            <h3 className={styles.title2}>Tracking <i>Objets d&apos;art</i> in Time through the Art Market</h3>
+          </div>
+
+          {/* <h1 className={styles.title}>
+          <div>
+            OBJECTive <br />
+            <span className={styles.title2}>Tracking <i>Objets d&apos;art</i> in Time through the Art Market</span>
+          </div>
+         </h1> */}
         </div>
 
         <ion-grid fixed class="ion-padding">
           <p className="lead">
             <strong>
-              Tracking <i>Objets d&apos;art</i> in Time through the Art Market<br />
               Historical data on auctions in the modern era (1750-1950), ready to explore and reuse
             </strong>
           </p>{' '}
-          <p>
+          <p className={styles.justify}>
             <i>Objets d&apos;art</i> (or decorative arts) are challenging to research as they include a vast array of objects, encompassing ceramics, 
             furniture, glass, metalwork, and textiles, all with distinctive forms, functions and materials, and their creators are often unknown.
             Under-represented in cultural economics and heritage studies, the absence of a comprehensive dataset is an obstacle to study and track pieces across time.
           </p>
-          <p>
-            This project aims to create a database on <i>objets d&apos;art</i> auction sales (from 1750s until 1950s) by working from a consistent source: the auction catalogue.
+          <p className={styles.justify}>
+            This project aims to create a database on <i>objets d&apos;art</i> auction sales by working from a consistent source: the auction catalogue.
           </p>
-          <p>
+          <p className={styles.justify}>
             From the mid-18th century auctions have been organised, mainly in Paris and London, to sell and disperse objects, 
             increasing greatly in the first half of the 19th century to reach a rhythm of several thousand sales per decade.
             Individual auctions have always both combined and dispersed a great diversity of fine objects, from a multitude of origins.

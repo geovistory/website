@@ -1,3 +1,7 @@
+.justify {
+    text-align: justify;
+}
+
 .emphasize {
     background: #ccc;
     border: 1px solid gray;
@@ -39,6 +43,15 @@
     left: 1rem;
     bottom: 0.3rem;
 }
+.title1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.title2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 /* sm and up */
 @media screen and (min-width: 576px) {
     .title {
