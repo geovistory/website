@@ -98,16 +98,16 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
             </strong>
           </p>{' '}
           <p className={styles.justify}>
-                Mapping Multifaith London provides the first digital map of a European capital's 
+                Mapping Multifaith London provides the first digital map of a European capital&apos;s 
                 dissenting and nonconformist heritage by following the development of minority religious 
                 communities and stranger churches in London across the period 1689-c.1740. 
-                The primary aim of the project is to reassess these communities' significance in early-modern 
+                The primary aim of the project is to reassess these communities&apos; significance in early-modern 
                 religious history and the history of religious sociability, by observing how multiconfessional 
                 exchange developed in religious places, such as places of worship, places of memory, 
                 and charitable and educational institutions. For this pilot, funded by a bilateral 
                 Programme Hubert Curien (Campus France, the British Council), we created a relational database of dissenting 
                 (presbyterian, congregational and baptist) and Huguenot places of worship using a manuscript list from 1730. 
-                We put our data into  Geovistory and translate it to a map of London from 1746  (John Rocque's map, 
+                We put our data into  Geovistory and translate it to a map of London from 1746  (John Rocque&apos;s map, 
                 georeferenced and provided by the British Library and used with permission). You can use this map to search for 
                 people and places and to see where they were located and how they were connected.
           </p>
@@ -187,7 +187,7 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
 
           <h4>Huguenot Team</h4>
           <p>
-            Dan Rafiqi (King's College London)<br/>
+            Dan Rafiqi (King&apos;s College London)<br/>
             Mathilde Monge (Université Toulouse Jean-Jaurès)<br/>
             Ed Legon (Queen Mary University of London)<br/>
           </p>
