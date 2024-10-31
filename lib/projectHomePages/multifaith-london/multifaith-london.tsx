@@ -10,6 +10,7 @@ import { LermaLogo } from '../../../components/logos/LermaLogo';
 import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
 import { AmuLogo } from '../../../components/logos/AmuLogo';
 import { QmcrleLogo } from '../../../components/logos/QmcrleLogo';
+import { BritishCouncilLogo } from '../../../components/logos/BritishCouncilLogo';
 
 const query = `
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -246,9 +247,14 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
                 <QmcrleLogo />
               </ion-col>
               <ion-col size="6">
-                <KleiolabLogo />
+                <BritishCouncilLogo />
               </ion-col>
             </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <KleiolabLogo />
+              </ion-col>
+              </ion-row>
           </p>
 
         </ion-grid>
