@@ -15,7 +15,7 @@ import UrbanBiographies_component from './urban-biographies/urban-biographies';
 import EnfantsDuPlacard_component from './enfants-du-placard/enfants-du-placard';
 import BaselNonProtestants_component from './basel-non-protestants/basel-non-protestants';
 import OBJECTive_component from './objective/objective';
-
+import MultiFaithLondon_component from './multifaith-london/multifaith-london';
 
 interface Map {
     [key: number]: NextPage<ProjectPageProps>
@@ -57,4 +57,6 @@ export const projectHomePageMap: Map = {
     1719422: BaselNonProtestants_component,
 
     11200212: OBJECTive_component,
+
+    15458106: MultiFaithLondon_component,
 };

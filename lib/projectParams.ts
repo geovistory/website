@@ -625,6 +625,33 @@ LIMIT 10`,
         headOgImage: '/socialimage/objective.png'
 
     },
+    // Mapping Multifaith London, 1689-c.1740
+    {
+        geovID: 15458106,
+        geovName: 'Mapping Multifaith London, 1689-c.1740',
+
+        preferredClasses: [],
+
+        featured: false,
+        listed: true,
+
+        teiURL: '',
+        sparqlURL: '',
+
+        fullName: 'Mapping Multifaith London, 1689-c.1740',
+        shortName: 'Mapping Multifaith London, 1689-c.1740',
+        description: "Mapping different faith communities in 18th century London",
+
+        hasPage: true,
+        sparqlLinkEnabled: false,
+        searchLinkEnabled: false,
+        ontoExplorerLinkEnabled: false,
+        sparklisLinkEnabled: false,
+        teiLinkEnabled: false,
+
+        headOgImage: '/socialimage/multifaith-london.jpg'
+
+    },
 ]
 
 
