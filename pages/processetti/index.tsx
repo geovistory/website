@@ -4,7 +4,6 @@ import { Person } from "../../components/elements/Person.component";
 import { HeadProps } from "../../components/layouts/DefaultHead";
 import { AnrLogo200 } from "../../components/logos/AnrLogo200";
 import { EcoleFrancaisRomeLogo200 } from "../../components/logos/EcoleFrancaisRomeLogo200";
-import { ProcessettiBanner } from "../../components/project-specific/ProcessettiBanner.component";
 import { ProcessettiLayout } from "../../components/project-specific/ProcessettiLayout.component";
 import styles from "./index.module.css";
 

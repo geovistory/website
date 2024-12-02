@@ -1,0 +1,32 @@
+.navBar {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 58px;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .tabBar {
+    --border: none;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 50px;
+    top: 0px;
+    z-index: 1;
+  }
+  
+  
+  
+  
+  @media screen and (min-width: 576px) {
+    .navBar {
+      height: 78px;
+    }
+  
+    .tabBar {
+  /*    --border: none;  1rem solid var(--ion-color-primary);*/
+      /* border-bottom: 1rem solid var(--ion-color-primary);   */
+      height: 50px;
+      margin-bottom: 6rem;
+    }
+  }

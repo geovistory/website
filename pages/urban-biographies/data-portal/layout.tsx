@@ -1,10 +1,11 @@
 import router from 'next/router';
 import { FunctionComponent, LegacyRef, useEffect, useRef } from 'react';
-import {  HeadProps } from '../layouts/DefaultHead';
-import styles from './ProcessettiGraficiLayout.module.css';
-import { ProcessettiLayout } from './ProcessettiLayout.component';
+import { HeadProps } from '../../../components/layouts/DefaultHead';
+import { Layout as ParentLayout} from '../layout'
+import styles from './layout.module.css';
 
-interface ProcessettiGraficiLayout {
+
+interface LayoutProps {
   head: HeadProps;
   hideBanner?: boolean;
   links: {
@@ -13,11 +14,10 @@ interface ProcessettiGraficiLayout {
     icon?: string;
   }[];
 }
-export const ProcessettiGraficiLayout: FunctionComponent<
-  ProcessettiGraficiLayout
-> = (props) => {
+
+export const Layout: FunctionComponent<LayoutProps> = (props) => {
   return (
-    <ProcessettiLayout head={props.head} hideBanner={props.hideBanner}>
+    <ParentLayout head={props.head} hideBanner={props.hideBanner}>
       <div className={`${styles.tabBar} ion-hide-sm-down`}>
         <ion-tab-bar color="primary" class={styles.tabBar}>
           {props.links.map((x, i) => (
@@ -31,7 +31,7 @@ export const ProcessettiGraficiLayout: FunctionComponent<
         </ion-tab-bar>
       </div>
       {props.children}
-    </ProcessettiLayout>
+    </ParentLayout>
   );
 };
 const TabButton: FunctionComponent<{
@@ -50,7 +50,6 @@ const TabButton: FunctionComponent<{
       href={x.href}
       layout="icon-hide"
     >
-      {/* <ion-icon icon={x.icon ? x.icon : libraryOutline}></ion-icon> */}
       <ion-label styles={{ fontSize: '10px' }}>{x.label}</ion-label>
     </ion-tab-button>
   );

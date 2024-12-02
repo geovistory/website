@@ -1,0 +1,74 @@
+.banner {
+    background-color: var(--ion-color-primary);
+    color: var(--ion-color-light);
+    padding: 0;
+    position: relative;
+}
+
+.bannerImageContainer {
+    overflow: hidden;
+}
+
+.bannerImage {
+    height: 150px;
+    object-fit: cover;
+    object-position: 100% 80%;
+}
+
+.bannerTitle {
+    position: absolute;
+    display: none;
+
+    left: 2rem;
+    bottom: 1rem;
+}
+
+.bannerTitle h1,
+.bannerTitle h2 {
+    font-weight: 500;
+    margin: 0;
+    color: #111;
+}
+
+.bannerTitle h2{
+    font-size: 1.5;
+}
+
+/* sm and up */
+@media screen and (min-width: 576px) {
+    .bannerImage {
+        height: 130px;
+    }
+
+}
+
+/* md and up */
+@media screen and (min-width: 768px) {
+    .bannerImage {
+        height: 220px;
+    }
+    .bannerTitle {
+        display: block;
+        font-size: 2.5rem;
+    }
+}
+
+/* lg and up */
+@media screen and (min-width: 992px) {
+    .bannerImage {
+        height: 260px;
+    }
+    .bannerTitle {
+        font-size: 3rem;
+    }
+}
+
+/* xl and up */
+@media screen and (min-width: 1200px) {
+    .bannerImage {
+        height: 330px;
+    }
+    .bannerTitle {
+        font-size: 3.5rem;
+    }
+}
