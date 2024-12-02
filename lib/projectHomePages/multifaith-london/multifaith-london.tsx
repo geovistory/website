@@ -15,34 +15,64 @@ import { CampusFranceLogo } from '../../../components/logos/CampusFranceLogo';
 
 const query = `
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ontome: <https://ontome.net/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT 
-(SAMPLE(?buildingLabel) as ?label) ?lat ?long ?buildingLabel ("Meeting places" as ?type) (1 as ?radius)
+# In this request, types are personnalized for the project:
+# - They are interested in all types except Jewish types and Catholic types
+# - All Baptist should be regrouped (unspecified, General Baptist, Particular Baptist)
+# To create the request, we then make a union of 2 requests: the first one that regroups all Baptist, 
+# And the second that take care of the others.
+# Finally unwanted Tags are filtered out.
 
+SELECT * 
 WHERE {
-
-  	# Only the Constructions
-  	?building rdf:type ontome:c441.
-
-	# Get the Constructions label
-    ?building rdfs:label ?buildingLabel.
-
-	# Construction -had presence-> Presence -was at-> Place (lat/long)
-	?building ontome:p147i/ontome:p148 ?place.
-
-	# Extract lat and long from WKT
-	bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
-	bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
-	bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
-	
-  	# Extract the type
-  
+  {
+    SELECT 
+    (SAMPLE(?buildingLabel) as ?label) ?lat ?long ?buildingLabel ("Baptist" as ?type) (1 as ?radius)
+    WHERE {
+        # Only the Constructions
+        ?building rdf:type ontome:c441.
+        # Get the Constructions label
+        ?building rdfs:label ?buildingLabel.
+        # Get the type (has tag)
+        ?building ontome:p1440/rdfs:label ?raw_type.
+        # Construction -had presence-> Presence -was at-> Place (lat/long)
+        ?building ontome:p147i/ontome:p148 ?place.
+        FILTER(contains(?raw_type, "Baptist")) 
+        # Extract lat and long from WKT
+        bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
+        bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
+        bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+    }
+    GROUP BY ?building ?long ?lat ?type ?buildingLabel
+  }
+  UNION
+  {
+    SELECT 
+    (SAMPLE(?buildingLabel) as ?label) ?lat ?long ?buildingLabel ?type (1 as ?radius)
+    WHERE {
+        # Only the Constructions
+        ?building rdf:type ontome:c441.
+        # Get the Constructions label
+        ?building rdfs:label ?buildingLabel.
+        # Get the type (has tag)
+        ?building ontome:p1440/rdfs:label ?type.
+        # Construction -had presence-> Presence -was at-> Place (lat/long)
+        ?building ontome:p147i/ontome:p148 ?place.
+        FILTER(!contains(?type, "Baptist"))
+        # Extract lat and long from WKT
+        bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
+        bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
+        bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+    }
+    GROUP BY ?building ?long ?lat ?type ?buildingLabel
+  }
+  FILTER(!contains(?type, "Jew"))
+  FILTER(!contains(?type, "Catholic"))
 }
-GROUP BY ?building ?long ?lat ?type ?buildingLabel
+ORDER BY ?type
 `
 
 const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
@@ -108,7 +138,7 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
                 exchange developed in religious places, such as places of worship, places of memory, 
                 and charitable and educational institutions. For this pilot, funded by a bilateral 
                 Programme Hubert Curien (Campus France, the British Council), we created a relational database of dissenting 
-                (presbyterian, congregational and baptist) and Huguenot places of worship using a manuscript list from 1730. 
+                (quaker, presbyterian, congregational and baptist) and Huguenot places of worship using a manuscript list from 1730. 
                 We put our data into  Geovistory and translate it to a map of London from 1746  (John Rocque&apos;s map, 
                 georeferenced and provided by the British Library and used with permission). You can use this map to search for 
                 people and places and to see where they were located and how they were connected.
@@ -117,9 +147,11 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
 
           <p className="lead">
             <strong>
-            The interactive map below depicts the meeting places of the different faith communities in 18th century London.
+            The map below depicts the meeting places of dissenting and huguenot communities in 18th century London
             </strong>
           </p>{' '}
+
+
           <geov-yasgui
             id="el-1"
             default-plugin="mapCircles"
@@ -142,27 +174,29 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
                     maxZoom: 25,
                     radiusMin: 4,
                     radiusMax: 25,
+                    tilesURL: 'https://mapwarper.net/maps/tile/24220/{z}/{x}/{y}.png',
                   },
                 };
               }
             }}
-          ></geov-yasgui>
-
-
+          >
+          </geov-yasgui>
 
 
           <h4>Project leaders</h4>
           <p>
             <ion-row>
-              <ion-col size="6">
+              <ion-col size="12">
                 <Person
-                  name="Anne Dunan-Page"
+                  name="Anne Dunan-Page (Aix-Marseille Université)"
                   description=""
                 />
               </ion-col>
-              <ion-col size="6">
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">
                 <Person
-                  name="Tessa Whitehouse"
+                  name="Tessa Whitehouse (Queen Mary University of London)"
                   description=""
                 />
               </ion-col>
@@ -197,7 +231,7 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
           <h4>Catholic Team</h4>
           <p>
             Claire Schiano-Locurcio (Aix-Marseille Université)<br/>
-            Laurence Lux-Sterritt (AMU)<br/>
+            Laurence Lux-Sterritt (Aix-Marseille Université)<br/>
             Emily Vine (Exeter University)<br/>
           </p>
 
