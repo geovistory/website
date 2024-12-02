@@ -1,5 +1,5 @@
-import { FunctionComponent, LegacyRef, useEffect, useRef } from 'react';
-import { HeadProps } from '../../../components/layouts/DefaultHead';
+import { FunctionComponent } from 'react';
+import { HeadProps } from '../../../layouts/DefaultHead';
 import { Layout as ParentLayout} from '../layout'
 
 
@@ -19,3 +19,5 @@ export const Layout: FunctionComponent<LayoutProps> = (props) => {
     </ParentLayout>
   );
 };
+
+export default Layout

@@ -8,3 +8,7 @@
 .content p {
     text-align: justify;
 }
+.theme {
+    --ion-background-color: #fff;
+    --gv-bg-project-toolbar: #EBF8FF;
+}

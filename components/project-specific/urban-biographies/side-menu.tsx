@@ -27,3 +27,5 @@ export const SideMenu: FunctionComponent<{}> = () => (
     </ion-content>
   </ion-menu>
 );
+
+export default SideMenu;

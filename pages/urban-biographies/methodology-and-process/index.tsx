@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { GetStaticProps, NextPage } from 'next';
-import { Layout } from './layout';
+import { Layout } from '../../../components/project-specific/urban-biographies/methodology-and-process/layout';
 import { metodologiaLinks } from '../../../components/project-specific/ProcessettiNavbar.component';
 import { HeadProps } from '../../../components/layouts/DefaultHead';
 import styles from "./index.module.css"

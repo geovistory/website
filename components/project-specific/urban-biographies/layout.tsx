@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import theming from '../../pages//index.module.css';
-import { DefaultHead, HeadProps } from '../../components/layouts/DefaultHead';
-import { ProjectFooter } from '../../components/layouts/ProjectFooter.component';
+import theming from './layout.module.css';
+import { DefaultHead, HeadProps } from '../../layouts/DefaultHead';
+import { ProjectFooter } from '../../layouts/ProjectFooter.component';
 import { Banner } from './banner';
 import styles from './layout.module.css';
 import { Navbar } from './navbar';
@@ -42,3 +42,5 @@ export const Layout: FunctionComponent<LayoutProps> = (
     </>
   );
 };
+
+export default Layout

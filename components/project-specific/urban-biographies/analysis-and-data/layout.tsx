@@ -1,6 +1,6 @@
 import router from 'next/router';
 import { FunctionComponent, LegacyRef, useEffect, useRef } from 'react';
-import { HeadProps } from '../../../components/layouts/DefaultHead';
+import { HeadProps } from '../../../layouts/DefaultHead';
 import { Layout as ParentLayout} from '../layout'
 import styles from './layout.module.css';
 
@@ -54,3 +54,5 @@ const TabButton: FunctionComponent<{
     </ion-tab-button>
   );
 };
+
+export default Layout

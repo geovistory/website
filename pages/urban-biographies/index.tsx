@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import { HeadProps } from "../../components/layouts/DefaultHead";
-import { Layout } from "./layout";
+import { Layout } from "../../components/project-specific/urban-biographies/layout";
 import styles from "./index.module.css"
 
 export interface ResourcesProps {

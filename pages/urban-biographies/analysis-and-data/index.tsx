@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { GetStaticProps, NextPage } from 'next';
-import { Layout } from './layout';
-import { analysisAndDataLinks } from '../navbar';
+import { Layout } from '../../../components/project-specific/urban-biographies/analysis-and-data/layout';
+import { analysisAndDataLinks } from '../../../components/project-specific/urban-biographies/navbar';
 import { HeadProps } from '../../../components/layouts/DefaultHead';
 import styles from './index.module.css'
 
@@ -13,8 +13,6 @@ const P: NextPage<Props> = (props) => {
     <Layout head={props.head} links={analysisAndDataLinks}>
       <ion-grid class={styles.sectionGreen}>
         <h2>Background on analysis & data</h2>
-
-
         <p>
           <ol>
             <li>Urban Prosopographies</li>
