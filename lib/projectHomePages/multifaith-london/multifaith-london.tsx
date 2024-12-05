@@ -30,7 +30,7 @@ SELECT *
 WHERE {
   {
     SELECT 
-    (SAMPLE(?buildingLabel) as ?label) ?lat ?long ?buildingLabel ("Baptist" as ?type) (1 as ?radius)
+    (SAMPLE(?buildingLabel) as ?label) ?lat ?long ?buildingLabel ("Baptist" as ?type) (1 as ?radius) ?link
     WHERE {
         # Only the Constructions
         ?building rdf:type ontome:c441.
@@ -45,13 +45,15 @@ WHERE {
         bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
         bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
         bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+        # Append the project query param to the URI
+        bind(concat(str(?building), "?p=15458106") as ?link )
     }
-    GROUP BY ?building ?long ?lat ?type ?buildingLabel
+    GROUP BY ?building ?long ?lat ?type ?buildingLabel ?link
   }
   UNION
   {
     SELECT 
-    (SAMPLE(?buildingLabel) as ?label) ?lat ?long ?buildingLabel ?type (1 as ?radius)
+    (SAMPLE(?buildingLabel) as ?label) ?lat ?long ?buildingLabel ?type (1 as ?radius) ?link
     WHERE {
         # Only the Constructions
         ?building rdf:type ontome:c441.
@@ -66,8 +68,10 @@ WHERE {
         bind(replace(str(?place), '<http://www.opengis.net/def/crs/EPSG/0/4326>', "", "i") as ?rep)
         bind(xsd:float(replace(str(?rep), "^[^0-9\\\\.-]*([-]?[0-9\\\\.]+) .*$", "$1" )) as ?long )
         bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" )) as ?lat )
+        # Append the project query param to the URI
+        bind(concat(str(?building), "?p=15458106") as ?link )
     }
-    GROUP BY ?building ?long ?lat ?type ?buildingLabel
+    GROUP BY ?building ?long ?lat ?type ?buildingLabel ?link
   }
   FILTER(!contains(?type, "Jew"))
   FILTER(!contains(?type, "Catholic"))
@@ -174,7 +178,8 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
                     maxZoom: 25,
                     radiusMin: 4,
                     radiusMax: 25,
-                    tilesURL: 'https://mapwarper.net/maps/tile/24220/{z}/{x}/{y}.png',
+                    // tilesURL: 'https://mapwarper.net/maps/tile/24220/{z}/{x}/{y}.png',
+                    tilesURL: 'https://overlays.humap.site/layersoflondon/rocque_LWS_1746/{z}/{x}/{y}.png',
                   },
                 };
               }
