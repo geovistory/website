@@ -630,7 +630,7 @@ LIMIT 10`,
         geovID: 15458106,
         geovName: 'Mapping Multifaith London, 1689-c.1740',
 
-        preferredClasses: [],
+        preferredClasses: ['c441', 'c635'],
 
         featured: false,
         listed: true,

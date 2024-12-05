@@ -206,15 +206,17 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
           <h4>Geovistory co-ordinators</h4>
           <p>
             <ion-row>
-              <ion-col size="6">
+              <ion-col size="12">
                 <Person
-                    name="William Burgess"
+                    name="William Burgess  (Queen Mary University of London)"
                     description=""
                   />
               </ion-col>
+            </ion-row>
+            <ion-row>
               <ion-col size="6">
                 <Person
-                    name="David Knecht M.A."
+                    name="David Knecht (KleioLab)"
                     description=""
                   />
               </ion-col>
