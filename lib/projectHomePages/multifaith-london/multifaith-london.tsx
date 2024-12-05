@@ -152,7 +152,7 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
           </p>{' '}
 
 
-          {/* <geov-yasgui
+          <geov-yasgui
             id="el-1"
             default-plugin="mapCircles"
             collapse="true"
@@ -180,7 +180,7 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
               }
             }}
           >
-          </geov-yasgui> */}
+          </geov-yasgui>
 
 
           <h4>Project leaders</h4>
