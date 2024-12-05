@@ -7,17 +7,20 @@
 
 .bannerImageContainer {
     overflow: hidden;
+    background-color: #875053;
 }
 
 .bannerImage {
     height: 150px;
     object-fit: cover;
-    object-position: 100% 80%;
+    object-position: 100% 100%;
 }
 
 .bannerTitle {
     position: absolute;
     display: none;
+    width:100%;
+    max-width: 100rem;
 
     left: 2rem;
     bottom: 1rem;
@@ -27,7 +30,8 @@
 .bannerTitle h2 {
     font-weight: 500;
     margin: 0;
-    color: #111;
+    color: #ddd;
+    max-width: 150rem;
 }
 
 .bannerTitle h2{
@@ -38,6 +42,7 @@
 @media screen and (min-width: 576px) {
     .bannerImage {
         height: 130px;
+        object-position: 100% 100%;
     }
 
 }
@@ -47,10 +52,6 @@
     .bannerImage {
         height: 220px;
     }
-    .bannerTitle {
-        display: block;
-        font-size: 2.5rem;
-    }
 }
 
 /* lg and up */
@@ -59,16 +60,18 @@
         height: 260px;
     }
     .bannerTitle {
-        font-size: 3rem;
+        display: block;
+        font-size: 1rem;
     }
 }
 
 /* xl and up */
 @media screen and (min-width: 1200px) {
     .bannerImage {
-        height: 330px;
+        height: 500px;
     }
     .bannerTitle {
-        font-size: 3.5rem;
+        display: block;
+        font-size: 1.5rem;
     }
 }

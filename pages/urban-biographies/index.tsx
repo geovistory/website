@@ -11,7 +11,6 @@ const Resources: NextPage<ResourcesProps> = (props) => {
     <Layout head={props.head}>
       <ion-grid class={styles.sectionGreen}>
         <h2>Project presentation</h2>
-
         <p>
           Welcome to the official homepage of the <strong>Urban Biographies Project</strong>, an interdisciplinary initiative by the Institute of 
           Ancient History at the University of Basel. Its aim has been to study two cities from Roman and late Roman Egypt, 
@@ -31,7 +30,7 @@ const Resources: NextPage<ResourcesProps> = (props) => {
         </p>
         <p>
           For more information on the genesis of the project, the team members, events and publications, 
-          please visit the <a href="https://www.geovistory.org/project/6619613">Project Homepage</a>
+          please visit the <a href="https://romegyptcities.philhist.unibas.ch/en/home-1/">Project Homepage</a>
         </p>
       </ion-grid>
     </Layout>

@@ -521,7 +521,7 @@ LIMIT 10`,
         geovID: 6619613,
         geovName: 'Urban Biographies of the Roman and Late Antique Worlds',
 
-        preferredClasses: [],
+        preferredClasses: ['c21', 'c441', 'c698'],
 
         featured: false,
         listed: true,

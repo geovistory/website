@@ -15,7 +15,7 @@
   ]
 
   export const dataPortalLinks = [
-    {label: "Data portal", href: "/urban-biographies/data-portal"},
+    {label: "Data Portal", href: "/urban-biographies/data-portal"},
     {label: "Data Access", href: "/urban-biographies/data-portal/data-access"}
   ]
 
@@ -26,7 +26,7 @@
       activateFor: '/methodology-and-process'
     },
     {label: "Analysis & Data", links: analysisAndDataLinks, activateFor: '/analysis-and-data'},
-    {label: "Data portal", links: dataPortalLinks, activateFor: '/data-portal'},
+    {label: "Data Portal", links: dataPortalLinks, activateFor: '/data-portal'},
   ];
   
   export const Navbar = (props: NavbarProps) => {
@@ -75,10 +75,10 @@
             </span>
           </ion-buttons>
   
-          <ion-buttons slot="end">
-            <ion-button href={`/project/591/sparql`}>SPARQL</ion-button>
-          </ion-buttons>
-  
+        <ion-buttons slot="end" style={{color: '#111'}}>
+          <ion-button href={`/project/6619613/sparql`}>SPARQL</ion-button>
+        </ion-buttons>
+
           <ion-buttons class="ion-hide-md-up" slot="end">
             <a href="/">
               <ion-img

@@ -18,7 +18,7 @@ interface LayoutProps {
 export const Layout: FunctionComponent<LayoutProps> = (props) => {
   return (
     <ParentLayout head={props.head} hideBanner={props.hideBanner}>
-      <div className={`${styles.tabBar} ion-hide-sm-down`}>
+      {/* <div className={`${styles.tabBar} ion-hide-sm-down`}>
         <ion-tab-bar color="primary" class={styles.tabBar}>
           {props.links.map((x, i) => (
             <TabButton
@@ -29,30 +29,30 @@ export const Layout: FunctionComponent<LayoutProps> = (props) => {
             ></TabButton>
           ))}
         </ion-tab-bar>
-      </div>
+      </div> */}
       {props.children}
     </ParentLayout>
   );
 };
-const TabButton: FunctionComponent<{
-  href: string;
-  label: string;
-  icon?: string;
-}> = (x) => {
-  const button: LegacyRef<HTMLIonTabButtonElement> = useRef(null);
-  useEffect(() => {
-    if (button.current) button.current.selected = router.pathname === x.href;
-  });
-  return (
-    <ion-tab-button
-      ref={button}
-      class={styles.tabButton}
-      href={x.href}
-      layout="icon-hide"
-    >
-      <ion-label styles={{ fontSize: '10px' }}>{x.label}</ion-label>
-    </ion-tab-button>
-  );
-};
+// const TabButton: FunctionComponent<{
+//   href: string;
+//   label: string;
+//   icon?: string;
+// }> = (x) => {
+//   const button: LegacyRef<HTMLIonTabButtonElement> = useRef(null);
+//   useEffect(() => {
+//     if (button.current) button.current.selected = router.pathname === x.href;
+//   });
+//   return (
+//     <ion-tab-button
+//       ref={button}
+//       class={styles.tabButton}
+//       href={x.href}
+//       layout="icon-hide"
+//     >
+//       <ion-label styles={{ fontSize: '10px' }}>{x.label}</ion-label>
+//     </ion-tab-button>
+//   );
+// };
 
 export default Layout
