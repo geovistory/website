@@ -187,6 +187,10 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
           >
           </geov-yasgui>
 
+          <p>
+            <strong>Note</strong> that the map is shown in high resolution when you zoom in. Click on any location for detailed information.
+          </p>
+
 
           <h4>Project leaders</h4>
           <p>
