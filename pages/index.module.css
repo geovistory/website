@@ -1,3 +1,7 @@
+.padding {
+  padding: var(--ion-padding);
+}
+
 .title {
   max-width: unset;
   font-size: 3rem;
@@ -59,6 +63,10 @@
   font-weight: 400;
 }
 
+.subheading2 {
+  font-weight: 400;
+}
+
 /* md and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -99,6 +107,10 @@
     position: absolute;
     bottom: 56px;
   }
+  .subheading2 {
+    position: absolute;
+    bottom: 16px;
+  }
 
   .carousel {
     display: block;
@@ -134,6 +146,10 @@
   .subheading {
     position: absolute;
     bottom: 70px;
+  }
+  .subheading2 {
+    position: absolute;
+    bottom: 30px;
   }
 }
 

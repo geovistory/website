@@ -69,6 +69,15 @@ export const Footer = (props: FooterProps) => {
                     {proj.shortName}
                   </ion-item>
                 ))}
+                <ion-item
+                  class={styles.featuredProject}
+                  key={'footer-all-projects'}
+                  href={'/projects'}
+                >
+                  <h5 style={{ width: '100%' }}>
+                    <ion-text>All public projects…</ion-text>
+                  </h5>
+                </ion-item>
               </ion-list>
             </ion-col>
 

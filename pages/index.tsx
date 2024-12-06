@@ -22,7 +22,7 @@ const Home: NextPage<HomeProps> = (props) => {
 
   const moreProjectsButton = (
     <ion-button fill="clear" href="/projects">
-      More projects…
+      <h3>List of all public projects…</h3>
     </ion-button>
   );
   return (
