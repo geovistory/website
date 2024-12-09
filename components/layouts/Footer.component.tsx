@@ -75,7 +75,7 @@ export const Footer = (props: FooterProps) => {
                   href={'/projects'}
                 >
                   <h5 style={{ width: '100%' }}>
-                    <ion-text>All public projects…</ion-text>
+                    <ion-text>All public projects</ion-text>
                   </h5>
                 </ion-item>
               </ion-list>
