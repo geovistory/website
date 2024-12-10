@@ -191,6 +191,15 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
             <strong>Note</strong> that the map is shown in high resolution when you zoom in. Click on any location for detailed information.
           </p>
 
+          <p>
+            Find here further information:
+            <ul>
+              <li><a href="https://mml.hypotheses.org/">Mapping Multifaith London blog</a></li>
+              <li><a href="https://umap.openstreetmap.fr/fr/map/multifaith-2024-cmh_1109014">Mapping Multifaith London u-Map teaching tool</a></li>
+            </ul>
+          </p>
+
+
 
           <h4>Project leaders</h4>
           <p>
@@ -276,6 +285,12 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
             Hannah Williams (Queen Mary University of London)<br/>
             Chris Sparks (Queen Mary University of London)<br/>
           </p>
+
+          <h4>Intern</h4>
+          <p>
+            Julia Laget (Master Études culturelles du monde anglophone, Aix-Marseille Université, TIGER/TFR internship)
+          </p>
+
 
 
           <h4>Institutional Partners</h4>
