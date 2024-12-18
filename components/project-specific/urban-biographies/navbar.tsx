@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
   import styles from './navbar.module.css';
   import { useRouter } from 'next/router';
+
+  const rootPath = '/ce237e301411506ac8d264344c72ed1767c17d403053da43042d977d399e818d'
   
   export interface NavbarProps {
     title: string;
@@ -9,20 +11,20 @@
   }
 
   export const analysisAndDataLinks = [
-    {label: "Analysis & Data", href: "/urban-biographies/analysis-and-data"},
-    {label: "Herakleopolis", href: "/urban-biographies/analysis-and-data/herakleopolis"},
-    {label: "Antinoopolis", href: "/urban-biographies/analysis-and-data/antinoopolis"}
+    {label: "Analysis & Data", href: rootPath + "/analysis-and-data"},
+    {label: "Herakleopolis", href: rootPath + "/analysis-and-data/herakleopolis"},
+    {label: "Antinoopolis", href: rootPath + "/analysis-and-data/antinoopolis"}
   ]
 
   export const dataPortalLinks = [
-    {label: "Data Portal", href: "/urban-biographies/data-portal"},
-    {label: "Data Access", href: "/urban-biographies/data-portal/data-access"}
+    {label: "Data Portal", href: rootPath + "/data-portal"},
+    {label: "Data Access", href: rootPath + "/data-portal/data-access"}
   ]
 
   export const menuStructure = [
     {
       label: "Methodology & Process",
-      links: [{label: "Methodology & Process", href: "/urban-biographies/methodology-and-process"}],
+      links: [{label: "Methodology & Process", href: rootPath + "/methodology-and-process"}],
       activateFor: '/methodology-and-process'
     },
     {label: "Analysis & Data", links: analysisAndDataLinks, activateFor: '/analysis-and-data'},
@@ -40,7 +42,7 @@
               id="main"
               menu="main"
             ></ion-menu-button>
-            <ion-button class="ion-hide-md-up" href={`/urban-biographies`}>
+            <ion-button class="ion-hide-md-up" href={rootPath}>
               {props.title}
             </ion-button>
             <a href="/" className="ion-hide-md-down">
@@ -51,9 +53,9 @@
             </a>
             <span className="ion-hide-md-down">
               <ion-button
-                href={`/urban-biographies`}
+                href={rootPath}
                 style={
-                  router.pathname === '/urban-biographies' ? { fontWeight: '600', color: '#111' } : { color: '#111' }
+                  router.pathname === rootPath ? { fontWeight: '600', color: '#111' } : { color: '#111' }
                 }
               >
                 Urban Biographies

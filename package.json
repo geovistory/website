@@ -16,7 +16,7 @@
     "copy:icons": "node .build/copy-icons.js"
   },
   "dependencies": {
-    "@geovistory/design-system-web": "1.25.0",
+    "@geovistory/design-system-web": "1.26.2",
     "@ionic/core": "^6.1.13",
     "@triply/yasgui": "^4.2.26",
     "dlv": "^1.1.3",
