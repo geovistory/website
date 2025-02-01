@@ -3,19 +3,18 @@ import type { GetStaticProps, NextPage } from 'next';
 import { Layout } from '../../../components/project-specific/urban-biographies/data-portal/layout';
 import { dataPortalLinks } from '../../../components/project-specific/urban-biographies/navbar';
 import { HeadProps } from '../../../components/layouts/DefaultHead';
-import styles from './index.module.css'
-
 
 export interface Props { head: HeadProps }
 
 const P: NextPage<Props> = (props) => {
   return (
     <Layout head={props.head} links={dataPortalLinks}>
-      <ion-grid class={styles.sectionGreen}>
-        <h2 style={{textAlign: 'center'}}>Data Portal</h2>
+      <ion-grid>
+
+        <h2 style={{textAlign: 'center', paddingBottom: "20px"}}>Data Portal</h2>
 
         <p>
-          This fully searchable data portal is open to everyone–from scholars working on Antinoopolis or Heracleopolis, 
+          This fully searchable data portal is open to everyone-from scholars working on Antinoopolis or Heracleopolis, 
           to the editors of papyri or texts from, or related to, either city, to students of Greco-Roman and late Antique Egypt, 
           or practitioners of the digital humanities with an interest in online prosopographies and digital archaeology. 
         </p>
@@ -24,7 +23,7 @@ const P: NextPage<Props> = (props) => {
 
         <p>
           For Heracleopolis, we covered the period from the death of Augustus 
-          to the end of the fourth century CE and, for Antinoopolis, from the city’s foundation in 130 CE to the middle of the fifth century CE.
+          to the end of the fourth century CE and, for Antinoopolis, from the city's foundation in 130 CE to the middle of the fifth century CE.
         </p>
 
         <p>

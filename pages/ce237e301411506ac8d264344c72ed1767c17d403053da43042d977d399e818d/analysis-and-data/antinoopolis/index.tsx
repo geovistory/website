@@ -11,8 +11,11 @@ export interface Props { head: HeadProps }
 const P: NextPage<Props> = (props) => {
   return (
     <Layout head={props.head} links={analysisAndDataLinks}>
-      <ion-grid class={styles.sectionGreen}>
-        <h2 style={{textAlign: 'center'}}>Antinoopolis</h2>
+      <ion-grid>
+        <div className={styles.sectionGreen} style={{height: "50px"}}></div>
+
+        <h2 style={{textAlign: 'center', paddingBottom: "20px"}}>Antinoopolis</h2>
+        
         <p>
           François Gerardin writes about Antinoopolis from its foundation in 130 CE to the middle of the fifth century as part of his habilitation project. Founded by Hadrian on the site of the death of Antinoos, the city grew to become the capital of the Thebaid in the late Roman period and, subsequently, Egypt’s second city. The habilitation is scheduled for completion on 31 July 2026 and will then be published as a book monograph.
         </p> 

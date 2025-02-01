@@ -11,8 +11,11 @@ export interface Props { head: HeadProps }
 const P: NextPage<Props> = (props) => {
   return (
     <Layout head={props.head} links={analysisAndDataLinks}>
-      <ion-grid class={styles.sectionGreen}>
-        <h2 style={{textAlign: 'center'}}>Herakleopolis</h2>
+      <ion-grid>
+        <div className={styles.sectionGreen} style={{height: "50px"}}></div>
+
+        <h2 style={{textAlign: 'center', paddingBottom: "20px"}}>Herakleopolis</h2>
+        
         <p>
           The history of Heracleopolis in the Roman and early late Roman periods is the subject of Lucas Weisser-Gericke's PhD dissertation. The data to be published on this page in the near future will provide the basis and background of the analysis carried out and the charts presented in his monograph. 
         </p> 

@@ -12,54 +12,52 @@ export interface ResourcesProps {
 const Resources: NextPage<ResourcesProps> = (props) => {
   return (
     <Layout head={props.head}>
-      <ion-grid class={styles.sectionGreen}>
-        <h2 style={{textAlign: 'center'}}>Project presentation</h2>
+      <ion-grid>
+        <div className={styles.sectionGreen} style={{height: "50px"}}></div>
 
-      <div style={{display: 'flex', flexDirection:'row',justifyContent:'center'}}>
-        <div style={{padding: '50px'}}>
+        <h2 style={{textAlign: 'center', paddingBottom: "20px"}}>Project presentation</h2>
 
-            <p>
-              Welcome to the digital interface of the <strong>Urban Biographies Project</strong>, which studies two cities from Roman and late Roman Egypt,
-              Antinoopolis and Heracleopolis. This interface presents the textual and material data that have been collected, processed, and analyzed 
-              by the project team. In this website you will find:
-              <ol>
-                <li>a full record of the people who were citizens, residents, or visitors of these two cities, based on attestations from 
-                  documents–especially papyri–as well as literary texts. These “urban prosopographies” are searchable in the “data portal”.</li>
-                <li>a selection of published archaeological materials to provide further contextualization for people’s lives in those two cities. 
-                  Artifacts and structures from Antinoopolis and Heracleopolis Magna give invaluable insights into the social, economic, 
-                  and cultural dynamics that shaped these cities, shedding light on everyday life in ways that written records alone cannot fully capture.
-                </li>
-              </ol>
-            </p>
-            <p>
-              For more information on the project, the team members, events and publications, please visit the <a href="https://romegyptcities.philhist.unibas.ch/en/home-1/">Project Homepage</a>.
-            </p>
-            
-          </div>
+        <h4>Welcome to the Urban Biographies Project</h4>
 
-          <div style={{padding: '50px'}}>
+        <p>
+          Explore the history of two cities from Roman and Late Roman Egypt: <strong>Antinoopolis</strong> and <strong>Heracleopolis Magna</strong>. 
+          This site provides full access to historical, archaeological, and biobliographical data, allowing you to learn 
+          about the people who lived in, visited, and worked in these ancient cities.
+        </p>
 
-            <p>We heartily thank the Swiss National Science Foundation (SNSF) for funding the creation of this interface.</p>
+        <h4>What you will find on this website:</h4>
 
-            <p>
-              In the four years of the project (2021-2025), we have combined textual and material data to develop this digital interface. 
-              At its core, it is meant to provide a full record of the people who were citizens, residents, or visitors of these two cities. 
-              Attestations from documents -especially papyri- as well as literary texts have been processed to build urban prosopographies 
-              for each city: both are searchable here. 
-            </p>
-            <p>
-              Published archaeological materials provide further contextualization for the lives of the people in those two cities. 
-              By examining artifacts from Antinoopolis and Heracleopolis Magna, we gain valuable insights into the social, 
-              economic, and cultural dynamics that shaped these cities, shedding light on everyday life in ways that written records 
-              alone cannot fully capture.
-            </p>
-            <p>
-              For more information on the genesis of the project, the team members, events and publications, 
-              please visit the 
-            </p>
+        <p>
+          <ul>
+            <li><strong>Urban Prosopographies:</strong> A comprehensive record of citizens, residents, and visitors of these cities, based on attestations from documents and literary texts, especially papyri.</li>
+            <li><strong>Archaeological Material:</strong> A selection of artifacts and structures that further contextualize everyday life, offering insights into the social, economic, and cultural dynamics of these cities.</li>
+            <li><strong>Interactive Data Portal:</strong> Explore the collected information through our digital portal for a more engaging research experience.</li>
+          </ul>
+        </p>
 
-        </div>
-      </div>
+        <p style={{paddingTop: "50px"}}>
+          <strong>For more information</strong>, visit our <a href="https://romegyptcities.philhist.unibas.ch/en/home-1/">homepage</a> to learn about the project’s origin, meet the team, and read our publications.
+        </p>
+
+        <p>
+          We would like to sincerely thank the <strong>Swiss National Science Foundation (SNSF)</strong> for funding the development 
+          of this digital interface.
+        </p>
+
+        <p>
+          Over the course of four years (2021-2025), we have integrated textual and archaeological data to create this platform.
+          The core purpose of this interface is to provide a comprehensive record of the people who were citizens, residents, 
+          or visitors of these two cities. We have processed attestations from various documents—particularly papyri—and literary 
+          texts to build searchable <strong>urban prosopographies</strong> for each city.
+        </p>
+
+        <p>
+          In addition to the textual records, we have published a selection of <strong>archaeological materials</strong> to 
+          further contextualize the lives of the people in these cities. By examining artifacts and structures 
+          from <strong>Antinoopolis</strong> and <strong>Heracleopolis Magna</strong>, we gain deeper insights into the social, 
+          economic, and cultural dynamics that shaped these cities. These materials offer valuable perspectives on everyday 
+          life that written records alone cannot fully capture.
+        </p>
 
       </ion-grid>
     </Layout>
