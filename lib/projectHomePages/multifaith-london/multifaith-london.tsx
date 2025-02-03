@@ -180,7 +180,7 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
                     radiusMax: 40,
                     tilesURL: 'https://overlays.humap.site/layersoflondon/rocque_LWS_1746/{z}/{x}/{y}.png',
                     colorScale: ['#a6cee3', '#1f78b4', '#556B2F', '#228B22', '#00CC7F', '#e31a1c', '#fdbf6f', '#ff7f00'],
-                    zoomLevelThreshold: 15,  
+                    zoomLevelThreshold: 0,  
                   },
                 };
               }
