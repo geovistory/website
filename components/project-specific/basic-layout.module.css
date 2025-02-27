@@ -1,0 +1,14 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.content p {
+    text-align: justify;
+}
+.theme {
+    --ion-background-color: #fff;
+    --gv-bg-project-toolbar: #EBF8FF;
+}
