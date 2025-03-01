@@ -1,0 +1,120 @@
+.justify {
+    text-align: justify;
+}
+
+.emphasize {
+    background: #ccc;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.theme {
+    --ion-background-color: #fff;
+    --gv-bg-project-toolbar: #ebf8ff;
+}
+
+.logosTitle {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.logosContainer {
+    margin-top: 4rem;
+    background-color: white;
+    --ion-grid-column-padding: var(--ion-padding);
+}
+
+.bannerContainer {
+    position: relative;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.bannerImage {
+    object-position: 40% 70%;
+}
+
+.title {
+    color: #fff;
+    font-size: 1.4rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 0.3rem;
+}
+.title1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+    background: rgba(255, 255, 255, 0.6);
+    max-width: 100rem;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.title2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* sm and up */
+@media screen and (min-width: 576px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .bannerContainer {
+        height: 350px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}
+
+/* md and up */
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .bannerContainer {
+        height: 425px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}
+
+/* lg and up */
+@media screen and (min-width: 992px) {
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .bannerContainer {
+        height: 500px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}
+
+/* xl and up */
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 4rem;
+    }
+
+    .bannerContainer {
+        height: 650px;
+    }
+
+    .bannerImage {
+        object-position: 100% 70%;
+    }
+}

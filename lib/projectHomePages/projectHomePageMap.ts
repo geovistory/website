@@ -1,24 +1,24 @@
-
-import { NextPage } from 'next';
-import { ProjectPageProps } from '../../pages/project/[geov_id]';
+import { NextPage } from "next";
+import { ProjectPageProps } from "../../pages/project/[geov_id]";
 import AMPI_component from "./ampi/ampi";
-import MaritimeHistory_component from './maritime-history/maritime-history';
+import MaritimeHistory_component from "./maritime-history/maritime-history";
 import Processetti_component from "./processetti/processetti";
 import EuroClimHist_component from "./euroclimhist/euroclimhist";
 import RomasDeportation_component from "./romas-deportation/romas-deportation";
-import Softpowarts_component from './softpowarts/softpowarts';
-import AcademicCareers_component from './academic-careers/academic-careers';
-import RomanSenate_component from './roman-senate/roman-senate';
-import SwitzerlandAndBeyond_component from './switzerland-and-beyond/switzerland-and-beyond';
-import StudentInternationalism_component from './student-internationalism/student-internationalism';
-import UrbanBiographies_component from './urban-biographies/urban-biographies';
-import EnfantsDuPlacard_component from './enfants-du-placard/enfants-du-placard';
-import BaselNonProtestants_component from './basel-non-protestants/basel-non-protestants';
-import OBJECTive_component from './objective/objective';
-import MultiFaithLondon_component from './multifaith-london/multifaith-london';
+import Softpowarts_component from "./softpowarts/softpowarts";
+import AcademicCareers_component from "./academic-careers/academic-careers";
+import RomanSenate_component from "./roman-senate/roman-senate";
+import SwitzerlandAndBeyond_component from "./switzerland-and-beyond/switzerland-and-beyond";
+import StudentInternationalism_component from "./student-internationalism/student-internationalism";
+import UrbanBiographies_component from "./urban-biographies/urban-biographies";
+import EnfantsDuPlacard_component from "./enfants-du-placard/enfants-du-placard";
+import BaselNonProtestants_component from "./basel-non-protestants/basel-non-protestants";
+import OBJECTive_component from "./objective/objective";
+import MultiFaithLondon_component from "./multifaith-london/multifaith-london";
+import Hisb_component from "./hisb/hisb";
 
 interface Map {
-    [key: number]: NextPage<ProjectPageProps>
+    [key: number]: NextPage<ProjectPageProps>;
 }
 export const projectHomePageMap: Map = {
     // AMPI
@@ -47,16 +47,18 @@ export const projectHomePageMap: Map = {
 
     // Switzerland and beyond
     153: SwitzerlandAndBeyond_component,
-    
+
     11172552: StudentInternationalism_component,
 
     6619613: UrbanBiographies_component,
-    
+
     1458522: EnfantsDuPlacard_component,
-    
+
     1719422: BaselNonProtestants_component,
 
     11200212: OBJECTive_component,
 
     15458106: MultiFaithLondon_component,
+
+    374840: Hisb_component,
 };
