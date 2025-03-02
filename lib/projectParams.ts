@@ -640,7 +640,7 @@ LIMIT 10`,
         geovID: 374840,
         geovName: "Historisch-Genealogisches Informationssystem Basel",
 
-        preferredClasses: [],
+        preferredClasses: ["c21", "c61", "c68"],
 
         featured: false,
         listed: true,
@@ -653,10 +653,10 @@ LIMIT 10`,
         description: "Das HISB als Zugang zu den Basler Volkszählungen.",
 
         hasPage: true,
-        sparqlLinkEnabled: false,
-        searchLinkEnabled: false,
-        ontoExplorerLinkEnabled: false,
-        sparklisLinkEnabled: false,
+        sparqlLinkEnabled: true,
+        searchLinkEnabled: true,
+        ontoExplorerLinkEnabled: true,
+        sparklisLinkEnabled: true,
         teiLinkEnabled: false,
 
         headOgImage: "/hisb-banner.jpg",

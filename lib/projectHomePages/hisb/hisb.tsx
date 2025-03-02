@@ -45,7 +45,7 @@ const Hisb_component: NextPage<ProjectPageProps> = (props) => {
             Das «Historisch-Genealogische Informationssystem Basel» (HISB) hat zum Ziel, 
             die im Bürgerforschungsprojekt Basel-Spitalfriedhof (BBS) erschlossenen Personendaten in 
             einem webbasierten Informationssystem der Forschung und der Öffentlichkeit zugänglich zu machen. 
-            <br />
+            <br /><br />
             Die zurzeit zugänglichen Daten umfassen die Personen der Basler Volkszählungen 1850 und 1860.
           </p>
 
@@ -61,6 +61,17 @@ const Hisb_component: NextPage<ProjectPageProps> = (props) => {
             </ion-row>
           </p>
           </ion-grid>
+
+          <ion-grid class={styles.section}>
+          <div className="restricted-width">
+            <ion-label>
+              <small>
+                Picture credit: Aquarelle reproduction of the Aeschentor (Gate of Aesch) in Basel, Switzerland. Source: Basler Staatsarchiv, Public Domain
+              </small>
+            </ion-label>
+          </div>
+        </ion-grid>
+
       </ProjectPageLayout>
     </div>
   );
