@@ -55,6 +55,7 @@ export const getServerSideProps: GetServerSideProps<
     params,
     uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
     uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',
+    sparqlEndpointURL: ""
   };
   return {
     props,

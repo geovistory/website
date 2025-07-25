@@ -27,7 +27,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
             objectFit={'cover'}
           />
 
-          {/* <ion-searchbar
+          <ion-searchbar
             style={{marginTop: '12rem !important'}}
             class="restricted-width"
             color="light"
@@ -46,25 +46,20 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     console.log(inputEl?.value);
                     router.push({
                       pathname: `${props.params.geovID}/search`,
-                      query: { term: inputEl?.value },
+                      query: { term: inputEl?.value, sparqlEndpointURL: "https://sparql-gdb.geovistory.org/OBJECTive" },
+                      
                     });
                   });
                 }
               });
             }}
-          ></ion-searchbar> */}
+          ></ion-searchbar>
 
           <div className={styles.title}>
             <h1 className={styles.title1}>OBJECTive</h1>
             <h3 className={styles.title2}>Tracking <i>Objets d&apos;art</i> in Time through the Art Market</h3>
           </div>
 
-          {/* <h1 className={styles.title}>
-          <div>
-            OBJECTive <br />
-            <span className={styles.title2}>Tracking <i>Objets d&apos;art</i> in Time through the Art Market</span>
-          </div>
-         </h1> */}
         </div>
 
         <ion-grid fixed class="ion-padding">

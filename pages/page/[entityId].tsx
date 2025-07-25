@@ -18,6 +18,7 @@ interface ResourceProps extends SSRProps {
   _ssrHtmlBody: string;
   _ssrHtmlHead: string;
   _ssrData: { [key: string]: any };
+  endpoint: string;
 }
 
 export default function Resource(props: ResourceProps) {
@@ -36,10 +37,10 @@ export default function Resource(props: ResourceProps) {
   );
 }
 
-function ssr(props: SSRProps) {
+function ssr(props: SSRProps, endpoint: string) {
   return (
     <geov-entity
-      sparql-endpoint="https://sparql.geovistory.org/api_v1_community_data"
+      sparql-endpoint={endpoint}
       entity-id={props.entityId}
       uri-regex={process.env.NEXT_PUBLIC_GEOV_URI_REGEX}
       uri-replace={process.env.NEXT_PUBLIC_GEOV_URI_REPLACE}
@@ -68,14 +69,62 @@ function ssr(props: SSRProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps<ResourceProps> = async (
+// export const getStaticProps: GetStaticProps<ResourceProps> = async (
+//   context
+// ) => {
+
+//   const entityId = context?.params?.entityId as string;
+//   const endpoint = context?.params?.endpoint as string ??  as string;
+
+//   const props: SSRProps = { entityId };
+
+//   const res = await serverRender(ssr(props, endpoint));
+
+//   const featuredProjects = projectsParams.filter((pp) => pp.featured);
+
+//   return {
+//     props: {
+//       ...props,
+//       featuredProjects,
+//       defaultPage: {
+//         head: {
+//           headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+//           headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} on Geovistory`,
+//           headOgImage: null,
+//         },
+//         footer: {
+//           featuredProjects,
+//         },
+//       },
+//       _ssrData: res.serverFetchedData,
+//       _ssrHtmlBody: res.bodyInnerHtml,
+//       _ssrHtmlHead: res.headInnerHtml,
+//       endpoint: endpoint
+//     },
+//     revalidate: 10,
+//   };
+// };
+
+
+// export async function getStaticPaths() {
+//   return {
+//     paths: ['/page/i92342', '/page/i3158616'],
+//     fallback: 'blocking', // can also be false or 'blocking'
+//   };
+// }
+
+
+import { GetServerSideProps } from 'next';
+
+export const getServerSideProps: GetServerSideProps<ResourceProps> = async (
   context
 ) => {
   const entityId = context?.params?.entityId as string;
+  const endpoint = context?.query?.endpoint as string ?? 'https://sparql.geovistory.org/api_v1_community_data';
 
   const props: SSRProps = { entityId };
 
-  const res = await serverRender(ssr(props));
+  const res = await serverRender(ssr(props, endpoint));
 
   const featuredProjects = projectsParams.filter((pp) => pp.featured);
 
@@ -85,7 +134,7 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
       featuredProjects,
       defaultPage: {
         head: {
-          headTitle: res.serverFetchedData?.['entity-label']?.label ?? '', // head title is set within Resource
+          headTitle: res.serverFetchedData?.['entity-label']?.label ?? '',
           headOgDescription: `Page about ${res.serverFetchedData?.['entity-label']?.label} on Geovistory`,
           headOgImage: null,
         },
@@ -96,14 +145,7 @@ export const getStaticProps: GetStaticProps<ResourceProps> = async (
       _ssrData: res.serverFetchedData,
       _ssrHtmlBody: res.bodyInnerHtml,
       _ssrHtmlHead: res.headInnerHtml,
+      endpoint,
     },
-    revalidate: 10,
   };
 };
-
-export async function getStaticPaths() {
-  return {
-    paths: ['/page/i92342', '/page/i3158616'],
-    fallback: 'blocking', // can also be false or 'blocking'
-  };
-}
