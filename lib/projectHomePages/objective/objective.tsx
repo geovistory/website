@@ -46,7 +46,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     console.log(inputEl?.value);
                     router.push({
                       pathname: `${props.params.geovID}/search`,
-                      query: { term: inputEl?.value, sparqlEndpointURL: "https://sparql-gdb.geovistory.org/OBJECTive" },
+                      query: { term: inputEl?.value},
                       
                     });
                   });

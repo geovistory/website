@@ -16,13 +16,12 @@ export interface ProjectSearchProps {
   projectPageLayout: ProjectPageLayoutProps;
   uriRegex: string;
   uriReplace: string;
-  sparqlEndpointURL: string;
 }
 const ProjectSearchPage: NextPage<ProjectSearchProps> = (props) => {
 
   let url = ""
-  if (props.sparqlEndpointURL == "") url = `https://sparql.geovistory.org/api_v1_project_${props.params.geovID}`;
-  else url = props.sparqlEndpointURL;
+
+  if (props.params.sparqlURL) url = props.params.sparqlURL
   
   return (
     <ProjectPageLayout {...props.projectPageLayout}>
@@ -57,8 +56,6 @@ export const getServerSideProps: GetServerSideProps<
   const query = context.query;
   const explorerTerm = query?.term ? query?.term.toString() : null;
 
-  const sparqlEndpointURL = query?.sparqlEndpointURL as string ?? ""
-
   const props: ProjectSearchProps = {
     explorerTerm,
     projectPageLayout: {
@@ -69,7 +66,6 @@ export const getServerSideProps: GetServerSideProps<
       },
       navbar: projectParamsToNavbarProps(params),
     },
-    sparqlEndpointURL: sparqlEndpointURL,
     params,
     uriRegex: process.env.NEXT_PUBLIC_GEOV_URI_REGEX ?? '',
     uriReplace: process.env.NEXT_PUBLIC_GEOV_URI_REPLACE ?? '',

@@ -594,7 +594,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql-gdb.geovistory.org/OBJECTive",
 
         fullName: "OBJECTive",
         shortName: "OBJECTive",
