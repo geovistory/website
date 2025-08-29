@@ -76,6 +76,16 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
           <p className={styles.justify}>
             This project aims to create a database on <i>objets d&apos;art</i> auction sales by working from a consistent source: the auction catalogue.
           </p>
+
+          <p className={styles.emphasize}>
+            <strong>
+                From September 2023 to 2025 this project benefited from an ANR/Access ERC funding, to explore the corpus, map the project planning and test the methods. 
+                This is a first step (proof of concept) to build-up a formal model, in offering access to a dataset (FAIR) from a first selection of 28 auctions, 
+                taking place in Paris from 1839 until 1895, referencing their catalogues and total of 12 596 lots (around 23 000 objects), 
+                corresponding to more than 456 000 information in the database.
+            </strong>
+          </p>
+
           <p className={styles.justify}>
             From the mid-18th century auctions have been organised, mainly in Paris and London, to sell and disperse objects, 
             increasing greatly in the first half of the 19th century to reach a rhythm of several thousand sales per decade.
@@ -86,12 +96,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
             integrate and structure various data collections. The database will offer a new tool for identification and provenance research but will also 
             focus on the individuals and institutions involved (sellers/buyers), allowing for a study of the networks and characteristics of this market over a long period.
           </p>
-          <p className={styles.emphasize}>
-            <strong>
-              From September 2023 to 2025 this project benefits from an ANR/Access ERC funding, 
-              to explore the corpus, map the project planning and test the methods with the input of the LARHRA engineers.
-            </strong>
-          </p>
           <h4>The team</h4>
           <p>
             <ion-row>
@@ -101,10 +105,17 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                   description="Project Leader"
                 />
               </ion-col>
+
+              <ion-col size="6">
+                <Person
+                    name="Gaétan Muck"
+                    description="Data Scientist/Engineer"
+                  />
+              </ion-col>
             </ion-row>
           </p>
 
-          <h4>LARHRA Engineers</h4>
+          <h4>LARHRA Collaborators</h4>
           <p>
             <ion-row>
               <ion-col size="6">
@@ -121,12 +132,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
               </ion-col>
             </ion-row>
           </p>
-
-          <h4>Scientific Commitee</h4>
-          <p>
-            (being formed)
-          </p>
-
 
           <h4>Institutional Partners</h4>
           <p>

@@ -588,7 +588,7 @@ LIMIT 10`,
         geovID: 11200212,
         geovName: "OBJECTive",
 
-        preferredClasses: [],
+        preferredClasses: ["c7", "c23", "c32", "c1289", "c756", "c1290", "c363", "c38", "c535", "c21", "c12", "c212", "c1357", "c1775"],
 
         featured: false,
         listed: true,
