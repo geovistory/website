@@ -45,7 +45,7 @@ export const projectsParams: Array<ProjectParams> = [
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_1483135",
 
         fullName: "Academic Education & Careers",
         shortName: "Academic Education & Careers",
@@ -124,7 +124,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_924033",
 
         fullName: "Tagebücher Anna Maria Preiswerk-Iselin",
         shortName: "Tagebücher Anna Maria Preiswerk-Iselin",
@@ -151,7 +151,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_591",
 
         fullName: "ANR Processetti",
         shortName: "ANR Processetti",
@@ -178,7 +178,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_84760",
 
         fullName: "Maritime History",
         shortName: "Maritime History",
@@ -355,7 +355,7 @@ LIMIT 10`,
         listed: false,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_6529336",
 
         fullName: "Euro-Climhist Database",
         shortName: "Euro-Climhist Database",
@@ -383,7 +383,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_3354801",
 
         fullName: "Roma's deportation to Transnistria, 1942-1944",
         shortName: "Roma's deportation",
@@ -409,7 +409,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_3350169",
 
         fullName: "Softpowarts",
         shortName: "Softpowarts",
@@ -436,7 +436,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_941447",
 
         fullName: "The Roman senate under the tetrarchs",
         shortName: "The Roman senate under the tetrarchs",
@@ -462,7 +462,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_153",
 
         fullName: "Switzerland and Beyond",
         shortName: "Switzerland and Beyond",
@@ -488,7 +488,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_11172552",
 
         fullName: "From Student Internationalism to Erasmus",
         shortName: "From Student Internationalism to Erasmus",
@@ -515,7 +515,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_6619613",
 
         fullName: "Urban Biographies of the Roman and Late Antique Worlds",
         shortName: "Urban Biographies of the Roman and Late Antique Worlds",
@@ -542,7 +542,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_1458522",
 
         fullName: "Les « enfants du placard »",
         shortName: "Les « enfants du placard »",
@@ -568,7 +568,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_1719422",
 
         fullName: "Jüdische & katholische Zentren Basels",
         shortName: "Jüdische & katholische Zentren Basels",
@@ -620,7 +620,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_15458106",
 
         fullName: "Mapping Multifaith London, 1689-c.1740",
         shortName: "Mapping Multifaith London, 1689-c.1740",
@@ -646,7 +646,7 @@ LIMIT 10`,
         listed: true,
 
         teiURL: "",
-        sparqlURL: "",
+        sparqlURL: "https://sparql.geovistory.org/api_v1_project_374840",
 
         fullName: "Historisch-Genealogisches Informationssystem Basel",
         shortName: "Historisch-Genealogisches Informationssystem Basel",
