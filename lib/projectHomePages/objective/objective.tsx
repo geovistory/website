@@ -169,6 +169,12 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                             description="Modelling preparatory work"
                         />
                       </ion-col>
+                      <ion-col size="6">
+                        <Person
+                            name="Djamel Ferhod"
+                            description="DevOps & Website Integration"
+                        />
+                      </ion-col>
                     </ion-row>
                   </p>
 
