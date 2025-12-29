@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useState } from 'react'; // Added useState for tab management
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
@@ -14,154 +15,192 @@ import { Lyon2Logo } from '../../../components/logos/Lyon2Logo';
 const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
 
+  // State to manage the active view ('home' or 'data')
+  const [activeTab, setActiveTab] = useState<'home' | 'data'>('home');
+
   return (
-    <div className={styles.theme}>
-      <ProjectPageLayout {...props.projectPageLayout}>
-        <div className={styles.bannerContainer}>
-          <Image
-            className={styles.bannerImage}
-            src={bannerImage}
-            alt="OBJECTive"
-            layout="fill"
-            placeholder="blur"
-            objectFit={'cover'}
-          />
+      <div className={styles.theme}>
+        <ProjectPageLayout {...props.projectPageLayout}>
+          <div className={styles.bannerContainer}>
+            <Image
+                className={styles.bannerImage}
+                src={bannerImage}
+                alt="OBJECTive"
+                layout="fill"
+                placeholder="blur"
+                objectFit={'cover'}
+            />
 
-          <ion-searchbar
-            style={{marginTop: '12rem !important'}}
-            class="restricted-width"
-            color="light"
-            enterkeyhint="enter"
-            placeholder="Search and hit enter…"
-            ref={(el: any) => {
-              setTimeout(() => {
-                el?.getInputElement().then(() => {
-                  console.log('focus on ', el);
-                  el?.setFocus();
-                });
-              }, 300);
-              el?.addEventListener('keypress', (event: KeyboardEvent) => {
-                if (event.key === 'Enter') {
-                  el?.getInputElement().then((inputEl: HTMLInputElement) => {
-                    console.log(inputEl?.value);
-                    router.push({
-                      pathname: `${props.params.geovID}/search`,
-                      query: { term: inputEl?.value},
-                      
+            {/* Search Bar - Always visible */}
+            <ion-searchbar
+                style={{marginTop: '12rem !important'}}
+                class="restricted-width"
+                color="light"
+                enterkeyhint="enter"
+                placeholder="Search and hit enter…"
+                ref={(el: any) => {
+                  setTimeout(() => {
+                    el?.getInputElement().then(() => {
+                      console.log('focus on ', el);
+                      el?.setFocus();
                     });
-                  });
-                }
-              });
-            }}
-          ></ion-searchbar>
+                  }, 300);
+                  el?.addEventListener('keypress', (event: KeyboardEvent) => {
+                    if (event.key === 'Enter') {
+                      el?.getInputElement().then((inputEl: HTMLInputElement) => {
+                        console.log(inputEl?.value);
+                        router.push({
+                          pathname: `${props.params.geovID}/search`,
+                          query: { term: inputEl?.value},
 
-          <div className={styles.title}>
-            <h1 className={styles.title1}>OBJECTive</h1>
-            <h3 className={styles.title2}>Tracking <i>Objets d&apos;art</i> in Time through the Art Market</h3>
+                        });
+                      });
+                    }
+                  });
+                }}
+            ></ion-searchbar>
+
+            <div className={styles.title}>
+              <h1 className={styles.title1}>OBJECTive</h1>
+              <h3 className={styles.title2}>Tracking <i>Objets d&apos;art</i> in Time through the Art Market</h3>
+            </div>
+
           </div>
 
-        </div>
+          {/* Navigation Tabs (Ion Segment) */}
+          <div className="ion-padding-top ion-margin-bottom" style={{ display: 'flex', justifyContent: 'center' }}>
+            <ion-segment
+                value={activeTab}
+                onIonChange={(e: any) => setActiveTab(e.detail.value)}
+                color="dark"
+                style={{ maxWidth: '600px' }}
+            >
+              <ion-segment-button value="home">
+                <ion-label>Project Presentation</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="data">
+                <ion-label>Data Overview</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </div>
 
-        <ion-grid fixed class="ion-padding">
-          <p className="lead">
-            <strong>
-              Historical data on auctions in the modern era (1750-1950), ready to explore and reuse
-            </strong>
-          </p>{' '}
-          <p className={styles.justify}>
-            <i>Objets d&apos;art</i> (or decorative arts) are challenging to research as they include a vast array of objects, encompassing ceramics, 
-            furniture, glass, metalwork, and textiles, all with distinctive forms, functions and materials, and their creators are often unknown.
-            Under-represented in cultural economics and heritage studies, the absence of a comprehensive dataset is an obstacle to study and track pieces across time.
-          </p>
-          <p className={styles.justify}>
-            This project aims to create a database on <i>objets d&apos;art</i> auction sales by working from a consistent source: the auction catalogue.
-          </p>
+          <ion-grid fixed class="ion-padding">
 
-          <p className={styles.emphasize}>
-            <strong>
-                From September 2023 to 2025 this project benefited from an ANR/Access ERC funding, to explore the corpus, map the project planning and test the methods. 
-                This is a first step (proof of concept) to build-up a formal model, in offering access to a dataset (FAIR) from a first selection of 28 auctions, 
-                taking place in Paris from 1839 until 1895, referencing their catalogues and total of 12 596 lots (around 23 000 objects), 
-                corresponding to more than 456 000 information in the database.
-            </strong>
-          </p>
+            {/* TAB 1: ORIGINAL CONTENT (Project Presentation) */}
+            {activeTab === 'home' && (
+                <div className="animate__animated animate__fadeIn">
+                  <p className="lead">
+                    <strong>
+                      Historical data on auctions in the modern era (1750-1950), ready to explore and reuse
+                    </strong>
+                  </p>{' '}
+                  <p className={styles.justify}>
+                    <i>Objets d&apos;art</i> (or decorative arts) are challenging to research as they include a vast array of objects, encompassing ceramics,
+                    furniture, glass, metalwork, and textiles, all with distinctive forms, functions and materials, and their creators are often unknown.
+                    Under-represented in cultural economics and heritage studies, the absence of a comprehensive dataset is an obstacle to study and track pieces across time.
+                  </p>
+                  <p className={styles.justify}>
+                    This project aims to create a database on <i>objets d&apos;art</i> auction sales by working from a consistent source: the auction catalogue.
+                  </p>
 
-          <p className={styles.justify}>
-            From the mid-18th century auctions have been organised, mainly in Paris and London, to sell and disperse objects, 
-            increasing greatly in the first half of the 19th century to reach a rhythm of several thousand sales per decade.
-            Individual auctions have always both combined and dispersed a great diversity of fine objects, from a multitude of origins.
-            The catalogue is a crucial record. In many cases annotated catalogues exist (with hammer prices and buyers) and others can be cross-referenced 
-            with auctioneers&apos; archives. The core of the dataset will be built up from the selection of a vast corpus of auction catalogues for the decorative arts. 
-            These catalogues will be interrogated through digital methods (extraction, processing and machine learning) and Geovistory will be used to 
-            integrate and structure various data collections. The database will offer a new tool for identification and provenance research but will also 
-            focus on the individuals and institutions involved (sellers/buyers), allowing for a study of the networks and characteristics of this market over a long period.
-          </p>
-          <h4>The team</h4>
-          <p>
-            <ion-row>
-              <ion-col size="6">
-                <Person
-                  name="Dr. Camille Mestdagh"
-                  description="Project Leader"
-                />
-              </ion-col>
+                  <p className={styles.emphasize}>
+                    <strong>
+                      From September 2023 to 2025 this project benefited from an ANR/Access ERC funding, to explore the corpus, map the project planning and test the methods.
+                      This is a first step (proof of concept) to build-up a formal model, in offering access to a dataset (FAIR) from a first selection of 28 auctions,
+                      taking place in Paris from 1839 until 1895, referencing their catalogues and total of 12 596 lots (around 23 000 objects),
+                      corresponding to more than 456 000 information in the database.
+                    </strong>
+                  </p>
 
-              <ion-col size="6">
-                <Person
-                    name="Gaétan Muck"
-                    description="Data Scientist/Engineer"
-                  />
-              </ion-col>
-            </ion-row>
-          </p>
+                  <p className={styles.justify}>
+                    From the mid-18th century auctions have been organised, mainly in Paris and London, to sell and disperse objects,
+                    increasing greatly in the first half of the 19th century to reach a rhythm of several thousand sales per decade.
+                    Individual auctions have always both combined and dispersed a great diversity of fine objects, from a multitude of origins.
+                    The catalogue is a crucial record. In many cases annotated catalogues exist (with hammer prices and buyers) and others can be cross-referenced
+                    with auctioneers&apos; archives. The core of the dataset will be built up from the selection of a vast corpus of auction catalogues for the decorative arts.
+                    These catalogues will be interrogated through digital methods (extraction, processing and machine learning) and Geovistory will be used to
+                    integrate and structure various data collections. The database will offer a new tool for identification and provenance research but will also
+                    focus on the individuals and institutions involved (sellers/buyers), allowing for a study of the networks and characteristics of this market over a long period.
+                  </p>
+                  <h4>The team</h4>
+                  <p>
+                    <ion-row>
+                      <ion-col size="6">
+                        <Person
+                            name="Dr. Camille Mestdagh"
+                            description="Project Leader"
+                        />
+                      </ion-col>
 
-          <h4>LARHRA Collaborators</h4>
-          <p>
-            <ion-row>
-              <ion-col size="6">
-                <Person
-                    name="Morgane Pica M.A"
-                    description="Database preparatory work"
-                  />
-              </ion-col>
-              <ion-col size="6">
-                <Person
-                    name="Vincent Alamercery M.A"
-                    description="Modelling preparatory work"
-                  />
-              </ion-col>
-            </ion-row>
-          </p>
+                      <ion-col size="6">
+                        <Person
+                            name="Gaétan Muck"
+                            description="Data Scientist/Engineer"
+                        />
+                      </ion-col>
+                    </ion-row>
+                  </p>
 
-          <h4>Institutional Partners</h4>
-          <p>
-            <ion-row>
-              <ion-col size="6">
-                <AnrLogo2 />
-              </ion-col>
-              <ion-col size="6">
-                <LarhraLogo />
-              </ion-col>
-              <ion-col size="6">
-                <Lyon2Logo />
-              </ion-col>
-              <ion-col size="6">
-                <KleiolabLogo />
-              </ion-col>
-            </ion-row>
-          </p>
+                  <h4>LARHRA Collaborators</h4>
+                  <p>
+                    <ion-row>
+                      <ion-col size="6">
+                        <Person
+                            name="Morgane Pica M.A"
+                            description="Database preparatory work"
+                        />
+                      </ion-col>
+                      <ion-col size="6">
+                        <Person
+                            name="Vincent Alamercery M.A"
+                            description="Modelling preparatory work"
+                        />
+                      </ion-col>
+                    </ion-row>
+                  </p>
 
-        <div className="restricted-width">
-          <ion-label>
-            <small>
-              Image: Ignacio de León y Escosura, Auction Sale in Clinton Hall, New York, 1876, The Metropolitan Museum of Art, 83.11, Gift of the Artist, 1883
-            </small>
-          </ion-label>
-        </div>
+                  <h4>Institutional Partners</h4>
+                  <p>
+                    <ion-row>
+                      <ion-col size="6">
+                        <AnrLogo2 />
+                      </ion-col>
+                      <ion-col size="6">
+                        <LarhraLogo />
+                      </ion-col>
+                      <ion-col size="6">
+                        <Lyon2Logo />
+                      </ion-col>
+                      <ion-col size="6">
+                        <KleiolabLogo />
+                      </ion-col>
+                    </ion-row>
+                  </p>
 
-        </ion-grid>
-      </ProjectPageLayout>
-    </div>
+                  <div className="restricted-width">
+                    <ion-label>
+                      <small>
+                        Image: Ignacio de León y Escosura, Auction Sale in Clinton Hall, New York, 1876, The Metropolitan Museum of Art, 83.11, Gift of the Artist, 1883
+                      </small>
+                    </ion-label>
+                  </div>
+                </div>
+            )}
+
+            {/* TAB 2: NEW CONTENT (Data Overview) */}
+            {activeTab === 'data' && (
+                <div className="animate__animated animate__fadeIn">
+                  <h2>Data Overview</h2>
+                  <p>
+                    {/* Placeholder for the upcoming HTML content */}
+                    [Content pending...]
+                  </p>
+                </div>
+            )}
+
+          </ion-grid>
+        </ProjectPageLayout>
+      </div>
   );
 };
 
