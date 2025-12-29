@@ -78,7 +78,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
             <ion-segment
                 value={activeTab}
                 class={styles.customSegment}
-                style={{ maxWidth: '600px' }}
+                style={{ maxWidth: '600px', margin: '0 auto' }}
             >
               <ion-segment-button
                   value="home"
