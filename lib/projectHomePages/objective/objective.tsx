@@ -11,6 +11,11 @@ import { LarhraLogo } from '../../../components/logos/LarhraLogo';
 import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
 import { AnrLogo2 } from '../../../components/logos/AnrLogo2';
 import { Lyon2Logo } from '../../../components/logos/Lyon2Logo';
+import mapEurope from '../../../public/objective/map_of_all_origins_Europe.jpg';
+import mapGlobal from '../../../public/objective/map_of_all_origins_Global.jpg';
+import periodsImg from '../../../public/objective/periods.jpg';
+import authorsImg from '../../../public/objective/authors.jpg';
+import expertsImg from '../../../public/objective/experts.jpg';
 
 const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
@@ -68,7 +73,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
           </div>
 
           {/* Navigation Tabs (Ion Segment) */}
-          {/* FIX: Using onClick on buttons because standard React doesn't listen to custom events (ionChange) via props */}
           <div className="ion-padding-top ion-margin-bottom" style={{ display: 'flex', justifyContent: 'center' }}>
             <ion-segment
                 value={activeTab}
@@ -190,11 +194,139 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
             {/* TAB 2: NEW CONTENT (Data Overview) */}
             {activeTab === 'data' && (
                 <div className="animate__animated animate__fadeIn">
-                  <h2>Data Overview</h2>
-                  <p>
-                    {/* Placeholder for the upcoming HTML content */}
-                    [Content pending...]
+
+                  {/* Intro Text */}
+                  <p className={styles.justify}>
+                    The different visualisations are guided by the main research questions:
                   </p>
+                  <ul>
+                    <li>What kind of objects are circulating on the auction market in the time periods? What is their origin of manufacture? Their typology and material? When were they made?</li>
+                    <li>Who are the actors leading the market?</li>
+                  </ul>
+                  <p className={styles.justify}>
+                    The recorded data emanates from a selection of 28 Parisian auctions, taking place from 1839 until 1895, referencing their catalogues and total of 12 596 lots. The number of auctions doesn’t allow us to reach conclusive broader analysis but this overview of the recorded data can be used to highlight the quality of the information and the research perspectives once more data could be aggregated.
+                  </p>
+
+                  <p className={styles.justify}>
+                    A few figures give an idea of the sheer volume of data recorded from the selection of sales:
+                    <br />
+                    12,596 auction lots are recorded in the database (each lot can combine several objects such as pairs or sets):
+                    <br />
+                    4,890 have a recorded origin of production (40%), referring to more than 170 different geographical locations, mostly in Europe but also Asia, the Middle East, Northern Africa, Central and South America.
+                  </p>
+
+                  {/* Maps Side by Side */}
+                  <ion-row class="ion-margin-vertical">
+                    <ion-col size="12" size-md="6">
+                      <div style={{position: 'relative', width: '100%', height: '300px'}}>
+                        <Image src={mapEurope} layout="fill" objectFit="contain" alt="Map of origins Europe" />
+                      </div>
+                    </ion-col>
+                    <ion-col size="12" size-md="6">
+                      <div style={{position: 'relative', width: '100%', height: '300px'}}>
+                        <Image src={mapGlobal} layout="fill" objectFit="contain" alt="Map of origins Global" />
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginBottom: '2rem'}}>
+                    © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
+                  </div>
+
+                  {/* Materials & Types */}
+                  <p className={styles.justify}>
+                    4,560 lots of objects have both known origins and recorded materials/techniques (37%); allowing us to analyse relationships between the country of origin, the materials used and the techniques applied.
+                    <br />
+                    10,790 have objects materials and/or techniques recorded (94%), listing 1,551 materials and/or technique references. More than 10,000 objects can be found in the top 10 categories of materials and techniques: Gold or Gilded, Porcelain, Bronze, Enamel, Wood, Silver, Marble, Copper, Ivory and Glass.
+                  </p>
+
+                  <p className={styles.justify}>
+                    12,273 lots have an identifiable object type (98%) and nearly 5,000 can be classified within the top 12 object types, including: Vase, Plat, Pendule, Coupe, Sculpture, Boîte, Plateau, Tasse et Soucoupe, Flambeau, Montre, Table…
+                  </p>
+
+                  {/* Periods & Authors Side by Side */}
+                  <ion-row class="ion-margin-vertical">
+                    <ion-col size="12" size-md="6">
+                      <div style={{position: 'relative', width: '100%', height: '300px'}}>
+                        <Image src={periodsImg} layout="fill" objectFit="contain" alt="Periods graph" />
+                      </div>
+                    </ion-col>
+                    <ion-col size="12" size-md="6">
+                      <div style={{position: 'relative', width: '100%', height: '300px'}}>
+                        <Image src={authorsImg} layout="fill" objectFit="contain" alt="Authors graph" />
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginBottom: '2rem'}}>
+                    © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
+                  </div>
+
+                  {/* Periods Text */}
+                  <p className={styles.justify}>
+                    For 3,118 lots the production period of the objects is referenced and could be recorded (just under 25%). It is interesting to note that the periods of production are mostly referenced in auction catalogues from the 1860s and increasingly into the 1880s. The “XVIe siècle” and “Renaissance” as well as the period known as “Louis XVI” in France are the most commonly found in the lots listed in the auction catalogues, followed by “Louis XIV” and Louis “XV” era.
+                    <br />
+                    Only very few lots of objects refer to authorship, referring to a single artist or maker’s names (5%). The most commonly found are: Boulle , followed by Clodion, Gouthière, Della Robbia (more than 20 times), then Thomire and Bernard Palissy (just over 10 times).
+                  </p>
+
+                  <p className={styles.justify}>
+                    Thanks to the information recorded from the front pages of auction catalogues we can also measure and compare the participation of auctioneers and experts across the sales. The domination of the Auctioneer Charles Pillet is evident, directing more than half the sales selected, followed by Paul Chevallier, his successor.
+                    <br />
+                    In the same way, the leading expert is Charles Mannheim, employed in more than half the sales, followed by Charles Roussel who appears in a small number of them.
+                  </p>
+
+                  {/* Experts Graph */}
+                  <div className="ion-margin-top ion-margin-bottom">
+                    <h4 style={{textAlign: 'center', marginBottom: '1rem'}}>Experts participations in auction across all catalogues</h4>
+                    <div style={{position: 'relative', width: '100%', height: '500px'}}>
+                      <Image src={expertsImg} layout="fill" objectFit="contain" alt="Experts participation graph" />
+                    </div>
+                    <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginTop: '0.5rem'}}>
+                      © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
+                    </div>
+                  </div>
+
+                  <div className="ion-margin-vertical">
+                    <hr />
+                  </div>
+
+                  {/* Catalogue List */}
+                  <div className="ion-text-center">
+                    <h4>LIST OF CATALOGUES USED FOR THE START OF THE PROJECT OBJECTive (2023-2025)</h4>
+                    <p style={{fontStyle: 'italic', marginBottom: '1rem'}}>(SOURCE FOR DATA EXTRACTION)</p>
+
+                    <div style={{columns: '2 auto', columnGap: '2rem', textAlign: 'left', maxWidth: '600px', margin: '0 auto'}}>
+                      <ul style={{listStyle: 'none', padding: 0, fontSize: '0.9em', lineHeight: '1.6'}}>
+                        <li>1839-02-06 Debruge-Duménil</li>
+                        <li>1839-03-12 Debruge-Duménil</li>
+                        <li>1839-03-18 Curiosités</li>
+                        <li>1840-12-14 Debruge-Duménil</li>
+                        <li>1845-03-10 Berthon</li>
+                        <li>1845-12-16 Jamar</li>
+                        <li>1850-01-23 Debruge-Duménil</li>
+                        <li>1855-06-04 Hope</li>
+                        <li>1861-04-08 Prince-Soltykoff</li>
+                        <li>1862-06-27 Pembroke</li>
+                        <li>1862-11-03 Baslini</li>
+                        <li>1863-01-13 Demidoff</li>
+                        <li>1865-04-21 Beauvau</li>
+                        <li>1866-02-07 Van-Cuyck</li>
+                        <li>1866-03-30 Daigremont</li>
+                        <li>1867-11-25 Mannheim-père</li>
+                        <li>1867-12-09 Mannheim-père</li>
+                        <li>1868-03-09 Monbro</li>
+                        <li>1868-06-10 Didier</li>
+                        <li>1876-04-03 Vaux-Praslin</li>
+                        <li>1880-03-15 San-Donato</li>
+                        <li>1882-04-17 Febvre</li>
+                        <li>1883-02-12 Marquis</li>
+                        <li>1883-04-09 Beurdeley</li>
+                        <li>1883-04-23 Beurdeley</li>
+                        <li>1889-03-11 Ayers</li>
+                        <li>1890-05-05 Baron-Seillière</li>
+                        <li>1895-05-27 Beurdeley</li>
+                      </ul>
+                    </div>
+                  </div>
+
                 </div>
             )}
 
