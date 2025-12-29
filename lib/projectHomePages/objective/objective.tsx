@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
@@ -16,11 +16,14 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<'home' | 'data'>('home');
 
-  // function to prevent scrolling on tab change
-  const handleTabChange = (e: any, tab: 'home' | 'data') => {
+  const handleTabChange = (e: MouseEvent, tab: 'home' | 'data') => {
     e.preventDefault();
     e.stopPropagation();
     setActiveTab(tab);
+  };
+
+  const preventFocusScroll = (e: MouseEvent) => {
+    e.preventDefault();
   };
 
   return (
@@ -71,20 +74,16 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
           </div>
 
-          {/* Navigation Tabs */}
           <div className="ion-padding-top ion-margin-bottom" style={{ display: 'flex', justifyContent: 'center' }}>
             <ion-segment
                 value={activeTab}
                 class={styles.customSegment}
                 style={{ maxWidth: '600px' }}
             >
-              {/*
-                   FIX SCROLL with onMouseDown and preventDefault est crucial
-                */}
               <ion-segment-button
                   value="home"
                   onClick={(e: any) => handleTabChange(e, 'home')}
-                  onMouseDown={(e: { preventDefault: () => any; }) => e.preventDefault()}
+                  onMouseDown={preventFocusScroll}
               >
                 <ion-label>Project Presentation</ion-label>
               </ion-segment-button>
@@ -92,7 +91,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
               <ion-segment-button
                   value="data"
                   onClick={(e: any) => handleTabChange(e, 'data')}
-                  onMouseDown={(e: { preventDefault: () => any; }) => e.preventDefault()}
+                  onMouseDown={preventFocusScroll}
               >
                 <ion-label>Data Overview</ion-label>
               </ion-segment-button>
@@ -207,12 +206,10 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                   <p className={styles.justify}>
                     The different visualisations are guided by the main research questions:
                   </p>
-                  <p>
-                    <ul>
-                      <li>What kind of objects are circulating on the auction market in the time periods? What is their origin of manufacture? Their typology and material? When were they made?</li>
-                      <li>Who are the actors leading the market?</li>
-                    </ul>
-                  </p>
+                  <ul>
+                    <li>What kind of objects are circulating on the auction market in the time periods? What is their origin of manufacture? Their typology and material? When were they made?</li>
+                    <li>Who are the actors leading the market?</li>
+                  </ul>
                   <p className={styles.justify}>
                     The recorded data emanates from a selection of 28 Parisian auctions, taking place from 1839 until 1895, referencing their catalogues and total of 12 596 lots. The number of auctions doesn’t allow us to reach conclusive broader analysis but this overview of the recorded data can be used to highlight the quality of the information and the research perspectives once more data could be aggregated.
                   </p>
