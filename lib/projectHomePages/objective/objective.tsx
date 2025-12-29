@@ -11,16 +11,9 @@ import { LarhraLogo } from '../../../components/logos/LarhraLogo';
 import { KleiolabLogo } from '../../../components/logos/KleiolabLogo';
 import { AnrLogo2 } from '../../../components/logos/AnrLogo2';
 import { Lyon2Logo } from '../../../components/logos/Lyon2Logo';
-import mapEurope from '../../../public/objective/map_of_all_origins_Europe.jpg';
-import mapGlobal from '../../../public/objective/map_of_all_origins_Global.jpg';
-import periodsImg from '../../../public/objective/periods.jpg';
-import authorsImg from '../../../public/objective/authors.jpg';
-import expertsImg from '../../../public/objective/experts.jpg';
 
 const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
-
-  // State to manage the active view ('home' or 'data')
   const [activeTab, setActiveTab] = useState<'home' | 'data'>('home');
 
   return (
@@ -36,7 +29,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                 objectFit={'cover'}
             />
 
-            {/* Search Bar - Always visible */}
             <ion-searchbar
                 style={{marginTop: '12rem !important'}}
                 class="restricted-width"
@@ -72,7 +64,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
           </div>
 
-          {/* Navigation Tabs (Ion Segment) */}
           <div className="ion-padding-top ion-margin-bottom" style={{ display: 'flex', justifyContent: 'center' }}>
             <ion-segment
                 value={activeTab}
@@ -90,7 +81,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
           <ion-grid fixed class="ion-padding">
 
-            {/* TAB 1: ORIGINAL CONTENT (Project Presentation) */}
             {activeTab === 'home' && (
                 <div className="animate__animated animate__fadeIn">
                   <p className="lead">
@@ -191,11 +181,9 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                 </div>
             )}
 
-            {/* TAB 2: NEW CONTENT (Data Overview) */}
             {activeTab === 'data' && (
                 <div className="animate__animated animate__fadeIn">
 
-                  {/* Intro Text */}
                   <p className={styles.justify}>
                     The different visualisations are guided by the main research questions:
                   </p>
@@ -215,16 +203,25 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     4,890 have a recorded origin of production (40%), referring to more than 170 different geographical locations, mostly in Europe but also Asia, the Middle East, Northern Africa, Central and South America.
                   </p>
 
-                  {/* Maps Side by Side */}
                   <ion-row class="ion-margin-vertical">
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
-                        <Image src={mapEurope} layout="fill" objectFit="contain" alt="Map of origins Europe" />
+                        <Image
+                            src="/objective/map_of_all_origins_Europe.jpg"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="Map of origins Europe"
+                        />
                       </div>
                     </ion-col>
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
-                        <Image src={mapGlobal} layout="fill" objectFit="contain" alt="Map of origins Global" />
+                        <Image
+                            src="/objective/map_of_all_origins_Global.jpg"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="Map of origins Global"
+                        />
                       </div>
                     </ion-col>
                   </ion-row>
@@ -232,7 +229,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
                   </div>
 
-                  {/* Materials & Types */}
                   <p className={styles.justify}>
                     4,560 lots of objects have both known origins and recorded materials/techniques (37%); allowing us to analyse relationships between the country of origin, the materials used and the techniques applied.
                     <br />
@@ -243,16 +239,25 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     12,273 lots have an identifiable object type (98%) and nearly 5,000 can be classified within the top 12 object types, including: Vase, Plat, Pendule, Coupe, Sculpture, Boîte, Plateau, Tasse et Soucoupe, Flambeau, Montre, Table…
                   </p>
 
-                  {/* Periods & Authors Side by Side */}
                   <ion-row class="ion-margin-vertical">
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
-                        <Image src={periodsImg} layout="fill" objectFit="contain" alt="Periods graph" />
+                        <Image
+                            src="/objective/periods.jpg"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="Periods graph"
+                        />
                       </div>
                     </ion-col>
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
-                        <Image src={authorsImg} layout="fill" objectFit="contain" alt="Authors graph" />
+                        <Image
+                            src="/objective/authors.jpg"
+                            layout="fill"
+                            objectFit="contain"
+                            alt="Authors graph"
+                        />
                       </div>
                     </ion-col>
                   </ion-row>
@@ -260,7 +265,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
                   </div>
 
-                  {/* Periods Text */}
                   <p className={styles.justify}>
                     For 3,118 lots the production period of the objects is referenced and could be recorded (just under 25%). It is interesting to note that the periods of production are mostly referenced in auction catalogues from the 1860s and increasingly into the 1880s. The “XVIe siècle” and “Renaissance” as well as the period known as “Louis XVI” in France are the most commonly found in the lots listed in the auction catalogues, followed by “Louis XIV” and Louis “XV” era.
                     <br />
@@ -273,11 +277,15 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     In the same way, the leading expert is Charles Mannheim, employed in more than half the sales, followed by Charles Roussel who appears in a small number of them.
                   </p>
 
-                  {/* Experts Graph */}
                   <div className="ion-margin-top ion-margin-bottom">
                     <h4 style={{textAlign: 'center', marginBottom: '1rem'}}>Experts participations in auction across all catalogues</h4>
                     <div style={{position: 'relative', width: '100%', height: '500px'}}>
-                      <Image src={expertsImg} layout="fill" objectFit="contain" alt="Experts participation graph" />
+                      <Image
+                          src="/objective/experts.jpg"
+                          layout="fill"
+                          objectFit="contain"
+                          alt="Experts participation graph"
+                      />
                     </div>
                     <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginTop: '0.5rem'}}>
                       © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
@@ -288,7 +296,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <hr />
                   </div>
 
-                  {/* Catalogue List */}
                   <div className="ion-text-center">
                     <h4>LIST OF CATALOGUES USED FOR THE START OF THE PROJECT OBJECTive (2023-2025)</h4>
                     <p style={{fontStyle: 'italic', marginBottom: '1rem'}}>(SOURCE FOR DATA EXTRACTION)</p>
