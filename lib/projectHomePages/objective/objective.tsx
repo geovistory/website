@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState, useEffect, useRef } from 'react'; // Ajout de useRef et useEffect
+import { useState } from 'react';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
@@ -16,25 +16,12 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<'home' | 'data'>('home');
 
-  const segmentRef = useRef<HTMLIonSegmentElement>(null);
-
-  useEffect(() => {
-    const segment = segmentRef.current;
-    if (segment) {
-      const handleSegmentChange = (e: any) => {
-        const newValue = e.detail.value;
-        if (newValue) {
-          setActiveTab(newValue as 'home' | 'data');
-        }
-      };
-
-      segment.addEventListener('ionChange', handleSegmentChange);
-
-      return () => {
-        segment.removeEventListener('ionChange', handleSegmentChange);
-      };
-    }
-  }, []);
+  // function to prevent scrolling on tab change
+  const handleTabChange = (e: any, tab: 'home' | 'data') => {
+    e.preventDefault();
+    e.stopPropagation();
+    setActiveTab(tab);
+  };
 
   return (
       <div className={styles.theme}>
@@ -84,18 +71,29 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
           </div>
 
-          {/* Navigation Tabs (Ion Segment) */}
+          {/* Navigation Tabs */}
           <div className="ion-padding-top ion-margin-bottom" style={{ display: 'flex', justifyContent: 'center' }}>
             <ion-segment
-                ref={segmentRef}
                 value={activeTab}
                 class={styles.customSegment}
                 style={{ maxWidth: '600px' }}
             >
-              <ion-segment-button value="home">
+              {/*
+                   FIX SCROLL with onMouseDown and preventDefault est crucial
+                */}
+              <ion-segment-button
+                  value="home"
+                  onClick={(e: any) => handleTabChange(e, 'home')}
+                  onMouseDown={(e: { preventDefault: () => any; }) => e.preventDefault()}
+              >
                 <ion-label>Project Presentation</ion-label>
               </ion-segment-button>
-              <ion-segment-button value="data">
+
+              <ion-segment-button
+                  value="data"
+                  onClick={(e: any) => handleTabChange(e, 'data')}
+                  onMouseDown={(e: { preventDefault: () => any; }) => e.preventDefault()}
+              >
                 <ion-label>Data Overview</ion-label>
               </ion-segment-button>
             </ion-segment>
@@ -209,10 +207,12 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                   <p className={styles.justify}>
                     The different visualisations are guided by the main research questions:
                   </p>
-                  <ul>
-                    <li>What kind of objects are circulating on the auction market in the time periods? What is their origin of manufacture? Their typology and material? When were they made?</li>
-                    <li>Who are the actors leading the market?</li>
-                  </ul>
+                  <p>
+                    <ul>
+                      <li>What kind of objects are circulating on the auction market in the time periods? What is their origin of manufacture? Their typology and material? When were they made?</li>
+                      <li>Who are the actors leading the market?</li>
+                    </ul>
+                  </p>
                   <p className={styles.justify}>
                     The recorded data emanates from a selection of 28 Parisian auctions, taking place from 1839 until 1895, referencing their catalogues and total of 12 596 lots. The number of auctions doesn’t allow us to reach conclusive broader analysis but this overview of the recorded data can be used to highlight the quality of the information and the research perspectives once more data could be aggregated.
                   </p>
@@ -229,7 +229,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/map_of_all_origins_Europe.jpg"
+                            src="/objective/map_of_all_origins_Europe.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Map of origins Europe"
@@ -239,7 +239,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/map_of_all_origins_Global.jpg"
+                            src="/objective/map_of_all_origins_Global.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Map of origins Global"
@@ -265,7 +265,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/periods.jpg"
+                            src="/objective/periods.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Periods graph"
@@ -275,7 +275,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/authors.jpg"
+                            src="/objective/authors.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Authors graph"
@@ -303,7 +303,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <h4 style={{textAlign: 'center', marginBottom: '1rem'}}>Experts participations in auction across all catalogues</h4>
                     <div style={{position: 'relative', width: '100%', height: '500px'}}>
                       <Image
-                          src="/objective/experts.jpg"
+                          src="/objective/experts.png"
                           layout="fill"
                           objectFit="contain"
                           alt="Experts participation graph"
