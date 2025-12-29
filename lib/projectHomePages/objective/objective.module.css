@@ -57,31 +57,27 @@
     background: var(--ion-color-primary-tint);
     border-radius: 8px;
     padding: 4px;
-    /* On augmente un peu la hauteur du conteneur si nécessaire */
-    min-height: 60px;
+    height: 60px;
 }
 
 .customSegment ion-segment-button {
     --color: white;
     --color-checked: var(--ion-color-primary-contrast);
     --indicator-color: var(--ion-color-primary);
-
-    /* Marge interne pour aérer */
     margin: 0 4px;
-}
-
-/* Cible le label à l'intérieur du bouton pour la taille et le centrage */
-.customSegment ion-segment-button ion-label {
-    font-size: 1.2rem; /* Taille style "Titre" */
-    font-weight: bold;
-    letter-spacing: 0.5px;
-
-    /* Assure le centrage vertical et horizontal */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+}
+
+.customSegment ion-segment-button ion-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
 
