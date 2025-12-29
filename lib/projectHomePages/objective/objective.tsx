@@ -207,7 +207,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/map_of_all_origins_Europe.jpg"
+                            src="/objective/map_of_all_origins_Europe.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Map of origins Europe"
@@ -217,7 +217,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/map_of_all_origins_Global.jpg"
+                            src="/objective/map_of_all_origins_Global.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Map of origins Global"
@@ -243,7 +243,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/periods.jpg"
+                            src="/objective/periods.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Periods graph"
@@ -253,7 +253,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <ion-col size="12" size-md="6">
                       <div style={{position: 'relative', width: '100%', height: '300px'}}>
                         <Image
-                            src="/objective/authors.jpg"
+                            src="/objective/authors.png"
                             layout="fill"
                             objectFit="contain"
                             alt="Authors graph"
@@ -281,7 +281,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <h4 style={{textAlign: 'center', marginBottom: '1rem'}}>Experts participations in auction across all catalogues</h4>
                     <div style={{position: 'relative', width: '100%', height: '500px'}}>
                       <Image
-                          src="/objective/experts.jpg"
+                          src="/objective/experts.png"
                           layout="fill"
                           objectFit="contain"
                           alt="Experts participation graph"
