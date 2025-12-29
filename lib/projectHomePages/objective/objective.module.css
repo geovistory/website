@@ -52,31 +52,47 @@
     margin-bottom: 1rem;
 }
 
-.customSegment {
-    --background: var(--ion-color-primary-tint);
-    background: var(--ion-color-primary-tint);
-    border-radius: 8px;
-    padding: 4px;
-    height: 60px;
-}
-
 .customSegment ion-segment-button {
     --color: white;
     --color-checked: var(--ion-color-primary-contrast);
     --indicator-color: var(--ion-color-primary);
+
+    /* 1. On force les marges internes du composant à zéro */
+    --margin-top: 0;
+    --margin-bottom: 0;
+    --margin-start: 0;
+    --margin-end: 0;
+
+    /* 2. On s'assure que le padding interne est nul ou équilibré */
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
     margin: 0 4px;
+    height: 100%;
+
+    /* On garde le flex pour centrer */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+}
+
+/* On cible le bouton natif interne via ::part (standard Web Components) si supporté,
+   sinon les variables ci-dessus font généralement le travail dans Ionic */
+.customSegment ion-segment-button::part(native) {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .customSegment ion-segment-button ion-label {
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 0.5px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 !important; /* Force brute sur le label */
     line-height: 1;
 }
 
