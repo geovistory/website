@@ -52,50 +52,58 @@
     margin-bottom: 1rem;
 }
 
+.customSegment {
+    /* Fond du conteneur (violet clair) */
+    --background: var(--ion-color-primary-tint);
+    background: var(--ion-color-primary-tint);
+    border-radius: 8px;
+    padding: 4px;
+    /* On définit une hauteur explicite pour le segment entier */
+    height: 60px;
+    display: flex;
+    align-items: stretch; /* Les boutons doivent s'étirer sur toute la hauteur */
+}
+
 .customSegment ion-segment-button {
-    --color: white;
-    --color-checked: var(--ion-color-primary-contrast);
+    /* COULEURS */
+    /* Couleur du texte quand NON SÉLECTIONNÉ (blanc pour lisibilité sur fond violet) */
+    --color: #ffffff;
+    /* Couleur du texte quand SÉLECTIONNÉ (blanc aussi, car le fond devient violet foncé) */
+    --color-checked: #ffffff;
+    /* Couleur de la pilule de sélection (violet foncé 'primary') */
     --indicator-color: var(--ion-color-primary);
 
-    /* 1. On force les marges internes du composant à zéro */
+    /* LAYOUT & MARGES */
+    /* On force les marges internes à zéro pour éviter le décalage vertical */
+    margin: 0 4px;
     --margin-top: 0;
     --margin-bottom: 0;
-    --margin-start: 0;
-    --margin-end: 0;
 
-    /* 2. On s'assure que le padding interne est nul ou équilibré */
-    --padding-top: 0;
-    --padding-bottom: 0;
-    --padding-start: 0;
-    --padding-end: 0;
-
-    margin: 0 4px;
+    /* HAUTEUR ET ALIGNEMENT */
+    /* Le bouton doit prendre toute la hauteur disponible */
     height: 100%;
+    min-height: 100%;
 
-    /* On garde le flex pour centrer */
+    /* Flex pour centrer le contenu (le label) */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* On cible le bouton natif interne via ::part (standard Web Components) si supporté,
-   sinon les variables ci-dessus font généralement le travail dans Ionic */
-.customSegment ion-segment-button::part(native) {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Ciblage du label pour la taille de police */
 .customSegment ion-segment-button ion-label {
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 0.5px;
-    margin: 0 !important; /* Force brute sur le label */
-    line-height: 1;
-}
+    margin: 0;
 
+    /* Assure que le label est bien centré */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
 
 /* sm and up */
 @media screen and (min-width: 576px) {
