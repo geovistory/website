@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState } from 'react'; // Added useState for tab management
+import { useState } from 'react';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
@@ -68,17 +68,17 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
           </div>
 
           {/* Navigation Tabs (Ion Segment) */}
+          {/* FIX: Using onClick on buttons because standard React doesn't listen to custom events (ionChange) via props */}
           <div className="ion-padding-top ion-margin-bottom" style={{ display: 'flex', justifyContent: 'center' }}>
             <ion-segment
                 value={activeTab}
-                onIonChange={(e: any) => setActiveTab(e.detail.value)}
                 color="dark"
                 style={{ maxWidth: '600px' }}
             >
-              <ion-segment-button value="home">
+              <ion-segment-button value="home" onClick={() => setActiveTab('home')}>
                 <ion-label>Project Presentation</ion-label>
               </ion-segment-button>
-              <ion-segment-button value="data">
+              <ion-segment-button value="data" onClick={() => setActiveTab('data')}>
                 <ion-label>Data Overview</ion-label>
               </ion-segment-button>
             </ion-segment>
