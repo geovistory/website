@@ -52,6 +52,19 @@
     margin-bottom: 1rem;
 }
 
+.customSegment {
+    --background: var(--ion-color-primary-tint);
+    background: var(--ion-color-primary-tint);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.customSegment ion-segment-button {
+    --color: white;
+    --color-checked: var(--ion-color-primary-contrast);
+    --indicator-color: var(--ion-color-primary);
+}
+
 /* sm and up */
 @media screen and (min-width: 576px) {
     .title {
