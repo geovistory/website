@@ -52,6 +52,66 @@
     margin-bottom: 1rem;
 }
 
+.customSegment {
+    /* Fond du conteneur */
+    background: var(--ion-color-primary-tint);
+    border-radius: 8px;
+    padding: 4px;
+    height: 60px;
+    width: 100%;
+}
+
+/* Ciblage direct du composant bouton */
+.customSegment ion-segment-button {
+    /* Couleurs */
+    --color: #ffffff;
+    --color-checked: #ffffff;
+    --indicator-color: var(--ion-color-primary);
+
+    /* Marges à zéro pour éviter les décalages */
+    margin: 0;
+
+    /* Variables Ionic pour tuer les espacements parasites */
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+}
+
+/* Ciblage de la partie "native" du bouton (le vrai <button> dans le Shadow DOM) */
+.customSegment ion-segment-button::part(native) {
+    /* On force le flexbox centré parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Hauteur et Largeur à 100% du parent */
+    height: 100%;
+    width: 100%;
+
+    /* Reset des paddings natifs */
+    padding: 0;
+}
+
+/* Ciblage de l'indicateur (la pilule de fond) */
+.customSegment ion-segment-button::part(indicator) {
+    /* On s'assure qu'elle prend bien tout l'espace si besoin, ou qu'elle est bien centrée */
+    inset: 0;
+}
+
+/* Ciblage du label (texte) */
+.customSegment ion-segment-button ion-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    /* On retire toutes les marges parasites du label */
+    margin: 0 !important;
+
+    /* On s'assure qu'il est centré */
+    text-align: center;
+}
+
 /* sm and up */
 @media screen and (min-width: 576px) {
     .title {
