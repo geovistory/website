@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState, MouseEvent } from 'react';
+import { useState, MouseEvent, useEffect, useRef } from 'react'; // Ajout de useEffect et useRef
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
@@ -16,13 +16,32 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<'home' | 'data'>('home');
 
-  const handleTabChange = (e: MouseEvent, tab: 'home' | 'data') => {
-    e.preventDefault();
-    e.stopPropagation();
-    setActiveTab(tab);
-  };
+  // Ref pour accéder au composant ion-segment
+  const segmentRef = useRef<HTMLIonSegmentElement>(null);
+
+  // Écouteur d'événement pour gérer le "slide" et le click via l'événement natif d'Ionic
+  useEffect(() => {
+    const segment = segmentRef.current;
+
+    const handleChange = (e: any) => {
+      // e.detail.value contient la valeur du segment sélectionné ('home' ou 'data')
+      setActiveTab(e.detail.value);
+    };
+
+    if (segment) {
+      segment.addEventListener('ionChange', handleChange);
+    }
+
+    // Nettoyage de l'écouteur
+    return () => {
+      if (segment) {
+        segment.removeEventListener('ionChange', handleChange);
+      }
+    };
+  }, []);
 
   const preventFocusScroll = (e: MouseEvent) => {
+    // Empêche le focus qui cause le scroll vers le haut
     e.preventDefault();
   };
 
@@ -76,13 +95,13 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
           <div className="ion-padding-top ion-margin-bottom" style={{ display: 'flex', justifyContent: 'center' }}>
             <ion-segment
+                ref={segmentRef}
                 value={activeTab}
                 class={styles.customSegment}
                 style={{ maxWidth: '600px', margin: '0 auto' }}
             >
               <ion-segment-button
                   value="home"
-                  onClick={(e: any) => handleTabChange(e, 'home')}
                   onMouseDown={preventFocusScroll}
               >
                 <ion-label>Project Presentation</ion-label>
@@ -90,7 +109,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
               <ion-segment-button
                   value="data"
-                  onClick={(e: any) => handleTabChange(e, 'data')}
                   onMouseDown={preventFocusScroll}
               >
                 <ion-label>Data Overview</ion-label>
