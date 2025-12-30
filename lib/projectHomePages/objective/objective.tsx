@@ -208,7 +208,11 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
             {activeTab === 'data' && (
                 <div className="animate__animated animate__fadeIn">
-
+                  <p className="lead">
+                    <strong>
+                      This section provides an initial overview of the data collected and examples of analysis with a brief commentary.
+                    </strong>
+                  </p>{' '}
                   <p className={styles.justify}>
                     The different visualisations are guided by the main research questions:
                   </p>
@@ -306,7 +310,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
                   <div className="ion-margin-top ion-margin-bottom">
                     <h4 style={{textAlign: 'center', marginBottom: '1rem'}}>Experts participations in auction across all catalogues</h4>
-                    <div style={{position: 'relative', width: '100%', height: '500px'}}>
+                    <div style={{position: 'relative', width: '100%', height: '418px'}}>
                       <Image
                           src="/objective/experts.png"
                           layout="fill"
