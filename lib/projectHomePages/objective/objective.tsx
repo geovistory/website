@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState, MouseEvent, useEffect, useRef } from 'react'; // Ajout de useEffect et useRef
+import { useState, MouseEvent, useEffect, useRef } from 'react';
 import { Person } from '../../../components/elements/Person.component';
 import { ProjectPageLayout } from '../../../components/layouts/ProjectPageLayout.component';
 import { ProjectPageProps } from '../../../pages/project/[geov_id]';
@@ -16,15 +16,12 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<'home' | 'data'>('home');
 
-  // Ref pour accéder au composant ion-segment
   const segmentRef = useRef<HTMLIonSegmentElement>(null);
 
-  // Écouteur d'événement pour gérer le "slide" et le click via l'événement natif d'Ionic
   useEffect(() => {
     const segment = segmentRef.current;
 
     const handleChange = (e: any) => {
-      // e.detail.value contient la valeur du segment sélectionné ('home' ou 'data')
       setActiveTab(e.detail.value);
     };
 
@@ -32,7 +29,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
       segment.addEventListener('ionChange', handleChange);
     }
 
-    // Nettoyage de l'écouteur
     return () => {
       if (segment) {
         segment.removeEventListener('ionChange', handleChange);
@@ -41,7 +37,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
   }, []);
 
   const preventFocusScroll = (e: MouseEvent) => {
-    // Empêche le focus qui cause le scroll vers le haut
     e.preventDefault();
   };
 
@@ -88,7 +83,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
 
             <div className={styles.title}>
               <h1 className={styles.title1}>OBJECTive</h1>
-              <h3 className={styles.title2}>Tracking <i>Objets d&apos;art</i> in Time through the Art Market</h3>
+              <h3 className={styles.title2}>Tracing <i>Objets d&apos;art</i> in Time through the Art Market</h3>
             </div>
 
           </div>
@@ -149,8 +144,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     Individual auctions have always both combined and dispersed a great diversity of fine objects, from a multitude of origins.
                     The catalogue is a crucial record. In many cases annotated catalogues exist (with hammer prices and buyers) and others can be cross-referenced
                     with auctioneers&apos; archives. The core of the dataset will be built up from the selection of a vast corpus of auction catalogues for the decorative arts.
-                    These catalogues will be interrogated through digital methods (extraction, processing and machine learning) and Geovistory will be used to
-                    integrate and structure various data collections. The database will offer a new tool for identification and provenance research but will also
+                    These catalogues will be interrogated through digital methods (extraction, processing and machine learning). The database will offer a new tool for identification and provenance research but will also
                     focus on the individuals and institutions involved (sellers/buyers), allowing for a study of the networks and characteristics of this market over a long period.
                   </p>
                   <h4>The team</h4>
@@ -214,6 +208,19 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     </ion-row>
                   </p>
 
+                  <h4>Credits</h4>
+                  <p>
+                    To refer to this page and database please use:<br />
+                    Mestdagh Camille, &quot;OBJECTive - Tracing Objets d'art in Time through the Art Market&quot;, ANR (ACCESS-ERC23) - Université Lumière Lyon 2, LARHRA - 2025.
+                  </p>
+                  <p>
+                    All Data is published as open data under the Creative Commons BY-SA 4.0 license.
+                  </p>
+                  <p>
+                    OBJECTive Data repository : 10.5281/zenodo.10728078<br />
+                    ORCID : /0000-0001-8135-254X
+                  </p>
+
                   <div className="restricted-width">
                     <ion-label>
                       <small>
@@ -241,7 +248,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     </ul>
                   </p>
                   <p className={styles.justify}>
-                    The recorded data emanates from a selection of 28 Parisian auctions, taking place from 1839 until 1895, referencing their catalogues and total of 12 596 lots. The number of auctions doesn’t allow us to reach conclusive broader analysis but this overview of the recorded data can be used to highlight the quality of the information and the research perspectives once more data could be aggregated.
+                    The recorded data emanates from a selection of 28 Parisian auctions, taking place from 1839 until 1895, referencing their catalogues and total of 12 596 lots. The number of auctions doesn't allow us to reach conclusive broader analysis but this overview of the recorded data can be used to highlight the quality of the information and the research perspectives once more data could be aggregated.
                   </p>
 
                   <p className={styles.justify}>
@@ -253,8 +260,8 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                   </p>
 
                   <ion-row class="ion-margin-vertical">
-                    <ion-col size="12" size-md="6">
-                      <div style={{position: 'relative', width: '100%', height: '300px'}}>
+                    <ion-col size="12">
+                      <div style={{position: 'relative', width: '100%', height: '500px'}}>
                         <Image
                             src="/objective/map_of_all_origins_Europe.png"
                             layout="fill"
@@ -263,8 +270,11 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                         />
                       </div>
                     </ion-col>
-                    <ion-col size="12" size-md="6">
-                      <div style={{position: 'relative', width: '100%', height: '300px'}}>
+                  </ion-row>
+
+                  <ion-row class="ion-margin-vertical">
+                    <ion-col size="12">
+                      <div style={{position: 'relative', width: '100%', height: '500px'}}>
                         <Image
                             src="/objective/map_of_all_origins_Global.png"
                             layout="fill"
@@ -274,8 +284,9 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                       </div>
                     </ion-col>
                   </ion-row>
+
                   <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginBottom: '2rem'}}>
-                    © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
+                    <strong>Maps of Objects' origins (all catalogues: 1839 to 1895)</strong> © OBJECTive / Camille Mestdagh - Gaétan Muck - 2025.
                   </div>
 
                   <p className={styles.justify}>
@@ -311,13 +322,13 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     </ion-col>
                   </ion-row>
                   <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginBottom: '2rem'}}>
-                    © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
+                    <strong>References to Objects' periods of production and to identified makers (all catalogues: 1839 to 1895)</strong> © OBJECTive / Camille Mestdagh - Gaétan Muck - 2025.
                   </div>
 
                   <p className={styles.justify}>
-                    For 3,118 lots the production period of the objects is referenced and could be recorded (just under 25%). It is interesting to note that the periods of production are mostly referenced in auction catalogues from the 1860s and increasingly into the 1880s. The “XVIe siècle” and “Renaissance” as well as the period known as “Louis XVI” in France are the most commonly found in the lots listed in the auction catalogues, followed by “Louis XIV” and Louis “XV” era.
+                    For 3,118 lots the production period of the objects is referenced and could be recorded (just under 25%). It is interesting to note that the periods of production are mostly referenced in auction catalogues from the 1860s and increasingly into the 1880s. The "XVIe siècle" and "Renaissance" as well as the period known as "Louis XVI" in France are the most commonly found in the lots listed in the auction catalogues, followed by "Louis XIV" and Louis "XV" era.
                     <br />
-                    Only very few lots of objects refer to authorship, referring to a single artist or maker’s names (5%). The most commonly found are: Boulle , followed by Clodion, Gouthière, Della Robbia (more than 20 times), then Thomire and Bernard Palissy (just over 10 times).
+                    Only very few lots of objects refer to authorship, referring to a single artist or maker's names (5%). The most commonly found are: Boulle , followed by Clodion, Gouthière, Della Robbia (more than 20 times), then Thomire and Bernard Palissy (just over 10 times).
                   </p>
 
                   <p className={styles.justify}>
@@ -327,7 +338,6 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                   </p>
 
                   <div className="ion-margin-top ion-margin-bottom">
-                    <h4 style={{textAlign: 'center', marginBottom: '1rem'}}>Experts participations in auction across all catalogues</h4>
                     <div style={{position: 'relative', width: '100%', height: '418px'}}>
                       <Image
                           src="/objective/experts.png"
@@ -337,7 +347,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                       />
                     </div>
                     <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginTop: '0.5rem'}}>
-                      © OBJECTive / Camille Mestdagh - Gaetan Muck - 2025.
+                      <strong>Experts involved in auctions, named on the catalogues (all catalogues: 1839 to 1895)</strong> © OBJECTive / Camille Mestdagh - Gaétan Muck - 2025.
                     </div>
                   </div>
 
