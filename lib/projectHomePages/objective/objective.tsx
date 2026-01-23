@@ -211,7 +211,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                   <h4>Credits</h4>
                   <p>
                     To refer to this page and database please use:<br />
-                    Mestdagh Camille, &quot;OBJECTive - Tracing Objets d'art in Time through the Art Market&quot;, ANR (ACCESS-ERC23) - Université Lumière Lyon 2, LARHRA - 2025.
+                    Mestdagh Camille, &quot;OBJECTive - Tracing Objets d&apos;art in Time through the Art Market&quot;, ANR (ACCESS-ERC23) - Université Lumière Lyon 2, LARHRA - 2025.
                   </p>
                   <p>
                     All Data is published as open data under the Creative Commons BY-SA 4.0 license.
@@ -248,7 +248,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     </ul>
                   </p>
                   <p className={styles.justify}>
-                    The recorded data emanates from a selection of 28 Parisian auctions, taking place from 1839 until 1895, referencing their catalogues and total of 12 596 lots. The number of auctions doesn't allow us to reach conclusive broader analysis but this overview of the recorded data can be used to highlight the quality of the information and the research perspectives once more data could be aggregated.
+                    The recorded data emanates from a selection of 28 Parisian auctions, taking place from 1839 until 1895, referencing their catalogues and total of 12 596 lots. The number of auctions doesn&apos;t allow us to reach conclusive broader analysis but this overview of the recorded data can be used to highlight the quality of the information and the research perspectives once more data could be aggregated.
                   </p>
 
                   <p className={styles.justify}>
@@ -286,7 +286,7 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                   </ion-row>
 
                   <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginBottom: '2rem'}}>
-                    <strong>Maps of Objects' origins (all catalogues: 1839 to 1895)</strong> © OBJECTive / Camille Mestdagh - Gaétan Muck - 2025.
+                    <strong>Maps of Objects&apos; origins (all catalogues: 1839 to 1895)</strong> © OBJECTive / Camille Mestdagh - Gaétan Muck - 2025.
                   </div>
 
                   <p className={styles.justify}>
@@ -322,13 +322,13 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     </ion-col>
                   </ion-row>
                   <div style={{textAlign: 'center', fontSize: '0.8em', color: '#666', marginBottom: '2rem'}}>
-                    <strong>References to Objects' periods of production and to identified makers (all catalogues: 1839 to 1895)</strong> © OBJECTive / Camille Mestdagh - Gaétan Muck - 2025.
+                    <strong>References to Objects&apos; periods of production and to identified makers (all catalogues: 1839 to 1895)</strong> © OBJECTive / Camille Mestdagh - Gaétan Muck - 2025.
                   </div>
 
                   <p className={styles.justify}>
-                    For 3,118 lots the production period of the objects is referenced and could be recorded (just under 25%). It is interesting to note that the periods of production are mostly referenced in auction catalogues from the 1860s and increasingly into the 1880s. The "XVIe siècle" and "Renaissance" as well as the period known as "Louis XVI" in France are the most commonly found in the lots listed in the auction catalogues, followed by "Louis XIV" and Louis "XV" era.
+                    For 3,118 lots the production period of the objects is referenced and could be recorded (just under 25%). It is interesting to note that the periods of production are mostly referenced in auction catalogues from the 1860s and increasingly into the 1880s. The &apos;XVIe siècle&apos; and &apos;Renaissance&apos; as well as the period known as &apos;Louis XVI&apos; in France are the most commonly found in the lots listed in the auction catalogues, followed by &apos;Louis XIV&apos; and Louis &apos;XV&apos; era.
                     <br />
-                    Only very few lots of objects refer to authorship, referring to a single artist or maker's names (5%). The most commonly found are: Boulle , followed by Clodion, Gouthière, Della Robbia (more than 20 times), then Thomire and Bernard Palissy (just over 10 times).
+                    Only very few lots of objects refer to authorship, referring to a single artist or maker&apos;s names (5%). The most commonly found are: Boulle , followed by Clodion, Gouthière, Della Robbia (more than 20 times), then Thomire and Bernard Palissy (just over 10 times).
                   </p>
 
                   <p className={styles.justify}>
