@@ -359,37 +359,39 @@ const OBJECTive_component: NextPage<ProjectPageProps> = (props) => {
                     <h4>LIST OF CATALOGUES USED FOR THE START OF THE PROJECT OBJECTive (2023-2025)</h4>
                     <p style={{fontStyle: 'italic', marginBottom: '1rem'}}>(SOURCE FOR DATA EXTRACTION)</p>
 
-                    <div style={{columns: '2 auto', columnGap: '2rem', textAlign: 'left', maxWidth: '600px', margin: '0 auto'}}>
-                      <ul style={{listStyle: 'none', padding: 0, fontSize: '0.9em', lineHeight: '1.6'}}>
-                        <li>1839-02-06 Debruge-Duménil</li>
-                        <li>1839-03-12 Debruge-Duménil</li>
-                        <li>1839-03-18 Curiosités</li>
-                        <li>1840-12-14 Debruge-Duménil</li>
-                        <li>1845-03-10 Berthon</li>
-                        <li>1845-12-16 Jamar</li>
-                        <li>1850-01-23 Debruge-Duménil</li>
-                        <li>1855-06-04 Hope</li>
-                        <li>1861-04-08 Prince-Soltykoff</li>
-                        <li>1862-06-27 Pembroke</li>
-                        <li>1862-11-03 Baslini</li>
-                        <li>1863-01-13 Demidoff</li>
-                        <li>1865-04-21 Beauvau</li>
-                        <li>1866-02-07 Van-Cuyck</li>
-                        <li>1866-03-30 Daigremont</li>
-                        <li>1867-11-25 Mannheim-père</li>
-                        <li>1867-12-09 Mannheim-père</li>
-                        <li>1868-03-09 Monbro</li>
-                        <li>1868-06-10 Didier</li>
-                        <li>1876-04-03 Vaux-Praslin</li>
-                        <li>1880-03-15 San-Donato</li>
-                        <li>1882-04-17 Febvre</li>
-                        <li>1883-02-12 Marquis</li>
-                        <li>1883-04-09 Beurdeley</li>
-                        <li>1883-04-23 Beurdeley</li>
-                        <li>1889-03-11 Ayers</li>
-                        <li>1890-05-05 Baron-Seillière</li>
-                        <li>1895-05-27 Beurdeley</li>
-                      </ul>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                      <div style={{ columns: '2', columnGap: '3rem', textAlign: 'left', display: 'inline-block' }}>
+                        <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '0.9em', lineHeight: '1.6' }}>
+                          <li>1839-02-06 Debruge-Duménil</li>
+                          <li>1839-03-12 Debruge-Duménil</li>
+                          <li>1839-03-18 Curiosités</li>
+                          <li>1840-12-14 Debruge-Duménil</li>
+                          <li>1845-03-10 Berthon</li>
+                          <li>1845-12-16 Jamar</li>
+                          <li>1850-01-23 Debruge-Duménil</li>
+                          <li>1855-06-04 Hope</li>
+                          <li>1861-04-08 Prince-Soltykoff</li>
+                          <li>1862-06-27 Pembroke</li>
+                          <li>1862-11-03 Baslini</li>
+                          <li>1863-01-13 Demidoff</li>
+                          <li>1865-04-21 Beauvau</li>
+                          <li>1866-02-07 Van-Cuyck</li>
+                          <li>1866-03-30 Daigremont</li>
+                          <li>1867-11-25 Mannheim-père</li>
+                          <li>1867-12-09 Mannheim-père</li>
+                          <li>1868-03-09 Monbro</li>
+                          <li>1868-06-10 Didier</li>
+                          <li>1876-04-03 Vaux-Praslin</li>
+                          <li>1880-03-15 San-Donato</li>
+                          <li>1882-04-17 Febvre</li>
+                          <li>1883-02-12 Marquis</li>
+                          <li>1883-04-09 Beurdeley</li>
+                          <li>1883-04-23 Beurdeley</li>
+                          <li>1889-03-11 Ayers</li>
+                          <li>1890-05-05 Baron-Seillière</li>
+                          <li>1895-05-27 Beurdeley</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
 
