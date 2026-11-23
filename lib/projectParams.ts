@@ -68,14 +68,14 @@ export const projectsParams: Array<ProjectParams> = [
 PREFIX ontome: <https://ontome.net/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Birth place" as ?type) ?link
+SELECT (SAMPLE(?rawLabel) as ?label) (?long as ?lon) ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Birth place" as ?type) ?link
 WHERE {
 
     # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
     ?s ontome:p147i/ontome:p148 ?place.
 
     # Geographical Place -label-> label
-    ?s rdfs:label ?label.
+    ?s rdfs:label ?rawLabel.
 
     # Geographical Place -is place of-> Birth
     ?s ontome:p7i ?sv.
@@ -87,8 +87,15 @@ WHERE {
 
     # Append the project query param to the URI
     bind(concat(str(?s), "?p=1483135") as ?link )
+
+    FILTER(
+      BOUND(?lat) && BOUND(?long) &&
+      str(?lat) != "NaN" && str(?long) != "NaN" &&
+      ?lat >= -90 && ?lat <= 90 &&
+      ?long >= -180 && ?long <= 180
+    )
 }
-GROUP BY ?label ?long ?lat ?type ?link
+GROUP BY ?s ?long ?lat ?link
                 `,
             },
             {
@@ -204,7 +211,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT *
 WHERE {
     {
-    SELECT ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Arrival Place" as ?type) ?link
+    SELECT ?label (?long as ?lon) ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Arrival Place" as ?type) ?link
     WHERE {
 
     # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
@@ -223,12 +230,19 @@ WHERE {
 
     # Append the project query param to the URI
     bind(concat(str(?s), "?p=84760") as ?link )
+
+    FILTER(
+      BOUND(?lat) && BOUND(?long) &&
+      str(?lat) != "NaN" && str(?long) != "NaN" &&
+      ?lat >= -90 && ?lat <= 90 &&
+      ?long >= -180 && ?long <= 180
+    )
     }
-    GROUP BY ?label ?long ?lat ?type ?link
+    GROUP BY ?label ?long ?lat ?link
     }
     UNION
     {
-    SELECT ?label ?long ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Departure Place" as ?type) ?link
+    SELECT ?label (?long as ?lon) ?lat (count(?sv) * 0.5 as ?radius) (count(?sv) as ?number) ("Departure Place" as ?type) ?link
     WHERE {
 
     # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
@@ -247,8 +261,15 @@ WHERE {
 
     # Append the project query param to the URI
     bind(concat(str(?s), "?p=84760") as ?link )
+
+    FILTER(
+      BOUND(?lat) && BOUND(?long) &&
+      str(?lat) != "NaN" && str(?long) != "NaN" &&
+      ?lat >= -90 && ?lat <= 90 &&
+      ?long >= -180 && ?long <= 180
+    )
     }
-    GROUP BY ?label ?long ?lat ?type ?link
+    GROUP BY ?label ?long ?lat ?link
     }
 }`,
             },
@@ -296,7 +317,7 @@ LIMIT 10`,
             },
             {
                 name: "Selection of triples",
-                sparqlEndpoint: `https://sparql.geovistory.org/api_v1_project_1483135`,
+                sparqlEndpoint: `https://sparql.geovistory.org/api_v1_project_84760`,
                 selectedPlugin: "table",
                 query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -316,33 +337,6 @@ LIMIT 10`,
             },
         ],
     },
-
-    // // ANR Globalvat
-    // {
-    //     geovID: -1,
-    //     geovName: 'GLOBALVAT',
-
-    //     preferredClasses: [],
-
-    //     featured: false,
-    // listed: false,
-
-    //     teiURL: '',
-    //     sparqlURL: '',
-
-    //     fullName: 'ANR Globalvat',
-    //     shortName: 'ANR Globalvat',
-    //     description: 'Reconstruire les sociétés et la personne humaine (1939-58) : L’apport des archives vaticanes.',
-
-    //     hasPage: false,
-    //     sparqlLinkEnabled: false,
-    //     searchLinkEnabled: false,
-    //     ontoExplorerLinkEnabled: false,
-    //     sparklisLinkEnabled: false,
-    //     teiLinkEnabled: false,
-    //     headOgImage: '/socialimage/ampi.jpg'
-
-    // },
 
     // EuroClimHist
     {
@@ -608,6 +602,76 @@ LIMIT 10`,
         teiLinkEnabled: false,
 
         headOgImage: "/socialimage/objective.png",
+        sparqlQueryTabs: [
+            {
+                name: "Geographical Places",
+                sparqlEndpoint: "https://sparql-gdb.geovistory.org/OBJECTive",
+                selectedPlugin: "mapCircles",
+                query: `PREFIX core: <https://sdhss.org/ontology/core/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX wdt:  <http://www.wikidata.org/prop/direct/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT
+  ?label (?long AS ?lon) ?lat ?link
+  ("Geographical Place" AS ?type)
+  (1 AS ?radius)
+WHERE {
+  {
+    SELECT DISTINCT ?geoplace ?label ?wd
+    WHERE {
+      ?geoplace a core:C13 ;
+                rdfs:label ?label ;
+                owl:sameAs ?identifiant .
+
+      FILTER(REGEX(
+        STR(?identifiant),
+        "^https?://www[.]wikidata[.]org/entity/Q[0-9]+$"
+      ))
+      BIND(IRI(STR(?identifiant)) AS ?wd)
+    }
+  }
+
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wd wdt:P625 ?coord .
+  }
+
+  FILTER(CONTAINS(STR(?coord), "Point("))
+  BIND(STRBEFORE(STRAFTER(STR(?coord), "Point("), ")") AS ?lonlat)
+  BIND(xsd:float(STRBEFORE(?lonlat, " ")) AS ?long)
+  BIND(xsd:float(STRAFTER(?lonlat, " ")) AS ?lat)
+  BIND(CONCAT(STR(?geoplace), "?p=11200212") AS ?link)
+
+  FILTER(
+    BOUND(?lat) && BOUND(?long) &&
+    STR(?lat) != "NaN" && STR(?long) != "NaN" &&
+    ?lat >= -90 && ?lat <= 90 &&
+    ?long >= -180 && ?long <= 180
+  )
+}`,
+            },
+            {
+                name: "Selection of triples",
+                sparqlEndpoint: "https://sparql-gdb.geovistory.org/OBJECTive",
+                selectedPlugin: "table",
+                query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ontome: <https://ontome.net/ontology/>
+PREFIX geov: <http://geovistory.org/resource/>
+
+SELECT ?subject ?predicate ?object
+WHERE {
+  ?subject ?predicate ?object .
+}
+LIMIT 10`,
+            },
+        ],
     },
     // Mapping Multifaith London, 1689-c.1740
     {

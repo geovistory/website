@@ -1,12 +1,13 @@
-import '@triply/yasgui/build/yasgui.min.css';
-import React from 'react';
+import { useEffect, useRef } from 'react';
+import '@matdata/yasgui/build/yasgui.min.css';
 
 export interface YasguiProps {
   endpoint: string;
   yasqueDefaultQuery?: string;
+  persistenceId?: string;
 }
 
-let defaultQuery = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+const defaultQuery = `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xml: <http://www.w3.org/XML/1998/namespace>
@@ -22,25 +23,39 @@ WHERE {
 }
 LIMIT 10`;
 
-export const Yasgui = ({ endpoint, yasqueDefaultQuery }: YasguiProps) => {
-  React.useEffect(() => {
-    const createYasgui = async () => {
-      const Y = (await import('@triply/yasgui')).default;
-      localStorage.removeItem('yagui__config');
-      const el = document.getElementById('yasgui');
-      if (!el) return;
-      const yasgui = new Y(el, {
-        requestConfig: {
-          endpoint,
-        },
-      });
-      const t = yasgui.getTab();
-      if (!t) return;
-      t.setQuery(yasqueDefaultQuery ?? defaultQuery);
-      t.getYasqe().collapsePrefixes();
-    };
-    createYasgui().catch(console.error);
-  });
+export const Yasgui = ({
+                         endpoint,
+                         yasqueDefaultQuery,
+                         persistenceId,
+                       }: YasguiProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  return <div id="yasgui" />;
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    Promise.all([
+      import('@matdata/yasgui'),
+      import('@matdata/yasgui-graph-plugin'),
+    ]).then(([{ default: YasguiClass }, { default: GraphPlugin }]) => {
+      if (containerRef.current && !containerRef.current.hasChildNodes()) {
+        YasguiClass.Yasr.registerPlugin('Graph', GraphPlugin);
+
+        const yasgui = new YasguiClass(containerRef.current, {
+          requestConfig: {
+            endpoint,
+          },
+          copyEndpointOnNewTab: true,
+          persistenceId: persistenceId ?? 'geovistory_generic_yasgui',
+        });
+
+        const currentTab = yasgui.getTab();
+        if (currentTab) {
+          currentTab.setEndpoint(endpoint);
+          currentTab.setQuery(yasqueDefaultQuery ?? defaultQuery);
+        }
+      }
+    });
+  }, [endpoint, yasqueDefaultQuery, persistenceId]);
+
+  return <div ref={containerRef} />;
 };

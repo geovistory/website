@@ -1,4 +1,4 @@
-import { CustomPlugin } from '@geovistory/design-system-web/loader';
+import { useEffect, useRef } from 'react';
 import type { GetStaticProps, NextPage } from 'next';
 import { CCLicense } from '../components/elements/CCLicense.component';
 import {
@@ -7,27 +7,19 @@ import {
 } from '../components/layouts/DefaultPage.component';
 import { projectsParams } from '../lib/projectParams';
 import styles from './sparql.module.css';
+import '@matdata/yasgui/build/yasgui.min.css';
+
 export interface SparqlProps {
   defaultPage: DefaultPageProps;
 }
-const Sparql: NextPage<SparqlProps> = (props) => {
-  return (
-    <DefaultPage {...props.defaultPage}>
-      <h1 className={styles.title}>
-        Access Geovistory Community Data via SPARQL
-      </h1>
-      <geov-yasgui
-        id="el-1"
-        default-plugin="table"
-        collapse="false"
-        ref={(el: HTMLGeovYasguiElement) => {
-          el.plugins = new Set<CustomPlugin>(['mapCircles', 'timeline']);
-          el.queryTabs = [
-            {
-              name: 'Selection of triples',
-              sparqlEndpoint: `https://sparql.geovistory.org/api_v1_community_data`,
-              selectedPlugin: 'table',
-              query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+const ENDPOINT = 'https://sparql.geovistory.org/api_v1_community_data';
+const PERSISTENCE_KEY = 'geovistory_sparql_tabs_v3';
+
+const TAB_CONFIGS = [
+  {
+    name: 'Selection of triples',
+    query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xml: <http://www.w3.org/XML/1998/namespace>
@@ -42,16 +34,14 @@ WHERE {
   ?subject ?predicate ?object .
 }
 LIMIT 10`,
-            },
-            {
-              name: 'Map example',
-              sparqlEndpoint: `https://sparql.geovistory.org/api_v1_community_data`,
-              selectedPlugin: 'mapCircles',
-              query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  },
+  {
+    name: 'Map example',
+    query: `PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ontome: <https://ontome.net/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?label ?long ?lat ?link ("Geographical Place" as ?type)
+SELECT ?label (?long as ?lon) ?lat ?link ("Geographical Place" as ?type)
 WHERE {
 
 # Geographical Place -had presence-> Presence -was at-> Place (lat/long)
@@ -68,16 +58,19 @@ bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" ))
 # Append the project query param to the URI
 bind(concat(str(?geoplace)) as ?link )
 
+FILTER(
+  BOUND(?lat) && BOUND(?long) &&
+  str(?lat) != "NaN" && str(?long) != "NaN" &&
+  ?lat >= -90 && ?lat <= 90 &&
+  ?long >= -180 && ?long <= 180
+)
+
 }
-GROUP BY ?label ?long ?lat ?type ?link
-              
-              `
-            },
-            {
-              name: 'Timeline example',
-              sparqlEndpoint: 'https://sparql.geovistory.org/api_v1_community_data',
-              selectedPlugin: 'timeline',
-              query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+GROUP BY ?label ?long ?lat ?link`,
+  },
+  {
+    name: 'Timeline example',
+    query: `PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xml: <http://www.w3.org/XML/1998/namespace>
@@ -113,16 +106,75 @@ WHERE {
 }
 GROUP BY ?e ?entityClassLabel
 LIMIT 10`,
-            },
-          ];
-        }}
-      ></geov-yasgui>{' '}
-      <CCLicense />
-    </DefaultPage>
+  },
+];
+
+const Sparql: NextPage<SparqlProps> = (props) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    Promise.all([
+      import('@matdata/yasgui'),
+      import('@matdata/yasgui-graph-plugin'),
+    ]).then(([{ default: Yasgui }, { default: GraphPlugin }]) => {
+      if (containerRef.current && !containerRef.current.hasChildNodes()) {
+        Yasgui.Yasr.registerPlugin('Graph', GraphPlugin);
+
+        const hasSavedSession = Object.keys(localStorage).some((key) =>
+  key.includes(PERSISTENCE_KEY)
+);
+
+        const yasgui = new Yasgui(containerRef.current, {
+          requestConfig: {
+            endpoint: ENDPOINT,
+          },
+          copyEndpointOnNewTab: true,
+          persistenceId: PERSISTENCE_KEY,
+        });
+
+        const themeManager = (yasgui as any).themeManager;
+        if (themeManager && !themeManager.getStoredTheme()) {
+          themeManager.setTheme('light');
+        }
+
+        if (!hasSavedSession) {
+          const firstTab = yasgui.getTab();
+          if (firstTab) {
+            firstTab.setName(TAB_CONFIGS[0].name);
+            firstTab.setEndpoint(ENDPOINT);
+            firstTab.setQuery(TAB_CONFIGS[0].query);
+          }
+
+          for (let i = 1; i < TAB_CONFIGS.length; i++) {
+            const tab = yasgui.addTab(true);
+            tab.setName(TAB_CONFIGS[i].name);
+            tab.setEndpoint(ENDPOINT);
+            tab.setQuery(TAB_CONFIGS[i].query);
+          }
+
+          if (firstTab) {
+            yasgui.selectTabId(firstTab.getId());
+          }
+        }
+      }
+    });
+  }, []);
+
+  return (
+      <DefaultPage {...props.defaultPage}>
+        <h1 className={styles.title}>
+          Access Geovistory Community Data via SPARQL
+        </h1>
+        <div ref={containerRef} style={{ marginBottom: '2rem' }} />
+        <CCLicense />
+      </DefaultPage>
   );
 };
 
 export default Sparql;
+
 export const getStaticProps: GetStaticProps<SparqlProps> = async () => {
   return {
     props: {
@@ -130,7 +182,7 @@ export const getStaticProps: GetStaticProps<SparqlProps> = async () => {
         head: {
           headTitle: 'SPARQL',
           headOgDescription:
-            'Query our data with SPARQL – the query language for the semantic web.',
+              'Query our data with SPARQL – the query language for the semantic web.',
           headOgImage: null,
         },
         expand: true,

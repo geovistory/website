@@ -6,7 +6,6 @@ const nextConfig = {
         return [
             { source: "/resources", destination: "/documentation", permanent: true },
             { source: "/project/591", destination: "/processetti", permanent: true },
-            // { source: '/project/6619613', destination: '/urban-biographies', permanent: true },
         ];
     },
 };
