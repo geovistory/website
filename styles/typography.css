@@ -1,10 +1,10 @@
 @import '~@ionic/core/css/typography.css';
 
 /*
-* Reading (medium). 
-* Text set for immersive reading. This usually
-* includes headings which may need to be sized differently to 
-* set them off from the body text.
+- Reading (medium).
+- Text set for immersive reading. This usually
+- includes headings which may need to be sized differently to
+- set them off from the body text.
 */
 p {
   font-size: 1rem;
@@ -21,7 +21,12 @@ p.lead {
 
 address {
   font-style: normal;
-  line-height: 1.2rem;
+  font-size: 1rem;
+  max-width: 38rem;
+  margin: auto;
+  margin-block-start: .9em;
+  margin-block-end: .9em;
+  line-height: 1.6;
 }
 
 small {
@@ -40,16 +45,16 @@ sup {
 
 
 /*
-* Reference (small). 
-* Reference text includes small print, notes and specialist purposes
-* such as bibliographies, dictionaries and data presentation.
+- Reference (small).
+- Reference text includes small print, notes and specialist purposes
+- such as bibliographies, dictionaries and data presentation.
 */
 
 /*
-* Display (large). 
-* Display text is there to make an impact, 
-* evoke an emotional response and set a tone. It is intended 
-* to be looked at before it is read, and is thus set larger.
+- Display (large).
+- Display text is there to make an impact,
+- evoke an emotional response and set a tone. It is intended
+- to be looked at before it is read, and is thus set larger.
 */
 /* sm and up */
 h1,
@@ -174,6 +179,20 @@ figcaption,
 .restricted-width {
   max-width: 38rem;
   margin: auto;
+}
+
+ul.restricted-width,
+ol.restricted-width {
+  font-size: 1rem;
+  margin-block-start: .9em;
+  margin-block-end: .9em;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+}
+
+ul.restricted-width li,
+ol.restricted-width li {
+  margin-bottom: 0.45rem;
 }
 
 .unrestricted-width {

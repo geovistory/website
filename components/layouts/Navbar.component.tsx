@@ -4,25 +4,31 @@ import styles from './Navbar.module.css';
 export interface NavbarProps {}
 export const Navbar = (props: NavbarProps) => {
   return (
-    <>
-      <ion-toolbar class={styles.toolbar} color="light">
-        <a href="/">
-          <ion-img
-            class={'ion-hide-md-up ' + styles.logo}
-            src={'/Geovistory-Logo-No-Text-White.svg'}
-          />
-          <ion-img
-            class={'ion-hide-md-down ' + styles.logo}
-            src={'/geovistory-logo.svg'}
-          />
-        </a>
-        <ion-buttons slot="end">
-          <ion-menu-button
-            class="ion-hide-md-up"
-            id="main"
-            menu="main"
-          ></ion-menu-button>
-          <span className="ion-hide-md-down" style={{ display: 'flex' }}>
+      <>
+        <ion-toolbar class={styles.toolbar} color="light">
+          <div className={styles.brandContainer}>
+            <a href="/" className={styles.logoLink}>
+              <ion-img
+                  class={'ion-hide-md-up ' + styles.logo}
+                  src={'/Geovistory-Logo-No-Text-White.svg'}
+              />
+              <ion-img
+                  class={'ion-hide-md-down ' + styles.logo}
+                  src={'/geovistory-logo.svg'}
+              />
+            </a>
+            <div className={styles.archiveNotice} role="status">
+              The Geovistory project came to an end in December 2025. These pages
+              are retained for archival purposes.
+            </div>
+          </div>
+          <ion-buttons slot="end">
+            <ion-menu-button
+                class="ion-hide-md-up"
+                id="main"
+                menu="main"
+            ></ion-menu-button>
+            <span className="ion-hide-md-down" style={{ display: 'flex' }}>
             <ion-button href="/data">Data</ion-button>
             <ion-button href="/community">Community</ion-button>
             <ion-button href="/documentation">Docs</ion-button>
@@ -39,16 +45,16 @@ export const Navbar = (props: NavbarProps) => {
             </ion-popover>
             <span className={styles.divider}></span>
             <ion-button
-              href="https://toolbox.geovistory.org/login"
-              target="_blank"
-              color="primary"
-              fill="clear"
+                href="https://toolbox.geovistory.org/login"
+                target="_blank"
+                color="primary"
+                fill="clear"
             >
               Log in
             </ion-button>
           </span>
-        </ion-buttons>
-      </ion-toolbar>
-    </>
+          </ion-buttons>
+        </ion-toolbar>
+      </>
   );
 };

@@ -13,60 +13,69 @@ export interface ProjectNavbarProps {
 }
 export const ProjectNavbar = (props: ProjectNavbarProps) => {
   return (
-    <>
-      <ion-toolbar class={styles.toolbar} color="light">
-        <ion-buttons class={styles.buttonsLeft}>
-          <a href="/">
-            <ion-img
-              class={styles.logo}
-              src={'/Geovistory-Logo-No-Text-Gray.svg'}
-            />
-          </a>
-          <ion-button href={`/project/${props.projectId}`}>
-            {props.title}
-          </ion-button>
-        </ion-buttons>
-        <ion-buttons slot="end">
-          <ion-menu-button
-            class="ion-hide-md-up"
-            id="main"
-            menu="main"
-          ></ion-menu-button>
-          <span className="ion-hide-md-down">
+      <>
+        <ion-toolbar class={styles.toolbar} color="light">
+          <div className={styles.brandContainer}>
+            <ion-buttons class={styles.buttonsLeft}>
+              <a href="/" className={styles.logoLink}>
+                <ion-img
+                    class={styles.logo}
+                    src={'/Geovistory-Logo-No-Text-Gray.svg'}
+                />
+              </a>
+              <ion-button href={`/project/${props.projectId}`}>
+                {props.title}
+              </ion-button>
+            </ion-buttons>
+            <div
+                className={'ion-hide-lg-down ' + styles.archiveNotice}
+                role="status"
+            >
+              The Geovistory project came to an end in December 2025. These pages
+              are retained for archival purposes.
+            </div>
+          </div>
+          <ion-buttons slot="end">
+            <ion-menu-button
+                class="ion-hide-md-up"
+                id="main"
+                menu="main"
+            ></ion-menu-button>
+            <span className="ion-hide-md-down">
             {props.teiLinkEnabled && (
-              <ion-button href={`/project/${props.projectId}/publication`}>
-                Edition
-              </ion-button>
+                <ion-button href={`/project/${props.projectId}/publication`}>
+                  Edition
+                </ion-button>
             )}
-            {props.sparqlLinkEnabled && (
-              <ion-button href={`/project/${props.projectId}/sparql`}>
-                SPARQL & Visualize
-              </ion-button>
-            )}
-            {props.ontoExplorerLinkEnabled && (
-              <ion-button
-                href={getOntoExlorerUrl(props.projectId, props.title)}
-                target="blank"
-              >
-                OntoExplorer
-              </ion-button>
-            )}
-            {props.sparklisLinkEnabled && (
-              <ion-button
-                href={`https://sparklis.geovistory.org/?title=Geovistory%20Project%20${props.title}&endpoint=https%3A//sparql.geovistory.org/api_v1_project_${props.projectId}&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label`}
-                target="blank"
-              >
-                Sparklis
-              </ion-button>
-            )}
-            {props.searchLinkEnabled && (
-              <ion-button href={`/project/${props.projectId}/search`}>
-                Search
-              </ion-button>
-            )}
+              {props.sparqlLinkEnabled && (
+                  <ion-button href={`/project/${props.projectId}/sparql`}>
+                    SPARQL & Visualize
+                  </ion-button>
+              )}
+              {props.ontoExplorerLinkEnabled && (
+                  <ion-button
+                      href={getOntoExlorerUrl(props.projectId, props.title)}
+                      target="blank"
+                  >
+                    OntoExplorer
+                  </ion-button>
+              )}
+              {props.sparklisLinkEnabled && (
+                  <ion-button
+                      href={`https://sparklis.geovistory.org/?title=Geovistory%20Project%20${props.title}&endpoint=https%3A//sparql.geovistory.org/api_v1_project_${props.projectId}&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label`}
+                      target="blank"
+                  >
+                    Sparklis
+                  </ion-button>
+              )}
+              {props.searchLinkEnabled && (
+                  <ion-button href={`/project/${props.projectId}/search`}>
+                    Search
+                  </ion-button>
+              )}
           </span>
-        </ion-buttons>
-      </ion-toolbar>
-    </>
+          </ion-buttons>
+        </ion-toolbar>
+      </>
   );
 };

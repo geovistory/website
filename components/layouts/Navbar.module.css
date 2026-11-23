@@ -1,6 +1,30 @@
- .logo {
+.brandContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.logoLink {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
     max-width: 30px;
     max-height: 30px;
+}
+
+.archiveNotice {
+    font-size: 0.72rem;
+    line-height: 1.3;
+    color: var(--ion-color-step-700, #4a4a4a);
+    background: var(--ion-color-step-50, #f4f5f8);
+    border-left: 3px solid var(--ion-color-medium, #92949c);
+    border-radius: 4px;
+    padding: 4px 8px;
+    max-width: 440px;
 }
 
 .divider {
@@ -20,15 +44,24 @@
     --ion-color-base: none !important;
 }
 
-
 .toolbar ion-button~ion-button {
     margin-left: 8px;
 }
 
 @media screen and (min-width: 768px) {
+    .brandContainer {
+        gap: 20px;
+    }
+
     .logo {
         max-width: 140px;
         max-height: 40px;
+    }
+
+    .archiveNotice {
+        font-size: 0.82rem;
+        line-height: 1.35;
+        padding: 6px 12px;
     }
 
     .toolbar {
@@ -37,4 +70,4 @@
         --padding-start: var(--gv-padding-big);
         --padding-end: var(--gv-padding-big);
     }
-} 
+}
