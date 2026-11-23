@@ -36,13 +36,9 @@ export const Yasgui = ({
     Promise.all([
       import('@matdata/yasgui'),
       import('@matdata/yasgui-graph-plugin'),
-      import('@matdata/yasgui-geo-plugin'),
-    ]).then(([{ default: YasguiClass }, { default: GraphPlugin }, GeoModule]) => {
+    ]).then(([{ default: YasguiClass }, { default: GraphPlugin }]) => {
       if (containerRef.current && !containerRef.current.hasChildNodes()) {
-        const GeoPlugin = GeoModule.default || GeoModule;
-
         YasguiClass.Yasr.registerPlugin('Graph', GraphPlugin);
-        YasguiClass.Yasr.registerPlugin('geo', GeoPlugin);
 
         const yasgui = new YasguiClass(containerRef.current, {
           requestConfig: {

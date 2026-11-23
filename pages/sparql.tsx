@@ -14,7 +14,7 @@ export interface SparqlProps {
 }
 
 const ENDPOINT = 'https://sparql.geovistory.org/api_v1_community_data';
-const PERSISTENCE_KEY = 'geovistory_sparql_tabs';
+const PERSISTENCE_KEY = 'geovistory_sparql_tabs_v3';
 
 const TAB_CONFIGS = [
   {
@@ -58,10 +58,15 @@ bind(xsd:float(replace( str(?rep), "^.* ([-]?[0-9\\\\.]+)[^0-9\\\\.]*$", "$1" ))
 # Append the project query param to the URI
 bind(concat(str(?geoplace)) as ?link )
 
-FILTER(BOUND(?lat) && BOUND(?long))
+FILTER(
+  BOUND(?lat) && BOUND(?long) &&
+  str(?lat) != "NaN" && str(?long) != "NaN" &&
+  ?lat >= -90 && ?lat <= 90 &&
+  ?long >= -180 && ?long <= 180
+)
 
 }
-GROUP BY ?label ?long ?lat ?type ?link`,
+GROUP BY ?label ?long ?lat ?link`,
   },
   {
     name: 'Timeline example',
@@ -113,16 +118,13 @@ const Sparql: NextPage<SparqlProps> = (props) => {
     Promise.all([
       import('@matdata/yasgui'),
       import('@matdata/yasgui-graph-plugin'),
-      import('@matdata/yasgui-geo-plugin'),
-    ]).then(([{ default: Yasgui }, { default: GraphPlugin }, GeoModule]) => {
+    ]).then(([{ default: Yasgui }, { default: GraphPlugin }]) => {
       if (containerRef.current && !containerRef.current.hasChildNodes()) {
-        const GeoPlugin = GeoModule.default || GeoModule;
-
-        // Enregistre le plugin de graphe et le plugin cartographique
         Yasgui.Yasr.registerPlugin('Graph', GraphPlugin);
-        Yasgui.Yasr.registerPlugin('geo', GeoPlugin);
 
-        const hasSavedSession = Boolean(localStorage.getItem(PERSISTENCE_KEY));
+        const hasSavedSession = Object.keys(localStorage).some((key) =>
+  key.includes(PERSISTENCE_KEY)
+);
 
         const yasgui = new Yasgui(containerRef.current, {
           requestConfig: {
@@ -131,6 +133,11 @@ const Sparql: NextPage<SparqlProps> = (props) => {
           copyEndpointOnNewTab: true,
           persistenceId: PERSISTENCE_KEY,
         });
+
+        const themeManager = (yasgui as any).themeManager;
+        if (themeManager && !themeManager.getStoredTheme()) {
+          themeManager.setTheme('light');
+        }
 
         if (!hasSavedSession) {
           const firstTab = yasgui.getTab();
@@ -141,10 +148,14 @@ const Sparql: NextPage<SparqlProps> = (props) => {
           }
 
           for (let i = 1; i < TAB_CONFIGS.length; i++) {
-            const tab = yasgui.addTab(false);
+            const tab = yasgui.addTab(true);
             tab.setName(TAB_CONFIGS[i].name);
             tab.setEndpoint(ENDPOINT);
             tab.setQuery(TAB_CONFIGS[i].query);
+          }
+
+          if (firstTab) {
+            yasgui.selectTabId(firstTab.getId());
           }
         }
       }

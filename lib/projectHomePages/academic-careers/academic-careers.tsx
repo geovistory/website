@@ -64,7 +64,9 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
 
         import('@matdata/yasgui').then(({default: Yasgui}) => {
             if (containerRef.current && !containerRef.current.hasChildNodes()) {
-                const hasSavedSession = Boolean(localStorage.getItem(PERSISTENCE_KEY));
+                const hasSavedSession = Object.keys(localStorage).some((key) =>
+  key.includes(PERSISTENCE_KEY)
+);
 
                 const yasgui = new Yasgui(containerRef.current, {
                     requestConfig: {
@@ -77,6 +79,11 @@ const AcademicCareers_component: NextPage<ProjectPageProps> = (props) => {
                         defaultPlugin: 'geo',
                     },
                 });
+
+                const themeManager = (yasgui as any).themeManager;
+                if (themeManager && !themeManager.getStoredTheme()) {
+                    themeManager.setTheme('light');
+                }
 
                 if (!hasSavedSession) {
                     const firstTab = yasgui.getTab();

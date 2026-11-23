@@ -43,7 +43,12 @@ WHERE {
         # Append the project query param to the URI
         bind(concat(str(?building), "?p=15458106") as ?link )
 
-        FILTER(BOUND(?lat) && BOUND(?long))
+        FILTER(
+          BOUND(?lat) && BOUND(?long) &&
+          str(?lat) != "NaN" && str(?long) != "NaN" &&
+          ?lat >= -90 && ?lat <= 90 &&
+          ?long >= -180 && ?long <= 180
+        )
     }
     GROUP BY ?building ?long ?lat ?type ?buildingLabel ?link
   }
@@ -68,7 +73,12 @@ WHERE {
         # Append the project query param to the URI
         bind(concat(str(?building), "?p=15458106") as ?link )
 
-        FILTER(BOUND(?lat) && BOUND(?long))
+        FILTER(
+          BOUND(?lat) && BOUND(?long) &&
+          str(?lat) != "NaN" && str(?long) != "NaN" &&
+          ?lat >= -90 && ?lat <= 90 &&
+          ?long >= -180 && ?long <= 180
+        )
     }
     GROUP BY ?building ?long ?lat ?type ?buildingLabel ?link
   }
@@ -79,7 +89,7 @@ ORDER BY ?type
 `;
 
 const ENDPOINT = 'https://sparql.geovistory.org/api_v1_project_15458106';
-const PERSISTENCE_KEY = 'geovistory_multifaith_london_sparql_tabs';
+const PERSISTENCE_KEY = 'geovistory_multifaith_london_sparql_tabs_v2';
 
 const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
     const router = useRouter();
@@ -88,17 +98,11 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
     useEffect(() => {
         if (!containerRef.current) return;
 
-        Promise.all([
-            import('@matdata/yasgui'),
-            import('@matdata/yasgui-geo-plugin'),
-        ]).then(([{default: Yasgui}, GeoModule]) => {
+        import('@matdata/yasgui').then(({default: Yasgui}) => {
             if (containerRef.current && !containerRef.current.hasChildNodes()) {
-                const GeoPlugin = GeoModule.default || GeoModule;
-
-                // Enregistre le plugin cartographique officiel de MatGUI
-                Yasgui.Yasr.registerPlugin('geo', GeoPlugin);
-
-                const hasSavedSession = Boolean(localStorage.getItem(PERSISTENCE_KEY));
+                const hasSavedSession = Object.keys(localStorage).some((key) =>
+  key.includes(PERSISTENCE_KEY)
+);
 
                 const yasgui = new Yasgui(containerRef.current, {
                     requestConfig: {
@@ -111,6 +115,11 @@ const MultiFaithLondon_component: NextPage<ProjectPageProps> = (props) => {
                         defaultPlugin: 'geo',
                     },
                 });
+
+                const themeManager = (yasgui as any).themeManager;
+                if (themeManager && !themeManager.getStoredTheme()) {
+                    themeManager.setTheme('light');
+                }
 
                 if (!hasSavedSession) {
                     const firstTab = yasgui.getTab();

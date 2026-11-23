@@ -19,7 +19,6 @@
     "@geovistory/design-system-web": "1.27.3",
     "@ionic/core": "^6.1.13",
     "@matdata/yasgui": "^6.6.0",
-    "@matdata/yasgui-geo-plugin": "github:Matdata-eu/yasgui-geo-plugin",
     "@matdata/yasgui-graph-plugin": "^1.6.2",
     "chart.js": "^4.4.8",
     "chartjs-chart-graph": "^4.3.4",
@@ -53,7 +52,6 @@
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
     "eslint-plugin-storybook": "^0.6.13",
-    "next-transpile-modules": "^10.0.1",
     "storybook": "^7.3.2",
     "typescript": "4.6.3",
     "webpack": "^5.73.0"

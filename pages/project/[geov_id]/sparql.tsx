@@ -28,8 +28,10 @@ export interface ProjectSparqlProps {
 const ProjectSparqlPage: NextPage<ProjectSparqlProps> = (props) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const { geovID } = props.params;
-    const endpointUrl = `https://sparql.geovistory.org/api_v1_project_${geovID}`;
-    const persistenceKey = `geovistory_project_sparql_tabs_${geovID}`;
+    const endpointUrl =
+        props.params.sparqlURL ||
+        `https://sparql.geovistory.org/api_v1_project_${geovID}`;
+    const persistenceKey = `geovistory_project_sparql_tabs_${geovID}_v4`;
 
     useEffect(() => {
         if (!containerRef.current) return;
@@ -68,9 +70,14 @@ WHERE {
                         : ''
                 }
 
-  FILTER(BOUND(?lat) && BOUND(?long))
+  FILTER(
+    BOUND(?lat) && BOUND(?long) &&
+    str(?lat) != "NaN" && str(?long) != "NaN" &&
+    ?lat >= -90 && ?lat <= 90 &&
+    ?long >= -180 && ?long <= 180
+  )
 }
-GROUP BY ?label ?long ?lat ?type ?link`,
+GROUP BY ?label ?long ?lat ?link`,
             },
             {
                 name: 'Timeline example',
@@ -132,15 +139,13 @@ LIMIT 10`,
         Promise.all([
             import('@matdata/yasgui'),
             import('@matdata/yasgui-graph-plugin'),
-            import('@matdata/yasgui-geo-plugin'),
-        ]).then(([{ default: Yasgui }, { default: GraphPlugin }, GeoModule]) => {
+        ]).then(([{ default: Yasgui }, { default: GraphPlugin }]) => {
             if (containerRef.current && !containerRef.current.hasChildNodes()) {
-                const GeoPlugin = GeoModule.default || GeoModule;
-
                 Yasgui.Yasr.registerPlugin('Graph', GraphPlugin);
-                Yasgui.Yasr.registerPlugin('geo', GeoPlugin);
 
-                const hasSavedSession = Boolean(localStorage.getItem(persistenceKey));
+                const hasSavedSession = Object.keys(localStorage).some((key) =>
+                    key.includes(persistenceKey)
+                );
 
                 const yasgui = new Yasgui(containerRef.current, {
                     requestConfig: {
@@ -149,6 +154,11 @@ LIMIT 10`,
                     copyEndpointOnNewTab: true,
                     persistenceId: persistenceKey,
                 });
+
+                const themeManager = (yasgui as any).themeManager;
+                if (themeManager && !themeManager.getStoredTheme()) {
+                    themeManager.setTheme('light');
+                }
 
                 if (!hasSavedSession) {
                     const firstTab = yasgui.getTab();
@@ -159,10 +169,14 @@ LIMIT 10`,
                     }
 
                     for (let i = 1; i < defaultTabs.length; i++) {
-                        const tab = yasgui.addTab(false);
+                        const tab = yasgui.addTab(true);
                         tab.setName(defaultTabs[i].name);
                         tab.setEndpoint(defaultTabs[i].sparqlEndpoint ?? endpointUrl);
                         tab.setQuery(defaultTabs[i].query);
+                    }
+
+                    if (firstTab) {
+                        yasgui.selectTabId(firstTab.getId());
                     }
                 }
             }
